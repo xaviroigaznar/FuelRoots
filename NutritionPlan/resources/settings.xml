@@ -1,0 +1,9 @@
+<settings>
+    <setting propertyKey="ftp" title="FTP">
+        <settingConfig type="number" />
+    </setting>
+
+    <setting propertyKey="weight" title="Peso (kg)">
+        <settingConfig type="number" />
+    </setting>
+</settings>

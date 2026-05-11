@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanApp.mc" id="1" lineNum="5" parent="globals/NutritionPlanApp" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanApp.mc" id="2" lineNum="26" parent="globals" pc="268435472" symbol="getApp"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanApp.mc" id="2" lineNum="27" parent="globals" pc="268435482" symbol="getApp"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanBackground.mc" id="3" lineNum="5" parent="globals/Background" pc="268435493" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435505" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="5" lineNum="6" parent="globals/NutritionPlanView" pc="268435525" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanApp.mc" id="6" lineNum="12" parent="globals/NutritionPlanApp" pc="268435537" symbol="onStart"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanApp.mc" id="7" lineNum="20" parent="globals/NutritionPlanApp" pc="268435540" symbol="getInitialView"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanApp.mc" id="7" lineNum="21" parent="globals/NutritionPlanApp" pc="268435542" symbol="getInitialView"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanApp.mc" id="8" lineNum="7" parent="globals/NutritionPlanApp" pc="268435568" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanApp.mc" id="8" lineNum="8" parent="globals/NutritionPlanApp" pc="268435570" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanApp.mc" id="9" lineNum="16" parent="globals/NutritionPlanApp" pc="268435583" symbol="onStop"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanBackground.mc" id="10" lineNum="19" parent="globals/Background" pc="268435586" symbol="setColor"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanBackground.mc" id="10" lineNum="20" parent="globals/Background" pc="268435588" symbol="setColor"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanBackground.mc" id="11" lineNum="9" parent="globals/Background" pc="268435598" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanBackground.mc" id="11" lineNum="10" parent="globals/Background" pc="268435601" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanBackground.mc" id="11" lineNum="14" parent="globals/Background" pc="268435619" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanBackground.mc" id="11" lineNum="16" parent="globals/Background" pc="268435635" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanBackground.mc" id="12" lineNum="23" parent="globals/Background" pc="268435648" symbol="draw"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanBackground.mc" id="12" lineNum="24" parent="globals/Background" pc="268435650" symbol="draw"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanBackground.mc" id="12" lineNum="25" parent="globals/Background" pc="268435667" symbol="draw"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="13" lineNum="52" parent="globals/NutritionPlanView" pc="268435676" symbol="compute"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="13" lineNum="54" parent="globals/NutritionPlanView" pc="268435678" symbol="compute"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="13" lineNum="55" parent="globals/NutritionPlanView" pc="268435689" symbol="compute"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="13" lineNum="56" parent="globals/NutritionPlanView" pc="268435700" symbol="compute"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="13" lineNum="58" parent="globals/NutritionPlanView" pc="268435717" symbol="compute"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="17" parent="globals/NutritionPlanView" pc="268435729" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="18" parent="globals/NutritionPlanView" pc="268435732" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="21" parent="globals/NutritionPlanView" pc="268435745" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="22" parent="globals/NutritionPlanView" pc="268435753" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="25" parent="globals/NutritionPlanView" pc="268435798" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="26" parent="globals/NutritionPlanView" pc="268435806" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="29" parent="globals/NutritionPlanView" pc="268435851" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="30" parent="globals/NutritionPlanView" pc="268435859" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="33" parent="globals/NutritionPlanView" pc="268435904" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="34" parent="globals/NutritionPlanView" pc="268435912" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="38" parent="globals/NutritionPlanView" pc="268435957" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="39" parent="globals/NutritionPlanView" pc="268435999" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="40" parent="globals/NutritionPlanView" pc="268436023" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="41" parent="globals/NutritionPlanView" pc="268436040" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="42" parent="globals/NutritionPlanView" pc="268436064" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="14" lineNum="45" parent="globals/NutritionPlanView" pc="268436081" symbol="onLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="15" lineNum="10" parent="globals/NutritionPlanView" pc="268436132" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="15" lineNum="11" parent="globals/NutritionPlanView" pc="268436134" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="15" lineNum="12" parent="globals/NutritionPlanView" pc="268436146" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="16" lineNum="65" parent="globals/NutritionPlanView" pc="268436155" symbol="onUpdate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="16" lineNum="67" parent="globals/NutritionPlanView" pc="268436158" symbol="onUpdate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="16" lineNum="70" parent="globals/NutritionPlanView" pc="268436195" symbol="onUpdate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="16" lineNum="71" parent="globals/NutritionPlanView" pc="268436219" symbol="onUpdate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="16" lineNum="72" parent="globals/NutritionPlanView" pc="268436230" symbol="onUpdate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="16" lineNum="74" parent="globals/NutritionPlanView" pc="268436248" symbol="onUpdate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="16" lineNum="76" parent="globals/NutritionPlanView" pc="268436259" symbol="onUpdate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="16" lineNum="79" parent="globals/NutritionPlanView" pc="268436287" symbol="onUpdate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="17" lineNum="57" parent="globals/Rez/Layouts" pc="268436308" symbol="BottomRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="17" lineNum="58" parent="globals/Rez/Layouts" pc="268436319" symbol="BottomRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="17" lineNum="60" parent="globals/Rez/Layouts" pc="268436343" symbol="BottomRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="17" lineNum="62" parent="globals/Rez/Layouts" pc="268436426" symbol="BottomRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="17" lineNum="64" parent="globals/Rez/Layouts" pc="268436509" symbol="BottomRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="18" lineNum="37" parent="globals/Rez/Layouts" pc="268436529" symbol="TopRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="18" lineNum="38" parent="globals/Rez/Layouts" pc="268436540" symbol="TopRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="18" lineNum="40" parent="globals/Rez/Layouts" pc="268436564" symbol="TopRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="18" lineNum="42" parent="globals/Rez/Layouts" pc="268436647" symbol="TopRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="18" lineNum="44" parent="globals/Rez/Layouts" pc="268436730" symbol="TopRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="19" lineNum="47" parent="globals/Rez/Layouts" pc="268436750" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="19" lineNum="48" parent="globals/Rez/Layouts" pc="268436761" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="19" lineNum="50" parent="globals/Rez/Layouts" pc="268436785" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="19" lineNum="52" parent="globals/Rez/Layouts" pc="268436867" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="19" lineNum="54" parent="globals/Rez/Layouts" pc="268436949" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="20" lineNum="27" parent="globals/Rez/Layouts" pc="268436969" symbol="TopLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="20" lineNum="28" parent="globals/Rez/Layouts" pc="268436980" symbol="TopLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="20" lineNum="30" parent="globals/Rez/Layouts" pc="268437004" symbol="TopLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="20" lineNum="32" parent="globals/Rez/Layouts" pc="268437086" symbol="TopLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="20" lineNum="34" parent="globals/Rez/Layouts" pc="268437168" symbol="TopLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="21" lineNum="13" parent="globals/Rez/Layouts" pc="268437188" symbol="MainLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="21" lineNum="14" parent="globals/Rez/Layouts" pc="268437199" symbol="MainLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="21" lineNum="16" parent="globals/Rez/Layouts" pc="268437208" symbol="MainLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="21" lineNum="18" parent="globals/Rez/Layouts" pc="268437217" symbol="MainLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="21" lineNum="20" parent="globals/Rez/Layouts" pc="268437241" symbol="MainLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="21" lineNum="22" parent="globals/Rez/Layouts" pc="268437348" symbol="MainLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/gen/006-B3843-00/source/Rez.mcgen" id="21" lineNum="24" parent="globals/Rez/Layouts" pc="268437455" symbol="MainLayout"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="6" object="true" symbol="NutritionPlanApp"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="13" method="true" symbol="MainLayout"/>
+        <entry field="true" id="9" symbol="mValue"/>
+        <entry id="7" object="true" symbol="NutritionPlanView"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="16" symbol="AppName"/>
+        <entry id="5" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8388631" module="true" symbol="Activity"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry field="true" id="8389138" symbol="label"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry id="8389137" method="true" symbol="compute"/>
+        <entry id="8389131" method="true" symbol="setColor"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="14" method="true" symbol="TopLeftLayout"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="11" method="true" symbol="BottomLeftLayout"/>
+        <entry id="12" method="true" symbol="BottomRightLayout"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="8389130" symbol="mColor"/>
+        <entry id="8389068" method="true" symbol="draw"/>
+        <entry field="true" id="10" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8390146" module="true" object="true" symbol="Background"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="8388747" symbol="currentHeartRate"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="8389347" symbol="color"/>
+        <entry id="8" module="true" symbol="Layouts"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry id="15" method="true" symbol="TopRightLayout"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435597" name="color" stackId="1" startPc="268435586"/>
+        <entry endPc="268435646" name="dictionary" stackId="1" startPc="268435601"/>
+        <entry arg="true" endPc="268435675" name="dc" stackId="1" startPc="268435648"/>
+        <entry arg="true" endPc="268435728" name="info" stackId="1" startPc="268435676"/>
+        <entry arg="true" endPc="268436131" name="dc" stackId="1" startPc="268435729"/>
+        <entry endPc="268436130" name="obscurityFlags" stackId="2" startPc="268435732"/>
+        <entry endPc="268436080" name="labelView" stackId="3" startPc="268435957"/>
+        <entry endPc="268436080" name="valueView" stackId="4" startPc="268435957"/>
+        <entry arg="true" endPc="268436307" name="dc" stackId="1" startPc="268436155"/>
+        <entry endPc="268436306" name="value" stackId="2" startPc="268436158"/>
+        <entry arg="true" endPc="268436528" name="dc" stackId="1" startPc="268436308"/>
+        <entry endPc="268436528" name="rez_cmp_local_custom_drawable_16187860511068497434" stackId="2" startPc="268436319"/>
+        <entry endPc="268436528" name="rez_cmp_local_text_label" stackId="3" startPc="268436319"/>
+        <entry endPc="268436528" name="rez_cmp_local_text_value" stackId="4" startPc="268436319"/>
+        <entry arg="true" endPc="268436749" name="dc" stackId="1" startPc="268436529"/>
+        <entry endPc="268436749" name="rez_cmp_local_custom_drawable_11824933295158922413" stackId="2" startPc="268436540"/>
+        <entry endPc="268436749" name="rez_cmp_local_text_label" stackId="3" startPc="268436540"/>
+        <entry endPc="268436749" name="rez_cmp_local_text_value" stackId="4" startPc="268436540"/>
+        <entry arg="true" endPc="268436968" name="dc" stackId="1" startPc="268436750"/>
+        <entry endPc="268436968" name="rez_cmp_local_custom_drawable_16380678501279751870" stackId="2" startPc="268436761"/>
+        <entry endPc="268436968" name="rez_cmp_local_text_label" stackId="3" startPc="268436761"/>
+        <entry endPc="268436968" name="rez_cmp_local_text_value" stackId="4" startPc="268436761"/>
+        <entry arg="true" endPc="268437187" name="dc" stackId="1" startPc="268436969"/>
+        <entry endPc="268437187" name="rez_cmp_local_custom_drawable_83741574912206153191" stackId="2" startPc="268436980"/>
+        <entry endPc="268437187" name="rez_cmp_local_text_label" stackId="3" startPc="268436980"/>
+        <entry endPc="268437187" name="rez_cmp_local_text_value" stackId="4" startPc="268436980"/>
+        <entry arg="true" endPc="268437474" name="dc" stackId="1" startPc="268437188"/>
+        <entry endPc="268437474" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268437199"/>
+        <entry endPc="268437474" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268437199"/>
+        <entry endPc="268437474" name="rez_cmp_local_custom_drawable_11939594661139614796" stackId="4" startPc="268437199"/>
+        <entry endPc="268437474" name="rez_cmp_local_text_label" stackId="5" startPc="268437199"/>
+        <entry endPc="268437474" name="rez_cmp_local_text_value" stackId="6" startPc="268437199"/>
+    </localVars>
+    <deviceInfo deviceVersion="45fe3cbb0de8ea0a70e12628d2697915f1272301" partNumber="006-B3843-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="label"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="58" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/NutritionPlanApp" offset="134" parentId="globals" symbolId="NutritionPlanApp" type="class"/>
+        <dataEntry label="globals/Background" offset="205" parentId="globals" symbolId="Background" type="class"/>
+        <dataEntry label="globals/Rez" offset="276" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/NutritionPlanView" offset="329" parentId="globals" symbolId="NutritionPlanView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="409" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="444" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="515" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="NutritionPlanApp" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435492" name="getApp" startPc="268435472">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435504" name="&lt;init&gt;" parent="Background" startPc="268435493">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435524" name="&lt;init&gt;" parent="Rez" startPc="268435505">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435536" name="&lt;init&gt;" parent="NutritionPlanView" startPc="268435525">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435539" name="onStart" parent="NutritionPlanApp" startPc="268435537">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435567" name="getInitialView" parent="NutritionPlanApp" startPc="268435540">
+            <documentation><![CDATA[<div class="description"> Return the initial view of your application here<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435582" name="initialize" parent="NutritionPlanApp" startPc="268435568">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435585" name="onStop" parent="NutritionPlanApp" startPc="268435583">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435597" name="setColor" parent="Background" startPc="268435586">
+            <param id="color"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435647" name="initialize" parent="Background" startPc="268435598">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435675" name="draw" parent="Background" startPc="268435648">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435728" name="compute" parent="NutritionPlanView" startPc="268435676">
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436131" name="onLayout" parent="NutritionPlanView" startPc="268435729">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436154" name="initialize" parent="NutritionPlanView" startPc="268436132">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436307" name="onUpdate" parent="NutritionPlanView" startPc="268436155">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436528" name="BottomRightLayout" parent="Layouts" startPc="268436308">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436749" name="TopRightLayout" parent="Layouts" startPc="268436529">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436968" name="BottomLeftLayout" parent="Layouts" startPc="268436750">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437187" name="TopLeftLayout" parent="Layouts" startPc="268436969">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437474" name="MainLayout" parent="Layouts" startPc="268437188">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
