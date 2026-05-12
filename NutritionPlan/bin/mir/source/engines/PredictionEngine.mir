@@ -1,0 +1,354 @@
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 1; @symbol_moduledef = [Engine,1,7,13]; ]
+module Engine {
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 1; ]
+    <init> {
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,10,16]; @symbol_usingdef<1> = [Activity,2,17,25]; ]
+    using Toybox.Activity;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,10,16]; @symbol_usingdef<1> = [Math,3,17,21]; ]
+    using Toybox.Math;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,10,16]; @symbol_usingdef<1> = [System,4,17,23]; ]
+    using Toybox.System;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 6; @symbol_classdef = [PredictionEngine,6,10,26]; ]
+    class PredictionEngine {
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 6; ]
+        <init> {
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 6; ]
+        static
+        <init> {
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 11; @position = 12; @symbol_vardef = [glycogenCapacity,11,12,28]; ]
+        var glycogenCapacity = 400;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 16; @symbol_functiondef = [initialize,16,17,27]; ]
+        function initialize() as Void {
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 18; @symbol_functiondef = [update,18,17,23]; @symbol_param<0> = [state,18,24,29]; ]
+        function update(state) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_18_31_21_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 19 12 ]
+            %tmp.1 = lgetv %state;
+            symbol [ state %tmp.1 19 12 17 ];
+            %tmp.2 = self;
+            symbol [ predictBonkTime %tmp.3 19 37 52 ];
+            %tmp.3 = getv function %tmp.2 :predictBonkTime;
+            %tmp.4 = lgetv %state;
+            symbol [ state %tmp.4 19 53 58 ];
+            symbol [ hydrationDeficit %tmp.5 19 59 75 ];
+            %tmp.5 = getv %tmp.4 :hydrationDeficit;
+            %tmp.6 = lgetv %state;
+            symbol [ state %tmp.6 19 77 82 ];
+            symbol [ ifValue %tmp.7 19 83 90 ];
+            %tmp.7 = getv %tmp.6 :ifValue;
+            %tmp.8 = invoke %tmp.2 %tmp.3(%tmp.5, %tmp.7);
+            symbol [ bonkTimeEstimate ? 19 18 34 ];
+            putv %tmp.1 :bonkTimeEstimate %tmp.8;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 20 12 ]
+            %tmp.9 = lgetv %state;
+            symbol [ state %tmp.9 20 12 17 ];
+            %tmp.10 = self;
+            symbol [ shouldFuelNow %tmp.11 20 39 52 ];
+            %tmp.11 = getv function %tmp.10 :shouldFuelNow;
+            %tmp.12 = lgetv %state;
+            symbol [ state %tmp.12 20 53 58 ];
+            symbol [ hydrationDeficit %tmp.13 20 59 75 ];
+            %tmp.13 = getv %tmp.12 :hydrationDeficit;
+            %tmp.14 = lgetv %state;
+            symbol [ state %tmp.14 20 77 82 ];
+            symbol [ ifValue %tmp.15 20 83 90 ];
+            %tmp.15 = getv %tmp.14 :ifValue;
+            %tmp.16 = invoke %tmp.10 %tmp.11(%tmp.13, %tmp.15);
+            symbol [ fuelRecommendation ? 20 18 36 ];
+            putv %tmp.9 :fuelRecommendation %tmp.16;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_18_31_21_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 26; @symbol_functiondef = [estimateCarbBurnRate,26,17,37]; @symbol_param<0> = [IF,26,38,40]; ]
+        function estimateCarbBurnRate(IF) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_26_42_44_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 27 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_27_12_29_12_if_stmt:
+            %tmp.1 = lgetv %IF;
+            symbol [ IF %tmp.1 27 16 18 ];
+            %tmp.2 = 0.60;
+            %tmp.3 = lt %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_27_12_29_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_27_12_29_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_27_27_29_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 28 16 ]
+            %tmp.4 = 40;
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_27_27_29_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_27_12_29_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_27_12_29_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 31 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_31_12_33_12_if_stmt:
+            %tmp.5 = lgetv %IF;
+            symbol [ IF %tmp.5 31 16 18 ];
+            %tmp.6 = 0.70;
+            %tmp.7 = lt %tmp.5 %tmp.6;
+            bf %tmp.7 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_31_12_33_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_31_12_33_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_31_27_33_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 32 16 ]
+            %tmp.8 = 55;
+            ret %tmp.8;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_31_27_33_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_31_12_33_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_31_12_33_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 35 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_35_12_37_12_if_stmt:
+            %tmp.9 = lgetv %IF;
+            symbol [ IF %tmp.9 35 16 18 ];
+            %tmp.10 = 0.80;
+            %tmp.11 = lt %tmp.9 %tmp.10;
+            bf %tmp.11 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_35_12_37_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_35_12_37_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_35_27_37_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 36 16 ]
+            %tmp.12 = 70;
+            ret %tmp.12;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_35_27_37_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_35_12_37_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_35_12_37_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 39 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_39_12_41_12_if_stmt:
+            %tmp.13 = lgetv %IF;
+            symbol [ IF %tmp.13 39 16 18 ];
+            %tmp.14 = 0.90;
+            %tmp.15 = lt %tmp.13 %tmp.14;
+            bf %tmp.15 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_39_12_41_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_39_12_41_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_39_27_41_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 40 16 ]
+            %tmp.16 = 90;
+            ret %tmp.16;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_39_27_41_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_39_12_41_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_39_12_41_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 43 12 ]
+            %tmp.17 = 110;
+            ret %tmp.17;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_26_42_44_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 49; @symbol_functiondef = [getEnergyStatus,49,17,32]; @symbol_param<0> = [deficit,49,33,40]; ]
+        function getEnergyStatus(deficit) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_49_42_59_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 50 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_50_12_52_12_if_stmt:
+            %tmp.1 = lgetv %deficit;
+            symbol [ deficit %tmp.1 50 16 23 ];
+            %tmp.2 = 30;
+            %tmp.3 = lt %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_50_12_52_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_50_12_52_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_50_30_52_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 51 16 ]
+            %tmp.4 = "GREEN";
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_50_30_52_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_50_12_52_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_50_12_52_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 54 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_54_12_56_12_if_stmt:
+            %tmp.5 = lgetv %deficit;
+            symbol [ deficit %tmp.5 54 16 23 ];
+            %tmp.6 = 60;
+            %tmp.7 = lt %tmp.5 %tmp.6;
+            bf %tmp.7 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_54_12_56_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_54_12_56_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_54_30_56_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 55 16 ]
+            %tmp.8 = "LOW";
+            ret %tmp.8;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_54_30_56_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_54_12_56_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_54_12_56_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 58 12 ]
+            %tmp.9 = "CRITICAL";
+            ret %tmp.9;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_49_42_59_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 64; @symbol_functiondef = [predictBonkTime,64,17,32]; @symbol_param<0> = [deficit,64,33,40]; @symbol_param<1> = [IF,64,42,44]; ]
+        function predictBonkTime(deficit, IF) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_64_46_74_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 65 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_64_46_74_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_64_46_74_8_stop" ]
+            %burnRate.1 = local;
+            symbol [ burnRate %burnRate.1 65 16 24 ];
+            %tmp.1 = self;
+            symbol [ estimateCarbBurnRate %tmp.2 65 27 47 ];
+            %tmp.2 = getv function %tmp.1 :estimateCarbBurnRate;
+            %tmp.3 = lgetv %IF;
+            symbol [ IF %tmp.3 65 48 50 ];
+            %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+            lputv %burnRate.1 %tmp.4;
+            symbol [ burnRate %burnRate.1 65 16 24 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 67 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_64_46_74_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_64_46_74_8_stop" ]
+            %remaining.2 = local;
+            symbol [ remaining %remaining.2 67 16 25 ];
+            symbol [ glycogenCapacity %tmp.6 67 28 44 ];
+            %tmp.6 = getv ? :glycogenCapacity;
+            %tmp.7 = lgetv %deficit;
+            symbol [ deficit %tmp.7 67 47 54 ];
+            %tmp.8 = sub %tmp.6 %tmp.7;
+            lputv %remaining.2 %tmp.8;
+            symbol [ remaining %remaining.2 67 16 25 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 69 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_69_12_71_12_if_stmt:
+            %tmp.9 = lgetv %remaining.2;
+            symbol [ remaining %tmp.9 69 16 25 ];
+            %tmp.10 = 0;
+            %tmp.11 = lte %tmp.9 %tmp.10;
+            bf %tmp.11 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_69_12_71_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_69_12_71_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_69_32_71_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 70 16 ]
+            %tmp.12 = 0;
+            ret %tmp.12;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_69_32_71_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_69_12_71_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_69_12_71_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 73 12 ]
+            %tmp.13 = lgetv %remaining.2;
+            symbol [ remaining %tmp.13 73 20 29 ];
+            %tmp.14 = lgetv %burnRate.1;
+            symbol [ burnRate %tmp.14 73 32 40 ];
+            %tmp.15 = div %tmp.13 %tmp.14;
+            %tmp.16 = 60;
+            %tmp.17 = mul %tmp.15 %tmp.16;
+            ret %tmp.17;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_64_46_74_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 79; @symbol_functiondef = [shouldFuelNow,79,17,30]; @symbol_param<0> = [deficit,79,31,38]; @symbol_param<1> = [IF,79,40,42]; ]
+        function shouldFuelNow(deficit, IF) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_79_44_93_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 80 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_79_44_93_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_79_44_93_8_stop" ]
+            %status.1 = local;
+            symbol [ status %status.1 80 16 22 ];
+            %tmp.1 = self;
+            symbol [ getEnergyStatus %tmp.2 80 25 40 ];
+            %tmp.2 = getv function %tmp.1 :getEnergyStatus;
+            %tmp.3 = lgetv %deficit;
+            symbol [ deficit %tmp.3 80 41 48 ];
+            %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+            lputv %status.1 %tmp.4;
+            symbol [ status %status.1 80 16 22 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 82 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_82_12_84_12_if_stmt:
+            %tmp.5 = lgetv %status.1;
+            symbol [ status %tmp.5 82 16 22 ];
+            %tmp.6 = "CRITICAL";
+            %tmp.7 = eq %tmp.5 %tmp.6;
+            bf %tmp.7 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_82_12_84_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_82_12_84_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_82_38_84_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 83 16 ]
+            %tmp.8 = true;
+            ret %tmp.8;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_82_38_84_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_82_12_84_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_82_12_84_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 86 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_79_44_93_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_79_44_93_8_stop" ]
+            %bonk.2 = local;
+            symbol [ bonk %bonk.2 86 16 20 ];
+            %tmp.9 = self;
+            symbol [ predictBonkTime %tmp.10 86 23 38 ];
+            %tmp.10 = getv function %tmp.9 :predictBonkTime;
+            %tmp.11 = lgetv %deficit;
+            symbol [ deficit %tmp.11 86 39 46 ];
+            %tmp.12 = lgetv %IF;
+            symbol [ IF %tmp.12 86 48 50 ];
+            %tmp.13 = invoke %tmp.9 %tmp.10(%tmp.11, %tmp.12);
+            lputv %bonk.2 %tmp.13;
+            symbol [ bonk %bonk.2 86 16 20 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 88 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_88_12_90_12_if_stmt:
+            %tmp.14 = lgetv %bonk.2;
+            symbol [ bonk %tmp.14 88 16 20 ];
+            %tmp.15 = 20;
+            %tmp.16 = lt %tmp.14 %tmp.15;
+            bf %tmp.16 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_88_12_90_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_88_12_90_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_88_27_90_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 89 16 ]
+            %tmp.17 = true;
+            ret %tmp.17;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_88_27_90_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_88_12_90_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_88_12_90_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 92 12 ]
+            %tmp.18 = false;
+            ret %tmp.18;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_79_44_93_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 97; @symbol_functiondef = [nextDemand,97,17,27]; @symbol_param<0> = [IF,97,28,30]; @symbol_param<1> = [lapDuration,97,32,43]; ]
+        function nextDemand(IF, lapDuration) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_97_45_111_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 98 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_98_12_100_12_if_stmt:
+            %tmp.1 = lgetv %IF;
+            symbol [ IF %tmp.1 98 16 18 ];
+            %tmp.2 = 0.90;
+            %tmp.3 = gt %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_98_12_100_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_98_12_100_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_98_27_100_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 99 16 ]
+            %tmp.4 = "LOW";
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_98_27_100_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_98_12_100_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_98_12_100_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 102 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_102_12_104_12_if_stmt:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_102_16_102_43_begin:
+            %tmp.5 = lgetv %IF;
+            symbol [ IF %tmp.5 102 16 18 ];
+            %tmp.6 = 0.60;
+            %tmp.7 = lt %tmp.5 %tmp.6;
+            bf %tmp.7 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_102_12_104_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_102_29_102_43_true:
+            %tmp.8 = lgetv %lapDuration;
+            symbol [ lapDuration %tmp.8 102 29 40 ];
+            %tmp.9 = 300;
+            %tmp.10 = gt %tmp.8 %tmp.9;
+            push %tmp.10;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_102_29_102_43_end:
+            %tmp.11 = phi [%tmp.7 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_102_16_102_43_begin] [%tmp.10 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_102_29_102_43_true] [%tmp.11 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_102_29_102_43_end];
+            bf %tmp.11 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_102_12_104_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_102_12_104_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_102_48_104_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 103 16 ]
+            %tmp.12 = "HIGH";
+            ret %tmp.12;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_102_48_104_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_102_12_104_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_102_12_104_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 106 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_106_12_108_12_if_stmt:
+            %tmp.13 = lgetv %IF;
+            symbol [ IF %tmp.13 106 16 18 ];
+            %tmp.14 = 0.80;
+            %tmp.15 = gt %tmp.13 %tmp.14;
+            bf %tmp.15 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_106_12_108_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_106_12_108_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_106_27_108_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 107 16 ]
+            %tmp.16 = "MODERATE";
+            ret %tmp.16;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_106_27_108_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_106_12_108_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_106_12_108_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" 110 12 ]
+            %tmp.17 = "STEADY";
+            ret %tmp.17;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_PredictionEngine_mc_97_45_111_8_stop:
+        }
+    }
+}
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc"; @line = 1; ]
+<init> {
+}

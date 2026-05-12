@@ -1,0 +1,9 @@
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/Session.mc"; @line = 1; @symbol_moduledef = [Session,1,7,14]; ]
+module Session {
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/Session.mc"; @line = 1; ]
+    <init> {
+    }
+}
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/Session.mc"; @line = 1; ]
+<init> {
+}

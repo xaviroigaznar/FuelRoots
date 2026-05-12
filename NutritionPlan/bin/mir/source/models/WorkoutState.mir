@@ -1,0 +1,40 @@
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 1; @symbol_classdef = [WorkoutState,1,6,18]; ]
+class WorkoutState {
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 1; ]
+    <init> {
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 1; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 2; @position = 8; @symbol_vardef = [elapsedTime,2,8,19]; ]
+    var elapsedTime;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 3; @position = 8; @symbol_vardef = [distance,3,8,16]; ]
+    var distance;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 4; @position = 8; @symbol_vardef = [speed,4,8,13]; ]
+    var speed;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 5; @position = 8; @symbol_vardef = [heartRate,5,8,17]; ]
+    var heartRate;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 6; @position = 8; @symbol_vardef = [temperature,6,8,19]; ]
+    var temperature;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 7; @position = 8; @symbol_vardef = [calories,7,8,16]; ]
+    var calories;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 10; @position = 8; @symbol_vardef = [glycogenRemaining,10,8,25]; ]
+    var glycogenRemaining;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 11; @position = 8; @symbol_vardef = [carbBurnRate,11,8,20]; ]
+    var carbBurnRate;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 14; @position = 8; @symbol_vardef = [hydrationLoss,14,8,21]; ]
+    var hydrationLoss;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 15; @position = 8; @symbol_vardef = [sweatRate,15,8,17]; ]
+    var sweatRate;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 18; @position = 8; @symbol_vardef = [fatigueScore,18,8,20]; ]
+    var fatigueScore;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 19; @position = 8; @symbol_vardef = [bonkRisk,19,8,16]; ]
+    var bonkRisk;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 21; @symbol_functiondef = [initialize,21,13,23]; ]
+    function initialize() as Void {
+    }
+}
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/models/WorkoutState.mc"; @line = 1; ]
+<init> {
+}
