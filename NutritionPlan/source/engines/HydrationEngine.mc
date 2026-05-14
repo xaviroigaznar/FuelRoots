@@ -7,49 +7,85 @@ module Engine {
         // =========================
         // CONFIG
         // =========================
+
         var weight;
 
         // =========================
         // STATE
         // =========================
-        var lastDrinkTime = 0;
+
+        var lastDrinkTime;
 
         // =========================
         // INIT
         // =========================
+
         function initialize(profile) {
             weight = profile.weight;
+
+            lastDrinkTime = System.getTimer();
         }
+
+        // =========================
+        // MAIN UPDATE
+        // =========================
 
         function update(state) {
-            var ifValue = state.ifValue;
+            var power = state.currentPower;
             var temp = state.temperature;
+            var elapsed = state.elapsedTime;
 
-            state.hydrationRate = hydrationRate(ifValue, temp);
-            state.hydrationRisk = hydrationRisk(ifValue, temp);
+            // Sweat rate (ml/h)
+            var sweatRate = calculateSweatRate(
+                power,
+                temp
+            );
+
+            state.sweatRate = sweatRate;
+
+            // Total estimated loss
+            var lossMl = (sweatRate / 3600.0) * elapsed;
+
+            state.hydrationDeficitMl = lossMl;
+
+            // Drink recommendation
+            state.minutesUntilDrink = calculateNextDrink(power);
+
+            state.drinkCountdownLabel = Utils.FormatUtils.formatCountdown(state.minutesUntilDrink);
+
+            // Status label
+            state.hydrationStateLabel = calculateHydrationLabel(lossMl);
         }
 
         // =========================
-        // HYDRATION RATE
+        // SWEAT MODEL
         // =========================
-        function hydrationRate(IF, temperature) {
+
+        function calculateSweatRate(power, temperature) {
+
             var rate = 500;
 
-            // BASE POR IF
-            if (IF < 0.65) {
-                rate = 500;
-            }
-            else if (IF < 0.80) {
-                rate = 650;
-            }
-            else if (IF < 0.90) {
-                rate = 800;
-            }
-            else {
-                rate = 1000;
+            // =====================
+            // POWER
+            // =====================
+            if (power != null) {
+                if (power > 150) {
+                    rate += 150;
+                }
+
+                if (power > 220) {
+                    rate += 200;
+                }
+
+                if (power > 280) {
+                    rate += 250;
+                }
             }
 
-            // AJUSTE TEMPERATURA
+            // =====================
+            // TEMPERATURE
+            // =====================
+
             if (temperature != null) {
 
                 if (temperature > 20) {
@@ -65,7 +101,10 @@ module Engine {
                 }
             }
 
-            // AJUSTE PESO
+            // =====================
+            // BODY SIZE
+            // =====================
+
             if (weight > 80) {
                 rate += 100;
             }
@@ -76,47 +115,61 @@ module Engine {
         // =========================
         // DRINK TIMER
         // =========================
-        function nextDrinkCountdown(IF) {
+
+        function calculateNextDrink(power) {
+
             var now = System.getTimer();
 
-            var interval = 600000;
+            var interval = 900000;
 
-            if (IF > 0.8) {
-                interval = 420000;
+            if (power != null) {
+                // Hard effort → drink sooner
+                if (power > 220) {
+                    interval = 600000;
+                }
+
+                if (power > 280) {
+                    interval = 420000;
+                }
             }
 
-            if (IF > 0.9) {
-                interval = 300000;
+            var remaining =
+                (interval - (now - lastDrinkTime)) / 60000.0;
+
+            if (remaining < 0) {
+                remaining = 0;
             }
 
-            return (interval - (now - lastDrinkTime)) / 1000;
+            return remaining;
         }
 
         // =========================
-        // HYDRATION RISK
+        // STATUS LABEL
         // =========================
-        function hydrationRisk(IF, temperature) {
-            var risk = "LOW";
 
-            if (IF > 0.85) {
-                risk = "MODERATE";
+        function calculateHydrationLabel(lossMl) {
+
+            if (lossMl < 500) {
+                return "Stable";
             }
 
-            if (temperature != null && temperature > 28) {
-                risk = "HIGH";
+            if (lossMl < 1200) {
+                return "Drink Soon";
             }
 
-            if (IF > 0.90 && temperature != null && temperature > 30) {
-                risk = "CRITICAL";
+            if (lossMl < 2000) {
+                return "Dehydrated";
             }
 
-            return risk;
+            return "Critical";
         }
 
         // =========================
         // EVENT
         // =========================
+
         function drinkRegistered() {
+
             lastDrinkTime = System.getTimer();
         }
     }

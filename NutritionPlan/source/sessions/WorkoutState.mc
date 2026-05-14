@@ -1,94 +1,81 @@
 module Session {
+
     class WorkoutState {
 
         // =========================
-        // INPUTS (raw data)
+        // Base Metrics
         // =========================
-        var elapsedTime;        // ms
+
+        var elapsedTime;
         var calories;
         var currentPower;
+        var heartRate;
         var temperature;
 
         // =========================
-        // ATHLETE PROFILE (copied for convenience)
+        // Fuel
         // =========================
-        var weight;
-        var ftp;
+
+        var glycogenRemaining;
+        var carbBurnRate;
+
+        // UI-ready fuel metrics
+        var timeToDepletion;
+        var fuelStateLabel;
 
         // =========================
-        // DERIVED PERFORMANCE METRICS
+        // Hydration
         // =========================
-        var np;
-        var ifValue;            // evita usar "if" keyword
-        var intensityFactor;
+
+        var hydrationLoss;
+        var sweatRate;
+
+        // UI-ready hydration metrics
+        var minutesUntilDrink;
+        var hydrationDeficitMl;
+        var hydrationStateLabel;
+        var drinkCountdownLabel;
 
         // =========================
-        // ENERGY MODEL
+        // Prediction
         // =========================
-        var kjAccumulated;
-        var carbConsumptionRate;     // g/h (derivado)
-        var carbsConsumed;
-        var carbsRequired;
-        var carbDeficit;
 
-        var glycogenEstimate;        // NO “remaining” absoluto, sino estimado
+        var fatiguePercent;
+        var bonkRisk;
 
-        // =========================
-        // HYDRATION MODEL
-        // =========================
-        var sweatRate;               // ml/h
-        var fluidLossTotal;
-        var fluidIntake;
-        var hydrationDeficit;
-        var hydrationRate;
-        var hydrationRisk;
-
-        // =========================
-        // FATIGUE MODEL
-        // =========================
-        var fatigueScore;            // 0–100 modelado
-        var perceivedLoad;
-
-        // =========================
-        // PREDICTION OUTPUTS
-        // =========================
-        var bonkTimeEstimate;        // min
-        var bonkRisk;                // LOW / MODERATE / HIGH / CRITICAL
-        var fuelRecommendation;      // boolean
-        var hydrationRecommendation;  // boolean
+        // UI-ready status
+        var statusLabel;
 
         function initialize() {
 
+            // Base
             elapsedTime = 0;
             calories = 0;
             currentPower = 0;
+            heartRate = 0;
             temperature = null;
 
-            np = 0;
-            ifValue = 0;
-            intensityFactor = 0;
+            // Fuel
+            glycogenRemaining = 100;
+            carbBurnRate = 0;
 
-            kjAccumulated = 0;
-            carbConsumptionRate = 0;
-            carbsConsumed = 0;
-            carbsRequired = 0;
-            carbDeficit = 0;
-            glycogenEstimate = 400;
+            timeToDepletion = "--";
+            fuelStateLabel = "Stable";
 
+            // Hydration
+            hydrationLoss = 0;
             sweatRate = 0;
-            fluidLossTotal = 0;
-            fluidIntake = 0;
-            hydrationDeficit = 0;
-            hydrationRate = 0;
-            hydrationRisk = 0;
+            hydrationStateLabel = "STABLE";
+            drinkCountdownLabel = "--";
 
-            fatigueScore = 0;
-            perceivedLoad = 0;
+            minutesUntilDrink = 0;
+            hydrationDeficitMl = 0;
 
-            bonkTimeEstimate = 0;
-            bonkRisk = "LOW";
-            fuelRecommendation = false;
-            hydrationRecommendation = false;
+            // Prediction
+            fatiguePercent = 0;
+            bonkRisk = 0;
+
+            statusLabel = "STABLE";
         }
     }
 }

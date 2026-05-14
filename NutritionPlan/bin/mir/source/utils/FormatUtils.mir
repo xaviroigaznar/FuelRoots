@@ -1,0 +1,439 @@
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 1; @symbol_moduledef = [Utils,1,7,12]; ]
+module Utils {
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 1; ]
+    <init> {
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,10,16]; @symbol_usingdef<1> = [Math,3,17,21]; ]
+    using Toybox.Math;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 5; @symbol_classdef = [FormatUtils,5,10,21]; ]
+    class FormatUtils {
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 5; ]
+        <init> {
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 5; ]
+        static
+        <init> {
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 16; @symbol_functiondef = [formatCountdown,16,24,39]; @symbol_param<0> = [minutesValue,16,40,52]; ]
+        static
+        function formatCountdown(minutesValue) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_16_54_39_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 18 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_18_12_20_12_if_stmt:
+            %tmp.1 = lgetv %minutesValue;
+            symbol [ minutesValue %tmp.1 18 16 28 ];
+            %tmp.2 = null;
+            %tmp.3 = eq %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_18_12_20_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_18_12_20_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_18_38_20_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 19 16 ]
+            %tmp.4 = "--:--";
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_18_38_20_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_18_12_20_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_18_12_20_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 22 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_16_54_39_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_16_54_39_8_stop" ]
+            %totalSeconds.1 = local;
+            symbol [ totalSeconds %totalSeconds.1 22 16 28 ];
+            %tmp.5 = lgetv %minutesValue;
+            symbol [ minutesValue %tmp.5 23 17 29 ];
+            %tmp.6 = 60;
+            %tmp.7 = mul %tmp.5 %tmp.6;
+            symbol [ toNumber %tmp.8 23 36 44 ];
+            %tmp.8 = getv function %tmp.7 :toNumber;
+            %tmp.9 = invoke %tmp.7 %tmp.8();
+            lputv %totalSeconds.1 %tmp.9;
+            symbol [ totalSeconds %totalSeconds.1 22 16 28 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 25 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_25_12_27_12_if_stmt:
+            %tmp.10 = lgetv %totalSeconds.1;
+            symbol [ totalSeconds %tmp.10 25 16 28 ];
+            %tmp.11 = 0;
+            %tmp.12 = lt %tmp.10 %tmp.11;
+            bf %tmp.12 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_25_12_27_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_25_12_27_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_25_34_27_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 26 16 ]
+            %tmp.13 = 0;
+            lputv %totalSeconds.1 %tmp.13;
+            symbol [ totalSeconds %totalSeconds.1 26 16 28 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_25_34_27_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_25_12_27_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_25_12_27_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 29 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_16_54_39_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_16_54_39_8_stop" ]
+            %minutes.2 = local;
+            symbol [ minutes %minutes.2 29 16 23 ];
+            symbol [ Math %tmp.14 30 16 20 ];
+            %tmp.14 = getm $.Toybox.Math;
+            symbol [ floor %tmp.15 30 21 26 ];
+            %tmp.15 = getv function %tmp.14 :floor;
+            %tmp.16 = lgetv %totalSeconds.1;
+            symbol [ totalSeconds %tmp.16 30 27 39 ];
+            %tmp.17 = 60;
+            %tmp.18 = div %tmp.16 %tmp.17;
+            %tmp.19 = invoke %tmp.14 %tmp.15(%tmp.18);
+            lputv %minutes.2 %tmp.19;
+            symbol [ minutes %minutes.2 29 16 23 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 32 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_16_54_39_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_16_54_39_8_stop" ]
+            %seconds.3 = local;
+            symbol [ seconds %seconds.3 32 16 23 ];
+            %tmp.20 = lgetv %totalSeconds.1;
+            symbol [ totalSeconds %tmp.20 33 16 28 ];
+            %tmp.21 = 60;
+            %tmp.22 = mod %tmp.20 %tmp.21;
+            lputv %seconds.3 %tmp.22;
+            symbol [ seconds %seconds.3 32 16 23 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 35 12 ]
+            %tmp.23 = lgetv %minutes.2;
+            symbol [ minutes %tmp.23 36 16 23 ];
+            symbol [ format %tmp.24 36 24 30 ];
+            %tmp.24 = getv function %tmp.23 :format;
+            %tmp.25 = "%d";
+            %tmp.26 = invoke %tmp.23 %tmp.24(%tmp.25);
+            %tmp.27 = ":";
+            %tmp.28 = add %tmp.26 %tmp.27;
+            %tmp.29 = lgetv %seconds.3;
+            symbol [ seconds %tmp.29 38 18 25 ];
+            symbol [ format %tmp.30 38 26 32 ];
+            %tmp.30 = getv function %tmp.29 :format;
+            %tmp.31 = "%02d";
+            %tmp.32 = invoke %tmp.29 %tmp.30(%tmp.31);
+            %tmp.33 = add %tmp.28 %tmp.32;
+            ret %tmp.33;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_16_54_39_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 46; @symbol_functiondef = [formatDuration,46,24,38]; @symbol_param<0> = [secondsValue,46,39,51]; ]
+        static
+        function formatDuration(secondsValue) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_46_53_78_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 48 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_48_12_50_12_if_stmt:
+            %tmp.1 = lgetv %secondsValue;
+            symbol [ secondsValue %tmp.1 48 16 28 ];
+            %tmp.2 = null;
+            %tmp.3 = eq %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_48_12_50_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_48_12_50_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_48_38_50_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 49 16 ]
+            %tmp.4 = "--:--";
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_48_38_50_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_48_12_50_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_48_12_50_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 52 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_46_53_78_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_46_53_78_8_stop" ]
+            %totalSeconds.1 = local;
+            symbol [ totalSeconds %totalSeconds.1 52 16 28 ];
+            %tmp.5 = lgetv %secondsValue;
+            symbol [ secondsValue %tmp.5 53 16 28 ];
+            symbol [ toNumber %tmp.6 53 29 37 ];
+            %tmp.6 = getv function %tmp.5 :toNumber;
+            %tmp.7 = invoke %tmp.5 %tmp.6();
+            lputv %totalSeconds.1 %tmp.7;
+            symbol [ totalSeconds %totalSeconds.1 52 16 28 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 55 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_46_53_78_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_46_53_78_8_stop" ]
+            %hours.2 = local;
+            symbol [ hours %hours.2 55 16 21 ];
+            symbol [ Math %tmp.8 56 16 20 ];
+            %tmp.8 = getm $.Toybox.Math;
+            symbol [ floor %tmp.9 56 21 26 ];
+            %tmp.9 = getv function %tmp.8 :floor;
+            %tmp.10 = lgetv %totalSeconds.1;
+            symbol [ totalSeconds %tmp.10 56 27 39 ];
+            %tmp.11 = 3600;
+            %tmp.12 = div %tmp.10 %tmp.11;
+            %tmp.13 = invoke %tmp.8 %tmp.9(%tmp.12);
+            lputv %hours.2 %tmp.13;
+            symbol [ hours %hours.2 55 16 21 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 58 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_46_53_78_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_46_53_78_8_stop" ]
+            %minutes.3 = local;
+            symbol [ minutes %minutes.3 58 16 23 ];
+            symbol [ Math %tmp.14 59 16 20 ];
+            %tmp.14 = getm $.Toybox.Math;
+            symbol [ floor %tmp.15 59 21 26 ];
+            %tmp.15 = getv function %tmp.14 :floor;
+            %tmp.16 = lgetv %totalSeconds.1;
+            symbol [ totalSeconds %tmp.16 59 28 40 ];
+            %tmp.17 = 3600;
+            %tmp.18 = mod %tmp.16 %tmp.17;
+            %tmp.19 = 60;
+            %tmp.20 = div %tmp.18 %tmp.19;
+            %tmp.21 = invoke %tmp.14 %tmp.15(%tmp.20);
+            lputv %minutes.3 %tmp.21;
+            symbol [ minutes %minutes.3 58 16 23 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 61 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_46_53_78_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_46_53_78_8_stop" ]
+            %seconds.4 = local;
+            symbol [ seconds %seconds.4 61 16 23 ];
+            %tmp.22 = lgetv %totalSeconds.1;
+            symbol [ totalSeconds %tmp.22 62 16 28 ];
+            %tmp.23 = 60;
+            %tmp.24 = mod %tmp.22 %tmp.23;
+            lputv %seconds.4 %tmp.24;
+            symbol [ seconds %seconds.4 61 16 23 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 64 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_64_12_72_12_if_stmt:
+            %tmp.25 = lgetv %hours.2;
+            symbol [ hours %tmp.25 64 16 21 ];
+            %tmp.26 = 0;
+            %tmp.27 = gt %tmp.25 %tmp.26;
+            bf %tmp.27 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_64_12_72_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_64_12_72_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_64_27_72_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 66 16 ]
+            %tmp.28 = lgetv %hours.2;
+            symbol [ hours %tmp.28 67 20 25 ];
+            symbol [ format %tmp.29 67 26 32 ];
+            %tmp.29 = getv function %tmp.28 :format;
+            %tmp.30 = "%d";
+            %tmp.31 = invoke %tmp.28 %tmp.29(%tmp.30);
+            %tmp.32 = ":";
+            %tmp.33 = add %tmp.31 %tmp.32;
+            %tmp.34 = lgetv %minutes.3;
+            symbol [ minutes %tmp.34 69 22 29 ];
+            symbol [ format %tmp.35 69 30 36 ];
+            %tmp.35 = getv function %tmp.34 :format;
+            %tmp.36 = "%02d";
+            %tmp.37 = invoke %tmp.34 %tmp.35(%tmp.36);
+            %tmp.38 = add %tmp.33 %tmp.37;
+            %tmp.39 = ":";
+            %tmp.40 = add %tmp.38 %tmp.39;
+            %tmp.41 = lgetv %seconds.4;
+            symbol [ seconds %tmp.41 71 22 29 ];
+            symbol [ format %tmp.42 71 30 36 ];
+            %tmp.42 = getv function %tmp.41 :format;
+            %tmp.43 = "%02d";
+            %tmp.44 = invoke %tmp.41 %tmp.42(%tmp.43);
+            %tmp.45 = add %tmp.40 %tmp.44;
+            ret %tmp.45;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_64_27_72_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_64_12_72_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_64_12_72_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 74 12 ]
+            %tmp.46 = lgetv %minutes.3;
+            symbol [ minutes %tmp.46 75 16 23 ];
+            symbol [ format %tmp.47 75 24 30 ];
+            %tmp.47 = getv function %tmp.46 :format;
+            %tmp.48 = "%d";
+            %tmp.49 = invoke %tmp.46 %tmp.47(%tmp.48);
+            %tmp.50 = ":";
+            %tmp.51 = add %tmp.49 %tmp.50;
+            %tmp.52 = lgetv %seconds.4;
+            symbol [ seconds %tmp.52 77 18 25 ];
+            symbol [ format %tmp.53 77 26 32 ];
+            %tmp.53 = getv function %tmp.52 :format;
+            %tmp.54 = "%02d";
+            %tmp.55 = invoke %tmp.52 %tmp.53(%tmp.54);
+            %tmp.56 = add %tmp.51 %tmp.55;
+            ret %tmp.56;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_46_53_78_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 84; @symbol_functiondef = [formatPercent,84,24,37]; @symbol_param<0> = [value,84,38,43]; ]
+        static
+        function formatPercent(value) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_84_45_91_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 86 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_86_12_88_12_if_stmt:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_86_16_86_42_begin:
+            %tmp.1 = lgetv %value;
+            symbol [ value %tmp.1 86 16 21 ];
+            %tmp.2 = null;
+            %tmp.3 = eq %tmp.1 %tmp.2;
+            bt %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_86_12_88_12_if_true;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_86_33_86_42_false:
+            %tmp.4 = lgetv %value;
+            symbol [ value %tmp.4 86 33 38 ];
+            %tmp.5 = as %tmp.4 { (!Null) };
+            %tmp.6 = 0;
+            %tmp.7 = lte %tmp.5 %tmp.6;
+            push %tmp.7;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_86_33_86_42_end:
+            %tmp.8 = phi [%tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_86_16_86_42_begin] [%tmp.7 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_86_33_86_42_false] [%tmp.8 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_86_33_86_42_end];
+            bf %tmp.8 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_86_12_88_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_86_12_88_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_86_45_88_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 87 16 ]
+            %tmp.9 = "--%";
+            ret %tmp.9;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_86_45_88_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_86_12_88_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_86_12_88_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 90 12 ]
+            %tmp.10 = lgetv %value;
+            symbol [ value %tmp.10 90 19 24 ];
+            symbol [ format %tmp.11 90 25 31 ];
+            %tmp.11 = getv function %tmp.10 :format;
+            %tmp.12 = "%.0f";
+            %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
+            %tmp.14 = "%";
+            %tmp.15 = add %tmp.13 %tmp.14;
+            ret %tmp.15;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_84_45_91_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 97; @symbol_functiondef = [formatMilliliters,97,24,41]; @symbol_param<0> = [value,97,42,47]; ]
+        static
+        function formatMilliliters(value) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_97_49_104_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 99 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_99_12_101_12_if_stmt:
+            %tmp.1 = lgetv %value;
+            symbol [ value %tmp.1 99 16 21 ];
+            %tmp.2 = null;
+            %tmp.3 = eq %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_99_12_101_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_99_12_101_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_99_31_101_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 100 16 ]
+            %tmp.4 = "-- ml";
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_99_31_101_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_99_12_101_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_99_12_101_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 103 12 ]
+            %tmp.5 = lgetv %value;
+            symbol [ value %tmp.5 103 19 24 ];
+            symbol [ format %tmp.6 103 25 31 ];
+            %tmp.6 = getv function %tmp.5 :format;
+            %tmp.7 = "%.0f";
+            %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+            %tmp.9 = "ml";
+            %tmp.10 = add %tmp.8 %tmp.9;
+            ret %tmp.10;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_97_49_104_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 106; @symbol_functiondef = [formatLiters,106,24,36]; @symbol_param<0> = [value,106,37,42]; ]
+        static
+        function formatLiters(value) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_106_44_113_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 108 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_108_12_110_12_if_stmt:
+            %tmp.1 = lgetv %value;
+            symbol [ value %tmp.1 108 16 21 ];
+            %tmp.2 = null;
+            %tmp.3 = eq %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_108_12_110_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_108_12_110_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_108_31_110_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 109 16 ]
+            %tmp.4 = "--.-L";
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_108_31_110_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_108_12_110_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_108_12_110_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 112 12 ]
+            %tmp.5 = lgetv %value;
+            symbol [ value %tmp.5 112 19 24 ];
+            symbol [ format %tmp.6 112 25 31 ];
+            %tmp.6 = getv function %tmp.5 :format;
+            %tmp.7 = "%.1f";
+            %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+            %tmp.9 = "L";
+            %tmp.10 = add %tmp.8 %tmp.9;
+            ret %tmp.10;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_106_44_113_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 119; @symbol_functiondef = [formatWatts,119,24,35]; @symbol_param<0> = [value,119,36,41]; ]
+        static
+        function formatWatts(value) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_119_43_126_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 121 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_121_12_123_12_if_stmt:
+            %tmp.1 = lgetv %value;
+            symbol [ value %tmp.1 121 16 21 ];
+            %tmp.2 = null;
+            %tmp.3 = eq %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_121_12_123_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_121_12_123_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_121_31_123_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 122 16 ]
+            %tmp.4 = "--w";
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_121_31_123_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_121_12_123_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_121_12_123_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 125 12 ]
+            %tmp.5 = lgetv %value;
+            symbol [ value %tmp.5 125 19 24 ];
+            symbol [ format %tmp.6 125 25 31 ];
+            %tmp.6 = getv function %tmp.5 :format;
+            %tmp.7 = "%.0f";
+            %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+            %tmp.9 = "w";
+            %tmp.10 = add %tmp.8 %tmp.9;
+            ret %tmp.10;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_119_43_126_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 132; @symbol_functiondef = [formatTemperature,132,24,41]; @symbol_param<0> = [value,132,42,47]; ]
+        static
+        function formatTemperature(value) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_132_49_139_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 134 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_134_12_136_12_if_stmt:
+            %tmp.1 = lgetv %value;
+            symbol [ value %tmp.1 134 16 21 ];
+            %tmp.2 = null;
+            %tmp.3 = eq %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_134_12_136_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_134_12_136_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_134_31_136_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 135 16 ]
+            %tmp.4 = "--°";
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_134_31_136_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_134_12_136_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_134_12_136_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 138 12 ]
+            %tmp.5 = lgetv %value;
+            symbol [ value %tmp.5 138 19 24 ];
+            symbol [ format %tmp.6 138 25 31 ];
+            %tmp.6 = getv function %tmp.5 :format;
+            %tmp.7 = "%.0f";
+            %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+            %tmp.9 = "°";
+            %tmp.10 = add %tmp.8 %tmp.9;
+            ret %tmp.10;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_132_49_139_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 145; @symbol_functiondef = [formatKilometers,145,24,40]; @symbol_param<0> = [value,145,41,46]; ]
+        static
+        function formatKilometers(value) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_145_48_152_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 147 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_147_12_149_12_if_stmt:
+            %tmp.1 = lgetv %value;
+            symbol [ value %tmp.1 147 16 21 ];
+            %tmp.2 = null;
+            %tmp.3 = eq %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_147_12_149_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_147_12_149_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_147_31_149_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 148 16 ]
+            %tmp.4 = "--.-km";
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_147_31_149_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_147_12_149_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_147_12_149_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" 151 12 ]
+            %tmp.5 = lgetv %value;
+            symbol [ value %tmp.5 151 19 24 ];
+            symbol [ format %tmp.6 151 25 31 ];
+            %tmp.6 = getv function %tmp.5 :format;
+            %tmp.7 = "%.1f";
+            %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+            %tmp.9 = "km";
+            %tmp.10 = add %tmp.8 %tmp.9;
+            ret %tmp.10;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_utils_FormatUtils_mc_145_48_152_8_stop:
+        }
+    }
+}
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc"; @line = 1; ]
+<init> {
+}

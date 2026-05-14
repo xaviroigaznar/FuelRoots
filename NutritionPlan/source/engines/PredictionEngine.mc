@@ -1,113 +1,160 @@
 module Engine {
-    using Toybox.Activity;
-    using Toybox.Math;
-    using Toybox.System;
 
     class PredictionEngine {
 
         // =========================
         // CONFIG
         // =========================
-        var glycogenCapacity = 400;
+
+        var glycogenCapacity;
 
         // =========================
         // INIT
         // =========================
-        function initialize() {}
+
+        function initialize() {
+            glycogenCapacity = 400;
+        }
+
+        // =========================
+        // MAIN UPDATE
+        // =========================
 
         function update(state) {
-            state.bonkTimeEstimate = predictBonkTime(state.hydrationDeficit, state.ifValue);
-            state.fuelRecommendation = shouldFuelNow(state.hydrationDeficit, state.ifValue);
+
+            var power = state.currentPower;
+            var elapsed = state.elapsedTime;
+            var hydration = state.hydrationDeficitMl;
+            var glycogen = state.glycogenRemaining;
+
+            // Fatigue model
+            state.fatiguePercent = calculateFatigue(power, elapsed, hydration);
+
+            // Bonk risk
+            state.bonkRisk =
+                calculateBonkRisk(
+                    glycogen,
+                    hydration,
+                    power
+                );
+
+            // Status label
+            state.statusLabel =
+                calculateStatus(
+                    state.fatiguePercent,
+                    state.bonkRisk
+                );
         }
 
         // =========================
-        // CARB BURN
+        // FATIGUE MODEL
         // =========================
-        function estimateCarbBurnRate(IF) {
-            if (IF < 0.60) {
-                return 40;
+
+        function calculateFatigue(
+            power,
+            elapsed,
+            hydration
+        ) {
+
+            var fatigue = 0;
+
+            // Duration contribution
+            fatigue += elapsed / 1800.0;
+
+            if (power != null) {
+                // Power contribution
+                if (power > 180) {
+                    fatigue += 10;
+                }
+
+                if (power > 240) {
+                    fatigue += 15;
+                }
+
+                if (power > 300) {
+                    fatigue += 20;
+                }
             }
 
-            if (IF < 0.70) {
-                return 55;
+            // Hydration contribution
+            fatigue += hydration / 250.0;
+
+            // Clamp
+            if (fatigue > 100) {
+                fatigue = 100;
             }
 
-            if (IF < 0.80) {
-                return 70;
-            }
-
-            if (IF < 0.90) {
-                return 90;
-            }
-
-            return 110;
+            return fatigue;
         }
 
         // =========================
-        // ENERGY STATUS
+        // BONK RISK
         // =========================
-        function getEnergyStatus(deficit) {
-            if (deficit < 30) {
-                return "GREEN";
+
+        function calculateBonkRisk(
+            glycogen,
+            hydration,
+            power
+        ) {
+
+            var risk = 0;
+
+            // Glycogen contribution
+            if (glycogen < 70) {
+                risk += 20;
             }
 
-            if (deficit < 60) {
-                return "LOW";
+            if (glycogen < 40) {
+                risk += 30;
             }
 
-            return "CRITICAL";
+            if (glycogen < 20) {
+                risk += 40;
+            }
+
+            // Hydration contribution
+            if (hydration > 1000) {
+                risk += 15;
+            }
+
+            if (hydration > 1800) {
+                risk += 20;
+            }
+
+            // High power contribution
+            if (power != null && power > 280) {
+                risk += 20;
+            }
+
+            if (risk > 100) {
+                risk = 100;
+            }
+
+            return risk;
         }
 
         // =========================
-        // BONK PREDICTION
+        // STATUS LABEL
         // =========================
-        function predictBonkTime(deficit, IF) {
-            var burnRate = estimateCarbBurnRate(IF);
 
-            var remaining = glycogenCapacity - deficit;
+        function calculateStatus(
+            fatigue,
+            bonkRisk
+        ) {
 
-            if (remaining <= 0) {
-                return 0;
+            if (bonkRisk > 80) {
+                return "CRITICAL";
             }
 
-            return (remaining / burnRate) * 60;
-        }
-
-        // =========================
-        // FUEL ALERT
-        // =========================
-        function shouldFuelNow(deficit, IF) {
-            var status = getEnergyStatus(deficit);
-
-            if (status == "CRITICAL") {
-                return true;
+            if (fatigue > 75) {
+                return "FATIGUED";
             }
 
-            var bonk = predictBonkTime(deficit, IF);
-
-            if (bonk < 20) {
-                return true;
-            }
-
-            return false;
-        }
-        // =========================
-        // NEXT DEMAND
-        // =========================
-        function nextDemand(IF, lapDuration) {
-            if (IF > 0.90) {
-                return "LOW";
-            }
-
-            if (IF < 0.60 && lapDuration > 300) {
-                return "HIGH";
-            }
-
-            if (IF > 0.80) {
+            if (fatigue > 50) {
                 return "MODERATE";
             }
 
-            return "STEADY";
+            return "STABLE";
         }
     }
 }

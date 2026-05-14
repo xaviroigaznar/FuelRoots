@@ -56,427 +56,497 @@
         <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="17" lineNum="74" parent="globals/NutritionPlanView" pc="268436260" symbol="onUpdate"/>
         <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="17" lineNum="76" parent="globals/NutritionPlanView" pc="268436271" symbol="onUpdate"/>
         <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanView.mc" id="17" lineNum="79" parent="globals/NutritionPlanView" pc="268436299" symbol="onUpdate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="50" parent="globals/FuelHydrationField" pc="268436320" symbol="drawMainScreen"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="52" parent="globals/FuelHydrationField" pc="268436323" symbol="drawMainScreen"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="54" parent="globals/FuelHydrationField" pc="268436331" symbol="drawMainScreen"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="55" parent="globals/FuelHydrationField" pc="268436340" symbol="drawMainScreen"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="57" parent="globals/FuelHydrationField" pc="268436349" symbol="drawMainScreen"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="58" parent="globals/FuelHydrationField" pc="268436353" symbol="drawMainScreen"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="63" parent="globals/FuelHydrationField" pc="268436360" symbol="drawMainScreen"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="78" parent="globals/FuelHydrationField" pc="268436435" symbol="drawMainScreen"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="93" parent="globals/FuelHydrationField" pc="268436511" symbol="drawMainScreen"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="17" parent="globals/FuelHydrationField" pc="268436568" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="19" parent="globals/FuelHydrationField" pc="268436571" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="21" parent="globals/FuelHydrationField" pc="268436583" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="23" parent="globals/FuelHydrationField" pc="268436612" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="24" parent="globals/FuelHydrationField" pc="268436642" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="26" parent="globals/FuelHydrationField" pc="268436672" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="27" parent="globals/FuelHydrationField" pc="268436681" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="30" parent="globals/FuelHydrationField" pc="268436694" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="31" parent="globals/FuelHydrationField" pc="268436703" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="34" parent="globals/FuelHydrationField" pc="268436715" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="36" parent="globals/FuelHydrationField" pc="268436749" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="20" lineNum="39" parent="globals/FuelHydrationField" pc="268436781" symbol="onUpdate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="20" lineNum="40" parent="globals/FuelHydrationField" pc="268436784" symbol="onUpdate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="20" lineNum="43" parent="globals/FuelHydrationField" pc="268436796" symbol="onUpdate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="20" lineNum="45" parent="globals/FuelHydrationField" pc="268436812" symbol="onUpdate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="20" lineNum="47" parent="globals/FuelHydrationField" pc="268436825" symbol="onUpdate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="21" lineNum="24" parent="globals/Engine/FuelEngine" pc="268436839" symbol="&lt;init&gt;"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="22" lineNum="10" parent="globals/UI/UIRenderer" pc="268436849" symbol="drawMetricBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="22" lineNum="13" parent="globals/UI/UIRenderer" pc="268436851" symbol="drawMetricBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="22" lineNum="14" parent="globals/UI/UIRenderer" pc="268436863" symbol="drawMetricBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="22" lineNum="17" parent="globals/UI/UIRenderer" pc="268436881" symbol="drawMetricBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="22" lineNum="18" parent="globals/UI/UIRenderer" pc="268436894" symbol="drawMetricBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="22" lineNum="21" parent="globals/UI/UIRenderer" pc="268436912" symbol="drawMetricBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="22" lineNum="22" parent="globals/UI/UIRenderer" pc="268436929" symbol="drawMetricBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="22" lineNum="24" parent="globals/UI/UIRenderer" pc="268436947" symbol="drawMetricBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="22" lineNum="33" parent="globals/UI/UIRenderer" pc="268436973" symbol="drawMetricBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="22" lineNum="35" parent="globals/UI/UIRenderer" pc="268436989" symbol="drawMetricBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="22" lineNum="44" parent="globals/UI/UIRenderer" pc="268437018" symbol="drawMetricBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="22" lineNum="46" parent="globals/UI/UIRenderer" pc="268437035" symbol="drawMetricBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="24" lineNum="56" parent="globals/UI/UIRenderer" pc="268437071" symbol="drawBottomBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="24" lineNum="58" parent="globals/UI/UIRenderer" pc="268437073" symbol="drawBottomBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="24" lineNum="59" parent="globals/UI/UIRenderer" pc="268437085" symbol="drawBottomBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="24" lineNum="61" parent="globals/UI/UIRenderer" pc="268437103" symbol="drawBottomBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="24" lineNum="62" parent="globals/UI/UIRenderer" pc="268437116" symbol="drawBottomBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="24" lineNum="64" parent="globals/UI/UIRenderer" pc="268437134" symbol="drawBottomBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="24" lineNum="65" parent="globals/UI/UIRenderer" pc="268437151" symbol="drawBottomBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="24" lineNum="67" parent="globals/UI/UIRenderer" pc="268437169" symbol="drawBottomBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="24" lineNum="75" parent="globals/UI/UIRenderer" pc="268437195" symbol="drawBottomBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="24" lineNum="77" parent="globals/UI/UIRenderer" pc="268437211" symbol="drawBottomBox"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="25" lineNum="57" parent="globals/Rez/Layouts" pc="268437241" symbol="BottomRightLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="25" lineNum="58" parent="globals/Rez/Layouts" pc="268437252" symbol="BottomRightLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="25" lineNum="60" parent="globals/Rez/Layouts" pc="268437276" symbol="BottomRightLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="25" lineNum="62" parent="globals/Rez/Layouts" pc="268437359" symbol="BottomRightLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="25" lineNum="64" parent="globals/Rez/Layouts" pc="268437442" symbol="BottomRightLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="26" lineNum="37" parent="globals/Rez/Layouts" pc="268437462" symbol="TopRightLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="26" lineNum="38" parent="globals/Rez/Layouts" pc="268437473" symbol="TopRightLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="26" lineNum="40" parent="globals/Rez/Layouts" pc="268437497" symbol="TopRightLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="26" lineNum="42" parent="globals/Rez/Layouts" pc="268437580" symbol="TopRightLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="26" lineNum="44" parent="globals/Rez/Layouts" pc="268437663" symbol="TopRightLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="27" lineNum="47" parent="globals/Rez/Layouts" pc="268437683" symbol="BottomLeftLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="27" lineNum="48" parent="globals/Rez/Layouts" pc="268437694" symbol="BottomLeftLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="27" lineNum="50" parent="globals/Rez/Layouts" pc="268437718" symbol="BottomLeftLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="27" lineNum="52" parent="globals/Rez/Layouts" pc="268437800" symbol="BottomLeftLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="27" lineNum="54" parent="globals/Rez/Layouts" pc="268437882" symbol="BottomLeftLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="28" lineNum="27" parent="globals/Rez/Layouts" pc="268437902" symbol="TopLeftLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="28" lineNum="28" parent="globals/Rez/Layouts" pc="268437913" symbol="TopLeftLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="28" lineNum="30" parent="globals/Rez/Layouts" pc="268437937" symbol="TopLeftLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="28" lineNum="32" parent="globals/Rez/Layouts" pc="268438019" symbol="TopLeftLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="28" lineNum="34" parent="globals/Rez/Layouts" pc="268438101" symbol="TopLeftLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="29" lineNum="13" parent="globals/Rez/Layouts" pc="268438121" symbol="MainLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="29" lineNum="14" parent="globals/Rez/Layouts" pc="268438132" symbol="MainLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="29" lineNum="16" parent="globals/Rez/Layouts" pc="268438141" symbol="MainLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="29" lineNum="18" parent="globals/Rez/Layouts" pc="268438150" symbol="MainLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="29" lineNum="20" parent="globals/Rez/Layouts" pc="268438174" symbol="MainLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="29" lineNum="22" parent="globals/Rez/Layouts" pc="268438281" symbol="MainLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="29" lineNum="24" parent="globals/Rez/Layouts" pc="268438388" symbol="MainLayout"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="30" lineNum="103" parent="globals/Engine/FuelEngine" pc="268438408" symbol="getNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="30" lineNum="105" parent="globals/Engine/FuelEngine" pc="268438410" symbol="getNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="30" lineNum="105" parent="globals/Engine/FuelEngine" pc="268438420" symbol="getNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="30" lineNum="107" parent="globals/Engine/FuelEngine" pc="268438425" symbol="getNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="31" lineNum="48" parent="globals/Engine/FuelEngine" pc="268438454" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="31" lineNum="49" parent="globals/Engine/FuelEngine" pc="268438456" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="31" lineNum="50" parent="globals/Engine/FuelEngine" pc="268438467" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="32" lineNum="159" parent="globals/Engine/FuelEngine" pc="268438483" symbol="registerFuel"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="32" lineNum="160" parent="globals/Engine/FuelEngine" pc="268438485" symbol="registerFuel"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="32" lineNum="162" parent="globals/Engine/FuelEngine" pc="268438500" symbol="registerFuel"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="33" lineNum="119" parent="globals/Engine/FuelEngine" pc="268438513" symbol="getTotalKj"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="33" lineNum="120" parent="globals/Engine/FuelEngine" pc="268438515" symbol="getTotalKj"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="34" lineNum="123" parent="globals/Engine/FuelEngine" pc="268438521" symbol="getLapKj"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="34" lineNum="124" parent="globals/Engine/FuelEngine" pc="268438523" symbol="getLapKj"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="35" lineNum="141" parent="globals/Engine/FuelEngine" pc="268438529" symbol="expectedCarbs"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="35" lineNum="143" parent="globals/Engine/FuelEngine" pc="268438531" symbol="expectedCarbs"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="36" lineNum="56" parent="globals/Engine/FuelEngine" pc="268438547" symbol="updateKj"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="36" lineNum="57" parent="globals/Engine/FuelEngine" pc="268438550" symbol="updateKj"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="36" lineNum="58" parent="globals/Engine/FuelEngine" pc="268438560" symbol="updateKj"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="36" lineNum="59" parent="globals/Engine/FuelEngine" pc="268438573" symbol="updateKj"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="36" lineNum="62" parent="globals/Engine/FuelEngine" pc="268438577" symbol="updateKj"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="36" lineNum="64" parent="globals/Engine/FuelEngine" pc="268438597" symbol="updateKj"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="36" lineNum="66" parent="globals/Engine/FuelEngine" pc="268438607" symbol="updateKj"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="36" lineNum="68" parent="globals/Engine/FuelEngine" pc="268438624" symbol="updateKj"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="36" lineNum="69" parent="globals/Engine/FuelEngine" pc="268438639" symbol="updateKj"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="36" lineNum="72" parent="globals/Engine/FuelEngine" pc="268438657" symbol="updateKj"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="37" lineNum="78" parent="globals/Engine/FuelEngine" pc="268438671" symbol="updateNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="37" lineNum="80" parent="globals/Engine/FuelEngine" pc="268438674" symbol="updateNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="37" lineNum="80" parent="globals/Engine/FuelEngine" pc="268438680" symbol="updateNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="37" lineNum="82" parent="globals/Engine/FuelEngine" pc="268438684" symbol="updateNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="37" lineNum="83" parent="globals/Engine/FuelEngine" pc="268438700" symbol="updateNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="37" lineNum="85" parent="globals/Engine/FuelEngine" pc="268438715" symbol="updateNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="37" lineNum="87" parent="globals/Engine/FuelEngine" pc="268438735" symbol="updateNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="37" lineNum="88" parent="globals/Engine/FuelEngine" pc="268438755" symbol="updateNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="37" lineNum="91" parent="globals/Engine/FuelEngine" pc="268438773" symbol="updateNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="37" lineNum="93" parent="globals/Engine/FuelEngine" pc="268438793" symbol="updateNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="37" lineNum="95" parent="globals/Engine/FuelEngine" pc="268438806" symbol="updateNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="37" lineNum="96" parent="globals/Engine/FuelEngine" pc="268438835" symbol="updateNP"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="38" lineNum="130" parent="globals/Engine/FuelEngine" pc="268438854" symbol="carbsPerHour"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="38" lineNum="132" parent="globals/Engine/FuelEngine" pc="268438857" symbol="carbsPerHour"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="38" lineNum="134" parent="globals/Engine/FuelEngine" pc="268438865" symbol="carbsPerHour"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="38" lineNum="134" parent="globals/Engine/FuelEngine" pc="268438876" symbol="carbsPerHour"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="38" lineNum="135" parent="globals/Engine/FuelEngine" pc="268438891" symbol="carbsPerHour"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="38" lineNum="135" parent="globals/Engine/FuelEngine" pc="268438902" symbol="carbsPerHour"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="38" lineNum="136" parent="globals/Engine/FuelEngine" pc="268438917" symbol="carbsPerHour"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="38" lineNum="136" parent="globals/Engine/FuelEngine" pc="268438928" symbol="carbsPerHour"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="38" lineNum="138" parent="globals/Engine/FuelEngine" pc="268438943" symbol="carbsPerHour"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="39" lineNum="110" parent="globals/Engine/FuelEngine" pc="268438955" symbol="getIF"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="39" lineNum="112" parent="globals/Engine/FuelEngine" pc="268438958" symbol="getIF"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="39" lineNum="114" parent="globals/Engine/FuelEngine" pc="268438966" symbol="getIF"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="39" lineNum="114" parent="globals/Engine/FuelEngine" pc="268438976" symbol="getIF"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="39" lineNum="116" parent="globals/Engine/FuelEngine" pc="268438981" symbol="getIF"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="40" lineNum="150" parent="globals/Engine/FuelEngine" pc="268438990" symbol="getDeficit"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="40" lineNum="152" parent="globals/Engine/FuelEngine" pc="268438992" symbol="getDeficit"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="41" lineNum="165" parent="globals/Engine/FuelEngine" pc="268439009" symbol="onLap"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="41" lineNum="166" parent="globals/Engine/FuelEngine" pc="268439011" symbol="onLap"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="42" lineNum="146" parent="globals/Engine/FuelEngine" pc="268439020" symbol="getConsumedCarbs"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="42" lineNum="147" parent="globals/Engine/FuelEngine" pc="268439022" symbol="getConsumedCarbs"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="43" lineNum="40" parent="globals/Engine/FuelEngine" pc="268439028" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="43" lineNum="41" parent="globals/Engine/FuelEngine" pc="268439030" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="43" lineNum="42" parent="globals/Engine/FuelEngine" pc="268439043" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="44" lineNum="119" parent="globals/Engine/HydrationEngine" pc="268439057" symbol="drinkRegistered"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="44" lineNum="120" parent="globals/Engine/HydrationEngine" pc="268439059" symbol="drinkRegistered"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="45" lineNum="24" parent="globals/Engine/HydrationEngine" pc="268439077" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="45" lineNum="25" parent="globals/Engine/HydrationEngine" pc="268439080" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="45" lineNum="26" parent="globals/Engine/HydrationEngine" pc="268439088" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="45" lineNum="28" parent="globals/Engine/HydrationEngine" pc="268439096" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="45" lineNum="29" parent="globals/Engine/HydrationEngine" pc="268439116" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="35" parent="globals/Engine/HydrationEngine" pc="268439137" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="36" parent="globals/Engine/HydrationEngine" pc="268439140" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="39" parent="globals/Engine/HydrationEngine" pc="268439145" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="40" parent="globals/Engine/HydrationEngine" pc="268439156" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="42" parent="globals/Engine/HydrationEngine" pc="268439164" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="43" parent="globals/Engine/HydrationEngine" pc="268439175" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="45" parent="globals/Engine/HydrationEngine" pc="268439183" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="46" parent="globals/Engine/HydrationEngine" pc="268439194" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="49" parent="globals/Engine/HydrationEngine" pc="268439202" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="53" parent="globals/Engine/HydrationEngine" pc="268439207" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="55" parent="globals/Engine/HydrationEngine" pc="268439213" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="56" parent="globals/Engine/HydrationEngine" pc="268439221" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="59" parent="globals/Engine/HydrationEngine" pc="268439231" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="60" parent="globals/Engine/HydrationEngine" pc="268439239" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="63" parent="globals/Engine/HydrationEngine" pc="268439250" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="64" parent="globals/Engine/HydrationEngine" pc="268439258" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="69" parent="globals/Engine/HydrationEngine" pc="268439272" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="70" parent="globals/Engine/HydrationEngine" pc="268439283" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="46" lineNum="73" parent="globals/Engine/HydrationEngine" pc="268439293" symbol="hydrationRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="47" lineNum="98" parent="globals/Engine/HydrationEngine" pc="268439296" symbol="hydrationRisk"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="47" lineNum="99" parent="globals/Engine/HydrationEngine" pc="268439299" symbol="hydrationRisk"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="47" lineNum="101" parent="globals/Engine/HydrationEngine" pc="268439306" symbol="hydrationRisk"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="47" lineNum="102" parent="globals/Engine/HydrationEngine" pc="268439317" symbol="hydrationRisk"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="47" lineNum="105" parent="globals/Engine/HydrationEngine" pc="268439327" symbol="hydrationRisk"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="47" lineNum="106" parent="globals/Engine/HydrationEngine" pc="268439341" symbol="hydrationRisk"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="47" lineNum="109" parent="globals/Engine/HydrationEngine" pc="268439351" symbol="hydrationRisk"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="47" lineNum="110" parent="globals/Engine/HydrationEngine" pc="268439376" symbol="hydrationRisk"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="47" lineNum="113" parent="globals/Engine/HydrationEngine" pc="268439386" symbol="hydrationRisk"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="48" lineNum="20" parent="globals/Engine/HydrationEngine" pc="268439389" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="48" lineNum="21" parent="globals/Engine/HydrationEngine" pc="268439391" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="49" lineNum="79" parent="globals/Engine/HydrationEngine" pc="268439405" symbol="nextDrinkCountdown"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="49" lineNum="80" parent="globals/Engine/HydrationEngine" pc="268439408" symbol="nextDrinkCountdown"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="49" lineNum="82" parent="globals/Engine/HydrationEngine" pc="268439420" symbol="nextDrinkCountdown"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="49" lineNum="84" parent="globals/Engine/HydrationEngine" pc="268439426" symbol="nextDrinkCountdown"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="49" lineNum="85" parent="globals/Engine/HydrationEngine" pc="268439437" symbol="nextDrinkCountdown"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="49" lineNum="88" parent="globals/Engine/HydrationEngine" pc="268439446" symbol="nextDrinkCountdown"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="49" lineNum="89" parent="globals/Engine/HydrationEngine" pc="268439457" symbol="nextDrinkCountdown"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="49" lineNum="92" parent="globals/Engine/HydrationEngine" pc="268439466" symbol="nextDrinkCountdown"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="50" lineNum="64" parent="globals/Engine/PredictionEngine" pc="268439482" symbol="predictBonkTime"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="50" lineNum="65" parent="globals/Engine/PredictionEngine" pc="268439485" symbol="predictBonkTime"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="50" lineNum="67" parent="globals/Engine/PredictionEngine" pc="268439497" symbol="predictBonkTime"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="50" lineNum="69" parent="globals/Engine/PredictionEngine" pc="268439507" symbol="predictBonkTime"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="50" lineNum="70" parent="globals/Engine/PredictionEngine" pc="268439514" symbol="predictBonkTime"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="50" lineNum="73" parent="globals/Engine/PredictionEngine" pc="268439519" symbol="predictBonkTime"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="51" lineNum="97" parent="globals/Engine/PredictionEngine" pc="268439528" symbol="nextDemand"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="51" lineNum="98" parent="globals/Engine/PredictionEngine" pc="268439530" symbol="nextDemand"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="51" lineNum="99" parent="globals/Engine/PredictionEngine" pc="268439541" symbol="nextDemand"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="51" lineNum="102" parent="globals/Engine/PredictionEngine" pc="268439550" symbol="nextDemand"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="51" lineNum="103" parent="globals/Engine/PredictionEngine" pc="268439570" symbol="nextDemand"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="51" lineNum="106" parent="globals/Engine/PredictionEngine" pc="268439579" symbol="nextDemand"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="51" lineNum="107" parent="globals/Engine/PredictionEngine" pc="268439590" symbol="nextDemand"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="51" lineNum="110" parent="globals/Engine/PredictionEngine" pc="268439599" symbol="nextDemand"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="52" lineNum="18" parent="globals/Engine/PredictionEngine" pc="268439605" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="52" lineNum="19" parent="globals/Engine/PredictionEngine" pc="268439607" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="52" lineNum="20" parent="globals/Engine/PredictionEngine" pc="268439635" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="54" lineNum="49" parent="globals/Engine/PredictionEngine" pc="268439664" symbol="getEnergyStatus"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="54" lineNum="50" parent="globals/Engine/PredictionEngine" pc="268439666" symbol="getEnergyStatus"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="54" lineNum="51" parent="globals/Engine/PredictionEngine" pc="268439674" symbol="getEnergyStatus"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="54" lineNum="54" parent="globals/Engine/PredictionEngine" pc="268439683" symbol="getEnergyStatus"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="54" lineNum="55" parent="globals/Engine/PredictionEngine" pc="268439691" symbol="getEnergyStatus"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="54" lineNum="58" parent="globals/Engine/PredictionEngine" pc="268439700" symbol="getEnergyStatus"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="55" lineNum="26" parent="globals/Engine/PredictionEngine" pc="268439706" symbol="estimateCarbBurnRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="55" lineNum="27" parent="globals/Engine/PredictionEngine" pc="268439708" symbol="estimateCarbBurnRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="55" lineNum="28" parent="globals/Engine/PredictionEngine" pc="268439719" symbol="estimateCarbBurnRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="55" lineNum="31" parent="globals/Engine/PredictionEngine" pc="268439725" symbol="estimateCarbBurnRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="55" lineNum="32" parent="globals/Engine/PredictionEngine" pc="268439736" symbol="estimateCarbBurnRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="55" lineNum="35" parent="globals/Engine/PredictionEngine" pc="268439742" symbol="estimateCarbBurnRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="55" lineNum="36" parent="globals/Engine/PredictionEngine" pc="268439753" symbol="estimateCarbBurnRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="55" lineNum="39" parent="globals/Engine/PredictionEngine" pc="268439759" symbol="estimateCarbBurnRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="55" lineNum="40" parent="globals/Engine/PredictionEngine" pc="268439770" symbol="estimateCarbBurnRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="55" lineNum="43" parent="globals/Engine/PredictionEngine" pc="268439776" symbol="estimateCarbBurnRate"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="56" lineNum="79" parent="globals/Engine/PredictionEngine" pc="268439779" symbol="shouldFuelNow"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="56" lineNum="80" parent="globals/Engine/PredictionEngine" pc="268439782" symbol="shouldFuelNow"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="56" lineNum="82" parent="globals/Engine/PredictionEngine" pc="268439794" symbol="shouldFuelNow"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="56" lineNum="83" parent="globals/Engine/PredictionEngine" pc="268439805" symbol="shouldFuelNow"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="56" lineNum="86" parent="globals/Engine/PredictionEngine" pc="268439810" symbol="shouldFuelNow"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="56" lineNum="88" parent="globals/Engine/PredictionEngine" pc="268439824" symbol="shouldFuelNow"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="56" lineNum="89" parent="globals/Engine/PredictionEngine" pc="268439832" symbol="shouldFuelNow"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="56" lineNum="92" parent="globals/Engine/PredictionEngine" pc="268439837" symbol="shouldFuelNow"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc" id="57" lineNum="6" parent="globals/Session/AthleteProfile" pc="268439839" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc" id="57" lineNum="7" parent="globals/Session/AthleteProfile" pc="268439841" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc" id="57" lineNum="8" parent="globals/Session/AthleteProfile" pc="268439850" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="58" lineNum="71" parent="globals/Session/SessionManager" pc="268439860" symbol="getState"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="58" lineNum="72" parent="globals/Session/SessionManager" pc="268439862" symbol="getState"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="59" lineNum="33" parent="globals/Session/SessionManager" pc="268439868" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="59" lineNum="34" parent="globals/Session/SessionManager" pc="268439871" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="59" lineNum="36" parent="globals/Session/SessionManager" pc="268439882" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="59" lineNum="39" parent="globals/Session/SessionManager" pc="268439894" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="59" lineNum="40" parent="globals/Session/SessionManager" pc="268439909" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="59" lineNum="42" parent="globals/Session/SessionManager" pc="268439928" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="59" lineNum="46" parent="globals/Session/SessionManager" pc="268439940" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="59" lineNum="47" parent="globals/Session/SessionManager" pc="268439956" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="59" lineNum="49" parent="globals/Session/SessionManager" pc="268439975" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="59" lineNum="53" parent="globals/Session/SessionManager" pc="268439987" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="59" lineNum="54" parent="globals/Session/SessionManager" pc="268440003" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="59" lineNum="56" parent="globals/Session/SessionManager" pc="268440022" symbol="update"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="60" lineNum="20" parent="globals/Session/SessionManager" pc="268440035" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="60" lineNum="21" parent="globals/Session/SessionManager" pc="268440037" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="60" lineNum="22" parent="globals/Session/SessionManager" pc="268440062" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="60" lineNum="24" parent="globals/Session/SessionManager" pc="268440071" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="60" lineNum="25" parent="globals/Session/SessionManager" pc="268440105" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="60" lineNum="26" parent="globals/Session/SessionManager" pc="268440139" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="60" lineNum="28" parent="globals/Session/SessionManager" pc="268440168" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="60" lineNum="29" parent="globals/Session/SessionManager" pc="268440176" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="60" lineNum="30" parent="globals/Session/SessionManager" pc="268440184" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="61" lineNum="60" parent="globals/Session/SessionManager" pc="268440193" symbol="updateBaseMetrics"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="61" lineNum="61" parent="globals/Session/SessionManager" pc="268440195" symbol="updateBaseMetrics"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="61" lineNum="62" parent="globals/Session/SessionManager" pc="268440201" symbol="updateBaseMetrics"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="61" lineNum="65" parent="globals/Session/SessionManager" pc="268440205" symbol="updateBaseMetrics"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="61" lineNum="66" parent="globals/Session/SessionManager" pc="268440222" symbol="updateBaseMetrics"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="61" lineNum="67" parent="globals/Session/SessionManager" pc="268440239" symbol="updateBaseMetrics"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="61" lineNum="68" parent="globals/Session/SessionManager" pc="268440256" symbol="updateBaseMetrics"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="60" parent="globals/Session/WorkoutState" pc="268440283" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="62" parent="globals/Session/WorkoutState" pc="268440285" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="63" parent="globals/Session/WorkoutState" pc="268440293" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="64" parent="globals/Session/WorkoutState" pc="268440301" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="65" parent="globals/Session/WorkoutState" pc="268440309" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="67" parent="globals/Session/WorkoutState" pc="268440317" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="68" parent="globals/Session/WorkoutState" pc="268440325" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="69" parent="globals/Session/WorkoutState" pc="268440333" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="71" parent="globals/Session/WorkoutState" pc="268440341" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="72" parent="globals/Session/WorkoutState" pc="268440349" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="73" parent="globals/Session/WorkoutState" pc="268440357" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="74" parent="globals/Session/WorkoutState" pc="268440365" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="75" parent="globals/Session/WorkoutState" pc="268440373" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="76" parent="globals/Session/WorkoutState" pc="268440381" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="78" parent="globals/Session/WorkoutState" pc="268440391" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="79" parent="globals/Session/WorkoutState" pc="268440399" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="80" parent="globals/Session/WorkoutState" pc="268440407" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="81" parent="globals/Session/WorkoutState" pc="268440415" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="82" parent="globals/Session/WorkoutState" pc="268440423" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="83" parent="globals/Session/WorkoutState" pc="268440431" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="85" parent="globals/Session/WorkoutState" pc="268440439" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="86" parent="globals/Session/WorkoutState" pc="268440447" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="88" parent="globals/Session/WorkoutState" pc="268440455" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="89" parent="globals/Session/WorkoutState" pc="268440463" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="90" parent="globals/Session/WorkoutState" pc="268440475" symbol="initialize"/>
-        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="62" lineNum="91" parent="globals/Session/WorkoutState" pc="268440483" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="51" parent="globals/FuelHydrationField" pc="268436320" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="53" parent="globals/FuelHydrationField" pc="268436323" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="55" parent="globals/FuelHydrationField" pc="268436331" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="56" parent="globals/FuelHydrationField" pc="268436340" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="58" parent="globals/FuelHydrationField" pc="268436349" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="64" parent="globals/FuelHydrationField" pc="268436356" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="65" parent="globals/FuelHydrationField" pc="268436363" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="67" parent="globals/FuelHydrationField" pc="268436370" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="68" parent="globals/FuelHydrationField" pc="268436380" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="71" parent="globals/FuelHydrationField" pc="268436391" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="72" parent="globals/FuelHydrationField" pc="268436401" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="75" parent="globals/FuelHydrationField" pc="268436412" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="91" parent="globals/FuelHydrationField" pc="268436447" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="92" parent="globals/FuelHydrationField" pc="268436454" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="94" parent="globals/FuelHydrationField" pc="268436461" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="95" parent="globals/FuelHydrationField" pc="268436471" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="98" parent="globals/FuelHydrationField" pc="268436488" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="99" parent="globals/FuelHydrationField" pc="268436498" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="102" parent="globals/FuelHydrationField" pc="268436532" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="118" parent="globals/FuelHydrationField" pc="268436568" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="119" parent="globals/FuelHydrationField" pc="268436575" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="121" parent="globals/FuelHydrationField" pc="268436582" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="122" parent="globals/FuelHydrationField" pc="268436592" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="125" parent="globals/FuelHydrationField" pc="268436603" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="126" parent="globals/FuelHydrationField" pc="268436613" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="129" parent="globals/FuelHydrationField" pc="268436647" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="131" parent="globals/FuelHydrationField" pc="268436653" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="133" parent="globals/FuelHydrationField" pc="268436663" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="134" parent="globals/FuelHydrationField" pc="268436675" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="136" parent="globals/FuelHydrationField" pc="268436685" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="137" parent="globals/FuelHydrationField" pc="268436697" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="18" lineNum="141" parent="globals/FuelHydrationField" pc="268436710" symbol="drawMainScreen"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="17" parent="globals/FuelHydrationField" pc="268436748" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="19" parent="globals/FuelHydrationField" pc="268436751" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="21" parent="globals/FuelHydrationField" pc="268436763" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="23" parent="globals/FuelHydrationField" pc="268436792" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="24" parent="globals/FuelHydrationField" pc="268436822" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="26" parent="globals/FuelHydrationField" pc="268436852" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="27" parent="globals/FuelHydrationField" pc="268436861" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="30" parent="globals/FuelHydrationField" pc="268436874" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="31" parent="globals/FuelHydrationField" pc="268436883" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="34" parent="globals/FuelHydrationField" pc="268436895" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="19" lineNum="36" parent="globals/FuelHydrationField" pc="268436929" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="20" lineNum="39" parent="globals/FuelHydrationField" pc="268436961" symbol="onUpdate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="20" lineNum="40" parent="globals/FuelHydrationField" pc="268436964" symbol="onUpdate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="20" lineNum="43" parent="globals/FuelHydrationField" pc="268436976" symbol="onUpdate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="20" lineNum="45" parent="globals/FuelHydrationField" pc="268436992" symbol="onUpdate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" id="20" lineNum="47" parent="globals/FuelHydrationField" pc="268437005" symbol="onUpdate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="21" lineNum="24" parent="globals/Engine/FuelEngine" pc="268437019" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="23" lineNum="14" parent="globals/UI/UIRenderer" pc="268437029" symbol="drawMetricCard"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="23" lineNum="27" parent="globals/UI/UIRenderer" pc="268437031" symbol="drawMetricCard"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="23" lineNum="32" parent="globals/UI/UIRenderer" pc="268437043" symbol="drawMetricCard"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="23" lineNum="35" parent="globals/UI/UIRenderer" pc="268437061" symbol="drawMetricCard"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="23" lineNum="40" parent="globals/UI/UIRenderer" pc="268437074" symbol="drawMetricCard"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="23" lineNum="43" parent="globals/UI/UIRenderer" pc="268437092" symbol="drawMetricCard"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="23" lineNum="46" parent="globals/UI/UIRenderer" pc="268437110" symbol="drawMetricCard"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="23" lineNum="51" parent="globals/UI/UIRenderer" pc="268437127" symbol="drawMetricCard"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="23" lineNum="60" parent="globals/UI/UIRenderer" pc="268437152" symbol="drawMetricCard"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="23" lineNum="65" parent="globals/UI/UIRenderer" pc="268437168" symbol="drawMetricCard"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" id="23" lineNum="74" parent="globals/UI/UIRenderer" pc="268437203" symbol="drawMetricCard"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="24" lineNum="84" parent="globals/Utils/FormatUtils" pc="268437238" symbol="formatPercent"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="24" lineNum="86" parent="globals/Utils/FormatUtils" pc="268437240" symbol="formatPercent"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="24" lineNum="87" parent="globals/Utils/FormatUtils" pc="268437253" symbol="formatPercent"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="24" lineNum="90" parent="globals/Utils/FormatUtils" pc="268437262" symbol="formatPercent"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="25" lineNum="97" parent="globals/Utils/FormatUtils" pc="268437283" symbol="formatMilliliters"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="25" lineNum="99" parent="globals/Utils/FormatUtils" pc="268437285" symbol="formatMilliliters"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="25" lineNum="100" parent="globals/Utils/FormatUtils" pc="268437291" symbol="formatMilliliters"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="25" lineNum="103" parent="globals/Utils/FormatUtils" pc="268437300" symbol="formatMilliliters"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="26" lineNum="132" parent="globals/Utils/FormatUtils" pc="268437321" symbol="formatTemperature"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="26" lineNum="134" parent="globals/Utils/FormatUtils" pc="268437323" symbol="formatTemperature"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="26" lineNum="135" parent="globals/Utils/FormatUtils" pc="268437329" symbol="formatTemperature"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="26" lineNum="138" parent="globals/Utils/FormatUtils" pc="268437338" symbol="formatTemperature"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="27" lineNum="46" parent="globals/Utils/FormatUtils" pc="268437359" symbol="formatDuration"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="27" lineNum="48" parent="globals/Utils/FormatUtils" pc="268437362" symbol="formatDuration"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="27" lineNum="49" parent="globals/Utils/FormatUtils" pc="268437368" symbol="formatDuration"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="27" lineNum="52" parent="globals/Utils/FormatUtils" pc="268437377" symbol="formatDuration"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="27" lineNum="55" parent="globals/Utils/FormatUtils" pc="268437386" symbol="formatDuration"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="27" lineNum="58" parent="globals/Utils/FormatUtils" pc="268437406" symbol="formatDuration"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="27" lineNum="61" parent="globals/Utils/FormatUtils" pc="268437429" symbol="formatDuration"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="27" lineNum="64" parent="globals/Utils/FormatUtils" pc="268437436" symbol="formatDuration"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="27" lineNum="66" parent="globals/Utils/FormatUtils" pc="268437443" symbol="formatDuration"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="27" lineNum="74" parent="globals/Utils/FormatUtils" pc="268437503" symbol="formatDuration"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="28" lineNum="119" parent="globals/Utils/FormatUtils" pc="268437539" symbol="formatWatts"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="28" lineNum="121" parent="globals/Utils/FormatUtils" pc="268437541" symbol="formatWatts"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="28" lineNum="122" parent="globals/Utils/FormatUtils" pc="268437547" symbol="formatWatts"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="28" lineNum="125" parent="globals/Utils/FormatUtils" pc="268437556" symbol="formatWatts"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="29" lineNum="16" parent="globals/Utils/FormatUtils" pc="268437577" symbol="formatCountdown"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="29" lineNum="18" parent="globals/Utils/FormatUtils" pc="268437580" symbol="formatCountdown"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="29" lineNum="19" parent="globals/Utils/FormatUtils" pc="268437586" symbol="formatCountdown"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="29" lineNum="22" parent="globals/Utils/FormatUtils" pc="268437595" symbol="formatCountdown"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="29" lineNum="25" parent="globals/Utils/FormatUtils" pc="268437608" symbol="formatCountdown"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="29" lineNum="26" parent="globals/Utils/FormatUtils" pc="268437615" symbol="formatCountdown"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="29" lineNum="29" parent="globals/Utils/FormatUtils" pc="268437621" symbol="formatCountdown"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="29" lineNum="32" parent="globals/Utils/FormatUtils" pc="268437640" symbol="formatCountdown"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="29" lineNum="35" parent="globals/Utils/FormatUtils" pc="268437647" symbol="formatCountdown"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="30" lineNum="106" parent="globals/Utils/FormatUtils" pc="268437683" symbol="formatLiters"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="30" lineNum="108" parent="globals/Utils/FormatUtils" pc="268437685" symbol="formatLiters"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="30" lineNum="109" parent="globals/Utils/FormatUtils" pc="268437691" symbol="formatLiters"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="30" lineNum="112" parent="globals/Utils/FormatUtils" pc="268437700" symbol="formatLiters"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="32" lineNum="145" parent="globals/Utils/FormatUtils" pc="268437721" symbol="formatKilometers"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="32" lineNum="147" parent="globals/Utils/FormatUtils" pc="268437723" symbol="formatKilometers"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="32" lineNum="148" parent="globals/Utils/FormatUtils" pc="268437729" symbol="formatKilometers"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/utils/FormatUtils.mc" id="32" lineNum="151" parent="globals/Utils/FormatUtils" pc="268437738" symbol="formatKilometers"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="57" parent="globals/Rez/Layouts" pc="268437759" symbol="BottomRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="58" parent="globals/Rez/Layouts" pc="268437770" symbol="BottomRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="60" parent="globals/Rez/Layouts" pc="268437794" symbol="BottomRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="62" parent="globals/Rez/Layouts" pc="268437877" symbol="BottomRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="33" lineNum="64" parent="globals/Rez/Layouts" pc="268437960" symbol="BottomRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="37" parent="globals/Rez/Layouts" pc="268437980" symbol="TopRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="38" parent="globals/Rez/Layouts" pc="268437991" symbol="TopRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="40" parent="globals/Rez/Layouts" pc="268438015" symbol="TopRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="42" parent="globals/Rez/Layouts" pc="268438098" symbol="TopRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="34" lineNum="44" parent="globals/Rez/Layouts" pc="268438181" symbol="TopRightLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="47" parent="globals/Rez/Layouts" pc="268438201" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="48" parent="globals/Rez/Layouts" pc="268438212" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="50" parent="globals/Rez/Layouts" pc="268438236" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="52" parent="globals/Rez/Layouts" pc="268438318" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="35" lineNum="54" parent="globals/Rez/Layouts" pc="268438400" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="27" parent="globals/Rez/Layouts" pc="268438420" symbol="TopLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="28" parent="globals/Rez/Layouts" pc="268438431" symbol="TopLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="30" parent="globals/Rez/Layouts" pc="268438455" symbol="TopLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="32" parent="globals/Rez/Layouts" pc="268438537" symbol="TopLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="36" lineNum="34" parent="globals/Rez/Layouts" pc="268438619" symbol="TopLeftLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="37" lineNum="13" parent="globals/Rez/Layouts" pc="268438639" symbol="MainLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="37" lineNum="14" parent="globals/Rez/Layouts" pc="268438650" symbol="MainLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="37" lineNum="16" parent="globals/Rez/Layouts" pc="268438659" symbol="MainLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="37" lineNum="18" parent="globals/Rez/Layouts" pc="268438668" symbol="MainLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="37" lineNum="20" parent="globals/Rez/Layouts" pc="268438692" symbol="MainLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="37" lineNum="22" parent="globals/Rez/Layouts" pc="268438799" symbol="MainLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/bin/gen/006-B3843-00/source/Rez.mcgen" id="37" lineNum="24" parent="globals/Rez/Layouts" pc="268438906" symbol="MainLayout"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="38" lineNum="103" parent="globals/Engine/FuelEngine" pc="268438926" symbol="getNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="38" lineNum="105" parent="globals/Engine/FuelEngine" pc="268438928" symbol="getNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="38" lineNum="105" parent="globals/Engine/FuelEngine" pc="268438938" symbol="getNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="38" lineNum="107" parent="globals/Engine/FuelEngine" pc="268438943" symbol="getNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="39" lineNum="48" parent="globals/Engine/FuelEngine" pc="268438972" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="39" lineNum="49" parent="globals/Engine/FuelEngine" pc="268438974" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="39" lineNum="50" parent="globals/Engine/FuelEngine" pc="268438985" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="40" lineNum="159" parent="globals/Engine/FuelEngine" pc="268439001" symbol="registerFuel"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="40" lineNum="160" parent="globals/Engine/FuelEngine" pc="268439003" symbol="registerFuel"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="40" lineNum="162" parent="globals/Engine/FuelEngine" pc="268439018" symbol="registerFuel"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="41" lineNum="119" parent="globals/Engine/FuelEngine" pc="268439031" symbol="getTotalKj"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="41" lineNum="120" parent="globals/Engine/FuelEngine" pc="268439033" symbol="getTotalKj"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="42" lineNum="123" parent="globals/Engine/FuelEngine" pc="268439039" symbol="getLapKj"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="42" lineNum="124" parent="globals/Engine/FuelEngine" pc="268439041" symbol="getLapKj"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="43" lineNum="141" parent="globals/Engine/FuelEngine" pc="268439047" symbol="expectedCarbs"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="43" lineNum="143" parent="globals/Engine/FuelEngine" pc="268439049" symbol="expectedCarbs"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="44" lineNum="56" parent="globals/Engine/FuelEngine" pc="268439065" symbol="updateKj"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="44" lineNum="57" parent="globals/Engine/FuelEngine" pc="268439068" symbol="updateKj"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="44" lineNum="58" parent="globals/Engine/FuelEngine" pc="268439078" symbol="updateKj"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="44" lineNum="59" parent="globals/Engine/FuelEngine" pc="268439091" symbol="updateKj"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="44" lineNum="62" parent="globals/Engine/FuelEngine" pc="268439095" symbol="updateKj"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="44" lineNum="64" parent="globals/Engine/FuelEngine" pc="268439115" symbol="updateKj"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="44" lineNum="66" parent="globals/Engine/FuelEngine" pc="268439125" symbol="updateKj"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="44" lineNum="68" parent="globals/Engine/FuelEngine" pc="268439142" symbol="updateKj"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="44" lineNum="69" parent="globals/Engine/FuelEngine" pc="268439157" symbol="updateKj"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="44" lineNum="72" parent="globals/Engine/FuelEngine" pc="268439175" symbol="updateKj"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="45" lineNum="78" parent="globals/Engine/FuelEngine" pc="268439189" symbol="updateNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="45" lineNum="80" parent="globals/Engine/FuelEngine" pc="268439192" symbol="updateNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="45" lineNum="80" parent="globals/Engine/FuelEngine" pc="268439198" symbol="updateNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="45" lineNum="82" parent="globals/Engine/FuelEngine" pc="268439202" symbol="updateNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="45" lineNum="83" parent="globals/Engine/FuelEngine" pc="268439218" symbol="updateNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="45" lineNum="85" parent="globals/Engine/FuelEngine" pc="268439233" symbol="updateNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="45" lineNum="87" parent="globals/Engine/FuelEngine" pc="268439253" symbol="updateNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="45" lineNum="88" parent="globals/Engine/FuelEngine" pc="268439273" symbol="updateNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="45" lineNum="91" parent="globals/Engine/FuelEngine" pc="268439291" symbol="updateNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="45" lineNum="93" parent="globals/Engine/FuelEngine" pc="268439311" symbol="updateNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="45" lineNum="95" parent="globals/Engine/FuelEngine" pc="268439324" symbol="updateNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="45" lineNum="96" parent="globals/Engine/FuelEngine" pc="268439353" symbol="updateNP"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="46" lineNum="130" parent="globals/Engine/FuelEngine" pc="268439372" symbol="carbsPerHour"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="46" lineNum="132" parent="globals/Engine/FuelEngine" pc="268439375" symbol="carbsPerHour"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="46" lineNum="134" parent="globals/Engine/FuelEngine" pc="268439383" symbol="carbsPerHour"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="46" lineNum="134" parent="globals/Engine/FuelEngine" pc="268439394" symbol="carbsPerHour"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="46" lineNum="135" parent="globals/Engine/FuelEngine" pc="268439409" symbol="carbsPerHour"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="46" lineNum="135" parent="globals/Engine/FuelEngine" pc="268439420" symbol="carbsPerHour"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="46" lineNum="136" parent="globals/Engine/FuelEngine" pc="268439435" symbol="carbsPerHour"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="46" lineNum="136" parent="globals/Engine/FuelEngine" pc="268439446" symbol="carbsPerHour"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="46" lineNum="138" parent="globals/Engine/FuelEngine" pc="268439461" symbol="carbsPerHour"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="47" lineNum="110" parent="globals/Engine/FuelEngine" pc="268439473" symbol="getIF"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="47" lineNum="112" parent="globals/Engine/FuelEngine" pc="268439476" symbol="getIF"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="47" lineNum="114" parent="globals/Engine/FuelEngine" pc="268439484" symbol="getIF"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="47" lineNum="114" parent="globals/Engine/FuelEngine" pc="268439494" symbol="getIF"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="47" lineNum="116" parent="globals/Engine/FuelEngine" pc="268439499" symbol="getIF"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="48" lineNum="150" parent="globals/Engine/FuelEngine" pc="268439508" symbol="getDeficit"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="48" lineNum="152" parent="globals/Engine/FuelEngine" pc="268439510" symbol="getDeficit"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="49" lineNum="165" parent="globals/Engine/FuelEngine" pc="268439527" symbol="onLap"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="49" lineNum="166" parent="globals/Engine/FuelEngine" pc="268439529" symbol="onLap"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="50" lineNum="146" parent="globals/Engine/FuelEngine" pc="268439538" symbol="getConsumedCarbs"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="50" lineNum="147" parent="globals/Engine/FuelEngine" pc="268439540" symbol="getConsumedCarbs"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="51" lineNum="40" parent="globals/Engine/FuelEngine" pc="268439546" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="51" lineNum="41" parent="globals/Engine/FuelEngine" pc="268439548" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" id="51" lineNum="42" parent="globals/Engine/FuelEngine" pc="268439561" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="64" parent="globals/Engine/HydrationEngine" pc="268439575" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="66" parent="globals/Engine/HydrationEngine" pc="268439578" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="71" parent="globals/Engine/HydrationEngine" pc="268439583" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="72" parent="globals/Engine/HydrationEngine" pc="268439589" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="73" parent="globals/Engine/HydrationEngine" pc="268439598" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="76" parent="globals/Engine/HydrationEngine" pc="268439609" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="77" parent="globals/Engine/HydrationEngine" pc="268439618" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="80" parent="globals/Engine/HydrationEngine" pc="268439629" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="81" parent="globals/Engine/HydrationEngine" pc="268439638" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="89" parent="globals/Engine/HydrationEngine" pc="268439652" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="91" parent="globals/Engine/HydrationEngine" pc="268439658" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="92" parent="globals/Engine/HydrationEngine" pc="268439666" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="95" parent="globals/Engine/HydrationEngine" pc="268439676" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="96" parent="globals/Engine/HydrationEngine" pc="268439684" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="99" parent="globals/Engine/HydrationEngine" pc="268439695" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="100" parent="globals/Engine/HydrationEngine" pc="268439703" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="108" parent="globals/Engine/HydrationEngine" pc="268439717" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="109" parent="globals/Engine/HydrationEngine" pc="268439728" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="52" lineNum="112" parent="globals/Engine/HydrationEngine" pc="268439738" symbol="calculateSweatRate"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="53" lineNum="119" parent="globals/Engine/HydrationEngine" pc="268439741" symbol="calculateNextDrink"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="53" lineNum="121" parent="globals/Engine/HydrationEngine" pc="268439744" symbol="calculateNextDrink"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="53" lineNum="123" parent="globals/Engine/HydrationEngine" pc="268439756" symbol="calculateNextDrink"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="53" lineNum="125" parent="globals/Engine/HydrationEngine" pc="268439762" symbol="calculateNextDrink"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="53" lineNum="127" parent="globals/Engine/HydrationEngine" pc="268439768" symbol="calculateNextDrink"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="53" lineNum="128" parent="globals/Engine/HydrationEngine" pc="268439777" symbol="calculateNextDrink"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="53" lineNum="131" parent="globals/Engine/HydrationEngine" pc="268439786" symbol="calculateNextDrink"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="53" lineNum="132" parent="globals/Engine/HydrationEngine" pc="268439795" symbol="calculateNextDrink"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="53" lineNum="136" parent="globals/Engine/HydrationEngine" pc="268439807" symbol="calculateNextDrink"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="53" lineNum="139" parent="globals/Engine/HydrationEngine" pc="268439826" symbol="calculateNextDrink"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="53" lineNum="140" parent="globals/Engine/HydrationEngine" pc="268439833" symbol="calculateNextDrink"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="53" lineNum="143" parent="globals/Engine/HydrationEngine" pc="268439839" symbol="calculateNextDrink"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="54" lineNum="171" parent="globals/Engine/HydrationEngine" pc="268439842" symbol="drinkRegistered"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="54" lineNum="173" parent="globals/Engine/HydrationEngine" pc="268439844" symbol="drinkRegistered"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="55" lineNum="33" parent="globals/Engine/HydrationEngine" pc="268439862" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="55" lineNum="34" parent="globals/Engine/HydrationEngine" pc="268439865" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="55" lineNum="35" parent="globals/Engine/HydrationEngine" pc="268439873" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="55" lineNum="36" parent="globals/Engine/HydrationEngine" pc="268439881" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="55" lineNum="39" parent="globals/Engine/HydrationEngine" pc="268439889" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="55" lineNum="44" parent="globals/Engine/HydrationEngine" pc="268439903" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="55" lineNum="47" parent="globals/Engine/HydrationEngine" pc="268439913" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="55" lineNum="49" parent="globals/Engine/HydrationEngine" pc="268439926" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="55" lineNum="52" parent="globals/Engine/HydrationEngine" pc="268439936" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="55" lineNum="54" parent="globals/Engine/HydrationEngine" pc="268439954" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="55" lineNum="57" parent="globals/Engine/HydrationEngine" pc="268439985" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="56" lineNum="23" parent="globals/Engine/HydrationEngine" pc="268440004" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="56" lineNum="24" parent="globals/Engine/HydrationEngine" pc="268440006" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="56" lineNum="26" parent="globals/Engine/HydrationEngine" pc="268440019" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="57" lineNum="150" parent="globals/Engine/HydrationEngine" pc="268440037" symbol="calculateHydrationLabel"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="57" lineNum="152" parent="globals/Engine/HydrationEngine" pc="268440039" symbol="calculateHydrationLabel"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="57" lineNum="153" parent="globals/Engine/HydrationEngine" pc="268440048" symbol="calculateHydrationLabel"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="57" lineNum="156" parent="globals/Engine/HydrationEngine" pc="268440057" symbol="calculateHydrationLabel"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="57" lineNum="157" parent="globals/Engine/HydrationEngine" pc="268440066" symbol="calculateHydrationLabel"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="57" lineNum="160" parent="globals/Engine/HydrationEngine" pc="268440075" symbol="calculateHydrationLabel"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="57" lineNum="161" parent="globals/Engine/HydrationEngine" pc="268440084" symbol="calculateHydrationLabel"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" id="57" lineNum="164" parent="globals/Engine/HydrationEngine" pc="268440093" symbol="calculateHydrationLabel"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="94" parent="globals/Engine/PredictionEngine" pc="268440099" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="100" parent="globals/Engine/PredictionEngine" pc="268440102" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="103" parent="globals/Engine/PredictionEngine" pc="268440105" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="104" parent="globals/Engine/PredictionEngine" pc="268440113" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="107" parent="globals/Engine/PredictionEngine" pc="268440123" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="108" parent="globals/Engine/PredictionEngine" pc="268440131" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="111" parent="globals/Engine/PredictionEngine" pc="268440141" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="112" parent="globals/Engine/PredictionEngine" pc="268440149" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="116" parent="globals/Engine/PredictionEngine" pc="268440159" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="117" parent="globals/Engine/PredictionEngine" pc="268440168" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="120" parent="globals/Engine/PredictionEngine" pc="268440178" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="121" parent="globals/Engine/PredictionEngine" pc="268440187" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="125" parent="globals/Engine/PredictionEngine" pc="268440197" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="126" parent="globals/Engine/PredictionEngine" pc="268440212" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="129" parent="globals/Engine/PredictionEngine" pc="268440222" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="130" parent="globals/Engine/PredictionEngine" pc="268440230" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="58" lineNum="133" parent="globals/Engine/PredictionEngine" pc="268440237" symbol="calculateBonkRisk"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="59" lineNum="140" parent="globals/Engine/PredictionEngine" pc="268440240" symbol="calculateStatus"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="59" lineNum="145" parent="globals/Engine/PredictionEngine" pc="268440242" symbol="calculateStatus"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="59" lineNum="146" parent="globals/Engine/PredictionEngine" pc="268440250" symbol="calculateStatus"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="59" lineNum="149" parent="globals/Engine/PredictionEngine" pc="268440259" symbol="calculateStatus"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="59" lineNum="150" parent="globals/Engine/PredictionEngine" pc="268440267" symbol="calculateStatus"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="59" lineNum="153" parent="globals/Engine/PredictionEngine" pc="268440276" symbol="calculateStatus"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="59" lineNum="154" parent="globals/Engine/PredictionEngine" pc="268440284" symbol="calculateStatus"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="59" lineNum="157" parent="globals/Engine/PredictionEngine" pc="268440293" symbol="calculateStatus"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="60" lineNum="23" parent="globals/Engine/PredictionEngine" pc="268440299" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="60" lineNum="25" parent="globals/Engine/PredictionEngine" pc="268440302" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="60" lineNum="26" parent="globals/Engine/PredictionEngine" pc="268440310" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="60" lineNum="27" parent="globals/Engine/PredictionEngine" pc="268440318" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="60" lineNum="28" parent="globals/Engine/PredictionEngine" pc="268440326" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="60" lineNum="31" parent="globals/Engine/PredictionEngine" pc="268440334" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="60" lineNum="34" parent="globals/Engine/PredictionEngine" pc="268440356" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="60" lineNum="42" parent="globals/Engine/PredictionEngine" pc="268440378" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="61" lineNum="15" parent="globals/Engine/PredictionEngine" pc="268440407" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="61" lineNum="16" parent="globals/Engine/PredictionEngine" pc="268440409" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="62" lineNum="53" parent="globals/Engine/PredictionEngine" pc="268440420" symbol="calculateFatigue"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="62" lineNum="59" parent="globals/Engine/PredictionEngine" pc="268440423" symbol="calculateFatigue"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="62" lineNum="62" parent="globals/Engine/PredictionEngine" pc="268440426" symbol="calculateFatigue"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="62" lineNum="64" parent="globals/Engine/PredictionEngine" pc="268440439" symbol="calculateFatigue"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="62" lineNum="66" parent="globals/Engine/PredictionEngine" pc="268440445" symbol="calculateFatigue"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="62" lineNum="67" parent="globals/Engine/PredictionEngine" pc="268440454" symbol="calculateFatigue"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="62" lineNum="70" parent="globals/Engine/PredictionEngine" pc="268440464" symbol="calculateFatigue"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="62" lineNum="71" parent="globals/Engine/PredictionEngine" pc="268440473" symbol="calculateFatigue"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="62" lineNum="74" parent="globals/Engine/PredictionEngine" pc="268440483" symbol="calculateFatigue"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="62" lineNum="75" parent="globals/Engine/PredictionEngine" pc="268440492" symbol="calculateFatigue"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="62" lineNum="80" parent="globals/Engine/PredictionEngine" pc="268440505" symbol="calculateFatigue"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="62" lineNum="83" parent="globals/Engine/PredictionEngine" pc="268440518" symbol="calculateFatigue"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="62" lineNum="84" parent="globals/Engine/PredictionEngine" pc="268440526" symbol="calculateFatigue"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/PredictionEngine.mc" id="62" lineNum="87" parent="globals/Engine/PredictionEngine" pc="268440533" symbol="calculateFatigue"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc" id="63" lineNum="6" parent="globals/Session/AthleteProfile" pc="268440536" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc" id="63" lineNum="7" parent="globals/Session/AthleteProfile" pc="268440538" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc" id="63" lineNum="8" parent="globals/Session/AthleteProfile" pc="268440547" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="64" lineNum="71" parent="globals/Session/SessionManager" pc="268440557" symbol="getState"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="64" lineNum="72" parent="globals/Session/SessionManager" pc="268440559" symbol="getState"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="65" lineNum="33" parent="globals/Session/SessionManager" pc="268440565" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="65" lineNum="34" parent="globals/Session/SessionManager" pc="268440568" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="65" lineNum="36" parent="globals/Session/SessionManager" pc="268440579" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="65" lineNum="39" parent="globals/Session/SessionManager" pc="268440591" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="65" lineNum="40" parent="globals/Session/SessionManager" pc="268440606" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="65" lineNum="42" parent="globals/Session/SessionManager" pc="268440625" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="65" lineNum="46" parent="globals/Session/SessionManager" pc="268440637" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="65" lineNum="47" parent="globals/Session/SessionManager" pc="268440653" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="65" lineNum="49" parent="globals/Session/SessionManager" pc="268440672" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="65" lineNum="53" parent="globals/Session/SessionManager" pc="268440684" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="65" lineNum="54" parent="globals/Session/SessionManager" pc="268440700" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="65" lineNum="56" parent="globals/Session/SessionManager" pc="268440719" symbol="update"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="66" lineNum="20" parent="globals/Session/SessionManager" pc="268440732" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="66" lineNum="21" parent="globals/Session/SessionManager" pc="268440734" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="66" lineNum="22" parent="globals/Session/SessionManager" pc="268440759" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="66" lineNum="24" parent="globals/Session/SessionManager" pc="268440768" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="66" lineNum="25" parent="globals/Session/SessionManager" pc="268440802" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="66" lineNum="26" parent="globals/Session/SessionManager" pc="268440836" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="66" lineNum="28" parent="globals/Session/SessionManager" pc="268440865" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="66" lineNum="29" parent="globals/Session/SessionManager" pc="268440873" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="66" lineNum="30" parent="globals/Session/SessionManager" pc="268440881" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="67" lineNum="60" parent="globals/Session/SessionManager" pc="268440890" symbol="updateBaseMetrics"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="67" lineNum="61" parent="globals/Session/SessionManager" pc="268440892" symbol="updateBaseMetrics"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="67" lineNum="62" parent="globals/Session/SessionManager" pc="268440898" symbol="updateBaseMetrics"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="67" lineNum="65" parent="globals/Session/SessionManager" pc="268440902" symbol="updateBaseMetrics"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="67" lineNum="66" parent="globals/Session/SessionManager" pc="268440919" symbol="updateBaseMetrics"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="67" lineNum="67" parent="globals/Session/SessionManager" pc="268440936" symbol="updateBaseMetrics"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" id="67" lineNum="68" parent="globals/Session/SessionManager" pc="268440953" symbol="updateBaseMetrics"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="49" parent="globals/Session/WorkoutState" pc="268440980" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="52" parent="globals/Session/WorkoutState" pc="268440982" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="53" parent="globals/Session/WorkoutState" pc="268440990" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="54" parent="globals/Session/WorkoutState" pc="268440998" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="55" parent="globals/Session/WorkoutState" pc="268441006" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="56" parent="globals/Session/WorkoutState" pc="268441014" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="59" parent="globals/Session/WorkoutState" pc="268441022" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="60" parent="globals/Session/WorkoutState" pc="268441031" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="62" parent="globals/Session/WorkoutState" pc="268441039" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="63" parent="globals/Session/WorkoutState" pc="268441051" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="66" parent="globals/Session/WorkoutState" pc="268441063" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="67" parent="globals/Session/WorkoutState" pc="268441071" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="68" parent="globals/Session/WorkoutState" pc="268441079" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="69" parent="globals/Session/WorkoutState" pc="268441091" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="71" parent="globals/Session/WorkoutState" pc="268441103" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="72" parent="globals/Session/WorkoutState" pc="268441111" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="75" parent="globals/Session/WorkoutState" pc="268441119" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="76" parent="globals/Session/WorkoutState" pc="268441127" symbol="initialize"/>
+        <entry filename="/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" id="68" lineNum="78" parent="globals/Session/WorkoutState" pc="268441135" symbol="initialize"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="7" module="true" symbol="globals/Session"/>
         <entry id="8388639" module="true" symbol="Graphics"/>
-        <entry id="66" method="true" symbol="nextDemand"/>
-        <entry id="76" method="true" symbol="updateBaseMetrics"/>
-        <entry id="11" object="true" symbol="NutritionPlanApp"/>
+        <entry id="32" method="true" symbol="formatCountdown"/>
+        <entry id="76" method="true" symbol="calculateStatus"/>
+        <entry id="85" method="true" symbol="updateBaseMetrics"/>
+        <entry id="13" object="true" symbol="NutritionPlanApp"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
-        <entry field="true" id="47" symbol="lastEatKj"/>
-        <entry id="45" method="true" symbol="getTotalKj"/>
-        <entry id="32" method="true" symbol="MainLayout"/>
-        <entry id="41" method="true" symbol="getDeficit"/>
+        <entry field="true" id="58" symbol="lastEatKj"/>
+        <entry id="56" method="true" symbol="getTotalKj"/>
+        <entry id="43" method="true" symbol="MainLayout"/>
+        <entry id="52" method="true" symbol="getDeficit"/>
         <entry field="true" id="8388737" symbol="calories"/>
-        <entry field="true" id="91" symbol="intensityFactor"/>
-        <entry id="68" method="true" symbol="shouldFuelNow"/>
-        <entry field="true" id="83" symbol="fatigueScore"/>
-        <entry id="64" method="true" symbol="getEnergyStatus"/>
-        <entry id="22" object="true" symbol="HydrationEngine"/>
-        <entry field="true" id="16" symbol="mValue"/>
-        <entry id="43" method="true" symbol="getLapKj"/>
-        <entry field="true" id="48" symbol="lastTime"/>
-        <entry field="true" id="49" symbol="npCount"/>
-        <entry id="12" object="true" symbol="NutritionPlanView"/>
-        <entry field="true" id="50" symbol="npSum"/>
-        <entry field="true" id="80" symbol="carbDeficit"/>
-        <entry id="14" object="true" symbol="UIRenderer"/>
-        <entry field="true" id="19" symbol="renderer"/>
-        <entry field="true" id="60" method="true" symbol="hydrationRisk"/>
-        <entry id="27" method="true" symbol="drawBottomBox"/>
-        <entry id="37" method="true" symbol="carbsPerHour"/>
+        <entry id="26" object="true" symbol="HydrationEngine"/>
+        <entry field="true" id="20" symbol="mValue"/>
+        <entry id="54" method="true" symbol="getLapKj"/>
+        <entry field="true" id="59" symbol="lastTime"/>
+        <entry field="true" id="60" symbol="npCount"/>
+        <entry id="14" object="true" symbol="NutritionPlanView"/>
+        <entry field="true" id="61" symbol="npSum"/>
+        <entry id="17" object="true" symbol="UIRenderer"/>
+        <entry field="true" id="23" symbol="renderer"/>
+        <entry id="39" method="true" symbol="formatWatts"/>
+        <entry field="true" id="94" symbol="hydrationStateLabel"/>
+        <entry id="48" method="true" symbol="carbsPerHour"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
-        <entry field="true" id="73" symbol="lastPredictionUpdate"/>
-        <entry field="true" id="75" symbol="profile"/>
-        <entry field="true" id="94" symbol="perceivedLoad"/>
-        <entry field="true" id="88" symbol="hydrationDeficit"/>
+        <entry field="true" id="82" symbol="lastPredictionUpdate"/>
+        <entry field="true" id="84" symbol="profile"/>
         <entry field="true" id="8388962" symbol="temperature"/>
-        <entry field="true" id="65" symbol="glycogenCapacity"/>
-        <entry field="true" id="81" symbol="carbsConsumed"/>
-        <entry field="true" id="35" symbol="AppName"/>
-        <entry field="true" id="46" symbol="lapKj"/>
-        <entry id="39" method="true" symbol="expectedCarbs"/>
+        <entry field="true" id="77" symbol="glycogenCapacity"/>
+        <entry field="true" id="46" symbol="AppName"/>
+        <entry field="true" id="57" symbol="lapKj"/>
+        <entry id="50" method="true" symbol="expectedCarbs"/>
         <entry id="6" module="true" symbol="globals/Rez/Strings"/>
-        <entry id="9" module="true" symbol="Engine"/>
-        <entry field="true" id="72" symbol="lastHydrationUpdate"/>
-        <entry field="true" id="95" symbol="sweatRate"/>
+        <entry id="11" module="true" symbol="Engine"/>
+        <entry field="true" id="81" symbol="lastHydrationUpdate"/>
+        <entry field="true" id="97" symbol="sweatRate"/>
         <entry id="8388631" module="true" symbol="Activity"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
         <entry field="true" id="8389138" symbol="label"/>
         <entry id="3" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="93" symbol="hydrationLoss"/>
+        <entry field="true" id="87" symbol="carbBurnRate"/>
+        <entry field="true" id="90" symbol="fuelStateLabel"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
         <entry field="true" id="8389065" symbol="locY"/>
         <entry field="true" id="8389064" symbol="locX"/>
-        <entry field="true" id="55" symbol="totalKj"/>
+        <entry field="true" id="66" symbol="totalKj"/>
         <entry id="8391489" module="true" symbol="Weather"/>
-        <entry id="62" method="true" symbol="nextDrinkCountdown"/>
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
         <entry id="8389348" symbol="font"/>
-        <entry id="10" object="true" symbol="FuelHydrationField"/>
+        <entry field="true" id="88" symbol="drinkCountdownLabel"/>
+        <entry id="12" object="true" symbol="FuelHydrationField"/>
         <entry id="8389275" method="true" symbol="getApp"/>
         <entry id="5" module="true" symbol="globals/Rez/Layouts"/>
-        <entry field="true" id="93" symbol="np"/>
-        <entry field="true" id="59" method="true" symbol="hydrationRate"/>
         <entry id="8388879" module="true" object="true" symbol="Session"/>
-        <entry field="true" id="18" symbol="ftp"/>
-        <entry field="true" id="86" symbol="fuelRecommendation"/>
+        <entry field="true" id="22" symbol="ftp"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
-        <entry id="58" method="true" symbol="drinkRegistered"/>
-        <entry field="true" id="71" symbol="lastFuelUpdate"/>
+        <entry id="72" method="true" symbol="drinkRegistered"/>
+        <entry field="true" id="80" symbol="lastFuelUpdate"/>
         <entry field="true" id="8389063" symbol="identifier"/>
         <entry id="8389349" symbol="justification"/>
-        <entry field="true" id="20" symbol="sessionManager"/>
+        <entry field="true" id="24" symbol="sessionManager"/>
         <entry id="8389137" method="true" symbol="compute"/>
-        <entry field="true" id="36" symbol="bufferSize"/>
+        <entry field="true" id="47" symbol="bufferSize"/>
         <entry field="true" id="8388742" symbol="currentPower"/>
-        <entry field="true" id="61" symbol="lastDrinkTime"/>
-        <entry field="true" id="54" symbol="rollingSum"/>
+        <entry field="true" id="73" symbol="lastDrinkTime"/>
+        <entry id="33" method="true" symbol="formatDuration"/>
+        <entry field="true" id="65" symbol="rollingSum"/>
         <entry id="8389131" method="true" symbol="setColor"/>
+        <entry id="18" object="true" symbol="FormatUtils"/>
         <entry id="4" module="true" symbol="globals/Rez/Drawables"/>
-        <entry id="13" module="true" symbol="UI"/>
-        <entry id="33" method="true" symbol="TopLeftLayout"/>
-        <entry id="25" object="true" symbol="SessionManager"/>
-        <entry id="24" object="true" symbol="AthleteProfile"/>
+        <entry id="15" module="true" symbol="UI"/>
+        <entry field="true" id="92" symbol="hydrationDeficitMl"/>
+        <entry id="44" method="true" symbol="TopLeftLayout"/>
+        <entry id="29" object="true" symbol="SessionManager"/>
+        <entry id="28" object="true" symbol="AthleteProfile"/>
         <entry id="8388644" module="true" symbol="System"/>
+        <entry id="37" method="true" symbol="formatPercent"/>
         <entry field="true" id="8389143" symbol="weight"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
-        <entry id="30" method="true" symbol="BottomLeftLayout"/>
-        <entry field="true" id="79" symbol="carbConsumptionRate"/>
+        <entry id="41" method="true" symbol="BottomLeftLayout"/>
         <entry id="8" module="true" symbol="globals/UI"/>
-        <entry id="31" method="true" symbol="BottomRightLayout"/>
-        <entry field="true" id="69" symbol="fuelEngine"/>
+        <entry id="42" method="true" symbol="BottomRightLayout"/>
+        <entry field="true" id="78" symbol="fuelEngine"/>
         <entry id="8388640" module="true" symbol="Lang"/>
-        <entry id="26" object="true" symbol="WorkoutState"/>
-        <entry id="17" method="true" symbol="drawMainScreen"/>
-        <entry field="true" id="87" symbol="glycogenEstimate"/>
+        <entry id="30" object="true" symbol="WorkoutState"/>
+        <entry id="21" method="true" symbol="drawMainScreen"/>
+        <entry id="34" method="true" symbol="formatKilometers"/>
         <entry field="true" id="8389130" symbol="mColor"/>
         <entry id="8389068" method="true" symbol="draw"/>
-        <entry field="true" id="29" symbol="LauncherIcon"/>
+        <entry field="true" id="40" symbol="LauncherIcon"/>
         <entry id="8388610" symbol="statics"/>
-        <entry id="51" method="true" symbol="onLap"/>
-        <entry field="true" id="78" symbol="bonkTimeEstimate"/>
+        <entry id="62" method="true" symbol="onLap"/>
+        <entry id="69" method="true" symbol="calculateHydrationLabel"/>
         <entry id="8389350" module="true" symbol="globals"/>
         <entry id="8388770" module="true" object="true" symbol="Strings"/>
-        <entry field="true" id="84" symbol="fluidIntake"/>
-        <entry id="23" object="true" symbol="PredictionEngine"/>
+        <entry id="10" module="true" symbol="globals/Utils/FormatUtils/&lt;statics&gt;"/>
+        <entry id="27" object="true" symbol="PredictionEngine"/>
         <entry id="8390146" module="true" object="true" symbol="Background"/>
+        <entry field="true" id="8388960" symbol="heartRate"/>
         <entry id="8388702" method="true" symbol="initialize"/>
-        <entry id="57" method="true" symbol="updateNP"/>
-        <entry field="true" id="77" symbol="bonkRisk"/>
+        <entry field="true" id="91" symbol="glycogenRemaining"/>
+        <entry id="68" method="true" symbol="updateNP"/>
+        <entry field="true" id="86" symbol="bonkRisk"/>
         <entry id="8389279" method="true" symbol="onStart"/>
-        <entry field="true" id="89" symbol="hydrationRecommendation"/>
-        <entry id="56" method="true" symbol="updateKj"/>
+        <entry id="67" method="true" symbol="updateKj"/>
+        <entry id="16" module="true" symbol="Utils"/>
         <entry id="8389902" method="true" symbol="getState"/>
-        <entry id="28" method="true" symbol="drawMetricBox"/>
+        <entry field="true" id="98" symbol="timeToDepletion"/>
+        <entry field="true" id="95" symbol="minutesUntilDrink"/>
+        <entry id="36" method="true" symbol="formatMilliliters"/>
         <entry id="8388641" module="true" symbol="Math"/>
+        <entry id="70" method="true" symbol="calculateNextDrink"/>
+        <entry id="9" module="true" symbol="globals/Utils"/>
+        <entry id="71" method="true" symbol="calculateSweatRate"/>
         <entry field="true" id="8388747" symbol="currentHeartRate"/>
+        <entry id="31" method="true" symbol="drawMetricCard"/>
         <entry id="8389280" method="true" symbol="getInitialView"/>
         <entry id="8389281" method="true" symbol="onStop"/>
-        <entry field="true" id="38" symbol="consumedCarbs"/>
+        <entry field="true" id="49" symbol="consumedCarbs"/>
         <entry field="true" id="8389347" symbol="color"/>
-        <entry id="63" method="true" symbol="estimateCarbBurnRate"/>
+        <entry id="35" method="true" symbol="formatLiters"/>
         <entry field="true" id="8388732" symbol="elapsedTime"/>
-        <entry field="true" id="82" symbol="carbsRequired"/>
-        <entry field="true" id="52" symbol="powerBuffer"/>
-        <entry id="15" module="true" symbol="Layouts"/>
+        <entry field="true" id="63" symbol="powerBuffer"/>
+        <entry id="75" method="true" symbol="calculateFatigue"/>
+        <entry id="19" module="true" symbol="Layouts"/>
         <entry field="true" id="8389487" symbol="state"/>
-        <entry id="53" method="true" symbol="registerFuel"/>
+        <entry id="64" method="true" symbol="registerFuel"/>
         <entry id="2" module="true" symbol="globals/Engine"/>
-        <entry id="44" method="true" symbol="getNP"/>
-        <entry id="21" object="true" symbol="FuelEngine"/>
-        <entry field="true" id="74" symbol="predictionEngine"/>
-        <entry id="67" method="true" symbol="predictBonkTime"/>
-        <entry id="42" method="true" symbol="getIF"/>
-        <entry id="40" method="true" symbol="getConsumedCarbs"/>
+        <entry id="55" method="true" symbol="getNP"/>
+        <entry id="25" object="true" symbol="FuelEngine"/>
+        <entry field="true" id="83" symbol="predictionEngine"/>
+        <entry field="true" id="96" symbol="statusLabel"/>
+        <entry id="53" method="true" symbol="getIF"/>
+        <entry id="51" method="true" symbol="getConsumedCarbs"/>
         <entry id="8390514" method="true" symbol="update"/>
-        <entry field="true" id="85" symbol="fluidLossTotal"/>
-        <entry field="true" id="70" symbol="hydrationEngine"/>
+        <entry field="true" id="79" symbol="hydrationEngine"/>
+        <entry field="true" id="89" symbol="fatiguePercent"/>
         <entry id="8388635" module="true" symbol="Application"/>
-        <entry field="true" id="92" symbol="kjAccumulated"/>
-        <entry id="34" method="true" symbol="TopRightLayout"/>
-        <entry field="true" id="90" symbol="ifValue"/>
+        <entry id="38" method="true" symbol="formatTemperature"/>
+        <entry id="74" method="true" symbol="calculateBonkRisk"/>
+        <entry id="45" method="true" symbol="TopRightLayout"/>
     </symbolTable>
     <localVars>
         <entry arg="true" endPc="268435609" name="color" stackId="1" startPc="268435598"/>
@@ -489,99 +559,116 @@
         <entry endPc="268436092" name="valueView" stackId="4" startPc="268435969"/>
         <entry arg="true" endPc="268436319" name="dc" stackId="1" startPc="268436167"/>
         <entry endPc="268436318" name="value" stackId="2" startPc="268436170"/>
-        <entry arg="true" endPc="268436567" name="dc" stackId="1" startPc="268436320"/>
-        <entry arg="true" endPc="268436567" name="state" stackId="2" startPc="268436320"/>
-        <entry endPc="268436566" name="width" stackId="3" startPc="268436323"/>
-        <entry endPc="268436566" name="height" stackId="4" startPc="268436323"/>
-        <entry endPc="268436566" name="boxWidth" stackId="5" startPc="268436323"/>
-        <entry endPc="268436566" name="boxHeight" stackId="6" startPc="268436323"/>
-        <entry endPc="268436779" name="profile" stackId="1" startPc="268436571"/>
-        <entry arg="true" endPc="268436838" name="dc" stackId="1" startPc="268436781"/>
-        <entry endPc="268436837" name="info" stackId="2" startPc="268436784"/>
-        <entry endPc="268436837" name="state" stackId="3" startPc="268436784"/>
-        <entry arg="true" endPc="268437070" name="dc" stackId="1" startPc="268436849"/>
-        <entry arg="true" endPc="268437070" name="x" stackId="2" startPc="268436849"/>
-        <entry arg="true" endPc="268437070" name="y" stackId="3" startPc="268436849"/>
-        <entry arg="true" endPc="268437070" name="w" stackId="4" startPc="268436849"/>
-        <entry arg="true" endPc="268437070" name="h" stackId="5" startPc="268436849"/>
-        <entry arg="true" endPc="268437070" name="color" stackId="6" startPc="268436849"/>
-        <entry arg="true" endPc="268437070" name="title" stackId="7" startPc="268436849"/>
-        <entry arg="true" endPc="268437070" name="value" stackId="8" startPc="268436849"/>
-        <entry arg="true" endPc="268437070" name="subValue" stackId="9" startPc="268436849"/>
-        <entry arg="true" endPc="268437240" name="dc" stackId="1" startPc="268437071"/>
-        <entry arg="true" endPc="268437240" name="x" stackId="2" startPc="268437071"/>
-        <entry arg="true" endPc="268437240" name="y" stackId="3" startPc="268437071"/>
-        <entry arg="true" endPc="268437240" name="w" stackId="4" startPc="268437071"/>
-        <entry arg="true" endPc="268437240" name="h" stackId="5" startPc="268437071"/>
-        <entry arg="true" endPc="268437240" name="color" stackId="6" startPc="268437071"/>
-        <entry arg="true" endPc="268437240" name="title" stackId="7" startPc="268437071"/>
-        <entry arg="true" endPc="268437240" name="value" stackId="8" startPc="268437071"/>
-        <entry arg="true" endPc="268437461" name="dc" stackId="1" startPc="268437241"/>
-        <entry endPc="268437461" name="rez_cmp_local_custom_drawable_16187860511068497434" stackId="2" startPc="268437252"/>
-        <entry endPc="268437461" name="rez_cmp_local_text_label" stackId="3" startPc="268437252"/>
-        <entry endPc="268437461" name="rez_cmp_local_text_value" stackId="4" startPc="268437252"/>
-        <entry arg="true" endPc="268437682" name="dc" stackId="1" startPc="268437462"/>
-        <entry endPc="268437682" name="rez_cmp_local_custom_drawable_11824933295158922413" stackId="2" startPc="268437473"/>
-        <entry endPc="268437682" name="rez_cmp_local_text_label" stackId="3" startPc="268437473"/>
-        <entry endPc="268437682" name="rez_cmp_local_text_value" stackId="4" startPc="268437473"/>
-        <entry arg="true" endPc="268437901" name="dc" stackId="1" startPc="268437683"/>
-        <entry endPc="268437901" name="rez_cmp_local_custom_drawable_16380678501279751870" stackId="2" startPc="268437694"/>
-        <entry endPc="268437901" name="rez_cmp_local_text_label" stackId="3" startPc="268437694"/>
-        <entry endPc="268437901" name="rez_cmp_local_text_value" stackId="4" startPc="268437694"/>
-        <entry arg="true" endPc="268438120" name="dc" stackId="1" startPc="268437902"/>
-        <entry endPc="268438120" name="rez_cmp_local_custom_drawable_83741574912206153191" stackId="2" startPc="268437913"/>
-        <entry endPc="268438120" name="rez_cmp_local_text_label" stackId="3" startPc="268437913"/>
-        <entry endPc="268438120" name="rez_cmp_local_text_value" stackId="4" startPc="268437913"/>
-        <entry arg="true" endPc="268438407" name="dc" stackId="1" startPc="268438121"/>
-        <entry endPc="268438407" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268438132"/>
-        <entry endPc="268438407" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268438132"/>
-        <entry endPc="268438407" name="rez_cmp_local_custom_drawable_11939594661139614796" stackId="4" startPc="268438132"/>
-        <entry endPc="268438407" name="rez_cmp_local_text_label" stackId="5" startPc="268438132"/>
-        <entry endPc="268438407" name="rez_cmp_local_text_value" stackId="6" startPc="268438132"/>
-        <entry arg="true" endPc="268438482" name="info" stackId="1" startPc="268438454"/>
-        <entry arg="true" endPc="268438512" name="intake" stackId="1" startPc="268438483"/>
-        <entry arg="true" endPc="268438546" name="elapsedTime" stackId="1" startPc="268438529"/>
-        <entry arg="true" endPc="268438670" name="info" stackId="1" startPc="268438547"/>
-        <entry endPc="268438669" name="delta" stackId="2" startPc="268438550"/>
-        <entry endPc="268438653" name="kjInc" stackId="3" startPc="268438607"/>
-        <entry arg="true" endPc="268438853" name="power" stackId="1" startPc="268438671"/>
-        <entry endPc="268438849" name="avg30" stackId="2" startPc="268438793"/>
-        <entry endPc="268438954" name="IF" stackId="1" startPc="268438857"/>
-        <entry endPc="268438989" name="np" stackId="1" startPc="268438958"/>
-        <entry arg="true" endPc="268439008" name="elapsedTime" stackId="1" startPc="268438990"/>
-        <entry arg="true" endPc="268439056" name="profile" stackId="1" startPc="268439028"/>
-        <entry arg="true" endPc="268439136" name="state" stackId="1" startPc="268439077"/>
-        <entry endPc="268439135" name="ifValue" stackId="2" startPc="268439080"/>
-        <entry endPc="268439135" name="temp" stackId="3" startPc="268439080"/>
-        <entry arg="true" endPc="268439295" name="IF" stackId="1" startPc="268439137"/>
-        <entry arg="true" endPc="268439295" name="temperature" stackId="2" startPc="268439137"/>
-        <entry endPc="268439295" name="rate" stackId="3" startPc="268439140"/>
-        <entry arg="true" endPc="268439388" name="IF" stackId="1" startPc="268439296"/>
-        <entry arg="true" endPc="268439388" name="temperature" stackId="2" startPc="268439296"/>
-        <entry endPc="268439388" name="risk" stackId="3" startPc="268439299"/>
-        <entry arg="true" endPc="268439404" name="profile" stackId="1" startPc="268439389"/>
-        <entry arg="true" endPc="268439481" name="IF" stackId="1" startPc="268439405"/>
-        <entry endPc="268439481" name="now" stackId="2" startPc="268439408"/>
-        <entry endPc="268439481" name="interval" stackId="3" startPc="268439408"/>
-        <entry arg="true" endPc="268439527" name="deficit" stackId="1" startPc="268439482"/>
-        <entry arg="true" endPc="268439527" name="IF" stackId="2" startPc="268439482"/>
-        <entry endPc="268439527" name="burnRate" stackId="3" startPc="268439485"/>
-        <entry endPc="268439527" name="remaining" stackId="4" startPc="268439485"/>
-        <entry arg="true" endPc="268439604" name="IF" stackId="1" startPc="268439528"/>
-        <entry arg="true" endPc="268439604" name="lapDuration" stackId="2" startPc="268439528"/>
-        <entry arg="true" endPc="268439663" name="state" stackId="1" startPc="268439605"/>
-        <entry arg="true" endPc="268439705" name="deficit" stackId="1" startPc="268439664"/>
-        <entry arg="true" endPc="268439778" name="IF" stackId="1" startPc="268439706"/>
-        <entry arg="true" endPc="268439838" name="deficit" stackId="1" startPc="268439779"/>
-        <entry arg="true" endPc="268439838" name="IF" stackId="2" startPc="268439779"/>
-        <entry endPc="268439838" name="status" stackId="3" startPc="268439782"/>
-        <entry endPc="268439838" name="bonk" stackId="4" startPc="268439782"/>
-        <entry arg="true" endPc="268439859" name="ftpValue" stackId="1" startPc="268439839"/>
-        <entry arg="true" endPc="268439859" name="weightValue" stackId="2" startPc="268439839"/>
-        <entry arg="true" endPc="268440034" name="info" stackId="1" startPc="268439868"/>
-        <entry endPc="268440033" name="now" stackId="2" startPc="268439871"/>
-        <entry arg="true" endPc="268440192" name="profileData" stackId="1" startPc="268440035"/>
-        <entry arg="true" endPc="268440282" name="info" stackId="1" startPc="268440193"/>
+        <entry arg="true" endPc="268436747" name="dc" stackId="1" startPc="268436320"/>
+        <entry arg="true" endPc="268436747" name="state" stackId="2" startPc="268436320"/>
+        <entry endPc="268436746" name="width" stackId="3" startPc="268436323"/>
+        <entry endPc="268436746" name="height" stackId="4" startPc="268436323"/>
+        <entry endPc="268436746" name="cardHeight" stackId="5" startPc="268436323"/>
+        <entry endPc="268436746" name="fuelMain" stackId="6" startPc="268436323"/>
+        <entry endPc="268436746" name="fuelSecondary" stackId="7" startPc="268436323"/>
+        <entry endPc="268436746" name="hydrationMain" stackId="8" startPc="268436323"/>
+        <entry endPc="268436746" name="hydrationSecondary" stackId="9" startPc="268436323"/>
+        <entry endPc="268436746" name="statusMain" stackId="10" startPc="268436323"/>
+        <entry endPc="268436746" name="statusSecondary" stackId="11" startPc="268436323"/>
+        <entry endPc="268436746" name="statusColor" stackId="12" startPc="268436323"/>
+        <entry endPc="268436959" name="profile" stackId="1" startPc="268436751"/>
+        <entry arg="true" endPc="268437018" name="dc" stackId="1" startPc="268436961"/>
+        <entry endPc="268437017" name="info" stackId="2" startPc="268436964"/>
+        <entry endPc="268437017" name="state" stackId="3" startPc="268436964"/>
+        <entry arg="true" endPc="268437237" name="dc" stackId="1" startPc="268437029"/>
+        <entry arg="true" endPc="268437237" name="x" stackId="2" startPc="268437029"/>
+        <entry arg="true" endPc="268437237" name="y" stackId="3" startPc="268437029"/>
+        <entry arg="true" endPc="268437237" name="w" stackId="4" startPc="268437029"/>
+        <entry arg="true" endPc="268437237" name="h" stackId="5" startPc="268437029"/>
+        <entry arg="true" endPc="268437237" name="color" stackId="6" startPc="268437029"/>
+        <entry arg="true" endPc="268437237" name="title" stackId="7" startPc="268437029"/>
+        <entry arg="true" endPc="268437237" name="primaryValue" stackId="8" startPc="268437029"/>
+        <entry arg="true" endPc="268437237" name="secondaryValue" stackId="9" startPc="268437029"/>
+        <entry arg="true" endPc="268437282" name="value" stackId="1" startPc="268437238"/>
+        <entry arg="true" endPc="268437320" name="value" stackId="1" startPc="268437283"/>
+        <entry arg="true" endPc="268437358" name="value" stackId="1" startPc="268437321"/>
+        <entry arg="true" endPc="268437538" name="secondsValue" stackId="1" startPc="268437359"/>
+        <entry endPc="268437538" name="totalSeconds" stackId="2" startPc="268437362"/>
+        <entry endPc="268437538" name="hours" stackId="3" startPc="268437362"/>
+        <entry endPc="268437538" name="minutes" stackId="4" startPc="268437362"/>
+        <entry endPc="268437538" name="seconds" stackId="5" startPc="268437362"/>
+        <entry arg="true" endPc="268437576" name="value" stackId="1" startPc="268437539"/>
+        <entry arg="true" endPc="268437682" name="minutesValue" stackId="1" startPc="268437577"/>
+        <entry endPc="268437682" name="totalSeconds" stackId="2" startPc="268437580"/>
+        <entry endPc="268437682" name="minutes" stackId="3" startPc="268437580"/>
+        <entry endPc="268437682" name="seconds" stackId="4" startPc="268437580"/>
+        <entry arg="true" endPc="268437720" name="value" stackId="1" startPc="268437683"/>
+        <entry arg="true" endPc="268437758" name="value" stackId="1" startPc="268437721"/>
+        <entry arg="true" endPc="268437979" name="dc" stackId="1" startPc="268437759"/>
+        <entry endPc="268437979" name="rez_cmp_local_custom_drawable_16187860511068497434" stackId="2" startPc="268437770"/>
+        <entry endPc="268437979" name="rez_cmp_local_text_label" stackId="3" startPc="268437770"/>
+        <entry endPc="268437979" name="rez_cmp_local_text_value" stackId="4" startPc="268437770"/>
+        <entry arg="true" endPc="268438200" name="dc" stackId="1" startPc="268437980"/>
+        <entry endPc="268438200" name="rez_cmp_local_custom_drawable_11824933295158922413" stackId="2" startPc="268437991"/>
+        <entry endPc="268438200" name="rez_cmp_local_text_label" stackId="3" startPc="268437991"/>
+        <entry endPc="268438200" name="rez_cmp_local_text_value" stackId="4" startPc="268437991"/>
+        <entry arg="true" endPc="268438419" name="dc" stackId="1" startPc="268438201"/>
+        <entry endPc="268438419" name="rez_cmp_local_custom_drawable_16380678501279751870" stackId="2" startPc="268438212"/>
+        <entry endPc="268438419" name="rez_cmp_local_text_label" stackId="3" startPc="268438212"/>
+        <entry endPc="268438419" name="rez_cmp_local_text_value" stackId="4" startPc="268438212"/>
+        <entry arg="true" endPc="268438638" name="dc" stackId="1" startPc="268438420"/>
+        <entry endPc="268438638" name="rez_cmp_local_custom_drawable_83741574912206153191" stackId="2" startPc="268438431"/>
+        <entry endPc="268438638" name="rez_cmp_local_text_label" stackId="3" startPc="268438431"/>
+        <entry endPc="268438638" name="rez_cmp_local_text_value" stackId="4" startPc="268438431"/>
+        <entry arg="true" endPc="268438925" name="dc" stackId="1" startPc="268438639"/>
+        <entry endPc="268438925" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268438650"/>
+        <entry endPc="268438925" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268438650"/>
+        <entry endPc="268438925" name="rez_cmp_local_custom_drawable_11939594661139614796" stackId="4" startPc="268438650"/>
+        <entry endPc="268438925" name="rez_cmp_local_text_label" stackId="5" startPc="268438650"/>
+        <entry endPc="268438925" name="rez_cmp_local_text_value" stackId="6" startPc="268438650"/>
+        <entry arg="true" endPc="268439000" name="info" stackId="1" startPc="268438972"/>
+        <entry arg="true" endPc="268439030" name="intake" stackId="1" startPc="268439001"/>
+        <entry arg="true" endPc="268439064" name="elapsedTime" stackId="1" startPc="268439047"/>
+        <entry arg="true" endPc="268439188" name="info" stackId="1" startPc="268439065"/>
+        <entry endPc="268439187" name="delta" stackId="2" startPc="268439068"/>
+        <entry endPc="268439171" name="kjInc" stackId="3" startPc="268439125"/>
+        <entry arg="true" endPc="268439371" name="power" stackId="1" startPc="268439189"/>
+        <entry endPc="268439367" name="avg30" stackId="2" startPc="268439311"/>
+        <entry endPc="268439472" name="IF" stackId="1" startPc="268439375"/>
+        <entry endPc="268439507" name="np" stackId="1" startPc="268439476"/>
+        <entry arg="true" endPc="268439526" name="elapsedTime" stackId="1" startPc="268439508"/>
+        <entry arg="true" endPc="268439574" name="profile" stackId="1" startPc="268439546"/>
+        <entry arg="true" endPc="268439740" name="power" stackId="1" startPc="268439575"/>
+        <entry arg="true" endPc="268439740" name="temperature" stackId="2" startPc="268439575"/>
+        <entry endPc="268439740" name="rate" stackId="3" startPc="268439578"/>
+        <entry arg="true" endPc="268439841" name="power" stackId="1" startPc="268439741"/>
+        <entry endPc="268439841" name="now" stackId="2" startPc="268439744"/>
+        <entry endPc="268439841" name="interval" stackId="3" startPc="268439744"/>
+        <entry endPc="268439841" name="remaining" stackId="4" startPc="268439744"/>
+        <entry arg="true" endPc="268440003" name="state" stackId="1" startPc="268439862"/>
+        <entry endPc="268440002" name="power" stackId="2" startPc="268439865"/>
+        <entry endPc="268440002" name="temp" stackId="3" startPc="268439865"/>
+        <entry endPc="268440002" name="elapsed" stackId="4" startPc="268439865"/>
+        <entry endPc="268440002" name="sweatRate" stackId="5" startPc="268439865"/>
+        <entry endPc="268440002" name="lossMl" stackId="6" startPc="268439865"/>
+        <entry arg="true" endPc="268440036" name="profile" stackId="1" startPc="268440004"/>
+        <entry arg="true" endPc="268440098" name="lossMl" stackId="1" startPc="268440037"/>
+        <entry arg="true" endPc="268440239" name="glycogen" stackId="1" startPc="268440099"/>
+        <entry arg="true" endPc="268440239" name="hydration" stackId="2" startPc="268440099"/>
+        <entry arg="true" endPc="268440239" name="power" stackId="3" startPc="268440099"/>
+        <entry endPc="268440239" name="risk" stackId="4" startPc="268440102"/>
+        <entry arg="true" endPc="268440298" name="fatigue" stackId="1" startPc="268440240"/>
+        <entry arg="true" endPc="268440298" name="bonkRisk" stackId="2" startPc="268440240"/>
+        <entry arg="true" endPc="268440406" name="state" stackId="1" startPc="268440299"/>
+        <entry endPc="268440405" name="power" stackId="2" startPc="268440302"/>
+        <entry endPc="268440405" name="elapsed" stackId="3" startPc="268440302"/>
+        <entry endPc="268440405" name="hydration" stackId="4" startPc="268440302"/>
+        <entry endPc="268440405" name="glycogen" stackId="5" startPc="268440302"/>
+        <entry arg="true" endPc="268440535" name="power" stackId="1" startPc="268440420"/>
+        <entry arg="true" endPc="268440535" name="elapsed" stackId="2" startPc="268440420"/>
+        <entry arg="true" endPc="268440535" name="hydration" stackId="3" startPc="268440420"/>
+        <entry endPc="268440535" name="fatigue" stackId="4" startPc="268440423"/>
+        <entry arg="true" endPc="268440556" name="ftpValue" stackId="1" startPc="268440536"/>
+        <entry arg="true" endPc="268440556" name="weightValue" stackId="2" startPc="268440536"/>
+        <entry arg="true" endPc="268440731" name="info" stackId="1" startPc="268440565"/>
+        <entry endPc="268440730" name="now" stackId="2" startPc="268440568"/>
+        <entry arg="true" endPc="268440889" name="profileData" stackId="1" startPc="268440732"/>
+        <entry arg="true" endPc="268440979" name="info" stackId="1" startPc="268440890"/>
     </localVars>
     <deviceInfo deviceVersion="45fe3cbb0de8ea0a70e12628d2697915f1272301" partNumber="006-B3843-00"/>
     <annotations>
@@ -590,25 +677,28 @@
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="label"/>
     </annotations>
     <dataEntryOffsetMappings>
-        <dataEntry label="globals" offset="85" parentId="" symbolId="globals" type="module"/>
-        <dataEntry label="globals/NutritionPlanApp" offset="197" parentId="globals" symbolId="NutritionPlanApp" type="class"/>
-        <dataEntry label="globals/Background" offset="268" parentId="globals" symbolId="Background" type="class"/>
-        <dataEntry label="globals/UI" offset="339" parentId="globals" symbolId="UI" type="module"/>
-        <dataEntry label="globals/Rez" offset="374" parentId="globals" symbolId="Rez" type="module"/>
-        <dataEntry label="globals/NutritionPlanView" offset="427" parentId="globals" symbolId="NutritionPlanView" type="class"/>
-        <dataEntry label="globals/FuelHydrationField" offset="507" parentId="globals" symbolId="FuelHydrationField" type="class"/>
-        <dataEntry label="globals/Engine" offset="605" parentId="globals" symbolId="Engine" type="module"/>
-        <dataEntry label="globals/Session" offset="658" parentId="globals" symbolId="Session" type="module"/>
-        <dataEntry label="globals/UI/UIRenderer" offset="711" parentId="UI" symbolId="UIRenderer" type="class"/>
-        <dataEntry label="globals/Rez/Drawables" offset="773" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry label="globals/Rez/Layouts" offset="808" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry label="globals/Rez/Strings" offset="879" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry label="globals/Engine/FuelEngine" offset="923" parentId="Engine" symbolId="FuelEngine" type="class"/>
-        <dataEntry label="globals/Engine/HydrationEngine" offset="1192" parentId="Engine" symbolId="HydrationEngine" type="class"/>
-        <dataEntry label="globals/Engine/PredictionEngine" offset="1299" parentId="Engine" symbolId="PredictionEngine" type="class"/>
-        <dataEntry label="globals/Session/AthleteProfile" offset="1406" parentId="Session" symbolId="AthleteProfile" type="class"/>
-        <dataEntry label="globals/Session/SessionManager" offset="1468" parentId="Session" symbolId="SessionManager" type="class"/>
-        <dataEntry label="globals/Session/WorkoutState" offset="1611" parentId="Session" symbolId="WorkoutState" type="class"/>
+        <dataEntry label="globals" offset="103" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/NutritionPlanApp" offset="224" parentId="globals" symbolId="NutritionPlanApp" type="class"/>
+        <dataEntry label="globals/Background" offset="295" parentId="globals" symbolId="Background" type="class"/>
+        <dataEntry label="globals/UI" offset="366" parentId="globals" symbolId="UI" type="module"/>
+        <dataEntry label="globals/Utils" offset="401" parentId="globals" symbolId="Utils" type="module"/>
+        <dataEntry label="globals/Rez" offset="436" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/NutritionPlanView" offset="489" parentId="globals" symbolId="NutritionPlanView" type="class"/>
+        <dataEntry label="globals/FuelHydrationField" offset="569" parentId="globals" symbolId="FuelHydrationField" type="class"/>
+        <dataEntry label="globals/Engine" offset="667" parentId="globals" symbolId="Engine" type="module"/>
+        <dataEntry label="globals/Session" offset="720" parentId="globals" symbolId="Session" type="module"/>
+        <dataEntry label="globals/UI/UIRenderer" offset="773" parentId="UI" symbolId="UIRenderer" type="class"/>
+        <dataEntry label="globals/Utils/FormatUtils" offset="826" parentId="Utils" symbolId="FormatUtils" type="class"/>
+        <dataEntry label="globals/Utils/FormatUtils/&lt;statics&gt;" offset="874" parentId="FormatUtils" symbolId="&lt;statics&gt;" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="968" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="1003" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1074" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Engine/FuelEngine" offset="1118" parentId="Engine" symbolId="FuelEngine" type="class"/>
+        <dataEntry label="globals/Engine/HydrationEngine" offset="1387" parentId="Engine" symbolId="HydrationEngine" type="class"/>
+        <dataEntry label="globals/Engine/PredictionEngine" offset="1494" parentId="Engine" symbolId="PredictionEngine" type="class"/>
+        <dataEntry label="globals/Session/AthleteProfile" offset="1583" parentId="Session" symbolId="AthleteProfile" type="class"/>
+        <dataEntry label="globals/Session/SessionManager" offset="1645" parentId="Session" symbolId="SessionManager" type="class"/>
+        <dataEntry label="globals/Session/WorkoutState" offset="1788" parentId="Session" symbolId="WorkoutState" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="NutritionPlanApp" startPc="268435460">
@@ -621,6 +711,9 @@
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="UI">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Utils">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" endPc="268435524" name="&lt;init&gt;" parent="Rez" startPc="268435505">
@@ -666,6 +759,12 @@
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="UIRenderer">
             <documentation/>
         </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="FormatUtils">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="globals/Utils/FormatUtils">
+            <documentation/>
+        </functionEntry>
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
             <documentation/>
         </functionEntry>
@@ -690,19 +789,19 @@
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436567" name="drawMainScreen" parent="FuelHydrationField" startPc="268436320">
+        <functionEntry accessMode="public" endPc="268436747" name="drawMainScreen" parent="FuelHydrationField" startPc="268436320">
             <param id="dc"/>
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436780" name="initialize" parent="FuelHydrationField" startPc="268436568">
+        <functionEntry accessMode="public" endPc="268436960" name="initialize" parent="FuelHydrationField" startPc="268436748">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436838" name="onUpdate" parent="FuelHydrationField" startPc="268436781">
+        <functionEntry accessMode="public" endPc="268437018" name="onUpdate" parent="FuelHydrationField" startPc="268436961">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436848" name="&lt;init&gt;" parent="FuelEngine" startPc="268436839">
+        <functionEntry accessMode="public" endPc="268437028" name="&lt;init&gt;" parent="FuelEngine" startPc="268437019">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="HydrationEngine">
@@ -720,22 +819,10 @@
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="WorkoutState">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437070" name="drawMetricBox" parent="UIRenderer" startPc="268436849">
-            <param id="dc"/>
-            <param id="x"/>
-            <param id="y"/>
-            <param id="w"/>
-            <param id="h"/>
-            <param id="color"/>
-            <param id="title"/>
-            <param id="value"/>
-            <param id="subValue"/>
-            <documentation/>
-        </functionEntry>
         <functionEntry accessMode="public" name="initialize" parent="UIRenderer">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437240" name="drawBottomBox" parent="UIRenderer" startPc="268437071">
+        <functionEntry accessMode="public" endPc="268437237" name="drawMetricCard" parent="UIRenderer" startPc="268437029">
             <param id="dc"/>
             <param id="x"/>
             <param id="y"/>
@@ -743,154 +830,183 @@
             <param id="h"/>
             <param id="color"/>
             <param id="title"/>
+            <param id="primaryValue"/>
+            <param id="secondaryValue"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437282" name="formatPercent" parent="FormatUtils" startPc="268437238">
             <param id="value"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437461" name="BottomRightLayout" parent="Layouts" startPc="268437241">
+        <functionEntry accessMode="public" endPc="268437320" name="formatMilliliters" parent="FormatUtils" startPc="268437283">
+            <param id="value"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437358" name="formatTemperature" parent="FormatUtils" startPc="268437321">
+            <param id="value"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437538" name="formatDuration" parent="FormatUtils" startPc="268437359">
+            <param id="secondsValue"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437576" name="formatWatts" parent="FormatUtils" startPc="268437539">
+            <param id="value"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437682" name="formatCountdown" parent="FormatUtils" startPc="268437577">
+            <param id="minutesValue"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437720" name="formatLiters" parent="FormatUtils" startPc="268437683">
+            <param id="value"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="FormatUtils">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437758" name="formatKilometers" parent="FormatUtils" startPc="268437721">
+            <param id="value"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437979" name="BottomRightLayout" parent="Layouts" startPc="268437759">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437682" name="TopRightLayout" parent="Layouts" startPc="268437462">
+        <functionEntry accessMode="public" endPc="268438200" name="TopRightLayout" parent="Layouts" startPc="268437980">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268437901" name="BottomLeftLayout" parent="Layouts" startPc="268437683">
+        <functionEntry accessMode="public" endPc="268438419" name="BottomLeftLayout" parent="Layouts" startPc="268438201">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438120" name="TopLeftLayout" parent="Layouts" startPc="268437902">
+        <functionEntry accessMode="public" endPc="268438638" name="TopLeftLayout" parent="Layouts" startPc="268438420">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438407" name="MainLayout" parent="Layouts" startPc="268438121">
+        <functionEntry accessMode="public" endPc="268438925" name="MainLayout" parent="Layouts" startPc="268438639">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438453" name="getNP" parent="FuelEngine" startPc="268438408">
+        <functionEntry accessMode="public" endPc="268438971" name="getNP" parent="FuelEngine" startPc="268438926">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438482" name="update" parent="FuelEngine" startPc="268438454">
+        <functionEntry accessMode="public" endPc="268439000" name="update" parent="FuelEngine" startPc="268438972">
             <param id="info"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438512" name="registerFuel" parent="FuelEngine" startPc="268438483">
+        <functionEntry accessMode="public" endPc="268439030" name="registerFuel" parent="FuelEngine" startPc="268439001">
             <param id="intake"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438520" name="getTotalKj" parent="FuelEngine" startPc="268438513">
+        <functionEntry accessMode="public" endPc="268439038" name="getTotalKj" parent="FuelEngine" startPc="268439031">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438528" name="getLapKj" parent="FuelEngine" startPc="268438521">
+        <functionEntry accessMode="public" endPc="268439046" name="getLapKj" parent="FuelEngine" startPc="268439039">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438546" name="expectedCarbs" parent="FuelEngine" startPc="268438529">
+        <functionEntry accessMode="public" endPc="268439064" name="expectedCarbs" parent="FuelEngine" startPc="268439047">
             <param id="elapsedTime"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438670" name="updateKj" parent="FuelEngine" startPc="268438547">
+        <functionEntry accessMode="public" endPc="268439188" name="updateKj" parent="FuelEngine" startPc="268439065">
             <param id="info"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438853" name="updateNP" parent="FuelEngine" startPc="268438671">
+        <functionEntry accessMode="public" endPc="268439371" name="updateNP" parent="FuelEngine" startPc="268439189">
             <param id="power"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438954" name="carbsPerHour" parent="FuelEngine" startPc="268438854">
+        <functionEntry accessMode="public" endPc="268439472" name="carbsPerHour" parent="FuelEngine" startPc="268439372">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268438989" name="getIF" parent="FuelEngine" startPc="268438955">
+        <functionEntry accessMode="public" endPc="268439507" name="getIF" parent="FuelEngine" startPc="268439473">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439008" name="getDeficit" parent="FuelEngine" startPc="268438990">
+        <functionEntry accessMode="public" endPc="268439526" name="getDeficit" parent="FuelEngine" startPc="268439508">
             <param id="elapsedTime"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439019" name="onLap" parent="FuelEngine" startPc="268439009">
+        <functionEntry accessMode="public" endPc="268439537" name="onLap" parent="FuelEngine" startPc="268439527">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439027" name="getConsumedCarbs" parent="FuelEngine" startPc="268439020">
+        <functionEntry accessMode="public" endPc="268439545" name="getConsumedCarbs" parent="FuelEngine" startPc="268439538">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439056" name="initialize" parent="FuelEngine" startPc="268439028">
+        <functionEntry accessMode="public" endPc="268439574" name="initialize" parent="FuelEngine" startPc="268439546">
             <param id="profile"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439076" name="drinkRegistered" parent="HydrationEngine" startPc="268439057">
+        <functionEntry accessMode="public" endPc="268439740" name="calculateSweatRate" parent="HydrationEngine" startPc="268439575">
+            <param id="power"/>
+            <param id="temperature"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439136" name="update" parent="HydrationEngine" startPc="268439077">
+        <functionEntry accessMode="public" endPc="268439841" name="calculateNextDrink" parent="HydrationEngine" startPc="268439741">
+            <param id="power"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439861" name="drinkRegistered" parent="HydrationEngine" startPc="268439842">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440003" name="update" parent="HydrationEngine" startPc="268439862">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439295" name="hydrationRate" parent="HydrationEngine" startPc="268439137">
-            <param id="IF"/>
-            <param id="temperature"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" endPc="268439388" name="hydrationRisk" parent="HydrationEngine" startPc="268439296">
-            <param id="IF"/>
-            <param id="temperature"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" endPc="268439404" name="initialize" parent="HydrationEngine" startPc="268439389">
+        <functionEntry accessMode="public" endPc="268440036" name="initialize" parent="HydrationEngine" startPc="268440004">
             <param id="profile"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439481" name="nextDrinkCountdown" parent="HydrationEngine" startPc="268439405">
-            <param id="IF"/>
+        <functionEntry accessMode="public" endPc="268440098" name="calculateHydrationLabel" parent="HydrationEngine" startPc="268440037">
+            <param id="lossMl"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439527" name="predictBonkTime" parent="PredictionEngine" startPc="268439482">
-            <param id="deficit"/>
-            <param id="IF"/>
+        <functionEntry accessMode="public" endPc="268440239" name="calculateBonkRisk" parent="PredictionEngine" startPc="268440099">
+            <param id="glycogen"/>
+            <param id="hydration"/>
+            <param id="power"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439604" name="nextDemand" parent="PredictionEngine" startPc="268439528">
-            <param id="IF"/>
-            <param id="lapDuration"/>
+        <functionEntry accessMode="public" endPc="268440298" name="calculateStatus" parent="PredictionEngine" startPc="268440240">
+            <param id="fatigue"/>
+            <param id="bonkRisk"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439663" name="update" parent="PredictionEngine" startPc="268439605">
+        <functionEntry accessMode="public" endPc="268440406" name="update" parent="PredictionEngine" startPc="268440299">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" name="initialize" parent="PredictionEngine">
+        <functionEntry accessMode="public" endPc="268440419" name="initialize" parent="PredictionEngine" startPc="268440407">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439705" name="getEnergyStatus" parent="PredictionEngine" startPc="268439664">
-            <param id="deficit"/>
+        <functionEntry accessMode="public" endPc="268440535" name="calculateFatigue" parent="PredictionEngine" startPc="268440420">
+            <param id="power"/>
+            <param id="elapsed"/>
+            <param id="hydration"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439778" name="estimateCarbBurnRate" parent="PredictionEngine" startPc="268439706">
-            <param id="IF"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" endPc="268439838" name="shouldFuelNow" parent="PredictionEngine" startPc="268439779">
-            <param id="deficit"/>
-            <param id="IF"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" endPc="268439859" name="initialize" parent="AthleteProfile" startPc="268439839">
+        <functionEntry accessMode="public" endPc="268440556" name="initialize" parent="AthleteProfile" startPc="268440536">
             <param id="ftpValue"/>
             <param id="weightValue"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439867" name="getState" parent="SessionManager" startPc="268439860">
+        <functionEntry accessMode="public" endPc="268440564" name="getState" parent="SessionManager" startPc="268440557">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440034" name="update" parent="SessionManager" startPc="268439868">
+        <functionEntry accessMode="public" endPc="268440731" name="update" parent="SessionManager" startPc="268440565">
             <param id="info"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440192" name="initialize" parent="SessionManager" startPc="268440035">
+        <functionEntry accessMode="public" endPc="268440889" name="initialize" parent="SessionManager" startPc="268440732">
             <param id="profileData"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440282" name="updateBaseMetrics" parent="SessionManager" startPc="268440193">
+        <functionEntry accessMode="public" endPc="268440979" name="updateBaseMetrics" parent="SessionManager" startPc="268440890">
             <param id="info"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440491" name="initialize" parent="WorkoutState" startPc="268440283">
+        <functionEntry accessMode="public" endPc="268441147" name="initialize" parent="WorkoutState" startPc="268440980">
             <documentation/>
         </functionEntry>
     </functions>

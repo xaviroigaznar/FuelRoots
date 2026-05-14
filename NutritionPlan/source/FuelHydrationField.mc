@@ -47,6 +47,7 @@ class FuelHydrationField extends WatchUi.DataField {
         drawMainScreen(dc, state);
     }
 
+
     function drawMainScreen(dc, state) {
 
         dc.clear();
@@ -54,51 +55,99 @@ class FuelHydrationField extends WatchUi.DataField {
         var width = dc.getWidth();
         var height = dc.getHeight();
 
-        var boxWidth = width;
-        var boxHeight = height / 3;
+        var cardHeight = height / 3;
 
-        // =========================
-        // FUEL
-        // =========================
-        renderer.drawMetricBox(
+        // ==================================================
+        // FUEL CARD
+        // ==================================================
+
+        var fuelMain = "--";
+        var fuelSecondary = "Calculating";
+
+        if (state.timeToDepletion != null) {
+            fuelMain = state.timeToDepletion;
+        }
+
+        if (state.fuelStateLabel != null) {
+            fuelSecondary = state.fuelStateLabel;
+        }
+
+        renderer.drawMetricCard(
             dc,
             0,
             0,
-            boxWidth,
-            boxHeight,
+            width,
+            cardHeight,
             Graphics.COLOR_BLUE,
-            "FUEL",
-            (state.glycogenEstimate == null ? 0 : state.glycogenEstimate).format("%.0f") + "%",
-            ""
+            "FUEL LEFT",
+            fuelMain,
+            fuelSecondary
         );
 
-        // =========================
-        // HYDRATION
-        // =========================
-        renderer.drawMetricBox(
+        // ==================================================
+        // HYDRATION CARD
+        // ==================================================
+
+        var hydrationMain = "--";
+        var hydrationSecondary = "No deficit";
+
+        if (state.minutesUntilDrink != null) {
+            hydrationMain = "Drink in " + state.drinkCountdownLabel;
+        }
+
+        if (state.hydrationDeficitMl != null) {
+            hydrationSecondary = Utils.FormatUtils.formatMilliliters(state.hydrationDeficitMl) + " deficit";
+        }
+
+        renderer.drawMetricCard(
             dc,
             0,
-            boxHeight,
-            boxWidth,
-            boxHeight,
+            cardHeight,
+            width,
+            cardHeight,
             Graphics.COLOR_BLUE,
             "HYDRATION",
-            (state.fluidLossTotal == null ? 0 : state.fluidLossTotal).format("%.1f") + "L",
-            ""
+            hydrationMain,
+            hydrationSecondary
         );
 
-        // =========================
-        // BONK RISK
-        // =========================
-        renderer.drawBottomBox(
+        // ==================================================
+        // STATUS CARD
+        // ==================================================
+
+        var statusMain = "STABLE";
+        var statusSecondary = "Fatigue 0%";
+
+        if (state.statusLabel != null) {
+            statusMain = state.statusLabel;
+        }
+
+        if (state.fatiguePercent != null) {
+            statusSecondary = "Fatigue " + Utils.FormatUtils.formatPercent(state.fatiguePercent);
+        }
+
+        var statusColor = Graphics.COLOR_GREEN;
+
+        if (state.fatiguePercent != null) {
+
+            if (state.fatiguePercent > 70) {
+                statusColor = Graphics.COLOR_RED;
+            }
+            else if (state.fatiguePercent > 40) {
+                statusColor = Graphics.COLOR_ORANGE;
+            }
+        }
+
+        renderer.drawMetricCard(
             dc,
             0,
-            boxHeight * 2,
-            boxWidth,
-            boxHeight,
-            Graphics.COLOR_RED,
-            "BONK RISK",
-            (state.bonkRisk == null ? 0 : state.bonkRisk)
+            cardHeight * 2,
+            width,
+            cardHeight,
+            statusColor,
+            "STATUS",
+            statusMain,
+            statusSecondary
         );
     }
 }

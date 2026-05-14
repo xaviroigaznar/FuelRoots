@@ -1,3 +1,7 @@
+// ======================================================
+// UIRenderer.mc
+// ======================================================
+
 module UI {
 
     using Toybox.Graphics;
@@ -7,78 +11,71 @@ module UI {
         function initialize() {
         }
 
-        function drawMetricBox(dc, x, y, w, h, color, title, value, subValue) {
+        function drawMetricCard(
+            dc,
+            x,
+            y,
+            w,
+            h,
+            color,
+            title,
+            primaryValue,
+            secondaryValue
+        ) {
 
             // Background
-            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+            dc.setColor(
+                Graphics.COLOR_BLACK,
+                Graphics.COLOR_BLACK
+            );
+
             dc.fillRectangle(x, y, w, h);
 
             // Border
-            dc.setColor(color, Graphics.COLOR_BLACK);
+            dc.setColor(
+                color,
+                Graphics.COLOR_BLACK
+            );
+
             dc.drawRectangle(x, y, w, h);
 
-            // Header
-            dc.setColor(Graphics.COLOR_WHITE, color);
-            dc.fillRectangle(x, y, w, 24);
+            // Top header line
+            dc.fillRectangle(x, y, w, 18);
+
+            // Header text
+            dc.setColor(
+                Graphics.COLOR_WHITE,
+                color
+            );
 
             dc.drawText(
-                x + 10,
+                x + 8,
                 y + 2,
-                Graphics.FONT_SMALL,
+                Graphics.FONT_XTINY,
                 title,
                 Graphics.TEXT_JUSTIFY_LEFT
             );
 
             // Main value
-            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+            dc.setColor(
+                Graphics.COLOR_WHITE,
+                Graphics.COLOR_BLACK
+            );
 
             dc.drawText(
-                w / 2,
-                y + (h / 2),
+                x + (w / 2),
+                y + (h / 2) - 12,
                 Graphics.FONT_NUMBER_MEDIUM,
-                value,
+                primaryValue,
                 Graphics.TEXT_JUSTIFY_CENTER
             );
 
-            // Optional sub value
-            if (subValue != null && subValue != "") {
-
-                dc.drawText(
-                    w / 2,
-                    y + (h / 2) + 25,
-                    Graphics.FONT_SMALL,
-                    subValue,
-                    Graphics.TEXT_JUSTIFY_CENTER
-                );
-            }
-        }
-
-        function drawBottomBox(dc, x, y, w, h, color, title, value) {
-
-            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-            dc.fillRectangle(x, y, w, h);
-
-            dc.setColor(color, Graphics.COLOR_BLACK);
-            dc.drawRectangle(x, y, w, h);
-
-            dc.setColor(Graphics.COLOR_WHITE, color);
-            dc.fillRectangle(x, y, w, 24);
-
+            // Secondary value
             dc.drawText(
-                x + 10,
-                y + 2,
-                Graphics.FONT_SMALL,
-                title,
-                Graphics.TEXT_JUSTIFY_LEFT
-            );
-
-            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-
-            dc.drawText(
-                w / 2,
-                y + (h / 2),
-                Graphics.FONT_NUMBER_HOT,
-                value,
+                x + (w / 2),
+                y + (h / 2) + 50,
+                Graphics.FONT_XTINY,
+                secondaryValue,
                 Graphics.TEXT_JUSTIFY_CENTER
             );
         }
