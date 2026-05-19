@@ -148,7 +148,6 @@ module Engine {
         }
 
         function getDeficit(elapsedTime) {
-
             return expectedCarbs(elapsedTime)
                 - consumedCarbs;
         }

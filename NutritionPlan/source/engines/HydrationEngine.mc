@@ -31,15 +31,12 @@ module Engine {
         // =========================
 
         function update(state) {
-            var power = state.currentPower;
+            var ri = state.relativeIntensity;
             var temp = state.temperature;
             var elapsed = state.elapsedTime;
 
             // Sweat rate (ml/h)
-            var sweatRate = calculateSweatRate(
-                power,
-                temp
-            );
+            var sweatRate = calculateSweatRate(ri, temp);
 
             state.sweatRate = sweatRate;
 
@@ -49,7 +46,7 @@ module Engine {
             state.hydrationDeficitMl = lossMl;
 
             // Drink recommendation
-            state.minutesUntilDrink = calculateNextDrink(power);
+            state.minutesUntilDrink = calculateNextDrink(ri);
 
             state.drinkCountdownLabel = Utils.FormatUtils.formatCountdown(state.minutesUntilDrink);
 
@@ -61,26 +58,11 @@ module Engine {
         // SWEAT MODEL
         // =========================
 
-        function calculateSweatRate(power, temperature) {
-
+        function calculateSweatRate(relativeIntensity, temperature) {
             var rate = 500;
 
-            // =====================
-            // POWER
-            // =====================
-            if (power != null) {
-                if (power > 150) {
-                    rate += 150;
-                }
-
-                if (power > 220) {
-                    rate += 200;
-                }
-
-                if (power > 280) {
-                    rate += 250;
-                }
-            }
+            // Intensity scaling
+            rate += relativeIntensity * 700;
 
             // =====================
             // TEMPERATURE
@@ -105,9 +87,8 @@ module Engine {
             // BODY SIZE
             // =====================
 
-            if (weight > 80) {
-                rate += 100;
-            }
+            // Weight scaling
+            rate += (weight - 70) * 2;
 
             return rate;
         }
@@ -116,25 +97,21 @@ module Engine {
         // DRINK TIMER
         // =========================
 
-        function calculateNextDrink(power) {
-
+        function calculateNextDrink(relativeIntensity) {
             var now = System.getTimer();
 
             var interval = 900000;
 
-            if (power != null) {
+            if (relativeIntensity != null) {
                 // Hard effort → drink sooner
-                if (power > 220) {
-                    interval = 600000;
-                }
-
-                if (power > 280) {
+                if (relativeIntensity > 0.8) {
                     interval = 420000;
+                } else if (relativeIntensity > 0.65) {
+                    interval = 600000;
                 }
             }
 
-            var remaining =
-                (interval - (now - lastDrinkTime)) / 60000.0;
+            var remaining = (interval - (now - lastDrinkTime)) / 60000.0;
 
             if (remaining < 0) {
                 remaining = 0;
@@ -169,7 +146,6 @@ module Engine {
         // =========================
 
         function drinkRegistered() {
-
             lastDrinkTime = System.getTimer();
         }
     }

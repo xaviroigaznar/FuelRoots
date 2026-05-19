@@ -22,20 +22,20 @@ module Engine {
 
         function update(state) {
 
-            var power = state.currentPower;
+            var ri = state.relativeIntensity;
             var elapsed = state.elapsedTime;
             var hydration = state.hydrationDeficitMl;
             var glycogen = state.glycogenRemaining;
 
             // Fatigue model
-            state.fatiguePercent = calculateFatigue(power, elapsed, hydration);
+            state.fatiguePercent = calculateFatigue(ri, elapsed, hydration);
 
             // Bonk risk
             state.bonkRisk =
                 calculateBonkRisk(
                     glycogen,
                     hydration,
-                    power
+                    ri
                 );
 
             // Status label
@@ -51,7 +51,7 @@ module Engine {
         // =========================
 
         function calculateFatigue(
-            power,
+            relativeIntensity,
             elapsed,
             hydration
         ) {
@@ -61,20 +61,7 @@ module Engine {
             // Duration contribution
             fatigue += elapsed / 1800.0;
 
-            if (power != null) {
-                // Power contribution
-                if (power > 180) {
-                    fatigue += 10;
-                }
-
-                if (power > 240) {
-                    fatigue += 15;
-                }
-
-                if (power > 300) {
-                    fatigue += 20;
-                }
-            }
+            fatigue += relativeIntensity * 25;
 
             // Hydration contribution
             fatigue += hydration / 250.0;
@@ -94,7 +81,7 @@ module Engine {
         function calculateBonkRisk(
             glycogen,
             hydration,
-            power
+            ri
         ) {
 
             var risk = 0;
@@ -122,7 +109,7 @@ module Engine {
             }
 
             // High power contribution
-            if (power != null && power > 280) {
+            if (ri > 0.8) {
                 risk += 20;
             }
 

@@ -17,6 +17,9 @@ module Session {
         var lastHydrationUpdate;
         var lastPredictionUpdate;
 
+        var powerBuffer;
+        var maxBufferSize;
+
         function initialize(profileData) {
             state = new WorkoutState();
             profile = profileData;
@@ -28,6 +31,9 @@ module Session {
             lastFuelUpdate = 0;
             lastHydrationUpdate = 0;
             lastPredictionUpdate = 0;
+
+            powerBuffer = [];
+            maxBufferSize = 30;
         }
 
         function update(info) {
@@ -42,15 +48,13 @@ module Session {
                 lastFuelUpdate = now;
             }
 
-            // Hydration every 60s
-            if (now - lastHydrationUpdate > 60000) {
-                hydrationEngine.update(state);
+            // Hydration every second
+            hydrationEngine.update(state);
 
-                lastHydrationUpdate = now;
-            }
+            lastHydrationUpdate = now;
 
-            // Prediction every 2 min
-            if (now - lastPredictionUpdate > 120000) {
+            // Prediction every 60s
+            if (now - lastPredictionUpdate > 60000) {
                 predictionEngine.update(state);
 
                 lastPredictionUpdate = now;
@@ -66,6 +70,38 @@ module Session {
             state.calories = info.calories;
             state.currentPower = info.currentPower;
             state.temperature = Weather.getCurrentConditions().temperature;
+
+            updateRollingPower(info.currentPower);
+        }
+
+        function updateRollingPower(currentPower) {
+            if (currentPower == null) {
+                return;
+            }
+
+            powerBuffer.add(currentPower);
+
+            // Keep only latest 30 samples
+            if (powerBuffer.size() > maxBufferSize) {
+                powerBuffer.remove(0);
+            }
+
+            var total = 0;
+
+            for (var i = 0; i < powerBuffer.size(); i += 1) {
+                total += powerBuffer[i];
+            }
+
+            state.rollingPower = total / powerBuffer.size();
+
+            // Relative intensity
+            if (profile.ftp > 0) {
+                state.relativeIntensity = state.rollingPower / profile.ftp;
+            }
+            else {
+
+                state.relativeIntensity = 0;
+            }
         }
 
         function getState() {

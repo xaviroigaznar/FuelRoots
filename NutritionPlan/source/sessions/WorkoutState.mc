@@ -11,6 +11,8 @@ module Session {
         var currentPower;
         var heartRate;
         var temperature;
+        var rollingPower;
+        var relativeIntensity;
 
         // =========================
         // Fuel
@@ -54,6 +56,8 @@ module Session {
             currentPower = 0;
             heartRate = 0;
             temperature = null;
+            rollingPower = 0;
+            relativeIntensity = 0;
 
             // Fuel
             glycogenRemaining = 100;
