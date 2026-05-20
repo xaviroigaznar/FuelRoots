@@ -7,19 +7,30 @@ using Session;
 using UI;
 
 class FuelHydrationField extends WatchUi.DataField {
-
+    // =====================================
+    // CORE
+    // =====================================
     var sessionManager;
     var renderer;
 
+    // =====================================
+    // ATHLETE CONFIG
+    // =====================================
     var ftp;
     var weight;
 
+    // =====================================
+    // INIT
+    // =====================================
     function initialize() {
 
         DataField.initialize();
 
         renderer = new UI.UIRenderer();
 
+        // =============================
+        // SETTINGS
+        // =============================
         ftp = Application.getApp().getProperty("ftp");
         weight = Application.getApp().getProperty("weight");
 
@@ -31,6 +42,9 @@ class FuelHydrationField extends WatchUi.DataField {
             weight = 75;
         }
 
+        // =============================
+        // PROFILE
+        // =============================
         var profile = new Session.AthleteProfile(ftp, weight);
 
         sessionManager = new Session.SessionManager(profile);
@@ -42,8 +56,10 @@ class FuelHydrationField extends WatchUi.DataField {
         // Feed Garmin info directly
         sessionManager.update(info);
 
+        // State
         var state = sessionManager.getState();
 
+        // Draw UI
         drawMainScreen(dc, state);
     }
 
@@ -55,99 +71,91 @@ class FuelHydrationField extends WatchUi.DataField {
         var width = dc.getWidth();
         var height = dc.getHeight();
 
-        var cardHeight = height / 3;
+        // =================================
+        // LAYOUT
+        // =================================
+        var topHeight =
+            (height * 40) / 100;
 
-        // ==================================================
-        // FUEL CARD
-        // ==================================================
+        var bottomHeight =
+            height - topHeight;
 
-        var fuelMain = "--";
-        var fuelSecondary = "Calculating";
+        var summaryWidth =
+            width / 2;
 
-        if (state.timeToDepletion != null) {
-            fuelMain = state.timeToDepletion;
-        }
+        var telemetryWidth =
+            (width * 65) / 100;
 
-        if (state.fuelStateLabel != null) {
-            fuelSecondary = state.fuelStateLabel;
-        }
+        var statusWidth =
+            width - telemetryWidth;
 
-        renderer.drawMetricCard(
+        // =================================
+        // TOP ROW
+        // =================================
+
+        // -----------------------------
+        // SESSION BOX
+        // -----------------------------
+
+        renderer.drawSummaryBox(
             dc,
             0,
             0,
-            width,
-            cardHeight,
-            Graphics.COLOR_BLUE,
-            "FUEL LEFT",
-            fuelMain,
-            fuelSecondary
+            summaryWidth,
+            topHeight,
+            "TOTAL",
+            state.sessionCarbsBurnedPerHour,
+            state.sessionCarbsIngestedPerHour,
+            state.sessionCarbsIngested,
+            Graphics.COLOR_RED
         );
 
-        // ==================================================
-        // HYDRATION CARD
-        // ==================================================
+        // -----------------------------
+        // LAP BOX
+        // -----------------------------
 
-        var hydrationMain = "--";
-        var hydrationSecondary = "No deficit";
-
-        if (state.minutesUntilDrink != null) {
-            hydrationMain = "Drink in " + state.drinkCountdownLabel;
-        }
-
-        if (state.hydrationDeficitMl != null) {
-            hydrationSecondary = Utils.FormatUtils.formatMilliliters(state.hydrationDeficitMl) + " deficit";
-        }
-
-        renderer.drawMetricCard(
+        renderer.drawSummaryBox(
             dc,
+            summaryWidth,
             0,
-            cardHeight,
-            width,
-            cardHeight,
-            Graphics.COLOR_BLUE,
-            "HYDRATION",
-            hydrationMain,
-            hydrationSecondary
+            summaryWidth,
+            topHeight,
+            "LAP",
+            state.lapCarbsBurnedPerHour,
+            state.lapCarbsIngestedPerHour,
+            state.lapCarbsIngested,
+            Graphics.COLOR_GREEN
         );
 
-        // ==================================================
-        // STATUS CARD
-        // ==================================================
+        // =================================
+        // BOTTOM LEFT
+        // =================================
 
-        var statusMain = "STABLE";
-        var statusSecondary = "Fatigue 0%";
-
-        if (state.statusLabel != null) {
-            statusMain = state.statusLabel;
-        }
-
-        if (state.fatiguePercent != null) {
-            statusSecondary = "Fatigue " + Utils.FormatUtils.formatPercent(state.fatiguePercent);
-        }
-
-        var statusColor = Graphics.COLOR_GREEN;
-
-        if (state.fatiguePercent != null) {
-
-            if (state.fatiguePercent > 70) {
-                statusColor = Graphics.COLOR_RED;
-            }
-            else if (state.fatiguePercent > 40) {
-                statusColor = Graphics.COLOR_ORANGE;
-            }
-        }
-
-        renderer.drawMetricCard(
+        renderer.drawTelemetryBox(
             dc,
             0,
-            cardHeight * 2,
-            width,
-            cardHeight,
-            statusColor,
-            "STATUS",
-            statusMain,
-            statusSecondary
+            topHeight,
+            telemetryWidth,
+            bottomHeight,
+            state.drinkCountdownLabel,
+            state.hydrationDeficitLabel,
+            state.nextFuelCountdownLabel,
+            state.carbDeficitLabel
+        );
+
+        // =================================
+        // STATUS BOX
+        // =================================
+
+        renderer.drawStatusBox(
+            dc,
+            telemetryWidth,
+            topHeight,
+            statusWidth,
+            bottomHeight,
+            state.statusLabel,
+            state.bonkTimeLabel,
+            state.bonkRiskLabel
         );
     }
 }

@@ -1,12 +1,10 @@
 module Engine {
-    using Toybox.Activity;
     using Toybox.Math;
-    using Toybox.System;
 
     class FuelEngine {
 
         // =========================
-        // CONFIG
+        // ATHLETE PROFILE
         // =========================
         var ftp;
         var weight;
@@ -16,10 +14,9 @@ module Engine {
         // =========================
         var totalKj = 0.0;
         var lapKj = 0.0;
-        var lastTime = 0;
 
         // =========================
-        // NP
+        // NORMALIZED POWER
         // =========================
         var powerBuffer = [];
         var bufferSize = 30;
@@ -29,10 +26,15 @@ module Engine {
         var npCount = 0;
 
         // =========================
-        // NUTRICIÓN
+        // CARBS BURNED
         // =========================
-        var consumedCarbs = 0.0;
-        var lastEatKj = 0;
+        var totalCarbsBurned = 0.0;
+        var lapCarbsBurned = 0;
+
+        // =====================================
+        // TIME
+        // =====================================
+        var lastElapsedTime = 0;
 
         // =========================
         // INIT
@@ -43,33 +45,145 @@ module Engine {
         }
 
         // =========================
-        // UPDATE
+        // MAIN UPDATE
         // =========================
-        function update(info) {
-            updateKj(info);
-            updateNP(info.currentPower);
-        }
+        function update(state) {
 
-        // =========================
-        // KJ
-        // =========================
-        function updateKj(info) {
-            if (lastTime == 0) {
-                lastTime = info.elapsedTime;
+            var elapsed =
+                state.elapsedTime;
+
+            var power =
+                state.currentPower;
+
+            // First update
+            if (lastElapsedTime == 0) {
+
+                lastElapsedTime = elapsed;
                 return;
             }
 
-            var delta = (info.elapsedTime - lastTime) / 1000.0;
+            var deltaSeconds =
+                (elapsed - lastElapsedTime)
+                / 1000.0;
 
-            if (info.currentPower != null) {
+            // =================================
+            // POWER ANALYTICS
+            // =================================
 
-                var kjInc = (info.currentPower * delta) / 1000.0;
+            updateNP(power);
 
-                totalKj += kjInc;
-                lapKj += kjInc;
+            // =================================
+            // RELATIVE INTENSITY
+            // =================================
+
+            var ri =
+                getIF();
+
+            state.relativeIntensity = ri;
+
+            // =================================
+            // ENERGY
+            // =================================
+
+            updateEnergy(
+                power,
+                deltaSeconds
+            );
+
+            // =================================
+            // CARBS
+            // =================================
+
+            updateCarbs(
+                ri,
+                deltaSeconds
+            );
+
+            // =================================
+            // EXPORT TO STATE
+            // =================================
+
+            state.sessionCarbsBurned =
+                totalCarbsBurned;
+
+            state.lapCarbsBurned =
+                lapCarbsBurned;
+
+            state.carbBurnRate =
+                calculateCarbBurnRate(ri);
+
+            lastElapsedTime =
+                elapsed;
+        }
+
+        // =====================================
+        // ENERGY
+        // =====================================
+
+        function updateEnergy(
+            power,
+            deltaSeconds
+        ) {
+
+            if (power == null) {
+                return;
             }
 
-            lastTime = info.elapsedTime;
+            var kjIncrement =
+                (power * deltaSeconds)
+                / 1000.0;
+
+            totalKj += kjIncrement;
+            lapKj += kjIncrement;
+        }
+
+        // =====================================
+        // CARBS
+        // =====================================
+
+        function updateCarbs(
+            relativeIntensity,
+            deltaSeconds
+        ) {
+
+            var burnRate =
+                calculateCarbBurnRate(
+                    relativeIntensity
+                );
+
+            // g/sec
+            var carbIncrement =
+                (burnRate / 3600.0)
+                * deltaSeconds;
+
+            totalCarbsBurned +=
+                carbIncrement;
+
+            lapCarbsBurned +=
+                carbIncrement;
+        }
+
+        // =====================================
+        // CARB MODEL
+        // =====================================
+
+        function calculateCarbBurnRate(
+            relativeIntensity
+        ) {
+
+            // Dynamic continuous model
+            //
+            // Easy ride:
+            // ~30g/h
+            //
+            // Hard ride:
+            // ~110g/h
+
+            return
+                20 +
+                (relativeIntensity
+                * weight
+                * 1.2);
         }
 
         // =========================
@@ -124,45 +238,21 @@ module Engine {
             return lapKj;
         }
 
-        // =========================
-        // CARBS
-        // =========================
-        function carbsPerHour() {
-
-            var IF = getIF();
-
-            if (IF < 0.65) { return 0.8 * weight; }
-            if (IF < 0.80) { return 1.0 * weight; }
-            if (IF < 0.90) { return 1.2 * weight; }
-
-            return 1.4 * weight;
+        function getTotalCarbsBurned() {
+            return totalCarbsBurned;
         }
 
-        function expectedCarbs(elapsedTime) {
-
-            return carbsPerHour() * (elapsedTime / 3600000.0);
-        }
-
-        function getConsumedCarbs() {
-            return consumedCarbs;
-        }
-
-        function getDeficit(elapsedTime) {
-            return expectedCarbs(elapsedTime)
-                - consumedCarbs;
+        function getLapCarbsBurned() {
+            return lapCarbsBurned;
         }
 
         // =========================
         // EVENTS
         // =========================
-        function registerFuel(intake) {
-            consumedCarbs += intake;
-
-            lastEatKj = totalKj;
-        }
 
         function onLap() {
             lapKj = 0;
+            lapCarbsBurned = 0;
         }
     }
 }

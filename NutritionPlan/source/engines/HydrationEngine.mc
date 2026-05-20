@@ -5,15 +5,26 @@ module Engine {
     class HydrationEngine {
 
         // =========================
-        // CONFIG
+        // ATHLETE PROFILE
         // =========================
 
         var weight;
 
         // =========================
-        // STATE
+        // HYDRATION STATE
         // =========================
 
+        var totalFluidLossMl = 0.0;
+        var lapFluidLossMl = 0.0;
+
+        var totalFluidIntakeMl = 0.0;
+        var lapFluidIntakeMl = 0.0;
+
+        // =====================================
+        // TIMERS
+        // =====================================
+
+        var lastElapsedTime = 0;
         var lastDrinkTime;
 
         // =========================
@@ -35,23 +46,95 @@ module Engine {
             var temp = state.temperature;
             var elapsed = state.elapsedTime;
 
-            // Sweat rate (ml/h)
+            // First update
+            if (lastElapsedTime == 0) {
+
+                lastElapsedTime = elapsed;
+                return;
+            }
+
+            var deltaSeconds =
+                (elapsed - lastElapsedTime)
+                / 1000.0;
+
+            // =================================
+            // SWEAT RATE
+            // =================================
             var sweatRate = calculateSweatRate(ri, temp);
 
             state.sweatRate = sweatRate;
 
-            // Total estimated loss
-            var lossMl = (sweatRate / 3600.0) * elapsed;
+            
+            // =================================
+            // FLUID LOSS
+            // =================================
+            updateFluidLoss(
+                sweatRate,
+                deltaSeconds
+            );
 
-            state.hydrationDeficitMl = lossMl;
+            // =================================
+            // HYDRATION DEFICIT
+            // =================================
 
-            // Drink recommendation
-            state.minutesUntilDrink = calculateNextDrink(ri);
+            var deficit =
+                totalFluidLossMl
+                - totalFluidIntakeMl;
 
-            state.drinkCountdownLabel = Utils.FormatUtils.formatCountdown(state.minutesUntilDrink);
+            if (deficit < 0) {
+                deficit = 0;
+            }
 
-            // Status label
-            state.hydrationStateLabel = calculateHydrationLabel(lossMl);
+            // =================================
+            // DRINK TIMING
+            // =================================
+
+            var drinkCountdown =
+                calculateNextDrink(ri);
+
+            // =================================
+            // EXPORT TO STATE
+            // =================================
+
+            state.hydrationDeficitMl =
+                deficit;
+
+            state.minutesUntilDrink =
+                drinkCountdown;
+
+            state.drinkCountdownLabel =
+                Utils.FormatUtils
+                    .formatCountdown(
+                        drinkCountdown
+                    );
+
+            state.hydrationStateLabel =
+                calculateHydrationLabel(
+                    deficit
+                );
+
+            lastElapsedTime =
+                elapsed;
+        }
+
+        // =====================================
+        // FLUID LOSS
+        // =====================================
+
+        function updateFluidLoss(
+            sweatRate,
+            deltaSeconds
+        ) {
+
+            var lossIncrement =
+                (sweatRate / 3600.0)
+                * deltaSeconds;
+
+            totalFluidLossMl +=
+                lossIncrement;
+
+            lapFluidLossMl +=
+                lossIncrement;
         }
 
         // =========================
@@ -59,6 +142,7 @@ module Engine {
         // =========================
 
         function calculateSweatRate(relativeIntensity, temperature) {
+            // Base sweat rate
             var rate = 500;
 
             // Intensity scaling
@@ -89,6 +173,11 @@ module Engine {
 
             // Weight scaling
             rate += (weight - 70) * 2;
+
+            // Clamp minimum
+            if (rate < 300) {
+                rate = 300;
+            }
 
             return rate;
         }
@@ -121,7 +210,7 @@ module Engine {
         }
 
         // =========================
-        // STATUS LABEL
+        // HYDRATION STATUS
         // =========================
 
         function calculateHydrationLabel(lossMl) {
@@ -141,12 +230,24 @@ module Engine {
             return "Critical";
         }
 
-        // =========================
-        // EVENT
-        // =========================
+        // =====================================
+        // DRINK EVENT
+        // =====================================
+        function registerDrink(ml) {
 
-        function drinkRegistered() {
-            lastDrinkTime = System.getTimer();
+            totalFluidIntakeMl += ml;
+            lapFluidIntakeMl += ml;
+
+            lastDrinkTime =
+                System.getTimer();
+        }
+
+        // =====================================
+        // LAP EVENT
+        // =====================================
+        function onLap() {
+            lapFluidLossMl = 0;
+            lapFluidIntakeMl = 0;
         }
     }
 }

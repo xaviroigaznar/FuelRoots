@@ -13,6 +13,7 @@ module Engine {
         // =========================
 
         function initialize() {
+            // Estimated glycogen storage
             glycogenCapacity = 400;
         }
 
@@ -21,29 +22,129 @@ module Engine {
         // =========================
 
         function update(state) {
-
             var ri = state.relativeIntensity;
             var elapsed = state.elapsedTime;
-            var hydration = state.hydrationDeficitMl;
-            var glycogen = state.glycogenRemaining;
+            var hydrationDeficit =
+                state.hydrationDeficitMl;
+            var carbsBurned =
+                state.sessionCarbsBurned;
+            var carbsIngested =
+                state.sessionCarbsIngested;
 
-            // Fatigue model
-            state.fatiguePercent = calculateFatigue(ri, elapsed, hydration);
+            // =================================
+            // GLYCOGEN
+            // =================================
 
-            // Bonk risk
-            state.bonkRisk =
+            var glycogenRemaining =
+                calculateRemainingGlycogen(
+                    carbsBurned,
+                    carbsIngested
+                );
+
+            state.glycogenRemaining =
+                glycogenRemaining;
+
+            state.glycogenPercent =
+                Utils.FormatUtils
+                    .formatPercent(
+                    (glycogenRemaining
+                    / glycogenCapacity
+                ) * 100);
+
+            // =================================
+            // FATIGUE
+            // =================================
+
+            var fatigue =
+                calculateFatigue(
+                    ri,
+                    elapsed,
+                    hydrationDeficit,
+                    glycogenRemaining
+                );
+
+            state.fatiguePercent =
+                Utils.FormatUtils
+                    .formatPercent(
+                        fatigue
+                    );
+
+            // =================================
+            // BONK RISK
+            // =================================
+
+            var bonkRisk =
                 calculateBonkRisk(
-                    glycogen,
-                    hydration,
+                    glycogenRemaining,
+                    hydrationDeficit,
                     ri
                 );
 
-            // Status label
+            state.bonkRisk =
+                bonkRisk;
+
+            state.bonkRiskLabel =
+                Utils.FormatUtils
+                    .formatPercent(
+                        bonkRisk
+                    );
+
+            // =================================
+            // BONK TIME
+            // =================================
+
+            var bonkTime =
+                estimateBonkTime(
+                    glycogenRemaining,
+                    ri
+                );
+
+            state.bonkTimeLabel =
+                bonkTime;
+
+            state.bonkTimeLabel =
+                Utils.FormatUtils
+                    .formatCountdown(
+                        bonkTime
+                    );
+
+            // =================================
+            // STATUS
+            // =================================
+
             state.statusLabel =
                 calculateStatus(
-                    state.fatiguePercent,
-                    state.bonkRisk
+                    fatigue,
+                    bonkRisk
                 );
+        }
+
+        // =====================================
+        // GLYCOGEN MODEL
+        // =====================================
+
+        function calculateRemainingGlycogen(
+            carbsBurned,
+            carbsIngested
+        ) {
+
+            var remaining =
+                glycogenCapacity
+                - carbsBurned
+                + carbsIngested;
+
+            if (remaining > glycogenCapacity) {
+
+                remaining =
+                    glycogenCapacity;
+            }
+
+            if (remaining < 0) {
+
+                remaining = 0;
+            }
+
+            return remaining;
         }
 
         // =========================
@@ -53,21 +154,55 @@ module Engine {
         function calculateFatigue(
             relativeIntensity,
             elapsed,
-            hydration
+            hydrationDeficit,
+            glycogenRemaining
         ) {
 
             var fatigue = 0;
 
-            // Duration contribution
-            fatigue += elapsed / 1800.0;
+            // =============================
+            // DURATION
+            // =============================
 
-            fatigue += relativeIntensity * 25;
+            fatigue +=
+                elapsed / 2400.0;
 
-            // Hydration contribution
-            fatigue += hydration / 250.0;
+            // =============================
+            // INTENSITY
+            // =============================
+
+            fatigue +=
+                relativeIntensity * 30;
+
+            // =============================
+            // HYDRATION
+            // =============================
+
+            fatigue +=
+                hydrationDeficit / 300.0;
+
+            // =============================
+            // LOW GLYCOGEN
+            // =============================
+
+            if (glycogenRemaining < 150) {
+
+                fatigue += 10;
+            }
+
+            if (glycogenRemaining < 80) {
+
+                fatigue += 15;
+            }
+
+            if (glycogenRemaining < 40) {
+
+                fatigue += 25;
+            }
 
             // Clamp
             if (fatigue > 100) {
+
                 fatigue = 100;
             }
 
@@ -79,45 +214,84 @@ module Engine {
         // =========================
 
         function calculateBonkRisk(
-            glycogen,
-            hydration,
-            ri
+            glycogenRemaining,
+            hydrationDeficit,
+            relativeIntensity
         ) {
 
             var risk = 0;
 
-            // Glycogen contribution
-            if (glycogen < 70) {
-                risk += 20;
-            }
+            // =============================
+            // GLYCOGEN
+            // =============================
 
-            if (glycogen < 40) {
-                risk += 30;
-            }
-
-            if (glycogen < 20) {
-                risk += 40;
-            }
-
-            // Hydration contribution
-            if (hydration > 1000) {
+            if (glycogenRemaining < 150) {
                 risk += 15;
             }
 
-            if (hydration > 1800) {
+            if (glycogenRemaining < 80) {
+                risk += 25;
+            }
+
+            if (glycogenRemaining < 40) {
+                risk += 40;
+            }
+
+            // =============================
+            // HYDRATION
+            // =============================
+
+            if (hydrationDeficit > 1000) {
+                risk += 10;
+            }
+
+            if (hydrationDeficit > 1800) {
                 risk += 20;
             }
 
-            // High power contribution
-            if (ri > 0.8) {
+            // =============================
+            // INTENSITY
+            // =============================
+
+            if (relativeIntensity > 0.80) {
+                risk += 15;
+            }
+
+            if (relativeIntensity > 0.90) {
                 risk += 20;
             }
 
+            // Clamp
             if (risk > 100) {
                 risk = 100;
             }
 
             return risk;
+        }
+
+        // =====================================
+        // BONK TIME ESTIMATION
+        // =====================================
+
+        function estimateBonkTime(
+            glycogenRemaining,
+            relativeIntensity
+        ) {
+
+            var burnRate =
+                20 +
+                (relativeIntensity * 80);
+
+            if (burnRate <= 0) {
+                return 999;
+            }
+
+            // Minutes remaining
+            return
+                (
+                    glycogenRemaining
+                    / burnRate
+                ) * 60;
         }
 
         // =========================

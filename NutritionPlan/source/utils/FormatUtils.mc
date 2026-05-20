@@ -34,8 +34,9 @@ module Utils {
 
             return
                 minutes.format("%d")
-                + ":"
-                + seconds.format("%02d");
+                + "m"
+                + seconds.format("%02d")
+                + "s";
         }
 
         // Converts seconds to HH:MM:SS
@@ -65,16 +66,18 @@ module Utils {
 
                 return
                     hours.format("%d")
-                    + ":"
+                    + "h"
                     + minutes.format("%02d")
-                    + ":"
-                    + seconds.format("%02d");
+                    + "m"
+                    + seconds.format("%02d")
+                    + "s";
             }
 
             return
                 minutes.format("%d")
-                + ":"
-                + seconds.format("%02d");
+                + "m"
+                + seconds.format("%02d")
+                + "s";
         }
 
         // ==========================================

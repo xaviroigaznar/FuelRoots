@@ -7,6 +7,7 @@ module Session {
         // =========================
 
         var elapsedTime;
+        var lapElapsedTime;
         var calories;
         var currentPower;
         var heartRate;
@@ -15,10 +16,36 @@ module Session {
         var relativeIntensity;
 
         // =========================
+        // Session Totals Metrics
+        // =========================
+        var sessionCarbsBurnedPerHour;
+        var sessionCarbsIngestedPerHour;
+        var sessionCarbsIngested;
+        var sessionCarbsBurned;
+
+        // =========================
+        // Lap Metrics
+        // =========================
+        var lapCarbsBurnedPerHour;
+        var lapCarbsIngestedPerHour;
+        var lapCarbsIngested;
+        var lapCarbsBurned;
+
+        // =========================
+        // Countdown Metrics
+        // =========================
+        var nextDrinkCountdownLabel;
+        var hydrationDeficitLabel;
+
+        var nextFuelCountdownLabel;
+        var carbDeficitLabel;
+
+        // =========================
         // Fuel
         // =========================
 
         var glycogenRemaining;
+        var glycogenPercent;
         var carbBurnRate;
 
         // UI-ready fuel metrics
@@ -47,11 +74,14 @@ module Session {
 
         // UI-ready status
         var statusLabel;
+        var bonkTimeLabel;
+        var bonkRiskLabel;
 
         function initialize() {
 
             // Base
             elapsedTime = 0;
+            lapElapsedTime = 0;
             calories = 0;
             currentPower = 0;
             heartRate = 0;
@@ -61,6 +91,7 @@ module Session {
 
             // Fuel
             glycogenRemaining = 100;
+            glycogenPercent = "100%";
             carbBurnRate = 0;
 
             timeToDepletion = "--";
@@ -79,7 +110,24 @@ module Session {
             fatiguePercent = 0;
             bonkRisk = 0;
 
+            sessionCarbsBurnedPerHour = "0g/h";
+            sessionCarbsIngestedPerHour = "0g/h";
+            sessionCarbsIngested = "0g";
+            sessionCarbsBurned = 0.0;
+
+            lapCarbsBurnedPerHour = "0g/h";
+            lapCarbsIngestedPerHour = "0g/h";
+            lapCarbsIngested = "0g";
+            lapCarbsBurned = 0.0;
+
+            nextDrinkCountdownLabel = "--";
+            hydrationDeficitLabel = "0ml";
+            nextFuelCountdownLabel = "--";
+            carbDeficitLabel = "0g";
+
             statusLabel = "STABLE";
+            bonkTimeLabel = "--";
+            bonkRiskLabel = "0%";
         }
     }
 }

@@ -1,20 +1,36 @@
 using Toybox.System;
+using Toybox.Weather;
 
 using Session;
 using Engine;
-using Toybox.Weather;
+using Tracker;
 
 module Session {
     class SessionManager {
+
+        // =====================================
+        // CORE
+        // =====================================
         var state;
         var profile;
 
+        // =====================================
+        // ENGINES
+        // =====================================
         var fuelEngine;
         var hydrationEngine;
         var predictionEngine;
 
+        // =====================================
+        // TRACKERS
+        // =====================================
+        var nutritionTracker;
+
+        // =====================================
+        // UPDATE TIMERS
+        // =====================================
+
         var lastFuelUpdate;
-        var lastHydrationUpdate;
         var lastPredictionUpdate;
 
         var powerBuffer;
@@ -24,86 +40,267 @@ module Session {
             state = new WorkoutState();
             profile = profileData;
 
+            // =============================
+            // ENGINES
+            // =============================
             fuelEngine = new Engine.FuelEngine(profile);
             hydrationEngine = new Engine.HydrationEngine(profile);
             predictionEngine = new Engine.PredictionEngine();
 
+            // =============================
+            // TRACKERS
+            // =============================
+            nutritionTracker = new Tracker.NutritionTracker();
+
+            // =============================
+            // TIMERS
+            // =============================
             lastFuelUpdate = 0;
-            lastHydrationUpdate = 0;
             lastPredictionUpdate = 0;
 
             powerBuffer = [];
             maxBufferSize = 30;
         }
 
+        // =====================================
+        // MAIN UPDATE
+        // =====================================
         function update(info) {
+            if (info == null) {
+                return;
+            }
+
+            // =============================
+            // BASE METRICS
+            // =============================
             updateBaseMetrics(info);
 
             var now = System.getTimer();
 
-            // Fuel every 30s
-            if (now - lastFuelUpdate > 30000) {
+            // =============================
+            // FUEL ENGINE
+            // =============================
+
+            if (
+                now - lastFuelUpdate
+                > 1000
+            ) {
                 fuelEngine.update(state);
 
                 lastFuelUpdate = now;
             }
 
-            // Hydration every second
+            // =============================
+            // HYDRATION ENGINE
+            // =============================
             hydrationEngine.update(state);
 
-            lastHydrationUpdate = now;
+            // =============================
+            // NUTRITION
+            // =============================
+            updateNutritionState();
 
-            // Prediction every 60s
-            if (now - lastPredictionUpdate > 60000) {
-                predictionEngine.update(state);
+            // =============================
+            // PREDICTIONS
+            // =============================
 
-                lastPredictionUpdate = now;
+            if (
+                now - lastPredictionUpdate
+                > 5000
+            ) {
+                predictionEngine
+                    .update(state);
+
+                lastPredictionUpdate =
+                    now;
             }
         }
 
+        // =====================================
+        // BASE METRICS
+        // =====================================
         function updateBaseMetrics(info) {
-            if (info == null) {
-                return;
+            state.elapsedTime =
+                info.elapsedTime;
+
+            state.currentPower =
+                info.currentPower;
+
+            state.calories =
+                info.calories;
+
+            // =============================
+            // WEATHER
+            // =============================
+            var weather =
+                Weather
+                    .getCurrentConditions();
+
+            if (
+                weather != null
+                && weather.temperature
+                    != null
+            ) {
+
+                state.temperature =
+                    weather.temperature;
             }
 
-            state.elapsedTime = info.elapsedTime;
-            state.calories = info.calories;
-            state.currentPower = info.currentPower;
-            state.temperature = Weather.getCurrentConditions().temperature;
+            // =============================
+            // LAP TIME
+            // =============================
 
-            updateRollingPower(info.currentPower);
+            if (
+                info has :currentLapTime
+            ) {
+                state.lapElapsedTime =
+                    info.currentLapTime;
+            }
         }
 
-        function updateRollingPower(currentPower) {
-            if (currentPower == null) {
-                return;
-            }
+        // =====================================
+        // NUTRITION STATE
+        // =====================================
 
-            powerBuffer.add(currentPower);
+        function updateNutritionState() {
 
-            // Keep only latest 30 samples
-            if (powerBuffer.size() > maxBufferSize) {
-                powerBuffer.remove(0);
-            }
+            // =============================
+            // SESSION INTAKE
+            // =============================
 
-            var total = 0;
+            state.sessionCarbsIngested =
+                nutritionTracker
+                    .getSessionCarbs();
 
-            for (var i = 0; i < powerBuffer.size(); i += 1) {
-                total += powerBuffer[i];
-            }
+            state.lapCarbsIngested =
+                nutritionTracker
+                    .getLapCarbs();
 
-            state.rollingPower = total / powerBuffer.size();
+            // =============================
+            // INTAKE RATES
+            // =============================
 
-            // Relative intensity
-            if (profile.ftp > 0) {
-                state.relativeIntensity = state.rollingPower / profile.ftp;
+            state.sessionCarbsIngestedPerHour =
+                nutritionTracker
+                    .getSessionCarbRate(
+                        state.elapsedTime
+                    );
+
+            state.lapCarbsIngestedPerHour =
+                nutritionTracker
+                    .getLapCarbRate(
+                        state.lapElapsedTime
+                    );
+
+            // =============================
+            // BURN RATES
+            // =============================
+
+            var elapsedHours =
+                state.elapsedTime
+                / 3600.0;
+
+            if (elapsedHours > 0) {
+
+                state.sessionCarbsBurnedPerHour =
+                    state.sessionCarbsBurned
+                    / elapsedHours;
             }
             else {
 
-                state.relativeIntensity = 0;
+                state.sessionCarbsBurnedPerHour =
+                    0;
             }
+
+            var lapHours =
+                state.lapElapsedTime
+                / 3600.0;
+
+            if (lapHours > 0) {
+
+                state.lapCarbsBurnedPerHour =
+                    state.lapCarbsBurned
+                    / lapHours;
+            }
+            else {
+
+                state.lapCarbsBurnedPerHour =
+                    0;
+            }
+
+            // =============================
+            // FUEL DEFICIT
+            // =============================
+            var carbDeficit =
+                state.sessionCarbsBurned
+                - state.sessionCarbsIngested;
+
+            if (carbDeficit < 0) {
+                carbDeficit = 0;
+            }
+
+            state.carbDeficitLabel =
+                carbDeficit.format("%.0f")
+                + "g";
+
+            // =============================
+            // NEXT FUEL
+            // =============================
+            var minutesUntilFuel =
+                nutritionTracker
+                    .getNextFuelCountdown(
+                        state.relativeIntensity
+                    );
+
+            state.nextFuelCountdownLabel =
+                Utils.FormatUtils
+                    .formatCountdown(
+                        minutesUntilFuel
+                    );
+
+            // =============================
+            // HYDRATION DEFICIT
+            // =============================
+            state.hydrationDeficitLabel =
+                state.hydrationDeficitMl
+                    .format("%.0f")
+                + "ml";
         }
 
+        // =====================================
+        // FUEL EVENT
+        // =====================================
+        function registerFuel(grams) {
+
+            nutritionTracker
+                .registerCarbs(grams);
+        }
+
+        // =====================================
+        // DRINK EVENT
+        // =====================================
+        function registerDrink(ml) {
+            nutritionTracker
+                .registerDrink(ml);
+
+            hydrationEngine
+                .registerDrink(ml);
+        }
+
+        // =====================================
+        // LAP EVENT
+        // =====================================
+        function onLap() {
+            fuelEngine.onLap();
+
+            hydrationEngine.onLap();
+
+            nutritionTracker.resetLap();
+        }
+
+        // =====================================
+        // STATE
+        // =====================================
         function getState() {
             return state;
         }

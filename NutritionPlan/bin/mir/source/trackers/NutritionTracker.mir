@@ -1,0 +1,367 @@
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 1; @symbol_moduledef = [Tracker,1,7,14]; ]
+module Tracker {
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 1; ]
+    <init> {
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,10,16]; @symbol_usingdef<1> = [System,3,17,23]; ]
+    using Toybox.System;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 4; @symbol_usingdef<0> = [Utils,4,10,15]; ]
+    using Utils;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 6; @symbol_classdef = [NutritionTracker,6,10,26]; ]
+    class NutritionTracker {
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 6; ]
+        <init> {
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 6; ]
+        static
+        <init> {
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 12; @position = 12; @symbol_vardef = [sessionCarbsIngested,12,12,32]; ]
+        var sessionCarbsIngested;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 13; @position = 12; @symbol_vardef = [sessionFluidIngestedMl,13,12,34]; ]
+        var sessionFluidIngestedMl;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 19; @position = 12; @symbol_vardef = [lapCarbsIngested,19,12,28]; ]
+        var lapCarbsIngested;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 20; @position = 12; @symbol_vardef = [lapFluidIngestedMl,20,12,30]; ]
+        var lapFluidIngestedMl;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 26; @position = 12; @symbol_vardef = [lastCarbIntakeTime,26,12,30]; ]
+        var lastCarbIntakeTime;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 27; @position = 12; @symbol_vardef = [lastDrinkTime,27,12,25]; ]
+        var lastDrinkTime;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 33; @symbol_functiondef = [initialize,33,17,27]; ]
+        function initialize() as Void {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_33_30_45_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 35 12 ]
+            %tmp.1 = 0;
+            symbol [ sessionCarbsIngested ? 35 12 32 ];
+            putv self :sessionCarbsIngested %tmp.1;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 36 12 ]
+            %tmp.2 = 0;
+            symbol [ sessionFluidIngestedMl ? 36 12 34 ];
+            putv self :sessionFluidIngestedMl %tmp.2;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 38 12 ]
+            %tmp.3 = 0;
+            symbol [ lapCarbsIngested ? 38 12 28 ];
+            putv self :lapCarbsIngested %tmp.3;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 39 12 ]
+            %tmp.4 = 0;
+            symbol [ lapFluidIngestedMl ? 39 12 30 ];
+            putv self :lapFluidIngestedMl %tmp.4;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 41 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_33_30_45_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_33_30_45_8_stop" ]
+            %now.1 = local;
+            symbol [ now %now.1 41 16 19 ];
+            symbol [ System %tmp.5 41 22 28 ];
+            %tmp.5 = getm $.Toybox.System;
+            symbol [ getTimer %tmp.6 41 29 37 ];
+            %tmp.6 = getv function %tmp.5 :getTimer;
+            %tmp.7 = invoke %tmp.5 %tmp.6();
+            lputv %now.1 %tmp.7;
+            symbol [ now %now.1 41 16 19 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 43 12 ]
+            %tmp.8 = lgetv %now.1;
+            symbol [ now %tmp.8 43 33 36 ];
+            symbol [ lastCarbIntakeTime ? 43 12 30 ];
+            putv self :lastCarbIntakeTime %tmp.8;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 44 12 ]
+            %tmp.9 = lgetv %now.1;
+            symbol [ now %tmp.9 44 28 31 ];
+            symbol [ lastDrinkTime ? 44 12 25 ];
+            putv self :lastDrinkTime %tmp.9;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_33_30_45_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 51; @symbol_functiondef = [registerCarbs,51,17,30]; @symbol_param<0> = [grams,51,31,36]; ]
+        function registerCarbs(grams) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_51_38_58_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 53 12 ]
+            symbol [ sessionCarbsIngested %tmp.1 53 12 32 ];
+            %tmp.1 = getv self :sessionCarbsIngested;
+            %tmp.2 = lgetv %grams;
+            symbol [ grams %tmp.2 53 36 41 ];
+            %tmp.3 = add %tmp.1 %tmp.2;
+            symbol [ sessionCarbsIngested ? 53 12 32 ];
+            putv self :sessionCarbsIngested dup %tmp.3;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 54 12 ]
+            symbol [ lapCarbsIngested %tmp.4 54 12 28 ];
+            %tmp.4 = getv self :lapCarbsIngested;
+            %tmp.5 = lgetv %grams;
+            symbol [ grams %tmp.5 54 32 37 ];
+            %tmp.6 = add %tmp.4 %tmp.5;
+            symbol [ lapCarbsIngested ? 54 12 28 ];
+            putv self :lapCarbsIngested dup %tmp.6;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 56 12 ]
+            symbol [ System %tmp.7 57 16 22 ];
+            %tmp.7 = getm $.Toybox.System;
+            symbol [ getTimer %tmp.8 57 23 31 ];
+            %tmp.8 = getv function %tmp.7 :getTimer;
+            %tmp.9 = invoke %tmp.7 %tmp.8();
+            symbol [ lastCarbIntakeTime ? 56 12 30 ];
+            putv self :lastCarbIntakeTime %tmp.9;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_51_38_58_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 64; @symbol_functiondef = [registerDrink,64,17,30]; @symbol_param<0> = [ml,64,31,33]; ]
+        function registerDrink(ml) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_64_35_71_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 66 12 ]
+            symbol [ sessionFluidIngestedMl %tmp.1 66 12 34 ];
+            %tmp.1 = getv self :sessionFluidIngestedMl;
+            %tmp.2 = lgetv %ml;
+            symbol [ ml %tmp.2 66 38 40 ];
+            %tmp.3 = add %tmp.1 %tmp.2;
+            symbol [ sessionFluidIngestedMl ? 66 12 34 ];
+            putv self :sessionFluidIngestedMl dup %tmp.3;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 67 12 ]
+            symbol [ lapFluidIngestedMl %tmp.4 67 12 30 ];
+            %tmp.4 = getv self :lapFluidIngestedMl;
+            %tmp.5 = lgetv %ml;
+            symbol [ ml %tmp.5 67 34 36 ];
+            %tmp.6 = add %tmp.4 %tmp.5;
+            symbol [ lapFluidIngestedMl ? 67 12 30 ];
+            putv self :lapFluidIngestedMl dup %tmp.6;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 69 12 ]
+            symbol [ System %tmp.7 70 16 22 ];
+            %tmp.7 = getm $.Toybox.System;
+            symbol [ getTimer %tmp.8 70 23 31 ];
+            %tmp.8 = getv function %tmp.7 :getTimer;
+            %tmp.9 = invoke %tmp.7 %tmp.8();
+            symbol [ lastDrinkTime ? 69 12 25 ];
+            putv self :lastDrinkTime %tmp.9;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_64_35_71_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 77; @symbol_functiondef = [resetLap,77,17,25]; ]
+        function resetLap() {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_77_28_81_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 79 12 ]
+            %tmp.1 = 0;
+            symbol [ lapCarbsIngested ? 79 12 28 ];
+            putv self :lapCarbsIngested %tmp.1;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 80 12 ]
+            %tmp.2 = 0;
+            symbol [ lapFluidIngestedMl ? 80 12 30 ];
+            putv self :lapFluidIngestedMl %tmp.2;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_77_28_81_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 87; @symbol_functiondef = [getSessionCarbs,87,17,32]; ]
+        function getSessionCarbs() {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_87_35_90_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 89 12 ]
+            symbol [ sessionCarbsIngested %tmp.2 89 19 39 ];
+            %tmp.2 = getv ? :sessionCarbsIngested;
+            ret %tmp.2;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_87_35_90_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 96; @symbol_functiondef = [getLapCarbs,96,17,28]; ]
+        function getLapCarbs() {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_96_31_99_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 98 12 ]
+            symbol [ lapCarbsIngested %tmp.2 98 19 35 ];
+            %tmp.2 = getv ? :lapCarbsIngested;
+            ret %tmp.2;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_96_31_99_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 105; @symbol_functiondef = [getSessionCarbRate,105,17,35]; @symbol_param<0> = [elapsedSeconds,106,12,26]; ]
+        function getSessionCarbRate(elapsedSeconds) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_107_10_118_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 109 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_109_12_111_12_if_stmt:
+            %tmp.1 = lgetv %elapsedSeconds;
+            symbol [ elapsedSeconds %tmp.1 109 16 30 ];
+            %tmp.2 = 0;
+            %tmp.3 = lte %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_109_12_111_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_109_12_111_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_109_37_111_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 110 16 ]
+            %tmp.4 = 0;
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_109_37_111_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_109_12_111_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_109_12_111_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 113 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_107_10_118_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_107_10_118_8_stop" ]
+            %hours.1 = local;
+            symbol [ hours %hours.1 113 16 21 ];
+            %tmp.5 = lgetv %elapsedSeconds;
+            symbol [ elapsedSeconds %tmp.5 114 16 30 ];
+            %tmp.6 = 3600.0;
+            %tmp.7 = div %tmp.5 %tmp.6;
+            lputv %hours.1 %tmp.7;
+            symbol [ hours %hours.1 113 16 21 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 116 12 ]
+            symbol [ sessionCarbsIngested %tmp.9 117 16 36 ];
+            %tmp.9 = getv ? :sessionCarbsIngested;
+            %tmp.10 = lgetv %hours.1;
+            symbol [ hours %tmp.10 117 39 44 ];
+            %tmp.11 = div %tmp.9 %tmp.10;
+            ret %tmp.11;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_107_10_118_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 124; @symbol_functiondef = [getLapCarbRate,124,17,31]; @symbol_param<0> = [lapElapsedSeconds,125,12,29]; ]
+        function getLapCarbRate(lapElapsedSeconds) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_126_10_137_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 128 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_128_12_130_12_if_stmt:
+            %tmp.1 = lgetv %lapElapsedSeconds;
+            symbol [ lapElapsedSeconds %tmp.1 128 16 33 ];
+            %tmp.2 = 0;
+            %tmp.3 = lte %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_128_12_130_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_128_12_130_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_128_40_130_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 129 16 ]
+            %tmp.4 = 0;
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_128_40_130_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_128_12_130_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_128_12_130_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 132 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_126_10_137_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_126_10_137_8_stop" ]
+            %hours.1 = local;
+            symbol [ hours %hours.1 132 16 21 ];
+            %tmp.5 = lgetv %lapElapsedSeconds;
+            symbol [ lapElapsedSeconds %tmp.5 133 16 33 ];
+            %tmp.6 = 3600.0;
+            %tmp.7 = div %tmp.5 %tmp.6;
+            lputv %hours.1 %tmp.7;
+            symbol [ hours %hours.1 132 16 21 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 135 12 ]
+            symbol [ lapCarbsIngested %tmp.9 136 16 32 ];
+            %tmp.9 = getv ? :lapCarbsIngested;
+            %tmp.10 = lgetv %hours.1;
+            symbol [ hours %tmp.10 136 35 40 ];
+            %tmp.11 = div %tmp.9 %tmp.10;
+            ret %tmp.11;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_126_10_137_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 143; @symbol_functiondef = [getNextFuelCountdown,143,17,37]; @symbol_param<0> = [relativeIntensity,144,12,29]; ]
+        function getNextFuelCountdown(relativeIntensity) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_145_10_171_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 147 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_145_10_171_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_145_10_171_8_stop" ]
+            %interval.1 = local;
+            symbol [ interval %interval.1 147 16 24 ];
+            %tmp.1 = 1800000;
+            lputv %interval.1 %tmp.1;
+            symbol [ interval %interval.1 147 16 24 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 150 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_150_12_152_12_if_stmt:
+            %tmp.2 = lgetv %relativeIntensity;
+            symbol [ relativeIntensity %tmp.2 150 16 33 ];
+            %tmp.3 = 0.75;
+            %tmp.4 = gt %tmp.2 %tmp.3;
+            bf %tmp.4 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_150_12_152_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_150_12_152_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_150_42_152_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 151 16 ]
+            %tmp.5 = 1200000;
+            lputv %interval.1 %tmp.5;
+            symbol [ interval %interval.1 151 16 24 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_150_42_152_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_150_12_152_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_150_12_152_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 154 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_154_12_156_12_if_stmt:
+            %tmp.6 = lgetv %relativeIntensity;
+            symbol [ relativeIntensity %tmp.6 154 16 33 ];
+            %tmp.7 = 0.90;
+            %tmp.8 = gt %tmp.6 %tmp.7;
+            bf %tmp.8 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_154_12_156_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_154_12_156_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_154_42_156_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 155 16 ]
+            %tmp.9 = 900000;
+            lputv %interval.1 %tmp.9;
+            symbol [ interval %interval.1 155 16 24 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_154_42_156_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_154_12_156_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_154_12_156_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 158 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_145_10_171_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_145_10_171_8_stop" ]
+            %now.2 = local;
+            symbol [ now %now.2 158 16 19 ];
+            symbol [ System %tmp.10 159 16 22 ];
+            %tmp.10 = getm $.Toybox.System;
+            symbol [ getTimer %tmp.11 159 23 31 ];
+            %tmp.11 = getv function %tmp.10 :getTimer;
+            %tmp.12 = invoke %tmp.10 %tmp.11();
+            lputv %now.2 %tmp.12;
+            symbol [ now %now.2 158 16 19 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 161 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_145_10_171_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_145_10_171_8_stop" ]
+            %remainingMinutes.3 = local;
+            symbol [ remainingMinutes %remainingMinutes.3 161 16 32 ];
+            %tmp.13 = lgetv %interval.1;
+            symbol [ interval %tmp.13 162 17 25 ];
+            %tmp.14 = lgetv %now.2;
+            symbol [ now %tmp.14 163 17 20 ];
+            symbol [ lastCarbIntakeTime %tmp.16 163 23 41 ];
+            %tmp.16 = getv ? :lastCarbIntakeTime;
+            %tmp.17 = sub %tmp.14 %tmp.16;
+            %tmp.18 = sub %tmp.13 %tmp.17;
+            %tmp.19 = 60000.0;
+            %tmp.20 = div %tmp.18 %tmp.19;
+            lputv %remainingMinutes.3 %tmp.20;
+            symbol [ remainingMinutes %remainingMinutes.3 161 16 32 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 166 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_166_12_168_12_if_stmt:
+            %tmp.21 = lgetv %remainingMinutes.3;
+            symbol [ remainingMinutes %tmp.21 166 16 32 ];
+            %tmp.22 = 0;
+            %tmp.23 = lt %tmp.21 %tmp.22;
+            bf %tmp.23 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_166_12_168_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_166_12_168_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_166_38_168_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 167 16 ]
+            %tmp.24 = 0;
+            lputv %remainingMinutes.3 %tmp.24;
+            symbol [ remainingMinutes %remainingMinutes.3 167 16 32 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_166_38_168_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_166_12_168_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_166_12_168_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 170 12 ]
+            %tmp.25 = lgetv %remainingMinutes.3;
+            symbol [ remainingMinutes %tmp.25 170 19 35 ];
+            ret %tmp.25;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_145_10_171_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 177; @symbol_functiondef = [getFuelDeficit,177,17,31]; @symbol_param<0> = [carbsBurned,178,12,23]; ]
+        function getFuelDeficit(carbsBurned) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_179_10_190_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 181 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_179_10_190_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_179_10_190_8_stop" ]
+            %deficit.1 = local;
+            symbol [ deficit %deficit.1 181 16 23 ];
+            %tmp.1 = lgetv %carbsBurned;
+            symbol [ carbsBurned %tmp.1 182 16 27 ];
+            symbol [ sessionCarbsIngested %tmp.3 183 16 36 ];
+            %tmp.3 = getv ? :sessionCarbsIngested;
+            %tmp.4 = sub %tmp.1 %tmp.3;
+            lputv %deficit.1 %tmp.4;
+            symbol [ deficit %deficit.1 181 16 23 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 185 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_185_12_187_12_if_stmt:
+            %tmp.5 = lgetv %deficit.1;
+            symbol [ deficit %tmp.5 185 16 23 ];
+            %tmp.6 = 0;
+            %tmp.7 = lt %tmp.5 %tmp.6;
+            bf %tmp.7 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_185_12_187_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_185_12_187_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_185_29_187_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 186 16 ]
+            %tmp.8 = 0;
+            lputv %deficit.1 %tmp.8;
+            symbol [ deficit %deficit.1 186 16 23 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_185_29_187_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_185_12_187_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_185_12_187_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 189 12 ]
+            %tmp.9 = lgetv %deficit.1;
+            symbol [ deficit %tmp.9 189 19 26 ];
+            ret %tmp.9;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_179_10_190_8_stop:
+        }
+    }
+}
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 1; ]
+<init> {
+}
