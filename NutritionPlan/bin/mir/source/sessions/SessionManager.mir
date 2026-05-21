@@ -42,577 +42,872 @@ module Session {
         var powerBuffer;
         [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 37; @position = 12; @symbol_vardef = [maxBufferSize,37,12,25]; ]
         var maxBufferSize;
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 39; @symbol_functiondef = [initialize,39,17,27]; @symbol_param<0> = [profileData,39,28,39]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 42; @position = 12; @symbol_vardef = [fuelAlertCooldown,42,12,29]; ]
+        var fuelAlertCooldown;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 43; @position = 12; @symbol_vardef = [drinkAlertCooldown,43,12,30]; ]
+        var drinkAlertCooldown;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 45; @position = 12; @symbol_vardef = [lastFuelAlertTime,45,12,29]; ]
+        var lastFuelAlertTime;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 46; @position = 12; @symbol_vardef = [lastDrinkAlertTime,46,12,30]; ]
+        var lastDrinkAlertTime;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 48; @symbol_functiondef = [initialize,48,17,27]; @symbol_param<0> = [profileData,48,28,39]; ]
         function initialize(profileData) as Void {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_39_41_63_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 40 12 ]
-            symbol [ WorkoutState %tmp.4 40 24 36 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_48_41_93_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 49 12 ]
+            symbol [ WorkoutState %tmp.4 49 24 36 ];
             %tmp.4 = getv ? :WorkoutState;
             %tmp.1 = newc %tmp.4 ();
-            symbol [ state ? 40 12 17 ];
+            symbol [ state ? 49 12 17 ];
             putv self :state %tmp.1;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 41 12 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 50 12 ]
             %tmp.5 = lgetv %profileData;
-            symbol [ profileData %tmp.5 41 22 33 ];
-            symbol [ profile ? 41 12 19 ];
+            symbol [ profileData %tmp.5 50 22 33 ];
+            symbol [ profile ? 50 12 19 ];
             putv self :profile %tmp.5;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 46 12 ]
-            symbol [ Engine %tmp.8 46 29 35 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 55 12 ]
+            symbol [ Engine %tmp.8 55 29 35 ];
             %tmp.8 = getm $.Engine;
-            symbol [ FuelEngine %tmp.9 46 36 46 ];
+            symbol [ FuelEngine %tmp.9 55 36 46 ];
             %tmp.9 = getv function ? %tmp.8 :FuelEngine;
-            symbol [ profile %tmp.11 46 47 54 ];
+            symbol [ profile %tmp.11 55 47 54 ];
             %tmp.11 = getv ? :profile;
             %tmp.6 = newc %tmp.9 (%tmp.11);
-            symbol [ fuelEngine ? 46 12 22 ];
+            symbol [ fuelEngine ? 55 12 22 ];
             putv self :fuelEngine %tmp.6;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 47 12 ]
-            symbol [ Engine %tmp.14 47 34 40 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 56 12 ]
+            symbol [ Engine %tmp.14 56 34 40 ];
             %tmp.14 = getm $.Engine;
-            symbol [ HydrationEngine %tmp.15 47 41 56 ];
+            symbol [ HydrationEngine %tmp.15 56 41 56 ];
             %tmp.15 = getv function ? %tmp.14 :HydrationEngine;
-            symbol [ profile %tmp.17 47 57 64 ];
+            symbol [ profile %tmp.17 56 57 64 ];
             %tmp.17 = getv ? :profile;
             %tmp.12 = newc %tmp.15 (%tmp.17);
-            symbol [ hydrationEngine ? 47 12 27 ];
+            symbol [ hydrationEngine ? 56 12 27 ];
             putv self :hydrationEngine %tmp.12;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 48 12 ]
-            symbol [ Engine %tmp.20 48 35 41 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 57 12 ]
+            symbol [ Engine %tmp.20 57 35 41 ];
             %tmp.20 = getm $.Engine;
-            symbol [ PredictionEngine %tmp.21 48 42 58 ];
+            symbol [ PredictionEngine %tmp.21 57 42 58 ];
             %tmp.21 = getv function ? %tmp.20 :PredictionEngine;
             %tmp.18 = newc %tmp.21 ();
-            symbol [ predictionEngine ? 48 12 28 ];
+            symbol [ predictionEngine ? 57 12 28 ];
             putv self :predictionEngine %tmp.18;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 53 12 ]
-            symbol [ Tracker %tmp.24 53 35 42 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 62 12 ]
+            symbol [ Tracker %tmp.24 62 35 42 ];
             %tmp.24 = getm $.Tracker;
-            symbol [ NutritionTracker %tmp.25 53 43 59 ];
+            symbol [ NutritionTracker %tmp.25 62 43 59 ];
             %tmp.25 = getv function ? %tmp.24 :NutritionTracker;
             %tmp.22 = newc %tmp.25 ();
-            symbol [ nutritionTracker ? 53 12 28 ];
+            symbol [ nutritionTracker ? 62 12 28 ];
             putv self :nutritionTracker %tmp.22;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 58 12 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 67 12 ]
             %tmp.26 = 0;
-            symbol [ lastFuelUpdate ? 58 12 26 ];
+            symbol [ lastFuelUpdate ? 67 12 26 ];
             putv self :lastFuelUpdate %tmp.26;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 59 12 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 68 12 ]
             %tmp.27 = 0;
-            symbol [ lastPredictionUpdate ? 59 12 32 ];
+            symbol [ lastPredictionUpdate ? 68 12 32 ];
             putv self :lastPredictionUpdate %tmp.27;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 61 12 ]
-            %tmp.28 = newa 0;
-            symbol [ powerBuffer ? 61 12 23 ];
-            putv self :powerBuffer %tmp.28;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 62 12 ]
-            %tmp.29 = 30;
-            symbol [ maxBufferSize ? 62 12 25 ];
-            putv self :maxBufferSize %tmp.29;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_39_41_63_8_stop:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 74 12 ]
+            %tmp.28 = 0;
+            symbol [ lastFuelAlertTime ? 74 12 29 ];
+            putv self :lastFuelAlertTime %tmp.28;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 75 12 ]
+            %tmp.29 = 0;
+            symbol [ lastDrinkAlertTime ? 75 12 30 ];
+            putv self :lastDrinkAlertTime %tmp.29;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 78 12 ]
+            %tmp.30 = 600000;
+            symbol [ fuelAlertCooldown ? 78 12 29 ];
+            putv self :fuelAlertCooldown %tmp.30;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 81 12 ]
+            %tmp.31 = 600000;
+            symbol [ drinkAlertCooldown ? 81 12 30 ];
+            putv self :drinkAlertCooldown %tmp.31;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 88 12 ]
+            symbol [ state %tmp.32 88 12 17 ];
+            %tmp.32 = getv self :state;
+            %tmp.33 = false;
+            symbol [ pendingFuelAlert ? 88 18 34 ];
+            putv %tmp.32 :pendingFuelAlert %tmp.33;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 91 12 ]
+            symbol [ state %tmp.34 91 12 17 ];
+            %tmp.34 = getv self :state;
+            %tmp.35 = false;
+            symbol [ pendingDrinkAlert ? 91 18 35 ];
+            putv %tmp.34 :pendingDrinkAlert %tmp.35;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_48_41_93_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 68; @symbol_functiondef = [update,68,17,23]; @symbol_param<0> = [info,68,24,28]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 98; @symbol_functiondef = [update,98,17,23]; @symbol_param<0> = [info,98,24,28]; ]
         function update(info) {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_68_30_117_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 69 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_69_12_71_12_if_stmt:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_98_30_152_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 99 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_99_12_101_12_if_stmt:
             %tmp.1 = lgetv %info;
-            symbol [ info %tmp.1 69 16 20 ];
+            symbol [ info %tmp.1 99 16 20 ];
             %tmp.2 = null;
             %tmp.3 = eq %tmp.1 %tmp.2;
-            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_69_12_71_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_69_12_71_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_69_30_71_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 70 16 ]
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_99_12_101_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_99_12_101_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_99_30_101_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 100 16 ]
             ret ?;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_69_30_71_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_69_12_71_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_69_12_71_12_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 76 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_99_30_101_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_99_12_101_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_99_12_101_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 106 12 ]
             %tmp.4 = self;
-            symbol [ updateBaseMetrics %tmp.5 76 12 29 ];
+            symbol [ updateBaseMetrics %tmp.5 106 12 29 ];
             %tmp.5 = getv function %tmp.4 :updateBaseMetrics;
             %tmp.6 = lgetv %info;
-            symbol [ info %tmp.6 76 30 34 ];
+            symbol [ info %tmp.6 106 30 34 ];
             invoke %tmp.4 %tmp.5(%tmp.6);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 78 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_68_30_117_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_68_30_117_8_stop" ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 108 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_98_30_152_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_98_30_152_8_stop" ]
             %now.1 = local;
-            symbol [ now %now.1 78 16 19 ];
-            symbol [ System %tmp.7 78 22 28 ];
+            symbol [ now %now.1 108 16 19 ];
+            symbol [ System %tmp.7 108 22 28 ];
             %tmp.7 = getm $.Toybox.System;
-            symbol [ getTimer %tmp.8 78 29 37 ];
+            symbol [ getTimer %tmp.8 108 29 37 ];
             %tmp.8 = getv function %tmp.7 :getTimer;
             %tmp.9 = invoke %tmp.7 %tmp.8();
             lputv %now.1 %tmp.9;
-            symbol [ now %now.1 78 16 19 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 84 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_84_12_91_12_if_stmt:
+            symbol [ now %now.1 108 16 19 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 114 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_114_12_121_12_if_stmt:
             %tmp.10 = lgetv %now.1;
-            symbol [ now %tmp.10 85 16 19 ];
-            symbol [ lastFuelUpdate %tmp.12 85 22 36 ];
+            symbol [ now %tmp.10 115 16 19 ];
+            symbol [ lastFuelUpdate %tmp.12 115 22 36 ];
             %tmp.12 = getv ? :lastFuelUpdate;
             %tmp.13 = sub %tmp.10 %tmp.12;
             %tmp.14 = 1000;
             %tmp.15 = gt %tmp.13 %tmp.14;
-            bf %tmp.15 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_84_12_91_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_84_12_91_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_87_14_91_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 88 16 ]
-            symbol [ fuelEngine %tmp.17 88 16 26 ];
+            bf %tmp.15 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_114_12_121_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_114_12_121_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_117_14_121_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 118 16 ]
+            symbol [ fuelEngine %tmp.17 118 16 26 ];
             %tmp.17 = getv ? :fuelEngine;
-            symbol [ update %tmp.18 88 27 33 ];
+            symbol [ update %tmp.18 118 27 33 ];
             %tmp.18 = getv function %tmp.17 :update;
-            symbol [ state %tmp.20 88 34 39 ];
+            symbol [ state %tmp.20 118 34 39 ];
             %tmp.20 = getv ? :state;
             invoke %tmp.17 %tmp.18(%tmp.20);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 90 16 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 120 16 ]
             %tmp.21 = lgetv %now.1;
-            symbol [ now %tmp.21 90 33 36 ];
-            symbol [ lastFuelUpdate ? 90 16 30 ];
+            symbol [ now %tmp.21 120 33 36 ];
+            symbol [ lastFuelUpdate ? 120 16 30 ];
             putv self :lastFuelUpdate %tmp.21;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_87_14_91_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_84_12_91_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_84_12_91_12_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 96 12 ]
-            symbol [ hydrationEngine %tmp.23 96 12 27 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_117_14_121_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_114_12_121_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_114_12_121_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 126 12 ]
+            symbol [ hydrationEngine %tmp.23 126 12 27 ];
             %tmp.23 = getv ? :hydrationEngine;
-            symbol [ update %tmp.24 96 28 34 ];
+            symbol [ update %tmp.24 126 28 34 ];
             %tmp.24 = getv function %tmp.23 :update;
-            symbol [ state %tmp.26 96 35 40 ];
+            symbol [ state %tmp.26 126 35 40 ];
             %tmp.26 = getv ? :state;
             invoke %tmp.23 %tmp.24(%tmp.26);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 101 12 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 131 12 ]
             %tmp.27 = self;
-            symbol [ updateNutritionState %tmp.28 101 12 32 ];
+            symbol [ updateNutritionState %tmp.28 131 12 32 ];
             %tmp.28 = getv function %tmp.27 :updateNutritionState;
             invoke %tmp.27 %tmp.28();
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 107 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_107_12_116_12_if_stmt:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 137 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_137_12_146_12_if_stmt:
             %tmp.29 = lgetv %now.1;
-            symbol [ now %tmp.29 108 16 19 ];
-            symbol [ lastPredictionUpdate %tmp.31 108 22 42 ];
+            symbol [ now %tmp.29 138 16 19 ];
+            symbol [ lastPredictionUpdate %tmp.31 138 22 42 ];
             %tmp.31 = getv ? :lastPredictionUpdate;
             %tmp.32 = sub %tmp.29 %tmp.31;
             %tmp.33 = 5000;
             %tmp.34 = gt %tmp.32 %tmp.33;
-            bf %tmp.34 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_107_12_116_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_107_12_116_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_110_14_116_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 111 16 ]
-            symbol [ predictionEngine %tmp.36 111 16 32 ];
+            bf %tmp.34 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_137_12_146_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_137_12_146_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_140_14_146_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 141 16 ]
+            symbol [ predictionEngine %tmp.36 141 16 32 ];
             %tmp.36 = getv ? :predictionEngine;
-            symbol [ update %tmp.37 112 21 27 ];
+            symbol [ update %tmp.37 142 21 27 ];
             %tmp.37 = getv function %tmp.36 :update;
-            symbol [ state %tmp.39 112 28 33 ];
+            symbol [ state %tmp.39 142 28 33 ];
             %tmp.39 = getv ? :state;
             invoke %tmp.36 %tmp.37(%tmp.39);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 114 16 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 144 16 ]
             %tmp.40 = lgetv %now.1;
-            symbol [ now %tmp.40 115 20 23 ];
-            symbol [ lastPredictionUpdate ? 114 16 36 ];
+            symbol [ now %tmp.40 145 20 23 ];
+            symbol [ lastPredictionUpdate ? 144 16 36 ];
             putv self :lastPredictionUpdate %tmp.40;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_110_14_116_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_107_12_116_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_107_12_116_12_if_end:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_68_30_117_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_140_14_146_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_137_12_146_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_137_12_146_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 151 12 ]
+            %tmp.41 = self;
+            symbol [ processAlerts %tmp.42 151 12 25 ];
+            %tmp.42 = getv function %tmp.41 :processAlerts;
+            invoke %tmp.41 %tmp.42();
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_98_30_152_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 122; @symbol_functiondef = [updateBaseMetrics,122,17,34]; @symbol_param<0> = [info,122,35,39]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 157; @symbol_functiondef = [updateBaseMetrics,157,17,34]; @symbol_param<0> = [info,157,35,39]; ]
         function updateBaseMetrics(info) {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_122_41_159_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 123 12 ]
-            symbol [ state %tmp.1 123 12 17 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_157_41_194_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 158 12 ]
+            symbol [ state %tmp.1 158 12 17 ];
             %tmp.1 = getv self :state;
             %tmp.2 = lgetv %info;
-            symbol [ info %tmp.2 124 16 20 ];
-            symbol [ elapsedTime %tmp.3 124 21 32 ];
+            symbol [ info %tmp.2 159 16 20 ];
+            symbol [ elapsedTime %tmp.3 159 21 32 ];
             %tmp.3 = getv %tmp.2 :elapsedTime;
-            symbol [ elapsedTime ? 123 18 29 ];
+            symbol [ elapsedTime ? 158 18 29 ];
             putv %tmp.1 :elapsedTime %tmp.3;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 126 12 ]
-            symbol [ state %tmp.4 126 12 17 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 161 12 ]
+            symbol [ state %tmp.4 161 12 17 ];
             %tmp.4 = getv self :state;
             %tmp.5 = lgetv %info;
-            symbol [ info %tmp.5 127 16 20 ];
-            symbol [ currentPower %tmp.6 127 21 33 ];
+            symbol [ info %tmp.5 162 16 20 ];
+            symbol [ currentPower %tmp.6 162 21 33 ];
             %tmp.6 = getv %tmp.5 :currentPower;
-            symbol [ currentPower ? 126 18 30 ];
+            symbol [ currentPower ? 161 18 30 ];
             putv %tmp.4 :currentPower %tmp.6;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 129 12 ]
-            symbol [ state %tmp.7 129 12 17 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 164 12 ]
+            symbol [ state %tmp.7 164 12 17 ];
             %tmp.7 = getv self :state;
             %tmp.8 = lgetv %info;
-            symbol [ info %tmp.8 130 16 20 ];
-            symbol [ calories %tmp.9 130 21 29 ];
+            symbol [ info %tmp.8 165 16 20 ];
+            symbol [ calories %tmp.9 165 21 29 ];
             %tmp.9 = getv %tmp.8 :calories;
-            symbol [ calories ? 129 18 26 ];
+            symbol [ calories ? 164 18 26 ];
             putv %tmp.7 :calories %tmp.9;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 135 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_122_41_159_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_122_41_159_8_stop" ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 170 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_157_41_194_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_157_41_194_8_stop" ]
             %weather.1 = local;
-            symbol [ weather %weather.1 135 16 23 ];
-            symbol [ Weather %tmp.10 136 16 23 ];
+            symbol [ weather %weather.1 170 16 23 ];
+            symbol [ Weather %tmp.10 171 16 23 ];
             %tmp.10 = getm $.Toybox.Weather;
-            symbol [ getCurrentConditions %tmp.11 137 21 41 ];
+            symbol [ getCurrentConditions %tmp.11 172 21 41 ];
             %tmp.11 = getv function %tmp.10 :getCurrentConditions;
             %tmp.12 = invoke %tmp.10 %tmp.11();
             lputv %weather.1 %tmp.12;
-            symbol [ weather %weather.1 135 16 23 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 139 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_139_12_147_12_if_stmt:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_140_16_142_23_begin:
+            symbol [ weather %weather.1 170 16 23 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 174 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_174_12_182_12_if_stmt:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_175_16_177_23_begin:
             %tmp.13 = lgetv %weather.1;
-            symbol [ weather %tmp.13 140 16 23 ];
+            symbol [ weather %tmp.13 175 16 23 ];
             %tmp.14 = null;
             %tmp.15 = ne %tmp.13 %tmp.14;
-            bf %tmp.15 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_139_12_147_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_141_19_142_23_true:
+            bf %tmp.15 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_174_12_182_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_176_19_177_23_true:
             %tmp.16 = lgetv %weather.1;
-            symbol [ weather %tmp.16 141 19 26 ];
+            symbol [ weather %tmp.16 176 19 26 ];
             %tmp.17 = as %tmp.16 { (!Null) };
-            symbol [ temperature %tmp.18 141 27 38 ];
+            symbol [ temperature %tmp.18 176 27 38 ];
             %tmp.18 = getv %tmp.17 :temperature;
             %tmp.19 = null;
             %tmp.20 = ne %tmp.18 %tmp.19;
             push %tmp.20;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_141_19_142_23_end:
-            %tmp.21 = phi [%tmp.15 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_140_16_142_23_begin] [%tmp.20 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_141_19_142_23_true] [%tmp.21 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_141_19_142_23_end];
-            bf %tmp.21 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_139_12_147_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_139_12_147_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_143_14_147_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 145 16 ]
-            symbol [ state %tmp.22 145 16 21 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_176_19_177_23_end:
+            %tmp.21 = phi [%tmp.15 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_175_16_177_23_begin] [%tmp.20 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_176_19_177_23_true] [%tmp.21 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_176_19_177_23_end];
+            bf %tmp.21 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_174_12_182_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_174_12_182_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_178_14_182_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 180 16 ]
+            symbol [ state %tmp.22 180 16 21 ];
             %tmp.22 = getv self :state;
             %tmp.23 = lgetv %weather.1;
-            symbol [ weather %tmp.23 146 20 27 ];
+            symbol [ weather %tmp.23 181 20 27 ];
             %tmp.24 = as %tmp.23 { (!Null) };
-            symbol [ temperature %tmp.25 146 28 39 ];
+            symbol [ temperature %tmp.25 181 28 39 ];
             %tmp.25 = getv %tmp.24 :temperature;
-            symbol [ temperature ? 145 22 33 ];
+            symbol [ temperature ? 180 22 33 ];
             putv %tmp.22 :temperature %tmp.25;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_143_14_147_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_139_12_147_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_139_12_147_12_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 153 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_153_12_158_12_if_stmt:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_178_14_182_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_174_12_182_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_174_12_182_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 188 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_188_12_193_12_if_stmt:
             %tmp.26 = lgetv %info;
-            symbol [ info %tmp.26 154 16 20 ];
+            symbol [ info %tmp.26 189 16 20 ];
             %tmp.28 = const :currentLapTime;
-            symbol [ currentLapTime %tmp.28 154 26 40 const ];
+            symbol [ currentLapTime %tmp.28 189 26 40 const ];
             %tmp.29 = canhazplz %tmp.26 %tmp.28;
-            bf %tmp.29 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_153_12_158_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_153_12_158_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_155_14_158_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 156 16 ]
-            symbol [ state %tmp.30 156 16 21 ];
+            bf %tmp.29 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_188_12_193_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_188_12_193_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_190_14_193_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 191 16 ]
+            symbol [ state %tmp.30 191 16 21 ];
             %tmp.30 = getv self :state;
             %tmp.31 = lgetv %info;
-            symbol [ info %tmp.31 157 20 24 ];
+            symbol [ info %tmp.31 192 20 24 ];
             %tmp.32 = as %tmp.31 { (interface { var currentLapTime; }) };
-            symbol [ currentLapTime %tmp.33 157 25 39 ];
+            symbol [ currentLapTime %tmp.33 192 25 39 ];
             %tmp.33 = getv %tmp.32 :currentLapTime;
-            symbol [ lapElapsedTime ? 156 22 36 ];
+            symbol [ lapElapsedTime ? 191 22 36 ];
             putv %tmp.30 :lapElapsedTime %tmp.33;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_155_14_158_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_153_12_158_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_153_12_158_12_if_end:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_122_41_159_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_190_14_193_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_188_12_193_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_188_12_193_12_if_end:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_157_41_194_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 165; @symbol_functiondef = [updateNutritionState,165,17,37]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 200; @symbol_functiondef = [updateNutritionState,200,17,37]; ]
         function updateNutritionState() {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_165_40_268_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 171 12 ]
-            symbol [ state %tmp.1 171 12 17 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_200_40_303_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 206 12 ]
+            symbol [ state %tmp.1 206 12 17 ];
             %tmp.1 = getv self :state;
-            symbol [ nutritionTracker %tmp.3 172 16 32 ];
+            symbol [ nutritionTracker %tmp.3 207 16 32 ];
             %tmp.3 = getv ? :nutritionTracker;
-            symbol [ getSessionCarbs %tmp.4 173 21 36 ];
+            symbol [ getSessionCarbs %tmp.4 208 21 36 ];
             %tmp.4 = getv function %tmp.3 :getSessionCarbs;
             %tmp.5 = invoke %tmp.3 %tmp.4();
-            symbol [ sessionCarbsIngested ? 171 18 38 ];
+            symbol [ sessionCarbsIngested ? 206 18 38 ];
             putv %tmp.1 :sessionCarbsIngested %tmp.5;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 175 12 ]
-            symbol [ state %tmp.6 175 12 17 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 210 12 ]
+            symbol [ state %tmp.6 210 12 17 ];
             %tmp.6 = getv self :state;
-            symbol [ nutritionTracker %tmp.8 176 16 32 ];
+            symbol [ nutritionTracker %tmp.8 211 16 32 ];
             %tmp.8 = getv ? :nutritionTracker;
-            symbol [ getLapCarbs %tmp.9 177 21 32 ];
+            symbol [ getLapCarbs %tmp.9 212 21 32 ];
             %tmp.9 = getv function %tmp.8 :getLapCarbs;
             %tmp.10 = invoke %tmp.8 %tmp.9();
-            symbol [ lapCarbsIngested ? 175 18 34 ];
+            symbol [ lapCarbsIngested ? 210 18 34 ];
             putv %tmp.6 :lapCarbsIngested %tmp.10;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 183 12 ]
-            symbol [ state %tmp.11 183 12 17 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 218 12 ]
+            symbol [ state %tmp.11 218 12 17 ];
             %tmp.11 = getv self :state;
-            symbol [ nutritionTracker %tmp.13 184 16 32 ];
+            symbol [ nutritionTracker %tmp.13 219 16 32 ];
             %tmp.13 = getv ? :nutritionTracker;
-            symbol [ getSessionCarbRate %tmp.14 185 21 39 ];
+            symbol [ getSessionCarbRate %tmp.14 220 21 39 ];
             %tmp.14 = getv function %tmp.13 :getSessionCarbRate;
-            symbol [ state %tmp.16 186 24 29 ];
+            symbol [ state %tmp.16 221 24 29 ];
             %tmp.16 = getv ? :state;
-            symbol [ elapsedTime %tmp.17 186 30 41 ];
+            symbol [ elapsedTime %tmp.17 221 30 41 ];
             %tmp.17 = getv %tmp.16 :elapsedTime;
             %tmp.18 = invoke %tmp.13 %tmp.14(%tmp.17);
-            symbol [ sessionCarbsIngestedPerHour ? 183 18 45 ];
+            symbol [ sessionCarbsIngestedPerHour ? 218 18 45 ];
             putv %tmp.11 :sessionCarbsIngestedPerHour %tmp.18;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 189 12 ]
-            symbol [ state %tmp.19 189 12 17 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 224 12 ]
+            symbol [ state %tmp.19 224 12 17 ];
             %tmp.19 = getv self :state;
-            symbol [ nutritionTracker %tmp.21 190 16 32 ];
+            symbol [ nutritionTracker %tmp.21 225 16 32 ];
             %tmp.21 = getv ? :nutritionTracker;
-            symbol [ getLapCarbRate %tmp.22 191 21 35 ];
+            symbol [ getLapCarbRate %tmp.22 226 21 35 ];
             %tmp.22 = getv function %tmp.21 :getLapCarbRate;
-            symbol [ state %tmp.24 192 24 29 ];
+            symbol [ state %tmp.24 227 24 29 ];
             %tmp.24 = getv ? :state;
-            symbol [ lapElapsedTime %tmp.25 192 30 44 ];
+            symbol [ lapElapsedTime %tmp.25 227 30 44 ];
             %tmp.25 = getv %tmp.24 :lapElapsedTime;
             %tmp.26 = invoke %tmp.21 %tmp.22(%tmp.25);
-            symbol [ lapCarbsIngestedPerHour ? 189 18 41 ];
+            symbol [ lapCarbsIngestedPerHour ? 224 18 41 ];
             putv %tmp.19 :lapCarbsIngestedPerHour %tmp.26;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 199 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_165_40_268_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_165_40_268_8_stop" ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 234 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_200_40_303_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_200_40_303_8_stop" ]
             %elapsedHours.1 = local;
-            symbol [ elapsedHours %elapsedHours.1 199 16 28 ];
-            symbol [ state %tmp.28 200 16 21 ];
+            symbol [ elapsedHours %elapsedHours.1 234 16 28 ];
+            symbol [ state %tmp.28 235 16 21 ];
             %tmp.28 = getv ? :state;
-            symbol [ elapsedTime %tmp.29 200 22 33 ];
+            symbol [ elapsedTime %tmp.29 235 22 33 ];
             %tmp.29 = getv %tmp.28 :elapsedTime;
-            %tmp.30 = 3600.0;
+            %tmp.30 = 3600000.0;
             %tmp.31 = div %tmp.29 %tmp.30;
             lputv %elapsedHours.1 %tmp.31;
-            symbol [ elapsedHours %elapsedHours.1 199 16 28 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 203 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_203_12_213_12_if_stmt:
+            symbol [ elapsedHours %elapsedHours.1 234 16 28 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 238 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_12_248_12_if_stmt:
             %tmp.32 = lgetv %elapsedHours.1;
-            symbol [ elapsedHours %tmp.32 203 16 28 ];
+            symbol [ elapsedHours %tmp.32 238 16 28 ];
             %tmp.33 = 0;
             %tmp.34 = gt %tmp.32 %tmp.33;
-            bf %tmp.34 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_203_12_213_12_if_else_false;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_203_12_213_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_203_34_208_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 205 16 ]
-            symbol [ state %tmp.35 205 16 21 ];
+            bf %tmp.34 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_12_248_12_if_else_false;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_12_248_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_34_243_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 240 16 ]
+            symbol [ state %tmp.35 240 16 21 ];
             %tmp.35 = getv self :state;
-            symbol [ state %tmp.37 206 20 25 ];
+            symbol [ state %tmp.37 241 20 25 ];
             %tmp.37 = getv ? :state;
-            symbol [ sessionCarbsBurned %tmp.38 206 26 44 ];
+            symbol [ sessionCarbsBurned %tmp.38 241 26 44 ];
             %tmp.38 = getv %tmp.37 :sessionCarbsBurned;
             %tmp.39 = lgetv %elapsedHours.1;
-            symbol [ elapsedHours %tmp.39 207 22 34 ];
+            symbol [ elapsedHours %tmp.39 242 22 34 ];
             %tmp.40 = div %tmp.38 %tmp.39;
-            symbol [ sessionCarbsBurnedPerHour ? 205 22 47 ];
+            symbol [ sessionCarbsBurnedPerHour ? 240 22 47 ];
             putv %tmp.35 :sessionCarbsBurnedPerHour %tmp.40;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_203_34_208_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_203_12_213_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_203_12_213_12_if_else_false:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_209_17_213_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 211 16 ]
-            symbol [ state %tmp.41 211 16 21 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_34_243_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_12_248_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_12_248_12_if_else_false:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_244_17_248_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 246 16 ]
+            symbol [ state %tmp.41 246 16 21 ];
             %tmp.41 = getv self :state;
             %tmp.42 = 0;
-            symbol [ sessionCarbsBurnedPerHour ? 211 22 47 ];
+            symbol [ sessionCarbsBurnedPerHour ? 246 22 47 ];
             putv %tmp.41 :sessionCarbsBurnedPerHour %tmp.42;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_209_17_213_12_stop:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_203_12_213_12_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 215 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_165_40_268_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_165_40_268_8_stop" ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_244_17_248_12_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_12_248_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 250 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_200_40_303_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_200_40_303_8_stop" ]
             %lapHours.2 = local;
-            symbol [ lapHours %lapHours.2 215 16 24 ];
-            symbol [ state %tmp.44 216 16 21 ];
+            symbol [ lapHours %lapHours.2 250 16 24 ];
+            symbol [ state %tmp.44 251 16 21 ];
             %tmp.44 = getv ? :state;
-            symbol [ lapElapsedTime %tmp.45 216 22 36 ];
+            symbol [ lapElapsedTime %tmp.45 251 22 36 ];
             %tmp.45 = getv %tmp.44 :lapElapsedTime;
-            %tmp.46 = 3600.0;
+            %tmp.46 = 3600000.0;
             %tmp.47 = div %tmp.45 %tmp.46;
             lputv %lapHours.2 %tmp.47;
-            symbol [ lapHours %lapHours.2 215 16 24 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 219 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_219_12_229_12_if_stmt:
+            symbol [ lapHours %lapHours.2 250 16 24 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 254 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_254_12_264_12_if_stmt:
             %tmp.48 = lgetv %lapHours.2;
-            symbol [ lapHours %tmp.48 219 16 24 ];
+            symbol [ lapHours %tmp.48 254 16 24 ];
             %tmp.49 = 0;
             %tmp.50 = gt %tmp.48 %tmp.49;
-            bf %tmp.50 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_219_12_229_12_if_else_false;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_219_12_229_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_219_30_224_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 221 16 ]
-            symbol [ state %tmp.51 221 16 21 ];
+            bf %tmp.50 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_254_12_264_12_if_else_false;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_254_12_264_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_254_30_259_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 256 16 ]
+            symbol [ state %tmp.51 256 16 21 ];
             %tmp.51 = getv self :state;
-            symbol [ state %tmp.53 222 20 25 ];
+            symbol [ state %tmp.53 257 20 25 ];
             %tmp.53 = getv ? :state;
-            symbol [ lapCarbsBurned %tmp.54 222 26 40 ];
+            symbol [ lapCarbsBurned %tmp.54 257 26 40 ];
             %tmp.54 = getv %tmp.53 :lapCarbsBurned;
             %tmp.55 = lgetv %lapHours.2;
-            symbol [ lapHours %tmp.55 223 22 30 ];
+            symbol [ lapHours %tmp.55 258 22 30 ];
             %tmp.56 = div %tmp.54 %tmp.55;
-            symbol [ lapCarbsBurnedPerHour ? 221 22 43 ];
+            symbol [ lapCarbsBurnedPerHour ? 256 22 43 ];
             putv %tmp.51 :lapCarbsBurnedPerHour %tmp.56;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_219_30_224_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_219_12_229_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_219_12_229_12_if_else_false:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_225_17_229_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 227 16 ]
-            symbol [ state %tmp.57 227 16 21 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_254_30_259_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_254_12_264_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_254_12_264_12_if_else_false:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_260_17_264_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 262 16 ]
+            symbol [ state %tmp.57 262 16 21 ];
             %tmp.57 = getv self :state;
             %tmp.58 = 0;
-            symbol [ lapCarbsBurnedPerHour ? 227 22 43 ];
+            symbol [ lapCarbsBurnedPerHour ? 262 22 43 ];
             putv %tmp.57 :lapCarbsBurnedPerHour %tmp.58;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_225_17_229_12_stop:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_219_12_229_12_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 234 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_165_40_268_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_165_40_268_8_stop" ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_260_17_264_12_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_254_12_264_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 269 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_200_40_303_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_200_40_303_8_stop" ]
             %carbDeficit.3 = local;
-            symbol [ carbDeficit %carbDeficit.3 234 16 27 ];
-            symbol [ state %tmp.60 235 16 21 ];
+            symbol [ carbDeficit %carbDeficit.3 269 16 27 ];
+            symbol [ state %tmp.60 270 16 21 ];
             %tmp.60 = getv ? :state;
-            symbol [ sessionCarbsBurned %tmp.61 235 22 40 ];
+            symbol [ sessionCarbsBurned %tmp.61 270 22 40 ];
             %tmp.61 = getv %tmp.60 :sessionCarbsBurned;
-            symbol [ state %tmp.63 236 18 23 ];
+            symbol [ state %tmp.63 271 18 23 ];
             %tmp.63 = getv ? :state;
-            symbol [ sessionCarbsIngested %tmp.64 236 24 44 ];
+            symbol [ sessionCarbsIngested %tmp.64 271 24 44 ];
             %tmp.64 = getv %tmp.63 :sessionCarbsIngested;
             %tmp.65 = sub %tmp.61 %tmp.64;
             lputv %carbDeficit.3 %tmp.65;
-            symbol [ carbDeficit %carbDeficit.3 234 16 27 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 238 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_12_240_12_if_stmt:
+            symbol [ carbDeficit %carbDeficit.3 269 16 27 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 273 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_273_12_275_12_if_stmt:
             %tmp.66 = lgetv %carbDeficit.3;
-            symbol [ carbDeficit %tmp.66 238 16 27 ];
+            symbol [ carbDeficit %tmp.66 273 16 27 ];
             %tmp.67 = 0;
             %tmp.68 = lt %tmp.66 %tmp.67;
-            bf %tmp.68 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_12_240_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_12_240_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_33_240_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 239 16 ]
+            bf %tmp.68 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_273_12_275_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_273_12_275_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_273_33_275_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 274 16 ]
             %tmp.69 = 0;
             lputv %carbDeficit.3 %tmp.69;
-            symbol [ carbDeficit %carbDeficit.3 239 16 27 ];
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_33_240_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_12_240_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_238_12_240_12_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 242 12 ]
-            symbol [ state %tmp.70 242 12 17 ];
+            symbol [ carbDeficit %carbDeficit.3 274 16 27 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_273_33_275_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_273_12_275_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_273_12_275_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 277 12 ]
+            symbol [ state %tmp.70 277 12 17 ];
             %tmp.70 = getv self :state;
             %tmp.71 = lgetv %carbDeficit.3;
-            symbol [ carbDeficit %tmp.71 243 16 27 ];
-            symbol [ format %tmp.72 243 28 34 ];
+            symbol [ carbDeficit %tmp.71 278 16 27 ];
+            symbol [ format %tmp.72 278 28 34 ];
             %tmp.72 = getv function %tmp.71 :format;
             %tmp.73 = "%.0f";
             %tmp.74 = invoke %tmp.71 %tmp.72(%tmp.73);
             %tmp.75 = "g";
             %tmp.76 = add %tmp.74 %tmp.75;
-            symbol [ carbDeficitLabel ? 242 18 34 ];
+            symbol [ carbDeficitLabel ? 277 18 34 ];
             putv %tmp.70 :carbDeficitLabel %tmp.76;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 249 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_165_40_268_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_165_40_268_8_stop" ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 284 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_200_40_303_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_200_40_303_8_stop" ]
             %minutesUntilFuel.4 = local;
-            symbol [ minutesUntilFuel %minutesUntilFuel.4 249 16 32 ];
-            symbol [ nutritionTracker %tmp.78 250 16 32 ];
+            symbol [ minutesUntilFuel %minutesUntilFuel.4 284 16 32 ];
+            symbol [ nutritionTracker %tmp.78 285 16 32 ];
             %tmp.78 = getv ? :nutritionTracker;
-            symbol [ getNextFuelCountdown %tmp.79 251 21 41 ];
+            symbol [ getNextFuelCountdown %tmp.79 286 21 41 ];
             %tmp.79 = getv function %tmp.78 :getNextFuelCountdown;
-            symbol [ state %tmp.81 252 24 29 ];
+            symbol [ state %tmp.81 287 24 29 ];
             %tmp.81 = getv ? :state;
-            symbol [ relativeIntensity %tmp.82 252 30 47 ];
+            symbol [ relativeIntensity %tmp.82 287 30 47 ];
             %tmp.82 = getv %tmp.81 :relativeIntensity;
             %tmp.83 = invoke %tmp.78 %tmp.79(%tmp.82);
             lputv %minutesUntilFuel.4 %tmp.83;
-            symbol [ minutesUntilFuel %minutesUntilFuel.4 249 16 32 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 255 12 ]
-            symbol [ state %tmp.84 255 12 17 ];
+            symbol [ minutesUntilFuel %minutesUntilFuel.4 284 16 32 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 290 12 ]
+            symbol [ state %tmp.84 290 12 17 ];
             %tmp.84 = getv self :state;
-            symbol [ Utils %tmp.86 256 16 21 ];
+            symbol [ Utils %tmp.86 291 16 21 ];
             %tmp.86 = getv ? :Utils;
-            symbol [ FormatUtils %tmp.87 256 22 33 ];
+            symbol [ FormatUtils %tmp.87 291 22 33 ];
             %tmp.87 = getv %tmp.86 :FormatUtils;
-            symbol [ formatCountdown %tmp.88 257 21 36 ];
+            symbol [ formatCountdown %tmp.88 292 21 36 ];
             %tmp.88 = getv function %tmp.87 :formatCountdown;
             %tmp.89 = lgetv %minutesUntilFuel.4;
-            symbol [ minutesUntilFuel %tmp.89 258 24 40 ];
+            symbol [ minutesUntilFuel %tmp.89 293 24 40 ];
             %tmp.90 = invoke %tmp.87 %tmp.88(%tmp.89);
-            symbol [ nextFuelCountdownLabel ? 255 18 40 ];
+            symbol [ nextFuelCountdownLabel ? 290 18 40 ];
             putv %tmp.84 :nextFuelCountdownLabel %tmp.90;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 264 12 ]
-            symbol [ state %tmp.91 264 12 17 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 299 12 ]
+            symbol [ state %tmp.91 299 12 17 ];
             %tmp.91 = getv self :state;
-            symbol [ state %tmp.93 265 16 21 ];
+            symbol [ state %tmp.93 300 16 21 ];
             %tmp.93 = getv ? :state;
-            symbol [ hydrationDeficitMl %tmp.94 265 22 40 ];
+            symbol [ hydrationDeficitMl %tmp.94 300 22 40 ];
             %tmp.94 = getv %tmp.93 :hydrationDeficitMl;
-            symbol [ format %tmp.95 266 21 27 ];
+            symbol [ format %tmp.95 301 21 27 ];
             %tmp.95 = getv function %tmp.94 :format;
             %tmp.96 = "%.0f";
             %tmp.97 = invoke %tmp.94 %tmp.95(%tmp.96);
             %tmp.98 = "ml";
             %tmp.99 = add %tmp.97 %tmp.98;
-            symbol [ hydrationDeficitLabel ? 264 18 39 ];
+            symbol [ hydrationDeficitLabel ? 299 18 39 ];
             putv %tmp.91 :hydrationDeficitLabel %tmp.99;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_165_40_268_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_200_40_303_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 273; @symbol_functiondef = [registerFuel,273,17,29]; @symbol_param<0> = [grams,273,30,35]; ]
-        function registerFuel(grams) {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_273_37_277_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 275 12 ]
-            symbol [ nutritionTracker %tmp.2 275 12 28 ];
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 309; @symbol_functiondef = [processAlerts,309,17,30]; ]
+        function processAlerts() {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_309_33_313_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 310 12 ]
+            %tmp.1 = self;
+            symbol [ processFuelAlert %tmp.2 310 12 28 ];
+            %tmp.2 = getv function %tmp.1 :processFuelAlert;
+            invoke %tmp.1 %tmp.2();
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 312 12 ]
+            %tmp.3 = self;
+            symbol [ processDrinkAlert %tmp.4 312 12 29 ];
+            %tmp.4 = getv function %tmp.3 :processDrinkAlert;
+            invoke %tmp.3 %tmp.4();
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_309_33_313_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 319; @symbol_functiondef = [processFuelAlert,319,17,33]; ]
+        function processFuelAlert() {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_319_36_356_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 321 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_319_36_356_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_319_36_356_8_stop" ]
+            %now.1 = local;
+            symbol [ now %now.1 321 16 19 ];
+            symbol [ System %tmp.1 322 16 22 ];
+            %tmp.1 = getm $.Toybox.System;
+            symbol [ getTimer %tmp.2 322 23 31 ];
+            %tmp.2 = getv function %tmp.1 :getTimer;
+            %tmp.3 = invoke %tmp.1 %tmp.2();
+            lputv %now.1 %tmp.3;
+            symbol [ now %now.1 321 16 19 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 325 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_325_12_329_12_if_stmt:
+            symbol [ state %tmp.5 326 16 21 ];
+            %tmp.5 = getv ? :state;
+            symbol [ pendingFuelAlert %tmp.6 326 22 38 ];
+            %tmp.6 = getv %tmp.5 :pendingFuelAlert;
+            bf %tmp.6 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_325_12_329_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_325_12_329_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_327_14_329_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 328 16 ]
+            ret ?;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_327_14_329_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_325_12_329_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_325_12_329_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 332 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_332_12_337_12_if_stmt:
+            %tmp.7 = lgetv %now.1;
+            symbol [ now %tmp.7 333 16 19 ];
+            symbol [ lastFuelAlertTime %tmp.9 333 22 39 ];
+            %tmp.9 = getv ? :lastFuelAlertTime;
+            %tmp.10 = sub %tmp.7 %tmp.9;
+            symbol [ fuelAlertCooldown %tmp.12 334 18 35 ];
+            %tmp.12 = getv ? :fuelAlertCooldown;
+            %tmp.13 = lt %tmp.10 %tmp.12;
+            bf %tmp.13 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_332_12_337_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_332_12_337_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_335_14_337_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 336 16 ]
+            ret ?;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_335_14_337_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_332_12_337_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_332_12_337_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 340 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_340_12_355_12_if_stmt:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_341_16_343_22_begin:
+            symbol [ state %tmp.15 341 16 21 ];
+            %tmp.15 = getv ? :state;
+            symbol [ minutesUntilFuel %tmp.16 341 22 38 ];
+            %tmp.16 = getv %tmp.15 :minutesUntilFuel;
+            %tmp.17 = 0;
+            %tmp.18 = lte %tmp.16 %tmp.17;
+            bf %tmp.18 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_340_12_355_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_342_19_343_22_true:
+            symbol [ state %tmp.20 342 19 24 ];
+            %tmp.20 = getv ? :state;
+            symbol [ fuelDeficit %tmp.21 342 25 36 ];
+            %tmp.21 = getv %tmp.20 :fuelDeficit;
+            %tmp.22 = 25;
+            %tmp.23 = gt %tmp.21 %tmp.22;
+            push %tmp.23;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_342_19_343_22_end:
+            %tmp.24 = phi [%tmp.18 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_341_16_343_22_begin] [%tmp.23 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_342_19_343_22_true] [%tmp.24 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_342_19_343_22_end];
+            bf %tmp.24 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_340_12_355_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_340_12_355_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_345_14_355_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 347 16 ]
+            symbol [ state %tmp.25 347 16 21 ];
+            %tmp.25 = getv self :state;
+            %tmp.26 = true;
+            symbol [ pendingFuelAlert ? 347 22 38 ];
+            putv %tmp.25 :pendingFuelAlert %tmp.26;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 350 16 ]
+            symbol [ state %tmp.27 350 16 21 ];
+            %tmp.27 = getv self :state;
+            %tmp.28 = "Take 30g carbs";
+            symbol [ fuelAlertText ? 350 22 35 ];
+            putv %tmp.27 :fuelAlertText %tmp.28;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 353 16 ]
+            %tmp.29 = lgetv %now.1;
+            symbol [ now %tmp.29 354 20 23 ];
+            symbol [ lastFuelAlertTime ? 353 16 33 ];
+            putv self :lastFuelAlertTime %tmp.29;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_345_14_355_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_340_12_355_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_340_12_355_12_if_end:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_319_36_356_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 361; @symbol_functiondef = [processDrinkAlert,361,17,34]; ]
+        function processDrinkAlert() {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_361_37_397_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 363 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_361_37_397_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_361_37_397_8_stop" ]
+            %now.1 = local;
+            symbol [ now %now.1 363 16 19 ];
+            symbol [ System %tmp.1 364 16 22 ];
+            %tmp.1 = getm $.Toybox.System;
+            symbol [ getTimer %tmp.2 364 23 31 ];
+            %tmp.2 = getv function %tmp.1 :getTimer;
+            %tmp.3 = invoke %tmp.1 %tmp.2();
+            lputv %now.1 %tmp.3;
+            symbol [ now %now.1 363 16 19 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 367 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_367_12_371_12_if_stmt:
+            symbol [ state %tmp.5 368 16 21 ];
+            %tmp.5 = getv ? :state;
+            symbol [ pendingDrinkAlert %tmp.6 368 22 39 ];
+            %tmp.6 = getv %tmp.5 :pendingDrinkAlert;
+            bf %tmp.6 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_367_12_371_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_367_12_371_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_369_14_371_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 370 16 ]
+            ret ?;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_369_14_371_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_367_12_371_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_367_12_371_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 374 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_374_12_379_12_if_stmt:
+            %tmp.7 = lgetv %now.1;
+            symbol [ now %tmp.7 375 16 19 ];
+            symbol [ lastDrinkAlertTime %tmp.9 375 22 40 ];
+            %tmp.9 = getv ? :lastDrinkAlertTime;
+            %tmp.10 = sub %tmp.7 %tmp.9;
+            symbol [ drinkAlertCooldown %tmp.12 376 18 36 ];
+            %tmp.12 = getv ? :drinkAlertCooldown;
+            %tmp.13 = lt %tmp.10 %tmp.12;
+            bf %tmp.13 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_374_12_379_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_374_12_379_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_377_14_379_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 378 16 ]
+            ret ?;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_377_14_379_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_374_12_379_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_374_12_379_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 382 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_382_12_396_12_if_stmt:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_383_16_385_22_begin:
+            symbol [ state %tmp.15 383 16 21 ];
+            %tmp.15 = getv ? :state;
+            symbol [ minutesUntilDrink %tmp.16 383 22 39 ];
+            %tmp.16 = getv %tmp.15 :minutesUntilDrink;
+            %tmp.17 = 0;
+            %tmp.18 = lte %tmp.16 %tmp.17;
+            bf %tmp.18 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_382_12_396_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_384_19_385_22_true:
+            symbol [ state %tmp.20 384 19 24 ];
+            %tmp.20 = getv ? :state;
+            symbol [ hydrationDeficitMl %tmp.21 384 25 43 ];
+            %tmp.21 = getv %tmp.20 :hydrationDeficitMl;
+            %tmp.22 = 400;
+            %tmp.23 = gt %tmp.21 %tmp.22;
+            push %tmp.23;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_384_19_385_22_end:
+            %tmp.24 = phi [%tmp.18 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_383_16_385_22_begin] [%tmp.23 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_384_19_385_22_true] [%tmp.24 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_384_19_385_22_end];
+            bf %tmp.24 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_382_12_396_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_382_12_396_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_386_14_396_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 388 16 ]
+            symbol [ state %tmp.25 388 16 21 ];
+            %tmp.25 = getv self :state;
+            %tmp.26 = true;
+            symbol [ pendingDrinkAlert ? 388 22 39 ];
+            putv %tmp.25 :pendingDrinkAlert %tmp.26;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 391 16 ]
+            symbol [ state %tmp.27 391 16 21 ];
+            %tmp.27 = getv self :state;
+            %tmp.28 = "Drink 250ml";
+            symbol [ drinkAlertText ? 391 22 36 ];
+            putv %tmp.27 :drinkAlertText %tmp.28;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 394 16 ]
+            %tmp.29 = lgetv %now.1;
+            symbol [ now %tmp.29 395 20 23 ];
+            symbol [ lastDrinkAlertTime ? 394 16 34 ];
+            putv self :lastDrinkAlertTime %tmp.29;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_386_14_396_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_382_12_396_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_382_12_396_12_if_end:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_361_37_397_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 402; @symbol_functiondef = [confirmFuelIntake,402,17,34]; ]
+        function confirmFuelIntake() {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_402_37_409_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 404 12 ]
+            symbol [ nutritionTracker %tmp.2 404 12 28 ];
             %tmp.2 = getv ? :nutritionTracker;
-            symbol [ registerCarbs %tmp.3 276 17 30 ];
+            symbol [ registerCarbs %tmp.3 405 17 30 ];
+            %tmp.3 = getv function %tmp.2 :registerCarbs;
+            %tmp.4 = 30;
+            invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 407 12 ]
+            symbol [ state %tmp.5 407 12 17 ];
+            %tmp.5 = getv self :state;
+            %tmp.6 = false;
+            symbol [ pendingFuelAlert ? 407 18 34 ];
+            putv %tmp.5 :pendingFuelAlert %tmp.6;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_402_37_409_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 414; @symbol_functiondef = [confirmDrinkIntake,414,17,35]; ]
+        function confirmDrinkIntake() {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_414_38_424_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 416 12 ]
+            symbol [ hydrationEngine %tmp.2 416 12 27 ];
+            %tmp.2 = getv ? :hydrationEngine;
+            symbol [ registerDrink %tmp.3 417 17 30 ];
+            %tmp.3 = getv function %tmp.2 :registerDrink;
+            %tmp.4 = 250;
+            invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 419 12 ]
+            symbol [ nutritionTracker %tmp.6 419 12 28 ];
+            %tmp.6 = getv ? :nutritionTracker;
+            symbol [ registerDrink %tmp.7 420 17 30 ];
+            %tmp.7 = getv function %tmp.6 :registerDrink;
+            %tmp.8 = 250;
+            invoke %tmp.6 %tmp.7(%tmp.8);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 422 12 ]
+            symbol [ state %tmp.9 422 12 17 ];
+            %tmp.9 = getv self :state;
+            %tmp.10 = false;
+            symbol [ pendingDrinkAlert ? 422 18 35 ];
+            putv %tmp.9 :pendingDrinkAlert %tmp.10;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_414_38_424_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 429; @symbol_functiondef = [dismissFuelAlert,429,17,33]; ]
+        function dismissFuelAlert() {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_429_36_433_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 431 12 ]
+            symbol [ state %tmp.1 431 12 17 ];
+            %tmp.1 = getv self :state;
+            %tmp.2 = false;
+            symbol [ pendingFuelAlert ? 431 18 34 ];
+            putv %tmp.1 :pendingFuelAlert %tmp.2;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_429_36_433_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 435; @symbol_functiondef = [dismissDrinkAlert,435,17,34]; ]
+        function dismissDrinkAlert() {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_435_37_439_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 437 12 ]
+            symbol [ state %tmp.1 437 12 17 ];
+            %tmp.1 = getv self :state;
+            %tmp.2 = false;
+            symbol [ pendingDrinkAlert ? 437 18 35 ];
+            putv %tmp.1 :pendingDrinkAlert %tmp.2;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_435_37_439_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 444; @symbol_functiondef = [registerFuel,444,17,29]; @symbol_param<0> = [grams,444,30,35]; ]
+        function registerFuel(grams) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_444_37_448_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 446 12 ]
+            symbol [ nutritionTracker %tmp.2 446 12 28 ];
+            %tmp.2 = getv ? :nutritionTracker;
+            symbol [ registerCarbs %tmp.3 447 17 30 ];
             %tmp.3 = getv function %tmp.2 :registerCarbs;
             %tmp.4 = lgetv %grams;
-            symbol [ grams %tmp.4 276 31 36 ];
+            symbol [ grams %tmp.4 447 31 36 ];
             invoke %tmp.2 %tmp.3(%tmp.4);
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_273_37_277_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_444_37_448_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 282; @symbol_functiondef = [registerDrink,282,17,30]; @symbol_param<0> = [ml,282,31,33]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 453; @symbol_functiondef = [registerDrink,453,17,30]; @symbol_param<0> = [ml,453,31,33]; ]
         function registerDrink(ml) {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_282_35_288_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 283 12 ]
-            symbol [ nutritionTracker %tmp.2 283 12 28 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_453_35_459_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 454 12 ]
+            symbol [ nutritionTracker %tmp.2 454 12 28 ];
             %tmp.2 = getv ? :nutritionTracker;
-            symbol [ registerDrink %tmp.3 284 17 30 ];
+            symbol [ registerDrink %tmp.3 455 17 30 ];
             %tmp.3 = getv function %tmp.2 :registerDrink;
             %tmp.4 = lgetv %ml;
-            symbol [ ml %tmp.4 284 31 33 ];
+            symbol [ ml %tmp.4 455 31 33 ];
             invoke %tmp.2 %tmp.3(%tmp.4);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 286 12 ]
-            symbol [ hydrationEngine %tmp.6 286 12 27 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 457 12 ]
+            symbol [ hydrationEngine %tmp.6 457 12 27 ];
             %tmp.6 = getv ? :hydrationEngine;
-            symbol [ registerDrink %tmp.7 287 17 30 ];
+            symbol [ registerDrink %tmp.7 458 17 30 ];
             %tmp.7 = getv function %tmp.6 :registerDrink;
             %tmp.8 = lgetv %ml;
-            symbol [ ml %tmp.8 287 31 33 ];
+            symbol [ ml %tmp.8 458 31 33 ];
             invoke %tmp.6 %tmp.7(%tmp.8);
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_282_35_288_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_453_35_459_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 293; @symbol_functiondef = [onLap,293,17,22]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 464; @symbol_functiondef = [onLap,464,17,22]; ]
         function onLap() {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_293_25_299_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 294 12 ]
-            symbol [ fuelEngine %tmp.2 294 12 22 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_464_25_470_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 465 12 ]
+            symbol [ fuelEngine %tmp.2 465 12 22 ];
             %tmp.2 = getv ? :fuelEngine;
-            symbol [ onLap %tmp.3 294 23 28 ];
+            symbol [ onLap %tmp.3 465 23 28 ];
             %tmp.3 = getv function %tmp.2 :onLap;
             invoke %tmp.2 %tmp.3();
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 296 12 ]
-            symbol [ hydrationEngine %tmp.5 296 12 27 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 467 12 ]
+            symbol [ hydrationEngine %tmp.5 467 12 27 ];
             %tmp.5 = getv ? :hydrationEngine;
-            symbol [ onLap %tmp.6 296 28 33 ];
+            symbol [ onLap %tmp.6 467 28 33 ];
             %tmp.6 = getv function %tmp.5 :onLap;
             invoke %tmp.5 %tmp.6();
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 298 12 ]
-            symbol [ nutritionTracker %tmp.8 298 12 28 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 469 12 ]
+            symbol [ nutritionTracker %tmp.8 469 12 28 ];
             %tmp.8 = getv ? :nutritionTracker;
-            symbol [ resetLap %tmp.9 298 29 37 ];
+            symbol [ resetLap %tmp.9 469 29 37 ];
             %tmp.9 = getv function %tmp.8 :resetLap;
             invoke %tmp.8 %tmp.9();
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_293_25_299_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_464_25_470_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 304; @symbol_functiondef = [getState,304,17,25]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc"; @line = 475; @symbol_functiondef = [getState,475,17,25]; ]
         function getState() {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_304_28_306_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 305 12 ]
-            symbol [ state %tmp.2 305 19 24 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_475_28_477_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/SessionManager.mc" 476 12 ]
+            symbol [ state %tmp.2 476 19 24 ];
             %tmp.2 = getv ? :state;
             ret %tmp.2;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_304_28_306_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_SessionManager_mc_475_28_477_8_stop:
         }
     }
 }

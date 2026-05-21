@@ -517,4 +517,132 @@ module UI {
             );
         }
     }
+
+    // =====================================
+    // ALERT OVERLAY
+    // =====================================
+    function drawAlertOverlay(
+        dc,
+        title,
+        message,
+        color
+    ) {
+
+        var width =
+            dc.getWidth();
+
+        var height =
+            dc.getHeight();
+
+        // =============================
+        // OVERLAY SIZE
+        // =============================
+
+        var w = width - 30;
+        var h = 90;
+
+        var x = 15;
+        var y = (height / 2) - (h / 2);
+
+        // =============================
+        // SHADOW
+        // =============================
+
+        dc.setColor(
+            Graphics.COLOR_DK_GRAY,
+            Graphics.COLOR_DK_GRAY
+        );
+
+        dc.fillRectangle(
+            x + 3,
+            y + 3,
+            w,
+            h
+        );
+
+        // =============================
+        // MAIN BOX
+        // =============================
+
+        dc.setColor(
+            Graphics.COLOR_BLACK,
+            Graphics.COLOR_BLACK
+        );
+
+        dc.fillRectangle(
+            x,
+            y,
+            w,
+            h
+        );
+
+        // =============================
+        // BORDER
+        // =============================
+
+        dc.setColor(
+            color,
+            Graphics.COLOR_BLACK
+        );
+
+        dc.drawRectangle(
+            x,
+            y,
+            w,
+            h
+        );
+
+        // =============================
+        // HEADER
+        // =============================
+
+        dc.fillRectangle(
+            x,
+            y,
+            w,
+            24
+        );
+
+        dc.setColor(
+            Graphics.COLOR_WHITE,
+            color
+        );
+
+        dc.drawText(
+            x + (w / 2),
+            y + 4,
+            Graphics.FONT_SMALL,
+            title,
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
+
+        // =============================
+        // MESSAGE
+        // =============================
+
+        dc.setColor(
+            Graphics.COLOR_WHITE,
+            Graphics.COLOR_BLACK
+        );
+
+        dc.drawText(
+            x + (w / 2),
+            y + 38,
+            Graphics.FONT_MEDIUM,
+            message,
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
+
+        // =============================
+        // FOOTER
+        // =============================
+
+        dc.drawText(
+            x + (w / 2),
+            y + 65,
+            Graphics.FONT_XTINY,
+            "PRESS START",
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
+    }
 }

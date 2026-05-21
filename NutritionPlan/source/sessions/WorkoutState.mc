@@ -48,9 +48,8 @@ module Session {
         var glycogenPercent;
         var carbBurnRate;
 
-        // UI-ready fuel metrics
-        var timeToDepletion;
-        var fuelStateLabel;
+        var minutesUntilFuel;
+        var fuelDeficit;
 
         // =========================
         // Hydration
@@ -77,6 +76,15 @@ module Session {
         var bonkTimeLabel;
         var bonkRiskLabel;
 
+        // =========================
+        // Alerts
+        // =========================
+        var pendingFuelAlert;
+        var pendingDrinkAlert;
+
+        var fuelAlertText;
+        var drinkAlertText;
+
         function initialize() {
 
             // Base
@@ -94,8 +102,8 @@ module Session {
             glycogenPercent = "100%";
             carbBurnRate = 0;
 
-            timeToDepletion = "--";
-            fuelStateLabel = "Stable";
+            minutesUntilFuel = 0;
+            fuelDeficit = 0;
 
             // Hydration
             hydrationLoss = 0;

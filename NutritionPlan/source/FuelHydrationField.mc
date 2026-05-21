@@ -2,6 +2,7 @@ using Toybox.WatchUi;
 using Toybox.Graphics;
 using Toybox.Application;
 using Toybox.Activity;
+using Toybox.System;
 
 using Session;
 using UI;
@@ -70,6 +71,26 @@ class FuelHydrationField extends WatchUi.DataField {
 
         var width = dc.getWidth();
         var height = dc.getHeight();
+
+        // =================================
+        // ALERTS
+        // =================================
+        if (state.pendingFuelAlert) {
+            renderer.drawAlertOverlay(
+                dc,
+                "FUEL NOW",
+                state.fuelAlertText,
+                Graphics.COLOR_ORANGE
+            );
+        }
+        else if (state.pendingDrinkAlert) {
+            renderer.drawAlertOverlay(
+                dc,
+                "DRINK NOW",
+                state.drinkAlertText,
+                Graphics.COLOR_BLUE
+            );
+        }
 
         // =================================
         // LAYOUT
@@ -157,5 +178,58 @@ class FuelHydrationField extends WatchUi.DataField {
             state.bonkTimeLabel,
             state.bonkRiskLabel
         );
+    }
+
+    // =====================================
+    // USER INPUT
+    // =====================================
+    function onKey(keyEvent) {
+
+        var state =
+            sessionManager.getState();
+
+        // =============================
+        // START BUTTON
+        // =============================
+
+        if (
+            keyEvent.getKey()
+            == WatchUi.KEY_START
+        ) {
+
+            // =========================
+            // FUEL ALERT
+            // =========================
+
+            if (
+                state.pendingFuelAlert
+            ) {
+
+                sessionManager
+                    .confirmFuelIntake();
+
+                WatchUi.requestUpdate();
+
+                return true;
+            }
+
+            // =========================
+            // DRINK ALERT
+            // =========================
+
+            if (
+                state.pendingDrinkAlert
+            ) {
+
+                sessionManager
+                    .confirmDrinkIntake();
+
+                WatchUi.requestUpdate();
+
+                return true;
+            }
+        }
+
+        return false;
     }
 }

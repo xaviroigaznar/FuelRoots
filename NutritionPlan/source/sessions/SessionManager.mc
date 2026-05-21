@@ -36,6 +36,15 @@ module Session {
         var powerBuffer;
         var maxBufferSize;
 
+        // =====================================
+        // ALERTS
+        // =====================================
+        var fuelAlertCooldown;
+        var drinkAlertCooldown;
+
+        var lastFuelAlertTime;
+        var lastDrinkAlertTime;
+
         function initialize(profileData) {
             state = new WorkoutState();
             profile = profileData;
@@ -58,8 +67,29 @@ module Session {
             lastFuelUpdate = 0;
             lastPredictionUpdate = 0;
 
-            powerBuffer = [];
-            maxBufferSize = 30;
+            // =============================
+            // ALERTS
+            // =============================
+
+            lastFuelAlertTime = 0;
+            lastDrinkAlertTime = 0;
+
+            // 10 min cooldowns
+            fuelAlertCooldown =
+                600000;
+
+            drinkAlertCooldown =
+                600000;
+
+            // =============================
+            // INITIAL STATE
+            // =============================
+
+            state.pendingFuelAlert =
+                false;
+
+            state.pendingDrinkAlert =
+                false;
         }
 
         // =====================================
@@ -114,6 +144,11 @@ module Session {
                 lastPredictionUpdate =
                     now;
             }
+
+            // =============================
+            // ALERTS
+            // =============================
+            processAlerts();
         }
 
         // =====================================
@@ -198,7 +233,7 @@ module Session {
 
             var elapsedHours =
                 state.elapsedTime
-                / 3600.0;
+                / 3600000.0;
 
             if (elapsedHours > 0) {
 
@@ -214,7 +249,7 @@ module Session {
 
             var lapHours =
                 state.lapElapsedTime
-                / 3600.0;
+                / 3600000.0;
 
             if (lapHours > 0) {
 
@@ -265,6 +300,142 @@ module Session {
                 state.hydrationDeficitMl
                     .format("%.0f")
                 + "ml";
+        }
+
+        // =====================================
+        // ALERT PROCESSING
+        // =====================================
+
+        function processAlerts() {
+            processFuelAlert();
+
+            processDrinkAlert();
+        }
+
+        // =====================================
+        // FUEL ALERT
+        // =====================================
+
+        function processFuelAlert() {
+
+            var now =
+                System.getTimer();
+
+            // Already active
+            if (
+                state.pendingFuelAlert
+            ) {
+                return;
+            }
+
+            // Cooldown
+            if (
+                now - lastFuelAlertTime
+                < fuelAlertCooldown
+            ) {
+                return;
+            }
+
+            // Trigger conditions
+            if(
+                state.minutesUntilFuel <= 0
+                && state.fuelDeficit
+                    > 25
+
+            ) {
+
+                state.pendingFuelAlert =
+                    true;
+
+                state.fuelAlertText =
+                    "Take 30g carbs";
+
+                lastFuelAlertTime =
+                    now;
+            }
+        }
+
+        // =====================================
+        // DRINK ALERT
+        // =====================================
+        function processDrinkAlert() {
+
+            var now =
+                System.getTimer();
+
+            // Already active
+            if (
+                state.pendingDrinkAlert
+            ) {
+                return;
+            }
+
+            // Cooldown
+            if (
+                now - lastDrinkAlertTime
+                < drinkAlertCooldown
+            ) {
+                return;
+            }
+
+            // Trigger conditions
+            if (
+                state.minutesUntilDrink <= 0
+                && state.hydrationDeficitMl
+                    > 400
+            ) {
+
+                state.pendingDrinkAlert =
+                    true;
+
+                state.drinkAlertText =
+                    "Drink 250ml";
+
+                lastDrinkAlertTime =
+                    now;
+            }
+        }
+
+        // =====================================
+        // CONFIRM FUEL
+        // =====================================
+        function confirmFuelIntake() {
+
+            nutritionTracker
+                .registerCarbs(30);
+
+            state.pendingFuelAlert =
+                false;
+        }
+
+        // =====================================
+        // CONFIRM DRINK
+        // =====================================
+        function confirmDrinkIntake() {
+
+            hydrationEngine
+                .registerDrink(250);
+
+            nutritionTracker
+                .registerDrink(250);
+
+            state.pendingDrinkAlert =
+                false;
+        }
+
+        // =====================================
+        // DISMISS ALERTS
+        // =====================================
+        function dismissFuelAlert() {
+
+            state.pendingFuelAlert =
+                false;
+        }
+
+        function dismissDrinkAlert() {
+
+            state.pendingDrinkAlert =
+                false;
         }
 
         // =====================================
