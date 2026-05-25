@@ -64,33 +64,12 @@ class FuelHydrationField extends WatchUi.DataField {
         drawMainScreen(dc, state);
     }
 
-
     function drawMainScreen(dc, state) {
 
         dc.clear();
 
         var width = dc.getWidth();
         var height = dc.getHeight();
-
-        // =================================
-        // ALERTS
-        // =================================
-        if (state.pendingFuelAlert) {
-            renderer.drawAlertOverlay(
-                dc,
-                "FUEL NOW",
-                state.fuelAlertText,
-                Graphics.COLOR_ORANGE
-            );
-        }
-        else if (state.pendingDrinkAlert) {
-            renderer.drawAlertOverlay(
-                dc,
-                "DRINK NOW",
-                state.drinkAlertText,
-                Graphics.COLOR_BLUE
-            );
-        }
 
         // =================================
         // LAYOUT
@@ -178,6 +157,26 @@ class FuelHydrationField extends WatchUi.DataField {
             state.bonkTimeLabel,
             state.bonkRiskLabel
         );
+
+        // =================================
+        // ALERTS
+        // =================================
+        if (state.pendingFuelAlert) {
+            renderer.drawAlertOverlay(
+                dc,
+                "FUEL NOW",
+                state.fuelAlertText,
+                Graphics.COLOR_ORANGE
+            );
+        } 
+        if (state.pendingDrinkAlert) {
+            renderer.drawAlertOverlay(
+                dc,
+                "DRINK NOW",
+                state.drinkAlertText,
+                Graphics.COLOR_BLUE
+            );
+        }
     }
 
     // =====================================
@@ -228,6 +227,46 @@ class FuelHydrationField extends WatchUi.DataField {
 
                 return true;
             }
+        }
+
+        return false;
+    }
+
+    function onTap(clickEvent) {
+
+        System.println("TAP DETECTED");
+
+        var state =
+            sessionManager.getState();
+
+        // =====================================
+        // FUEL ALERT
+        // =====================================
+
+        if (state.pendingFuelAlert) {
+
+            System.println("CONFIRM FUEL");
+
+            sessionManager.confirmFuelIntake();
+
+            WatchUi.requestUpdate();
+
+            return true;
+        }
+
+        // =====================================
+        // DRINK ALERT
+        // =====================================
+
+        if (state.pendingDrinkAlert) {
+
+            System.println("CONFIRM DRINK");
+
+            sessionManager.confirmDrinkIntake();
+
+            WatchUi.requestUpdate();
+
+            return true;
         }
 
         return false;

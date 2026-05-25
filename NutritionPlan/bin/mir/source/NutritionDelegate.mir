@@ -1,0 +1,56 @@
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionDelegate.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionDelegate.mc"; @line = 3; @symbol_classdef = [NutritionDelegate,3,6,23]; @symbol_extends<0> = [WatchUi,4,12,19]; @symbol_extends<1> = [BehaviorDelegate,4,20,36]; ]
+class NutritionDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionDelegate.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionDelegate.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionDelegate.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
+    function initialize() as Void {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionDelegate_mc_6_26_9_4_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionDelegate.mc" 8 8 ]
+        symbol [ BehaviorDelegate %tmp.2 8 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 8 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionDelegate_mc_6_26_9_4_stop:
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionDelegate.mc"; @line = 11; @symbol_functiondef = [onTap,11,13,18]; @symbol_param<0> = [clickEvent,11,19,29]; ]
+    function onTap(clickEvent) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionDelegate_mc_11_31_16_4_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionDelegate.mc" 13 8 ]
+        symbol [ System %tmp.2 13 8 14 ];
+        %tmp.2 = getv ? :System;
+        symbol [ println %tmp.3 13 15 22 ];
+        %tmp.3 = getv function %tmp.2 :println;
+        %tmp.4 = "Tap detected";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionDelegate.mc" 15 8 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionDelegate_mc_11_31_16_4_stop:
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionDelegate.mc"; @line = 18; @symbol_functiondef = [onKey,18,13,18]; @symbol_param<0> = [evt,18,19,22]; ]
+    function onKey(evt) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionDelegate_mc_18_24_23_4_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionDelegate.mc" 20 8 ]
+        symbol [ System %tmp.2 20 8 14 ];
+        %tmp.2 = getv ? :System;
+        symbol [ println %tmp.3 20 15 22 ];
+        %tmp.3 = getv function %tmp.2 :println;
+        %tmp.4 = "Key detected";
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionDelegate.mc" 22 8 ]
+        %tmp.5 = true;
+        ret %tmp.5;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionDelegate_mc_18_24_23_4_stop:
+    }
+}
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionDelegate.mc"; @line = 1; ]
+<init> {
+}

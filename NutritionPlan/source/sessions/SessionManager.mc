@@ -44,6 +44,8 @@ module Session {
 
         var lastFuelAlertTime;
         var lastDrinkAlertTime;
+        var fuelAlertStartTime;
+        var drinkAlertStartTime;
 
         function initialize(profileData) {
             state = new WorkoutState();
@@ -76,10 +78,10 @@ module Session {
 
             // 10 min cooldowns
             fuelAlertCooldown =
-                600000;
+                60000;
 
             drinkAlertCooldown =
-                600000;
+                60000;
 
             // =============================
             // INITIAL STATE
@@ -149,6 +151,8 @@ module Session {
             // ALERTS
             // =============================
             processAlerts();
+            updateFuelAlertLifecycle();
+            updateDrinkAlertLifecycle();
         }
 
         // =====================================
@@ -339,8 +343,8 @@ module Session {
             // Trigger conditions
             if(
                 state.minutesUntilFuel <= 0
-                && state.fuelDeficit
-                    > 25
+                || state.fuelDeficit
+                    > 2
 
             ) {
 
@@ -352,6 +356,8 @@ module Session {
 
                 lastFuelAlertTime =
                     now;
+                
+                fuelAlertStartTime = now;
             }
         }
 
@@ -381,8 +387,8 @@ module Session {
             // Trigger conditions
             if (
                 state.minutesUntilDrink <= 0
-                && state.hydrationDeficitMl
-                    > 400
+                || state.hydrationDeficitMl
+                    > 4
             ) {
 
                 state.pendingDrinkAlert =
@@ -393,6 +399,40 @@ module Session {
 
                 lastDrinkAlertTime =
                     now;
+                
+                drinkAlertStartTime = now;
+            }
+        }
+
+        function updateDrinkAlertLifecycle() {
+            if (drinkAlertStartTime == null) {
+                return;
+            }
+
+            var elapsed =
+                System.getTimer()
+                - drinkAlertStartTime;
+
+            // 8 seconds
+            if (elapsed > 8000) {
+                drinkAlertStartTime = null;
+                confirmDrinkIntake();
+            }
+        }
+
+        function updateFuelAlertLifecycle() {
+            if (fuelAlertStartTime == null) {
+                return;
+            }
+
+            var elapsed =
+                System.getTimer()
+                - fuelAlertStartTime;
+
+            // 8 seconds
+            if (elapsed > 8000) {
+                fuelAlertStartTime = null;
+                confirmFuelIntake();
             }
         }
 
@@ -401,8 +441,7 @@ module Session {
         // =====================================
         function confirmFuelIntake() {
 
-            nutritionTracker
-                .registerCarbs(30);
+            registerFuel(30);
 
             state.pendingFuelAlert =
                 false;
@@ -413,11 +452,7 @@ module Session {
         // =====================================
         function confirmDrinkIntake() {
 
-            hydrationEngine
-                .registerDrink(250);
-
-            nutritionTracker
-                .registerDrink(250);
+            registerDrink(250);
 
             state.pendingDrinkAlert =
                 false;
@@ -445,6 +480,9 @@ module Session {
 
             nutritionTracker
                 .registerCarbs(grams);
+            
+            fuelEngine
+            .registerCarbs(grams);
         }
 
         // =====================================
