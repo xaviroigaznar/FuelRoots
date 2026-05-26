@@ -169,24 +169,5 @@ module Tracker {
 
             return remainingMinutes;
         }
-
-        // =====================================
-        // FUEL DEFICIT
-        // =====================================
-
-        function getFuelDeficit(
-            carbsBurned
-        ) {
-
-            var deficit =
-                carbsBurned -
-                sessionCarbsIngested;
-
-            if (deficit < 0) {
-                deficit = 0;
-            }
-
-            return deficit;
-        }
     }
 }

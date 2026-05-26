@@ -31,14 +31,10 @@ module Engine {
         var totalCarbsBurned = 0.0;
         var lapCarbsBurned = 0;
 
-        var totalCarbsIntake = 0.0;
-        var lapCarbsIntake = 0.0;
-
         // =====================================
         // TIME
         // =====================================
         var lastElapsedTime = 0;
-        var lastFuelTime = 0;
 
         // =========================
         // INIT
@@ -104,33 +100,8 @@ module Engine {
             );
 
             // =================================
-            // HYDRATION DEFICIT
-            // =================================
-
-            var deficit =
-                totalCarbsBurned
-                - totalCarbsIntake;
-
-            if (deficit < 0) {
-                deficit = 0;
-            }
-
-            // =================================
-            // FUEL TIMING
-            // =================================
-
-            var fuelCountdown =
-                calculateNextFuel(ri);
-
-            // =================================
             // EXPORT TO STATE
             // =================================
-
-            state.fuelDeficit =
-                deficit;
-
-            state.minutesUntilFuel =
-                fuelCountdown;
 
             state.sessionCarbsBurned =
                 totalCarbsBurned;
@@ -215,32 +186,6 @@ module Engine {
         }
 
         // =========================
-        // FUEL TIMER
-        // =========================
-        function calculateNextFuel(relativeIntensity) {
-            var now = System.getTimer();
-
-            var interval = 900000;
-
-            if (relativeIntensity != null) {
-                // Hard effort → drink sooner
-                if (relativeIntensity > 0.8) {
-                    interval = 420000;
-                } else if (relativeIntensity > 0.65) {
-                    interval = 600000;
-                }
-            }
-
-            var remaining = (interval - (now - lastFuelTime)) / 60000.0;
-
-            if (remaining < 0) {
-                remaining = 0;
-            }
-
-            return remaining;
-        }
-
-        // =========================
         // NP
         // =========================
         function updateNP(power) {
@@ -298,18 +243,6 @@ module Engine {
 
         function getLapCarbsBurned() {
             return lapCarbsBurned;
-        }
-
-        // =====================================
-        // FUEL EVENT
-        // =====================================
-        function registerCarbs(g) {
-
-            totalCarbsIntake += g;
-            lapCarbsIntake += g;
-
-            lastFuelTime =
-                System.getTimer();
         }
 
         // =========================

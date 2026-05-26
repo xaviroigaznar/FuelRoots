@@ -130,6 +130,7 @@ class FuelHydrationField extends WatchUi.DataField {
         // =================================
         // BOTTOM LEFT
         // =================================
+        var carbDeficitLabel = state.carbsDeficit.format("%.0f") + "g";
 
         renderer.drawTelemetryBox(
             dc,
@@ -140,7 +141,7 @@ class FuelHydrationField extends WatchUi.DataField {
             state.drinkCountdownLabel,
             state.hydrationDeficitLabel,
             state.nextFuelCountdownLabel,
-            state.carbDeficitLabel
+            carbDeficitLabel
         );
 
         // =================================

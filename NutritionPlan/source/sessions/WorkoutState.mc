@@ -38,7 +38,7 @@ module Session {
         var hydrationDeficitLabel;
 
         var nextFuelCountdownLabel;
-        var carbDeficitLabel;
+        var carbsDeficit;
 
         // =========================
         // Fuel
@@ -49,7 +49,6 @@ module Session {
         var carbBurnRate;
 
         var minutesUntilFuel;
-        var fuelDeficit;
 
         // =========================
         // Hydration
@@ -103,7 +102,6 @@ module Session {
             carbBurnRate = 0;
 
             minutesUntilFuel = 0;
-            fuelDeficit = 0;
 
             // Hydration
             hydrationLoss = 0;
@@ -131,7 +129,7 @@ module Session {
             nextDrinkCountdownLabel = "--";
             hydrationDeficitLabel = "0ml";
             nextFuelCountdownLabel = "--";
-            carbDeficitLabel = "0g";
+            carbsDeficit = 0;
 
             statusLabel = "STABLE";
             bonkTimeLabel = "--";

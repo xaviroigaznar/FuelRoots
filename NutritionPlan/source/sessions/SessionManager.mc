@@ -194,6 +194,8 @@ module Session {
             ) {
                 state.lapElapsedTime =
                     info.currentLapTime;
+            } else {
+                state.lapElapsedTime = state.elapsedTime;
             }
         }
 
@@ -278,23 +280,16 @@ module Session {
                 carbDeficit = 0;
             }
 
-            state.carbDeficitLabel =
-                carbDeficit.format("%.0f")
-                + "g";
+            state.carbsDeficit = carbDeficit;
 
             // =============================
             // NEXT FUEL
             // =============================
-            var minutesUntilFuel =
-                nutritionTracker
-                    .getNextFuelCountdown(
-                        state.relativeIntensity
-                    );
 
             state.nextFuelCountdownLabel =
                 Utils.FormatUtils
                     .formatCountdown(
-                        minutesUntilFuel
+                        nutritionTracker.getNextFuelCountdown(state.relativeIntensity)
                     );
 
             // =============================
@@ -342,9 +337,7 @@ module Session {
 
             // Trigger conditions
             if(
-                state.minutesUntilFuel <= 0
-                || state.fuelDeficit
-                    > 2
+                state.minutesUntilFuel <= 0 || state.carbsDeficit > 2
 
             ) {
 
