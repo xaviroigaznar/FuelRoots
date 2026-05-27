@@ -41,7 +41,6 @@ module Session {
         // =====================================
         var alertCooldown;
 
-        var lastAlertTime;
         var alertStartTime;
 
         function initialize(profileData) {
@@ -69,8 +68,6 @@ module Session {
             // =============================
             // ALERTS
             // =============================
-
-            lastAlertTime = 0;
 
             // 10 min cooldowns
             alertCooldown =
@@ -135,14 +132,15 @@ module Session {
             // =============================
             // Trigger conditions
             if(
-                state.minutesUntilFuel <= 0 || state.carbsDeficit > 2
+                state.minutesUntilFuel <= 0 || state.carbsDeficit > 2 && state.activeAlert == null
             ) {
                 triggerFuelAlert();
             } else if (
-                state.minutesUntilDrink <= 0 || state.hydrationDeficitMl > 4
+                state.minutesUntilDrink <= 0 || state.hydrationDeficitMl > 4 && state.activeAlert == null
             ) {
                 triggerDrinkAlert();
             }
+            updateAlertLifecycle();
         }
 
         // =====================================
@@ -325,9 +323,6 @@ module Session {
 
             state.alertText =
                 "Take 30g carbs";
-
-            lastAlertTime =
-                now;
             
             alertStartTime = now;
         }
@@ -345,9 +340,6 @@ module Session {
 
             state.alertText =
                 "Drink 250ml";
-
-            lastAlertTime =
-                now;
             
             alertStartTime = now;
         }

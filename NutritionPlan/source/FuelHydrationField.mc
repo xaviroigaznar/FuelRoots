@@ -157,6 +157,7 @@ class FuelHydrationField extends WatchUi.DataField {
             statusWidth,
             bottomHeight,
             state.statusLabel,
+            state.fatiguePercent,
             state.bonkTimeLabel,
             state.bonkRiskLabel
         );
@@ -164,21 +165,23 @@ class FuelHydrationField extends WatchUi.DataField {
         // =================================
         // ALERTS
         // =================================
-        if (state.activeAlert == "FUEL") {
-            renderer.drawAlertOverlay(
-                dc,
-                "FUEL NOW",
-                state.alertText,
-                Graphics.COLOR_ORANGE
-            );
-        } 
-        if (state.activeAlert == "DRINK") {
-            renderer.drawAlertOverlay(
-                dc,
-                "DRINK NOW",
-                state.alertText,
-                Graphics.COLOR_BLUE
-            );
+        if (state.activeAlert != null) {
+            /* if (state.activeAlert == "FUEL") {
+                renderer.drawAlertOverlay(
+                    dc,
+                    "FUEL NOW",
+                    state.alertText,
+                    Graphics.COLOR_ORANGE
+                );
+            } 
+            if (state.activeAlert == "DRINK") { */
+                renderer.drawAlertOverlay(
+                    dc,
+                    "DRINK NOW",
+                    state.alertText,
+                    Graphics.COLOR_BLUE
+                );
+            // }
         }
     }
 }

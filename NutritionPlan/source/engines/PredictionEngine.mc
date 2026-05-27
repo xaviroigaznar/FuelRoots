@@ -26,10 +26,8 @@ module Engine {
             var elapsed = state.elapsedTime;
             var hydrationDeficit =
                 state.hydrationDeficitMl;
-            var carbsBurned =
-                state.sessionCarbsBurned;
-            var carbsIngested =
-                state.sessionCarbsIngested;
+            var carbsDeficit =
+                state.carbsDeficit;
 
             // =================================
             // GLYCOGEN
@@ -37,19 +35,8 @@ module Engine {
 
             var glycogenRemaining =
                 calculateRemainingGlycogen(
-                    carbsBurned,
-                    carbsIngested
+                    carbsDeficit
                 );
-
-            state.glycogenRemaining =
-                glycogenRemaining;
-
-            state.glycogenPercent =
-                Utils.FormatUtils
-                    .formatPercent(
-                    (glycogenRemaining
-                    / glycogenCapacity
-                ) * 100);
 
             // =================================
             // FATIGUE
@@ -80,9 +67,6 @@ module Engine {
                     ri
                 );
 
-            state.bonkRisk =
-                bonkRisk;
-
             state.bonkRiskLabel =
                 Utils.FormatUtils
                     .formatPercent(
@@ -98,9 +82,6 @@ module Engine {
                     glycogenRemaining,
                     ri
                 );
-
-            state.bonkTimeLabel =
-                bonkTime;
 
             state.bonkTimeLabel =
                 Utils.FormatUtils
@@ -124,14 +105,12 @@ module Engine {
         // =====================================
 
         function calculateRemainingGlycogen(
-            carbsBurned,
-            carbsIngested
+            carbsDeficit
         ) {
 
             var remaining =
                 glycogenCapacity
-                - carbsBurned
-                + carbsIngested;
+                - carbsDeficit;
 
             if (remaining > glycogenCapacity) {
 

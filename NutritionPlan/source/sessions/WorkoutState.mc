@@ -43,9 +43,6 @@ module Session {
         // =========================
         // Fuel
         // =========================
-
-        var glycogenRemaining;
-        var glycogenPercent;
         var carbBurnRate;
 
         var minutesUntilFuel;
@@ -69,7 +66,6 @@ module Session {
         // =========================
 
         var fatiguePercent;
-        var bonkRisk;
 
         // UI-ready status
         var statusLabel;
@@ -95,11 +91,20 @@ module Session {
             relativeIntensity = 0;
 
             // Fuel
-            glycogenRemaining = 100;
-            glycogenPercent = "100%";
             carbBurnRate = 0;
-
             minutesUntilFuel = 0;
+
+            sessionCarbsBurnedPerHour = "0g/h";
+            sessionCarbsIngestedPerHour = "0g/h";
+            sessionCarbsIngested = "0g";
+            sessionCarbsBurned = 0.0;
+
+            lapCarbsBurnedPerHour = "0g/h";
+            lapCarbsIngestedPerHour = "0g/h";
+            lapCarbsIngested = "0g";
+            lapCarbsBurned = 0.0;
+            nextFuelCountdownLabel = "--";
+            carbsDeficit = 0;
 
             // Hydration
             sessionHydrationLoss = 0;
@@ -112,24 +117,11 @@ module Session {
             minutesUntilDrink = 0;
             hydrationDeficitMl = 0;
 
-            // Prediction
-            fatiguePercent = 0;
-            bonkRisk = 0;
-
-            sessionCarbsBurnedPerHour = "0g/h";
-            sessionCarbsIngestedPerHour = "0g/h";
-            sessionCarbsIngested = "0g";
-            sessionCarbsBurned = 0.0;
-
-            lapCarbsBurnedPerHour = "0g/h";
-            lapCarbsIngestedPerHour = "0g/h";
-            lapCarbsIngested = "0g";
-            lapCarbsBurned = 0.0;
-
             nextDrinkCountdownLabel = "--";
             hydrationDeficitLabel = "0ml";
-            nextFuelCountdownLabel = "--";
-            carbsDeficit = 0;
+
+            // Prediction
+            fatiguePercent = 0;
 
             statusLabel = "STABLE";
             bonkTimeLabel = "--";

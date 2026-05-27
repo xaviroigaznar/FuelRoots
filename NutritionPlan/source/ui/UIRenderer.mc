@@ -328,6 +328,7 @@ module UI {
             w,
             h,
             status,
+            fatigue,
             bonkTime,
             risk
         ) {
@@ -427,12 +428,32 @@ module UI {
             );
 
             // =============================
-            // BONK
+            // FATIGUE
             // =============================
 
             dc.drawText(
                 x + 8,
                 y + 78,
+                Graphics.FONT_XTINY,
+                "Fatigue: ",
+                Graphics.TEXT_JUSTIFY_LEFT
+            );
+
+            dc.drawText(
+                x + w - 8,
+                y + 78,
+                Graphics.FONT_SMALL,
+                fatigue,
+                Graphics.TEXT_JUSTIFY_RIGHT
+            );
+
+            // =============================
+            // BONK
+            // =============================
+
+            dc.drawText(
+                x + 8,
+                y + 104,
                 Graphics.FONT_XTINY,
                 "Bonk",
                 Graphics.TEXT_JUSTIFY_LEFT
@@ -440,7 +461,7 @@ module UI {
 
             dc.drawText(
                 x + w - 8,
-                y + 78,
+                y + 104,
                 Graphics.FONT_SMALL,
                 bonkTime,
                 Graphics.TEXT_JUSTIFY_RIGHT
@@ -452,7 +473,7 @@ module UI {
 
             dc.drawText(
                 x + 8,
-                y + 104,
+                y + 128,
                 Graphics.FONT_XTINY,
                 "Risk",
                 Graphics.TEXT_JUSTIFY_LEFT
@@ -460,7 +481,7 @@ module UI {
 
             dc.drawText(
                 x + w - 8,
-                y + 104,
+                y + 128,
                 Graphics.FONT_SMALL,
                 risk,
                 Graphics.TEXT_JUSTIFY_RIGHT
