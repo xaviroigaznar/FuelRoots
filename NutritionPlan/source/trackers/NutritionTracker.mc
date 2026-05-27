@@ -169,5 +169,51 @@ module Tracker {
 
             return remainingMinutes;
         }
+
+        // =========================
+        // DRINK TIMER
+        // =========================
+
+        function getNextDrinkCountdown(relativeIntensity) {
+            var now = System.getTimer();
+
+            var interval = 900000;
+
+            if (relativeIntensity != null) {
+                // Hard effort → drink sooner
+                if (relativeIntensity > 0.8) {
+                    interval = 420000;
+                } else if (relativeIntensity > 0.65) {
+                    interval = 600000;
+                }
+            }
+
+            var remaining = (interval - (now - lastDrinkTime)) / 60000.0;
+
+            if (remaining < 0) {
+                remaining = 0;
+            }
+
+            return remaining;
+        }
+
+        // =====================================
+        // SESSION FLUID
+        // =====================================
+
+        function getSessionFluid() {
+
+            return sessionFluidIngestedMl;
+        }
+
+        // =====================================
+        // LAP FLUID
+        // =====================================
+
+        function getLapFluid() {
+
+            return lapFluidIngestedMl;
+        }
+
     }
 }

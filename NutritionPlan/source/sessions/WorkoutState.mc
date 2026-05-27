@@ -53,15 +53,16 @@ module Session {
         // =========================
         // Hydration
         // =========================
-
-        var hydrationLoss;
+        var sessionHydrationLoss;
+        var sessionHydrationDrunk;
+        var lapHydrationLoss;
+        var lapHydrationDrunk;
         var sweatRate;
 
         // UI-ready hydration metrics
         var minutesUntilDrink;
         var hydrationDeficitMl;
         var hydrationStateLabel;
-        var drinkCountdownLabel;
 
         // =========================
         // Prediction
@@ -78,11 +79,8 @@ module Session {
         // =========================
         // Alerts
         // =========================
-        var pendingFuelAlert;
-        var pendingDrinkAlert;
-
-        var fuelAlertText;
-        var drinkAlertText;
+        var activeAlert;
+        var alertText;
 
         function initialize() {
 
@@ -104,10 +102,12 @@ module Session {
             minutesUntilFuel = 0;
 
             // Hydration
-            hydrationLoss = 0;
+            sessionHydrationLoss = 0;
+            sessionHydrationDrunk = 0;
+            lapHydrationLoss = 0;
+            lapHydrationDrunk = 0;
             sweatRate = 0;
             hydrationStateLabel = "STABLE";
-            drinkCountdownLabel = "--";
 
             minutesUntilDrink = 0;
             hydrationDeficitMl = 0;

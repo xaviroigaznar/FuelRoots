@@ -107,6 +107,7 @@ class FuelHydrationField extends WatchUi.DataField {
             state.sessionCarbsBurnedPerHour,
             state.sessionCarbsIngestedPerHour,
             state.sessionCarbsIngested,
+            state.sessionHydrationLoss,
             Graphics.COLOR_RED
         );
 
@@ -124,6 +125,7 @@ class FuelHydrationField extends WatchUi.DataField {
             state.lapCarbsBurnedPerHour,
             state.lapCarbsIngestedPerHour,
             state.lapCarbsIngested,
+            state.lapHydrationLoss,
             Graphics.COLOR_GREEN
         );
 
@@ -138,7 +140,7 @@ class FuelHydrationField extends WatchUi.DataField {
             topHeight,
             telemetryWidth,
             bottomHeight,
-            state.drinkCountdownLabel,
+            state.nextDrinkCountdownLabel,
             state.hydrationDeficitLabel,
             state.nextFuelCountdownLabel,
             carbDeficitLabel
@@ -162,114 +164,21 @@ class FuelHydrationField extends WatchUi.DataField {
         // =================================
         // ALERTS
         // =================================
-        if (state.pendingFuelAlert) {
+        if (state.activeAlert == "FUEL") {
             renderer.drawAlertOverlay(
                 dc,
                 "FUEL NOW",
-                state.fuelAlertText,
+                state.alertText,
                 Graphics.COLOR_ORANGE
             );
         } 
-        if (state.pendingDrinkAlert) {
+        if (state.activeAlert == "DRINK") {
             renderer.drawAlertOverlay(
                 dc,
                 "DRINK NOW",
-                state.drinkAlertText,
+                state.alertText,
                 Graphics.COLOR_BLUE
             );
         }
-    }
-
-    // =====================================
-    // USER INPUT
-    // =====================================
-    function onKey(keyEvent) {
-
-        var state =
-            sessionManager.getState();
-
-        // =============================
-        // START BUTTON
-        // =============================
-
-        if (
-            keyEvent.getKey()
-            == WatchUi.KEY_START
-        ) {
-
-            // =========================
-            // FUEL ALERT
-            // =========================
-
-            if (
-                state.pendingFuelAlert
-            ) {
-
-                sessionManager
-                    .confirmFuelIntake();
-
-                WatchUi.requestUpdate();
-
-                return true;
-            }
-
-            // =========================
-            // DRINK ALERT
-            // =========================
-
-            if (
-                state.pendingDrinkAlert
-            ) {
-
-                sessionManager
-                    .confirmDrinkIntake();
-
-                WatchUi.requestUpdate();
-
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    function onTap(clickEvent) {
-
-        System.println("TAP DETECTED");
-
-        var state =
-            sessionManager.getState();
-
-        // =====================================
-        // FUEL ALERT
-        // =====================================
-
-        if (state.pendingFuelAlert) {
-
-            System.println("CONFIRM FUEL");
-
-            sessionManager.confirmFuelIntake();
-
-            WatchUi.requestUpdate();
-
-            return true;
-        }
-
-        // =====================================
-        // DRINK ALERT
-        // =====================================
-
-        if (state.pendingDrinkAlert) {
-
-            System.println("CONFIRM DRINK");
-
-            sessionManager.confirmDrinkIntake();
-
-            WatchUi.requestUpdate();
-
-            return true;
-        }
-
-        return false;
     }
 }

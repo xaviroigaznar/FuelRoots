@@ -17,15 +17,11 @@ module Engine {
         var totalFluidLossMl = 0.0;
         var lapFluidLossMl = 0.0;
 
-        var totalFluidIntakeMl = 0.0;
-        var lapFluidIntakeMl = 0.0;
-
         // =====================================
         // TIMERS
         // =====================================
 
         var lastElapsedTime = 0;
-        var lastDrinkTime;
 
         // =========================
         // INIT
@@ -33,8 +29,6 @@ module Engine {
 
         function initialize(profile) {
             weight = profile.weight;
-
-            lastDrinkTime = System.getTimer();
         }
 
         // =========================
@@ -74,43 +68,17 @@ module Engine {
             );
 
             // =================================
-            // HYDRATION DEFICIT
-            // =================================
-
-            var deficit =
-                totalFluidLossMl
-                - totalFluidIntakeMl;
-
-            if (deficit < 0) {
-                deficit = 0;
-            }
-
-            // =================================
-            // DRINK TIMING
-            // =================================
-
-            var drinkCountdown =
-                calculateNextDrink(ri);
-
-            // =================================
             // EXPORT TO STATE
             // =================================
 
-            state.hydrationDeficitMl =
-                deficit;
-
-            state.minutesUntilDrink =
-                drinkCountdown;
-
-            state.drinkCountdownLabel =
-                Utils.FormatUtils
-                    .formatCountdown(
-                        drinkCountdown
-                    );
+            state.sessionHydrationLoss =
+                totalFluidLossMl;
+            
+            state.lapHydrationLoss = lapFluidLossMl;
 
             state.hydrationStateLabel =
                 calculateHydrationLabel(
-                    deficit
+                    state.hydrationDeficitMl
                 );
 
             lastElapsedTime =
@@ -183,33 +151,6 @@ module Engine {
         }
 
         // =========================
-        // DRINK TIMER
-        // =========================
-
-        function calculateNextDrink(relativeIntensity) {
-            var now = System.getTimer();
-
-            var interval = 900000;
-
-            if (relativeIntensity != null) {
-                // Hard effort → drink sooner
-                if (relativeIntensity > 0.8) {
-                    interval = 420000;
-                } else if (relativeIntensity > 0.65) {
-                    interval = 600000;
-                }
-            }
-
-            var remaining = (interval - (now - lastDrinkTime)) / 60000.0;
-
-            if (remaining < 0) {
-                remaining = 0;
-            }
-
-            return remaining;
-        }
-
-        // =========================
         // HYDRATION STATUS
         // =========================
 
@@ -230,16 +171,12 @@ module Engine {
             return "Critical";
         }
 
-        // =====================================
-        // DRINK EVENT
-        // =====================================
-        function registerDrink(ml) {
-
-            totalFluidIntakeMl += ml;
-            lapFluidIntakeMl += ml;
-
-            lastDrinkTime =
-                System.getTimer();
+        function getTotalFluidLoss() {
+            return totalFluidLossMl;
+        }
+    
+        function getLapFluidLoss() {
+            return lapFluidLossMl;
         }
 
         // =====================================
@@ -247,7 +184,6 @@ module Engine {
         // =====================================
         function onLap() {
             lapFluidLossMl = 0;
-            lapFluidIntakeMl = 0;
         }
     }
 }

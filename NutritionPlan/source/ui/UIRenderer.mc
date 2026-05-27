@@ -25,6 +25,7 @@ module UI {
             burnRate,
             intakeRate,
             totalIntake,
+            drinkIntake,
             accentColor
         ) {
 
@@ -144,6 +145,24 @@ module UI {
                 Graphics.FONT_SMALL,
                 totalIntake.format("%.0f")
                 + "g",
+                Graphics.TEXT_JUSTIFY_RIGHT
+            );
+
+            // Intake
+            dc.drawText(
+                x + 8,
+                y + 98,
+                Graphics.FONT_XTINY,
+                "Hydration loss",
+                Graphics.TEXT_JUSTIFY_LEFT
+            );
+
+            dc.drawText(
+                x + w - 8,
+                y + 98,
+                Graphics.FONT_SMALL,
+                drinkIntake.format("%.0f")
+                + "ml",
                 Graphics.TEXT_JUSTIFY_RIGHT
             );
         }
