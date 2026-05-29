@@ -22,10 +22,12 @@ module UI {
             w,
             h,
             title,
-            burnRate,
-            intakeRate,
+            totalBurned,
             totalIntake,
-            drinkIntake,
+            intakeRate,
+            lapBurned,
+            lapIntake,
+            lapIntakeRate,
             accentColor
         ) {
 
@@ -94,30 +96,21 @@ module UI {
                 Graphics.COLOR_BLACK
             );
 
+            // TOTAL SESSION TITLE
+            dc.drawText(
+                x + 6,
+                y + 32,
+                Graphics.FONT_SMALL,
+                "TOTAL",
+                Graphics.TEXT_JUSTIFY_LEFT
+            );
+
             // Burn
             dc.drawText(
                 x + 8,
-                y + 32,
-                Graphics.FONT_XTINY,
-                "Burn",
-                Graphics.TEXT_JUSTIFY_LEFT
-            );
-
-            dc.drawText(
-                x + w - 8,
-                y + 32,
-                Graphics.FONT_SMALL,
-                burnRate.format("%.0f")
-                + "g/h",
-                Graphics.TEXT_JUSTIFY_RIGHT
-            );
-
-            // Intake
-            dc.drawText(
-                x + 8,
                 y + 54,
                 Graphics.FONT_XTINY,
-                "In",
+                "Burned: ",
                 Graphics.TEXT_JUSTIFY_LEFT
             );
 
@@ -125,35 +118,32 @@ module UI {
                 x + w - 8,
                 y + 54,
                 Graphics.FONT_SMALL,
-                intakeRate.format("%.0f")
-                + "g/h",
-                Graphics.TEXT_JUSTIFY_RIGHT
-            );
-
-            // Total
-            dc.drawText(
-                x + 8,
-                y + 76,
-                Graphics.FONT_XTINY,
-                "Total",
-                Graphics.TEXT_JUSTIFY_LEFT
-            );
-
-            dc.drawText(
-                x + w - 8,
-                y + 76,
-                Graphics.FONT_SMALL,
-                totalIntake.format("%.0f")
-                + "g",
+                totalBurned,
                 Graphics.TEXT_JUSTIFY_RIGHT
             );
 
             // Intake
             dc.drawText(
                 x + 8,
+                y + 76,
+                Graphics.FONT_XTINY,
+                "In: ",
+                Graphics.TEXT_JUSTIFY_LEFT
+            );
+
+            dc.drawText(
+                x + w - 8,
+                y + 76,
+                Graphics.FONT_SMALL,
+                totalIntake,
+                Graphics.TEXT_JUSTIFY_RIGHT
+            );
+
+            dc.drawText(
+                x + 8,
                 y + 98,
                 Graphics.FONT_XTINY,
-                "Hydration loss",
+                "In rate: ",
                 Graphics.TEXT_JUSTIFY_LEFT
             );
 
@@ -161,8 +151,71 @@ module UI {
                 x + w - 8,
                 y + 98,
                 Graphics.FONT_SMALL,
-                drinkIntake.format("%.0f")
-                + "ml",
+                intakeRate,
+                Graphics.TEXT_JUSTIFY_RIGHT
+            );
+
+            // LAP SESSION TITLE
+            dc.drawText(
+                x + 6,
+                y + 120,
+                Graphics.FONT_SMALL,
+                "LAP",
+                Graphics.TEXT_JUSTIFY_LEFT
+            );
+
+            dc.setColor(
+                Graphics.COLOR_WHITE,
+                Graphics.COLOR_BLACK
+            );
+
+            // Burn
+            dc.drawText(
+                x + 8,
+                y + 142,
+                Graphics.FONT_XTINY,
+                "Burned: ",
+                Graphics.TEXT_JUSTIFY_LEFT
+            );
+
+            dc.drawText(
+                x + w - 8,
+                y + 142,
+                Graphics.FONT_SMALL,
+                lapBurned,
+                Graphics.TEXT_JUSTIFY_RIGHT
+            );
+
+            // Intake
+            dc.drawText(
+                x + 8,
+                y + 164,
+                Graphics.FONT_XTINY,
+                "In: ",
+                Graphics.TEXT_JUSTIFY_LEFT
+            );
+
+            dc.drawText(
+                x + w - 8,
+                y + 164,
+                Graphics.FONT_SMALL,
+                lapIntake,
+                Graphics.TEXT_JUSTIFY_RIGHT
+            );
+
+            dc.drawText(
+                x + 8,
+                y + 186,
+                Graphics.FONT_XTINY,
+                "In rate: ",
+                Graphics.TEXT_JUSTIFY_LEFT
+            );
+
+            dc.drawText(
+                x + w - 8,
+                y + 186,
+                Graphics.FONT_SMALL,
+                lapIntakeRate,
                 Graphics.TEXT_JUSTIFY_RIGHT
             );
         }
@@ -171,16 +224,14 @@ module UI {
         // TELEMETRY BOX
         // =====================================
 
-        function drawTelemetryBox(
+        function drawCountdownBox(
             dc,
             x,
             y,
             w,
             h,
             drinkCountdown,
-            hydrationDeficit,
-            fuelCountdown,
-            carbDeficit
+            fuelCountdown
         ) {
 
             // =============================
@@ -235,7 +286,7 @@ module UI {
                 x + 6,
                 y,
                 Graphics.FONT_SMALL,
-                "FUEL / HYD",
+                "NEXT INGESTION",
                 Graphics.TEXT_JUSTIFY_LEFT
             );
 
@@ -253,7 +304,7 @@ module UI {
                 x + 8,
                 y + 32,
                 Graphics.FONT_XTINY,
-                "Drink in:",
+                "Drink in: ",
                 Graphics.TEXT_JUSTIFY_LEFT
             );
 
@@ -265,27 +316,10 @@ module UI {
                 Graphics.TEXT_JUSTIFY_RIGHT
             );
 
-            // Hydration deficit
-            dc.drawText(
-                x + 8,
-                y + 54,
-                Graphics.FONT_XTINY,
-                "Hydration deficit:",
-                Graphics.TEXT_JUSTIFY_LEFT
-            );
-
-            dc.drawText(
-                x + w - 8,
-                y + 54,
-                Graphics.FONT_SMALL,
-                hydrationDeficit,
-                Graphics.TEXT_JUSTIFY_RIGHT
-            );
-
             // Fuel countdown
             dc.drawText(
                 x + 8,
-                y + 84,
+                y + 54,
                 Graphics.FONT_XTINY,
                 "Fuel in: ",
                 Graphics.TEXT_JUSTIFY_LEFT
@@ -293,26 +327,9 @@ module UI {
 
             dc.drawText(
                 x + w - 8,
-                y + 84,
+                y + 54,
                 Graphics.FONT_SMALL,
                 fuelCountdown,
-                Graphics.TEXT_JUSTIFY_RIGHT
-            );
-
-            // Carb deficit
-            dc.drawText(
-                x + 8,
-                y + 106,
-                Graphics.FONT_XTINY,
-                "Carbs deficit:",
-                Graphics.TEXT_JUSTIFY_LEFT
-            );
-
-            dc.drawText(
-                x + w - 8,
-                y + 106,
-                Graphics.FONT_SMALL,
-                carbDeficit,
                 Graphics.TEXT_JUSTIFY_RIGHT
             );
         }
@@ -329,6 +346,8 @@ module UI {
             h,
             status,
             fatigue,
+            carbsDeficit,
+            hydrationDeficit,
             bonkTime,
             risk
         ) {
@@ -447,13 +466,55 @@ module UI {
                 Graphics.TEXT_JUSTIFY_RIGHT
             );
 
+
+            // =============================
+            // CARBS DEFICIT
+            // =============================
+
+            dc.drawText(
+                x + 8,
+                y + 104,
+                Graphics.FONT_XTINY,
+                "Carbs deficit: ",
+                Graphics.TEXT_JUSTIFY_LEFT
+            );
+
+            dc.drawText(
+                x + w - 8,
+                y + 104,
+                Graphics.FONT_SMALL,
+                carbsDeficit,
+                Graphics.TEXT_JUSTIFY_RIGHT
+            );
+
+
+            // =============================
+            // HYDRATION DEFICIT
+            // =============================
+
+            dc.drawText(
+                x + 8,
+                y + 128,
+                Graphics.FONT_XTINY,
+                "Hydration deficit: ",
+                Graphics.TEXT_JUSTIFY_LEFT
+            );
+
+            dc.drawText(
+                x + w - 8,
+                y + 128,
+                Graphics.FONT_SMALL,
+                hydrationDeficit,
+                Graphics.TEXT_JUSTIFY_RIGHT
+            );
+
             // =============================
             // BONK
             // =============================
 
             dc.drawText(
                 x + 8,
-                y + 104,
+                y + 152,
                 Graphics.FONT_XTINY,
                 "Bonk",
                 Graphics.TEXT_JUSTIFY_LEFT
@@ -461,7 +522,7 @@ module UI {
 
             dc.drawText(
                 x + w - 8,
-                y + 104,
+                y + 152,
                 Graphics.FONT_SMALL,
                 bonkTime,
                 Graphics.TEXT_JUSTIFY_RIGHT
@@ -473,7 +534,7 @@ module UI {
 
             dc.drawText(
                 x + 8,
-                y + 128,
+                y + 176,
                 Graphics.FONT_XTINY,
                 "Risk",
                 Graphics.TEXT_JUSTIFY_LEFT
@@ -481,7 +542,7 @@ module UI {
 
             dc.drawText(
                 x + w - 8,
-                y + 128,
+                y + 176,
                 Graphics.FONT_SMALL,
                 risk,
                 Graphics.TEXT_JUSTIFY_RIGHT

@@ -448,6 +448,80 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_tracke
             ret %tmp.2;
 _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_213_31_216_8_stop:
         }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 222; @symbol_functiondef = [getSessionHydrationRate,222,17,40]; @symbol_param<0> = [elapsedSeconds,223,12,26]; ]
+        function getSessionHydrationRate(elapsedSeconds) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_224_10_235_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 226 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_226_12_228_12_if_stmt:
+            %tmp.1 = lgetv %elapsedSeconds;
+            symbol [ elapsedSeconds %tmp.1 226 16 30 ];
+            %tmp.2 = 0;
+            %tmp.3 = lte %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_226_12_228_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_226_12_228_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_226_37_228_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 227 16 ]
+            %tmp.4 = 0;
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_226_37_228_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_226_12_228_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_226_12_228_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 230 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_224_10_235_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_224_10_235_8_stop" ]
+            %hours.1 = local;
+            symbol [ hours %hours.1 230 16 21 ];
+            %tmp.5 = lgetv %elapsedSeconds;
+            symbol [ elapsedSeconds %tmp.5 231 16 30 ];
+            %tmp.6 = 3600.0;
+            %tmp.7 = div %tmp.5 %tmp.6;
+            lputv %hours.1 %tmp.7;
+            symbol [ hours %hours.1 230 16 21 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 233 12 ]
+            symbol [ sessionFluidIngestedMl %tmp.9 234 16 38 ];
+            %tmp.9 = getv ? :sessionFluidIngestedMl;
+            %tmp.10 = lgetv %hours.1;
+            symbol [ hours %tmp.10 234 41 46 ];
+            %tmp.11 = div %tmp.9 %tmp.10;
+            ret %tmp.11;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_224_10_235_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 241; @symbol_functiondef = [getLapHydrationRate,241,17,36]; @symbol_param<0> = [lapElapsedSeconds,242,12,29]; ]
+        function getLapHydrationRate(lapElapsedSeconds) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_243_10_254_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 245 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_245_12_247_12_if_stmt:
+            %tmp.1 = lgetv %lapElapsedSeconds;
+            symbol [ lapElapsedSeconds %tmp.1 245 16 33 ];
+            %tmp.2 = 0;
+            %tmp.3 = lte %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_245_12_247_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_245_12_247_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_245_40_247_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 246 16 ]
+            %tmp.4 = 0;
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_245_40_247_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_245_12_247_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_245_12_247_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 249 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_243_10_254_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_243_10_254_8_stop" ]
+            %hours.1 = local;
+            symbol [ hours %hours.1 249 16 21 ];
+            %tmp.5 = lgetv %lapElapsedSeconds;
+            symbol [ lapElapsedSeconds %tmp.5 250 16 33 ];
+            %tmp.6 = 3600.0;
+            %tmp.7 = div %tmp.5 %tmp.6;
+            lputv %hours.1 %tmp.7;
+            symbol [ hours %hours.1 249 16 21 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc" 252 12 ]
+            symbol [ lapFluidIngestedMl %tmp.9 253 16 34 ];
+            %tmp.9 = getv ? :lapFluidIngestedMl;
+            %tmp.10 = lgetv %hours.1;
+            symbol [ hours %tmp.10 253 37 42 ];
+            %tmp.11 = div %tmp.9 %tmp.10;
+            ret %tmp.11;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_trackers_NutritionTracker_mc_243_10_254_8_stop:
+        }
     }
 }
 [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/trackers/NutritionTracker.mc"; @line = 1; ]

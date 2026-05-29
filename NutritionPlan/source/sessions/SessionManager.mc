@@ -200,10 +200,14 @@ module Session {
             state.sessionCarbsIngested =
                 nutritionTracker
                     .getSessionCarbs();
+            
+            state.sessionHydrationDrunk = nutritionTracker.getSessionFluid();
 
             state.lapCarbsIngested =
                 nutritionTracker
                     .getLapCarbs();
+            
+            state.lapHydrationDrunk = nutritionTracker.getLapFluid();
 
             // =============================
             // INTAKE RATES
@@ -214,12 +218,16 @@ module Session {
                     .getSessionCarbRate(
                         state.elapsedTime
                     );
+            
+            state.sessionHydrationDrunkPerHour = nutritionTracker.getSessionHydrationRate(state.elapsedTime);
 
             state.lapCarbsIngestedPerHour =
                 nutritionTracker
                     .getLapCarbRate(
                         state.lapElapsedTime
                     );
+            
+            state.lapHydrationDrunkPerHour = nutritionTracker.getLapHydrationRate(state.elapsedTime);
 
             // =============================
             // BURN RATES
@@ -280,7 +288,7 @@ module Session {
             
 
             // =============================
-            // FUEL DEFICIT
+            // HYDRATION DEFICIT
             // =============================
             var hydrationDeficit =
                 hydrationEngine.getTotalFluidLoss()
@@ -299,14 +307,6 @@ module Session {
                 .formatCountdown(
                     state.minutesUntilDrink
                 );
-
-            // =============================
-            // HYDRATION DEFICIT
-            // =============================
-            state.hydrationDeficitLabel =
-                state.hydrationDeficitMl
-                    .format("%.0f")
-                + "ml";
         }
 
         // =====================================

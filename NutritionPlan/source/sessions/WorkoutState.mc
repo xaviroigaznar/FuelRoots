@@ -52,8 +52,10 @@ module Session {
         // =========================
         var sessionHydrationLoss;
         var sessionHydrationDrunk;
+        var sessionHydrationDrunkPerHour;
         var lapHydrationLoss;
         var lapHydrationDrunk;
+        var lapHydrationDrunkPerHour;
         var sweatRate;
 
         // UI-ready hydration metrics
@@ -109,8 +111,10 @@ module Session {
             // Hydration
             sessionHydrationLoss = 0;
             sessionHydrationDrunk = 0;
+            sessionHydrationDrunkPerHour = 0;
             lapHydrationLoss = 0;
             lapHydrationDrunk = 0;
+            lapHydrationDrunkPerHour = 0;
             sweatRate = 0;
             hydrationStateLabel = "STABLE";
 

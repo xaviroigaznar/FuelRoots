@@ -215,5 +215,43 @@ module Tracker {
             return lapFluidIngestedMl;
         }
 
+        // =====================================
+        // SESSION INTAKE RATE
+        // =====================================
+
+        function getSessionHydrationRate(
+            elapsedSeconds
+        ) {
+
+            if (elapsedSeconds <= 0) {
+                return 0;
+            }
+
+            var hours =
+                elapsedSeconds / 3600.0;
+
+            return
+                sessionFluidIngestedMl / hours;
+        }
+
+        // =====================================
+        // LAP INTAKE RATE
+        // =====================================
+
+        function getLapHydrationRate(
+            lapElapsedSeconds
+        ) {
+
+            if (lapElapsedSeconds <= 0) {
+                return 0;
+            }
+
+            var hours =
+                lapElapsedSeconds / 3600.0;
+
+            return
+                lapFluidIngestedMl / hours;
+        }
+
     }
 }

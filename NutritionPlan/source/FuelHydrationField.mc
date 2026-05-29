@@ -75,57 +75,55 @@ class FuelHydrationField extends WatchUi.DataField {
         // LAYOUT
         // =================================
         var topHeight =
-            (height * 40) / 100;
+            (height * 50) / 100;
 
         var bottomHeight =
             height - topHeight;
 
-        var summaryWidth =
+        var boxWidth =
             width / 2;
-
-        var telemetryWidth =
-            (width * 65) / 100;
-
-        var statusWidth =
-            width - telemetryWidth;
 
         // =================================
         // TOP ROW
         // =================================
 
         // -----------------------------
-        // SESSION BOX
+        // CARBS BOX
         // -----------------------------
 
         renderer.drawSummaryBox(
             dc,
             0,
             0,
-            summaryWidth,
+            boxWidth,
             topHeight,
-            "TOTAL",
-            state.sessionCarbsBurnedPerHour,
-            state.sessionCarbsIngestedPerHour,
-            state.sessionCarbsIngested,
-            state.sessionHydrationLoss,
+            "CARBS",
+            state.sessionCarbsBurned.format("%.0f") + "g",
+            state.sessionCarbsIngested.format("%.0f") + "g",
+            state.sessionCarbsIngestedPerHour.format("%.0f") + "g/h",
+            state.lapCarbsBurned.format("%.0f") + "g",
+            state.lapCarbsIngested.format("%.0f") + "g",
+            state.lapCarbsIngestedPerHour.format("%.0f") + "g/h",
             Graphics.COLOR_RED
         );
 
         // -----------------------------
-        // LAP BOX
+        // HYDRATION BOX
         // -----------------------------
 
         renderer.drawSummaryBox(
             dc,
-            summaryWidth,
+            boxWidth,
             0,
-            summaryWidth,
+            boxWidth,
             topHeight,
-            "LAP",
-            state.lapCarbsBurnedPerHour,
-            state.lapCarbsIngestedPerHour,
-            state.lapCarbsIngested,
-            state.lapHydrationLoss,
+            "HYDRATION",
+            state.sessionHydrationLoss.format("%.0f") + "ml",
+            state.sessionHydrationDrunk.format("%.0f") + "ml",
+            state.sessionHydrationDrunkPerHour.format("%.0f") + "ml/h",
+            state.lapHydrationLoss.format("%.0f") + "ml",
+            state.lapHydrationDrunk.format("%.0f") + "ml",
+            state.lapHydrationDrunkPerHour.format("%.0f") + "ml/h",
             Graphics.COLOR_GREEN
         );
 
@@ -133,17 +131,16 @@ class FuelHydrationField extends WatchUi.DataField {
         // BOTTOM LEFT
         // =================================
         var carbDeficitLabel = state.carbsDeficit.format("%.0f") + "g";
+        var hydrationDeficitLabel = state.hydrationDeficitMl.format("%.0f") + "ml";
 
-        renderer.drawTelemetryBox(
+        renderer.drawCountdownBox(
             dc,
             0,
             topHeight,
-            telemetryWidth,
+            boxWidth,
             bottomHeight,
             state.nextDrinkCountdownLabel,
-            state.hydrationDeficitLabel,
-            state.nextFuelCountdownLabel,
-            carbDeficitLabel
+            state.nextFuelCountdownLabel
         );
 
         // =================================
@@ -152,12 +149,14 @@ class FuelHydrationField extends WatchUi.DataField {
 
         renderer.drawStatusBox(
             dc,
-            telemetryWidth,
+            boxWidth,
             topHeight,
-            statusWidth,
+            boxWidth,
             bottomHeight,
             state.statusLabel,
             state.fatiguePercent,
+            carbDeficitLabel,
+            hydrationDeficitLabel,
             state.bonkTimeLabel,
             state.bonkRiskLabel
         );
