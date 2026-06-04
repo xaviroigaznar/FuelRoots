@@ -14,29 +14,32 @@ module Utils {
         // 12.5 -> 12:30
         //
         static function formatCountdown(minutesValue) {
-
             if (minutesValue == null) {
                 return "--:--";
             }
 
-            var totalSeconds =
-                (minutesValue * 60).toNumber();
+            var totalSeconds = (minutesValue * 60).toNumber();
 
             if (totalSeconds < 0) {
                 totalSeconds = 0;
             }
 
-            var minutes =
-                Math.floor(totalSeconds / 60);
+            var hours = Math.floor(totalSeconds / 3600);
 
-            var seconds =
-                totalSeconds % 60;
+            var minutes = Math.floor((totalSeconds % 3600) / 60);
+
+            var seconds = totalSeconds % 60;
+
+            if (hours > 0) {
+                return
+                    hours.format("%d") + "h"
+                    + minutes.format("%02d") + "m"
+                    + seconds.format("%02d") + "s";
+            }
 
             return
-                minutes.format("%d")
-                + "m"
-                + seconds.format("%02d")
-                + "s";
+                minutes.format("%d") + "m"
+                + seconds.format("%02d") + "s";
         }
 
         // Converts seconds to HH:MM:SS
@@ -86,7 +89,7 @@ module Utils {
 
         static function formatPercent(value) {
 
-            if (value == null || value <= 0) {
+            if (value == null || value < 0) {
                 return "--%";
             }
 

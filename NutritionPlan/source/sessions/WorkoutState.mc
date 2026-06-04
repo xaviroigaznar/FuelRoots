@@ -93,7 +93,6 @@ module Session {
             relativeIntensity = 0;
 
             // Fuel
-            carbBurnRate = 0;
             minutesUntilFuel = 0;
 
             sessionCarbsBurnedPerHour = "0g/h";
@@ -115,7 +114,6 @@ module Session {
             lapHydrationLoss = 0;
             lapHydrationDrunk = 0;
             lapHydrationDrunkPerHour = 0;
-            sweatRate = 0;
             hydrationStateLabel = "STABLE";
 
             minutesUntilDrink = 0;

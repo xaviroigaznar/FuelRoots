@@ -39,9 +39,15 @@ module Session {
         // =====================================
         // ALERTS
         // =====================================
-        var alertCooldown;
-
         var alertStartTime;
+        var recommendedCarbs;
+        var recommendedDrink;
+
+        const CARBS_THRESHOLD = 30;
+        const HYDRATION_THRESHOLD = 250;
+
+        const MIN_FUEL_ALERT_TIME = 900000; // 15 min
+        const MIN_DRINK_ALERT_TIME = 600000; // 10 min
 
         function initialize(profileData) {
             state = new WorkoutState();
@@ -68,10 +74,8 @@ module Session {
             // =============================
             // ALERTS
             // =============================
-
-            // 10 min cooldowns
-            alertCooldown =
-                60000;
+            recommendedCarbs = 0;
+            recommendedDrink = 0;
         }
 
         // =====================================
@@ -132,11 +136,11 @@ module Session {
             // =============================
             // Trigger conditions
             if(
-                state.minutesUntilFuel <= 0 || state.carbsDeficit > 2 && state.activeAlert == null
+                (state.minutesUntilFuel <= 0 || state.carbsDeficit > CARBS_THRESHOLD) && state.activeAlert == null && state.elapsedTime >= MIN_FUEL_ALERT_TIME
             ) {
                 triggerFuelAlert();
             } else if (
-                state.minutesUntilDrink <= 0 || state.hydrationDeficitMl > 4 && state.activeAlert == null
+                (state.minutesUntilDrink <= 0 || state.hydrationDeficitMl > HYDRATION_THRESHOLD) && state.activeAlert == null && state.elapsedTime >= MIN_DRINK_ALERT_TIME
             ) {
                 triggerDrinkAlert();
             }
@@ -278,15 +282,16 @@ module Session {
 
             state.carbsDeficit = carbDeficit;
 
-            state.minutesUntilFuel = nutritionTracker.getNextFuelCountdown(state.relativeIntensity);
+            if (state.carbBurnRate != null) {
+                state.minutesUntilFuel = calculateFuelCountdown(carbDeficit, state.carbBurnRate);
+                recommendedCarbs = calculateRecommendedCarbs(carbDeficit, state.carbBurnRate);
 
-            state.nextFuelCountdownLabel =
-                Utils.FormatUtils
-                    .formatCountdown(
-                        state.minutesUntilFuel
-                    );
-            
-
+                state.nextFuelCountdownLabel =
+                    Utils.FormatUtils
+                        .formatCountdown(
+                            state.minutesUntilFuel
+                        );
+            }
             // =============================
             // HYDRATION DEFICIT
             // =============================
@@ -300,13 +305,51 @@ module Session {
 
             state.hydrationDeficitMl = hydrationDeficit;
 
-            state.minutesUntilDrink = nutritionTracker.getNextDrinkCountdown(state.relativeIntensity);
-            
-            state.nextDrinkCountdownLabel = 
-                Utils.FormatUtils
-                .formatCountdown(
-                    state.minutesUntilDrink
-                );
+            if (state.sweatRate != null) {
+                state.minutesUntilDrink = calculateDrinkCountdown(hydrationDeficit, state.sweatRate);
+                recommendedDrink = calculateRecommendedDrink(hydrationDeficit, state.sweatRate);
+                
+                state.nextDrinkCountdownLabel = 
+                    Utils.FormatUtils
+                    .formatCountdown(
+                        state.minutesUntilDrink
+                    );
+            }
+        }
+
+        // =====================================
+        // FUEL COUNTDOWN
+        // =====================================
+        function calculateFuelCountdown(
+            carbDeficit,
+            carbBurnRate
+        ) {
+            var remaining = CARBS_THRESHOLD - carbDeficit;
+
+            if (remaining <= 0) {
+                return 0;
+            }
+
+            return (remaining / carbBurnRate) * 60;
+        }
+
+        // =====================================
+        // FUEL RECOMMENDATION
+        // =====================================
+        function calculateRecommendedCarbs(
+            carbDeficit,
+            burnRate
+        ) {
+
+            var targetWindow = 20.0 / 60.0;
+
+            var futureDemand =
+                burnRate * targetWindow;
+
+            var recommendation =
+                carbDeficit + futureDemand;
+
+            return recommendation;
         }
 
         // =====================================
@@ -322,9 +365,50 @@ module Session {
                 "FUEL";
 
             state.alertText =
-                "Take 30g carbs";
+                "TAKE "
+                + recommendedCarbs.format("%.0f")
+                + "g HC";
             
             alertStartTime = now;
+        }
+
+        // =====================================
+        // DRINK COUNTDOWN
+        // =====================================
+        function calculateDrinkCountdown(
+            drinkDeficitMl,
+            sweatRate
+        ) {
+            var remaining = HYDRATION_THRESHOLD - drinkDeficitMl;
+
+            if (remaining <= 0) {
+                return 0;
+            }
+
+            return (remaining / sweatRate) * 60;
+        }
+
+        // =====================================
+        // DRINK RECOMMENDATION
+        // =====================================
+        function calculateRecommendedDrink(
+            deficitMl,
+            sweatRate
+        ) {
+
+            var targetWindow = 15.0 / 60.0;
+
+            var futureDemand =
+                sweatRate * targetWindow;
+
+            var recommendation =
+                deficitMl + futureDemand;
+
+            if (recommendation > 750) {
+                recommendation = 750;
+            }
+
+            return recommendation;
         }
 
         // =====================================
@@ -339,7 +423,9 @@ module Session {
                 "DRINK";
 
             state.alertText =
-                "Drink 250ml";
+                "DRINK "
+                + recommendedDrink.format("%.0f")
+                + "ml";
             
             alertStartTime = now;
         }
@@ -384,6 +470,7 @@ module Session {
         // FUEL EVENT
         // =====================================
         function registerFuel(grams) {
+            state.carbsDeficit = 0;
             nutritionTracker
                 .registerCarbs(grams);
         }
@@ -392,6 +479,7 @@ module Session {
         // DRINK EVENT
         // =====================================
         function registerDrink(ml) {
+            state.hydrationDeficitMl = 0;
             nutritionTracker
                 .registerDrink(ml);
         }
