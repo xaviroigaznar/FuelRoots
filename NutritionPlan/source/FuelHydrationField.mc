@@ -164,10 +164,17 @@ class FuelHydrationField extends WatchUi.DataField {
         // =================================
         // ALERTS
         // =================================
-        if (state.activeAlert != null) {
+        if (state.activeAlert == Constants.AlertType.FUEL) {
             renderer.drawAlertOverlay(
                 dc,
-                state.activeAlert,
+                "FUEL NOW",
+                state.alertText,
+                Graphics.COLOR_BLUE
+            );
+        } else if (state.activeAlert == Constants.AlertType.DRINK) {
+            renderer.drawAlertOverlay(
+                dc,
+                "DRINK NOW",
                 state.alertText,
                 Graphics.COLOR_BLUE
             );

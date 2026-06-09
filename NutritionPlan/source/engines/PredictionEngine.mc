@@ -1,7 +1,10 @@
 module Engine {
 
     class PredictionEngine {
-
+        // =========================
+        // PROFILE
+        // =========================
+        var weight;
         // =========================
         // CONFIG
         // =========================
@@ -12,7 +15,8 @@ module Engine {
         // INIT
         // =========================
 
-        function initialize() {
+        function initialize(profile) {
+            weight = profile.weight;
             // Estimated glycogen storage
             glycogenCapacity = 400;
         }
@@ -46,8 +50,7 @@ module Engine {
                 calculateFatigue(
                     ri,
                     elapsed,
-                    hydrationDeficit,
-                    glycogenRemaining
+                    hydrationDeficit
                 );
 
             state.fatiguePercent =
@@ -129,59 +132,29 @@ module Engine {
         // =========================
         // FATIGUE MODEL
         // =========================
-
         function calculateFatigue(
             relativeIntensity,
             elapsed,
-            hydrationDeficit,
-            glycogenRemaining
+            hydration
         ) {
 
-            var fatigue = 0;
+            var fatigue = 0.0;
 
-            // =============================
-            // DURATION
-            // =============================
+            var hours = elapsed / 3600000.0;
 
-            fatigue +=
-                elapsed / 2400.0;
+            // Duración
+            fatigue += hours * 15;
 
-            // =============================
-            // INTENSITY
-            // =============================
+            // Intensidad
+            fatigue += relativeIntensity * 30;
 
-            fatigue +=
-                relativeIntensity * 30;
+            // Hidratación
+            var dehydrationPercent =
+                hydration / (weight * 10.0);
 
-            // =============================
-            // HYDRATION
-            // =============================
+            fatigue += dehydrationPercent * 15;
 
-            fatigue +=
-                hydrationDeficit / 300.0;
-
-            // =============================
-            // LOW GLYCOGEN
-            // =============================
-
-            if (glycogenRemaining < 150) {
-
-                fatigue += 10;
-            }
-
-            if (glycogenRemaining < 80) {
-
-                fatigue += 15;
-            }
-
-            if (glycogenRemaining < 40) {
-
-                fatigue += 25;
-            }
-
-            // Clamp
             if (fatigue > 100) {
-
                 fatigue = 100;
             }
 

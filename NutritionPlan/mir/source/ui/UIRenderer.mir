@@ -225,7 +225,7 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIR
             %tmp.101 = getm $.Toybox.Graphics;
             symbol [ FONT_XTINY %tmp.102 129 25 35 ];
             %tmp.102 = getv %tmp.101 :FONT_XTINY;
-            %tmp.103 = "Taken: ";
+            %tmp.103 = "In: ";
             symbol [ Graphics %tmp.104 131 16 24 ];
             %tmp.104 = getm $.Toybox.Graphics;
             symbol [ TEXT_JUSTIFY_LEFT %tmp.105 131 25 42 ];
@@ -275,7 +275,7 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIR
             %tmp.129 = getm $.Toybox.Graphics;
             symbol [ FONT_XTINY %tmp.130 145 25 35 ];
             %tmp.130 = getv %tmp.129 :FONT_XTINY;
-            %tmp.131 = "Taken rate: ";
+            %tmp.131 = "In rate: ";
             symbol [ Graphics %tmp.132 147 16 24 ];
             %tmp.132 = getm $.Toybox.Graphics;
             symbol [ TEXT_JUSTIFY_LEFT %tmp.133 147 25 42 ];
@@ -412,7 +412,7 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIR
             %tmp.204 = getm $.Toybox.Graphics;
             symbol [ FONT_XTINY %tmp.205 193 25 35 ];
             %tmp.205 = getv %tmp.204 :FONT_XTINY;
-            %tmp.206 = "Taken: ";
+            %tmp.206 = "In: ";
             symbol [ Graphics %tmp.207 195 16 24 ];
             %tmp.207 = getm $.Toybox.Graphics;
             symbol [ TEXT_JUSTIFY_LEFT %tmp.208 195 25 42 ];
@@ -462,7 +462,7 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIR
             %tmp.232 = getm $.Toybox.Graphics;
             symbol [ FONT_XTINY %tmp.233 209 25 35 ];
             %tmp.233 = getv %tmp.232 :FONT_XTINY;
-            %tmp.234 = "Taken rate: ";
+            %tmp.234 = "In rate: ";
             symbol [ Graphics %tmp.235 211 16 24 ];
             %tmp.235 = getm $.Toybox.Graphics;
             symbol [ TEXT_JUSTIFY_LEFT %tmp.236 211 25 42 ];

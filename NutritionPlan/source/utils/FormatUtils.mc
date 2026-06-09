@@ -156,5 +156,20 @@ module Utils {
 
             return value.format("%.1f") + "km";
         }
+
+        // =====================================
+        // NEAREST MULTIPLE
+        // =====================================
+        static function roundToNearestMultiple(
+            value,
+            multiple
+        ) {
+
+            return (
+                Math.round(
+                    value / multiple
+                ) * multiple
+            ).toNumber();
+        }
     }
 }

@@ -127,7 +127,7 @@ module UI {
                 x + 8,
                 y + 76,
                 Graphics.FONT_XTINY,
-                "In: ",
+                "Taken: ",
                 Graphics.TEXT_JUSTIFY_LEFT
             );
 
@@ -143,7 +143,7 @@ module UI {
                 x + 8,
                 y + 98,
                 Graphics.FONT_XTINY,
-                "In rate: ",
+                "Taken rate: ",
                 Graphics.TEXT_JUSTIFY_LEFT
             );
 
@@ -191,7 +191,7 @@ module UI {
                 x + 8,
                 y + 164,
                 Graphics.FONT_XTINY,
-                "In: ",
+                "Taken: ",
                 Graphics.TEXT_JUSTIFY_LEFT
             );
 
@@ -207,7 +207,7 @@ module UI {
                 x + 8,
                 y + 186,
                 Graphics.FONT_XTINY,
-                "In rate: ",
+                "Taken rate: ",
                 Graphics.TEXT_JUSTIFY_LEFT
             );
 

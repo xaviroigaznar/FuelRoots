@@ -36,8 +36,8 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_Nutrit
 _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionPlanApp_mc_20_68_22_4_start:
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionPlanApp.mc" 21 8 ]
         %tmp.1 = newa 1;
-        symbol [ NutritionPlanView %tmp.5 21 21 38 ];
-        %tmp.5 = getv ? :NutritionPlanView;
+        symbol [ FuelHydrationField %tmp.5 21 21 39 ];
+        %tmp.5 = getv ? :FuelHydrationField;
         %tmp.2 = newc %tmp.5 ();
         %tmp.6 = dup %tmp.1;
         %tmp.7 = aputv %tmp.6 0 %tmp.2;

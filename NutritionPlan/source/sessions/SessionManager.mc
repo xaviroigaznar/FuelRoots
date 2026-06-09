@@ -26,13 +26,6 @@ module Session {
         // =====================================
         var nutritionTracker;
 
-        // =====================================
-        // UPDATE TIMERS
-        // =====================================
-
-        var lastFuelUpdate;
-        var lastPredictionUpdate;
-
         var powerBuffer;
         var maxBufferSize;
 
@@ -44,10 +37,13 @@ module Session {
         var recommendedDrink;
 
         const CARBS_THRESHOLD = 30;
-        const HYDRATION_THRESHOLD = 250;
+        const HYDRATION_THRESHOLD = 20;
+
+        const CARBS_MULTIPLE = 30;
+        const HYDRATION_MULTIPLE = 125;
 
         const MIN_FUEL_ALERT_TIME = 900000; // 15 min
-        const MIN_DRINK_ALERT_TIME = 600000; // 10 min
+        const MIN_DRINK_ALERT_TIME = 60000; // 10 min
 
         function initialize(profileData) {
             state = new WorkoutState();
@@ -58,18 +54,12 @@ module Session {
             // =============================
             fuelEngine = new Engine.FuelEngine(profile);
             hydrationEngine = new Engine.HydrationEngine(profile);
-            predictionEngine = new Engine.PredictionEngine();
+            predictionEngine = new Engine.PredictionEngine(profile);
 
             // =============================
             // TRACKERS
             // =============================
             nutritionTracker = new Tracker.NutritionTracker();
-
-            // =============================
-            // TIMERS
-            // =============================
-            lastFuelUpdate = 0;
-            lastPredictionUpdate = 0;
 
             // =============================
             // ALERTS
@@ -96,15 +86,7 @@ module Session {
             // =============================
             // FUEL ENGINE
             // =============================
-
-            if (
-                now - lastFuelUpdate
-                > 1000
-            ) {
-                fuelEngine.update(state);
-
-                lastFuelUpdate = now;
-            }
+            fuelEngine.update(state);
 
             // =============================
             // HYDRATION ENGINE
@@ -119,28 +101,19 @@ module Session {
             // =============================
             // PREDICTIONS
             // =============================
-
-            if (
-                now - lastPredictionUpdate
-                > 5000
-            ) {
                 predictionEngine
                     .update(state);
-
-                lastPredictionUpdate =
-                    now;
-            }
 
             // =============================
             // ALERTS
             // =============================
             // Trigger conditions
             if(
-                (state.minutesUntilFuel <= 0 || state.carbsDeficit > CARBS_THRESHOLD) && state.activeAlert == null && state.elapsedTime >= MIN_FUEL_ALERT_TIME
+                (fuelEngine.carbsBurnedSinceLastFuel > CARBS_THRESHOLD) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastCarbIntakeTime) >= MIN_FUEL_ALERT_TIME
             ) {
                 triggerFuelAlert();
             } else if (
-                (state.minutesUntilDrink <= 0 || state.hydrationDeficitMl > HYDRATION_THRESHOLD) && state.activeAlert == null && state.elapsedTime >= MIN_DRINK_ALERT_TIME
+                (hydrationEngine.fluidLostSinceLastDrink > HYDRATION_THRESHOLD) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastDrinkTime) >= MIN_DRINK_ALERT_TIME
             ) {
                 triggerDrinkAlert();
             }
@@ -283,7 +256,7 @@ module Session {
             state.carbsDeficit = carbDeficit;
 
             if (state.carbBurnRate != null) {
-                state.minutesUntilFuel = calculateFuelCountdown(carbDeficit, state.carbBurnRate);
+                state.minutesUntilFuel = calculateFuelCountdown(fuelEngine.carbsBurnedSinceLastFuel, state.carbBurnRate);
                 recommendedCarbs = calculateRecommendedCarbs(carbDeficit, state.carbBurnRate);
 
                 state.nextFuelCountdownLabel =
@@ -306,7 +279,7 @@ module Session {
             state.hydrationDeficitMl = hydrationDeficit;
 
             if (state.sweatRate != null) {
-                state.minutesUntilDrink = calculateDrinkCountdown(hydrationDeficit, state.sweatRate);
+                state.minutesUntilDrink = calculateDrinkCountdown(hydrationEngine.fluidLostSinceLastDrink, state.sweatRate);
                 recommendedDrink = calculateRecommendedDrink(hydrationDeficit, state.sweatRate);
                 
                 state.nextDrinkCountdownLabel = 
@@ -321,10 +294,10 @@ module Session {
         // FUEL COUNTDOWN
         // =====================================
         function calculateFuelCountdown(
-            carbDeficit,
+            carbsBurnedSinceLastFuel,
             carbBurnRate
         ) {
-            var remaining = CARBS_THRESHOLD - carbDeficit;
+            var remaining = CARBS_THRESHOLD - carbsBurnedSinceLastFuel;
 
             if (remaining <= 0) {
                 return 0;
@@ -349,7 +322,9 @@ module Session {
             var recommendation =
                 carbDeficit + futureDemand;
 
-            return recommendation;
+            var multiple = Utils.FormatUtils.roundToNearestMultiple(recommendation, CARBS_MULTIPLE);
+
+            return multiple;
         }
 
         // =====================================
@@ -361,8 +336,7 @@ module Session {
             var now =
                 System.getTimer();
 
-            state.activeAlert =
-                "FUEL";
+            state.activeAlert = Constants.AlertType.FUEL;
 
             state.alertText =
                 "TAKE "
@@ -376,10 +350,10 @@ module Session {
         // DRINK COUNTDOWN
         // =====================================
         function calculateDrinkCountdown(
-            drinkDeficitMl,
+            fluidLostSinceLastDrink,
             sweatRate
         ) {
-            var remaining = HYDRATION_THRESHOLD - drinkDeficitMl;
+            var remaining = HYDRATION_THRESHOLD - fluidLostSinceLastDrink;
 
             if (remaining <= 0) {
                 return 0;
@@ -408,19 +382,28 @@ module Session {
                 recommendation = 750;
             }
 
-            return recommendation;
+            var multiple = Utils.FormatUtils.roundToNearestMultiple(recommendation, HYDRATION_MULTIPLE);
+
+            return multiple;
         }
 
         // =====================================
         // DRINK ALERT
         // =====================================
         function triggerDrinkAlert() {
+            System.println(
+                "Fluid since drink: "
+                + hydrationEngine.fluidLostSinceLastDrink
+            );
 
+            System.println(
+                "Hydration deficit: "
+                + state.hydrationDeficitMl
+            );
             var now =
                 System.getTimer();
 
-            state.activeAlert =
-                "DRINK";
+            state.activeAlert = Constants.AlertType.DRINK;
 
             state.alertText =
                 "DRINK "
@@ -431,7 +414,7 @@ module Session {
         }
 
         function updateAlertLifecycle() {
-            if (state.activeAlert == null) {
+            if (state.activeAlert == Constants.AlertType.NONE) {
                 return;
             }
 
@@ -439,16 +422,24 @@ module Session {
                 System.getTimer()
                 - alertStartTime;
 
+            System.println(
+                "Alert active: "
+                + state.activeAlert
+                + " elapsed="
+                + elapsed
+            );
             // 8 seconds
             if (elapsed > 8000) {
+                System.println("CONFIRMING ALERT");
                 var activeAlert = state.activeAlert;
-                state.activeAlert = null;
-                alertStartTime = null;
-                if (activeAlert == "FUEL") {
+                if (activeAlert == Constants.AlertType.FUEL) {
                     confirmFuelIntake();
-                } else if (activeAlert == "DRINK") {
+                } else if (activeAlert == Constants.AlertType.DRINK) {
+                    System.println("CONFIRM DRINK");
                     confirmDrinkIntake();
                 }
+                state.activeAlert = Constants.AlertType.NONE;
+                alertStartTime = null;
             }
         }
 
@@ -456,32 +447,44 @@ module Session {
         // CONFIRM FUEL
         // =====================================
         function confirmFuelIntake() {
-            registerFuel(30);
+            registerFuel(recommendedCarbs);
         }
 
         // =====================================
         // CONFIRM DRINK
         // =====================================
         function confirmDrinkIntake() {
-            registerDrink(250);
+            System.println(
+    "confirmDrinkIntake() called"
+);
+            registerDrink(recommendedDrink);
         }
 
         // =====================================
         // FUEL EVENT
         // =====================================
         function registerFuel(grams) {
-            state.carbsDeficit = 0;
             nutritionTracker
                 .registerCarbs(grams);
+            
+            fuelEngine.resetCarbsBurnedSinceLastFuel();
+            
+            updateNutritionState();
         }
 
         // =====================================
         // DRINK EVENT
         // =====================================
         function registerDrink(ml) {
-            state.hydrationDeficitMl = 0;
             nutritionTracker
                 .registerDrink(ml);
+            hydrationEngine.resetFluidLostSinceLastDrink();
+            
+            System.println(
+                "After reset: "
+                + hydrationEngine.fluidLostSinceLastDrink
+            );
+            updateNutritionState();
         }
 
         // =====================================

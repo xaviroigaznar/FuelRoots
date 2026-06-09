@@ -30,6 +30,7 @@ module Engine {
         // =========================
         var totalCarbsBurned = 0.0;
         var lapCarbsBurned = 0;
+        var carbsBurnedSinceLastFuel = 0.0;
 
         // =====================================
         // TIME
@@ -157,6 +158,8 @@ module Engine {
 
             totalCarbsBurned +=
                 carbIncrement;
+            
+            carbsBurnedSinceLastFuel += carbIncrement;
 
             lapCarbsBurned +=
                 carbIncrement;
@@ -243,6 +246,10 @@ module Engine {
 
         function getLapCarbsBurned() {
             return lapCarbsBurned;
+        }
+
+        function resetCarbsBurnedSinceLastFuel() {
+            carbsBurnedSinceLastFuel = 0.0;
         }
 
         // =========================

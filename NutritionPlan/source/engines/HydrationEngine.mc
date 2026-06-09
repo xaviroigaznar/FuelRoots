@@ -16,6 +16,7 @@ module Engine {
 
         var totalFluidLossMl = 0.0;
         var lapFluidLossMl = 0.0;
+        var fluidLostSinceLastDrink = 0.0;
 
         // =====================================
         // TIMERS
@@ -100,6 +101,8 @@ module Engine {
 
             totalFluidLossMl +=
                 lossIncrement;
+            
+            fluidLostSinceLastDrink += lossIncrement;
 
             lapFluidLossMl +=
                 lossIncrement;
@@ -177,6 +180,10 @@ module Engine {
     
         function getLapFluidLoss() {
             return lapFluidLossMl;
+        }
+
+        function resetFluidLostSinceLastDrink() {
+            fluidLostSinceLastDrink = 0.0;
         }
 
         // =====================================

@@ -77,7 +77,7 @@ module Session {
         // =========================
         // Alerts
         // =========================
-        var activeAlert;
+        var activeAlert = Constants.AlertType.NONE;
         var alertText;
 
         function initialize() {

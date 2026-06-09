@@ -1,0 +1,38 @@
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc"; @line = 1; @symbol_moduledef = [Session,1,7,14]; ]
+module Session {
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc"; @line = 1; ]
+    <init> {
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc"; @line = 2; @symbol_classdef = [AthleteProfile,2,10,24]; ]
+    class AthleteProfile {
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc"; @line = 2; ]
+        <init> {
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc"; @line = 2; ]
+        static
+        <init> {
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc"; @line = 3; @position = 12; @symbol_vardef = [ftp,3,12,15]; ]
+        var ftp;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc"; @line = 4; @position = 12; @symbol_vardef = [weight,4,12,18]; ]
+        var weight;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc"; @line = 6; @symbol_functiondef = [initialize,6,17,27]; @symbol_param<0> = [ftpValue,6,28,36]; @symbol_param<1> = [weightValue,6,38,49]; ]
+        function initialize(ftpValue, weightValue) as Void {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_AthleteProfile_mc_6_51_9_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc" 7 12 ]
+            %tmp.1 = lgetv %ftpValue;
+            symbol [ ftpValue %tmp.1 7 18 26 ];
+            symbol [ ftp ? 7 12 15 ];
+            putv self :ftp %tmp.1;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc" 8 12 ]
+            %tmp.2 = lgetv %weightValue;
+            symbol [ weightValue %tmp.2 8 21 32 ];
+            symbol [ weight ? 8 12 18 ];
+            putv self :weight %tmp.2;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_AthleteProfile_mc_6_51_9_8_stop:
+        }
+    }
+}
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/AthleteProfile.mc"; @line = 1; ]
+<init> {
+}
