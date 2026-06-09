@@ -1,0 +1,429 @@
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 1; @symbol_moduledef = [Engine,1,7,13]; ]
+module Engine {
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 1; ]
+    <init> {
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,10,16]; @symbol_usingdef<1> = [System,3,17,23]; ]
+    using Toybox.System;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 5; @symbol_classdef = [HydrationEngine,5,10,25]; ]
+    class HydrationEngine {
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 5; ]
+        <init> {
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 5; ]
+        static
+        <init> {
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 11; @position = 12; @symbol_vardef = [weight,11,12,18]; ]
+        var weight;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 17; @position = 12; @symbol_vardef = [totalFluidLossMl,17,12,28]; ]
+        var totalFluidLossMl = 0.0;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 18; @position = 12; @symbol_vardef = [lapFluidLossMl,18,12,26]; ]
+        var lapFluidLossMl = 0.0;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 19; @position = 12; @symbol_vardef = [fluidLostSinceLastDrink,19,12,35]; ]
+        var fluidLostSinceLastDrink = 0.0;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 25; @position = 12; @symbol_vardef = [lastElapsedTime,25,12,27]; ]
+        var lastElapsedTime = 0;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 31; @symbol_functiondef = [initialize,31,17,27]; @symbol_param<0> = [profile,31,28,35]; ]
+        function initialize(profile) as Void {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_31_37_33_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 32 12 ]
+            %tmp.1 = lgetv %profile;
+            symbol [ profile %tmp.1 32 21 28 ];
+            symbol [ weight %tmp.2 32 29 35 ];
+            %tmp.2 = getv %tmp.1 :weight;
+            symbol [ weight ? 32 12 18 ];
+            putv self :weight %tmp.2;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_31_37_33_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 39; @symbol_functiondef = [update,39,17,23]; @symbol_param<0> = [state,39,24,29]; ]
+        function update(state) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_39_31_87_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 40 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_39_31_87_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_39_31_87_8_stop" ]
+            %ri.1 = local;
+            symbol [ ri %ri.1 40 16 18 ];
+            %tmp.1 = lgetv %state;
+            symbol [ state %tmp.1 40 21 26 ];
+            symbol [ relativeIntensity %tmp.2 40 27 44 ];
+            %tmp.2 = getv %tmp.1 :relativeIntensity;
+            lputv %ri.1 %tmp.2;
+            symbol [ ri %ri.1 40 16 18 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 41 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_39_31_87_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_39_31_87_8_stop" ]
+            %temp.2 = local;
+            symbol [ temp %temp.2 41 16 20 ];
+            %tmp.3 = lgetv %state;
+            symbol [ state %tmp.3 41 23 28 ];
+            symbol [ temperature %tmp.4 41 29 40 ];
+            %tmp.4 = getv %tmp.3 :temperature;
+            lputv %temp.2 %tmp.4;
+            symbol [ temp %temp.2 41 16 20 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 42 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_39_31_87_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_39_31_87_8_stop" ]
+            %elapsed.3 = local;
+            symbol [ elapsed %elapsed.3 42 16 23 ];
+            %tmp.5 = lgetv %state;
+            symbol [ state %tmp.5 42 26 31 ];
+            symbol [ elapsedTime %tmp.6 42 32 43 ];
+            %tmp.6 = getv %tmp.5 :elapsedTime;
+            lputv %elapsed.3 %tmp.6;
+            symbol [ elapsed %elapsed.3 42 16 23 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 45 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_45_12_49_12_if_stmt:
+            symbol [ lastElapsedTime %tmp.8 45 16 31 ];
+            %tmp.8 = getv ? :lastElapsedTime;
+            %tmp.9 = 0;
+            %tmp.10 = eq %tmp.8 %tmp.9;
+            bf %tmp.10 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_45_12_49_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_45_12_49_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_45_38_49_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 47 16 ]
+            %tmp.11 = lgetv %elapsed.3;
+            symbol [ elapsed %tmp.11 47 34 41 ];
+            symbol [ lastElapsedTime ? 47 16 31 ];
+            putv self :lastElapsedTime %tmp.11;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 48 16 ]
+            ret ?;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_45_38_49_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_45_12_49_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_45_12_49_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 51 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_39_31_87_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_39_31_87_8_stop" ]
+            %deltaSeconds.4 = local;
+            symbol [ deltaSeconds %deltaSeconds.4 51 16 28 ];
+            %tmp.12 = lgetv %elapsed.3;
+            symbol [ elapsed %tmp.12 52 17 24 ];
+            symbol [ lastElapsedTime %tmp.14 52 27 42 ];
+            %tmp.14 = getv ? :lastElapsedTime;
+            %tmp.15 = sub %tmp.12 %tmp.14;
+            %tmp.16 = 1000.0;
+            %tmp.17 = div %tmp.15 %tmp.16;
+            lputv %deltaSeconds.4 %tmp.17;
+            symbol [ deltaSeconds %deltaSeconds.4 51 16 28 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 58 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_39_31_87_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_39_31_87_8_stop" ]
+            %sweatRate.5 = local;
+            symbol [ sweatRate %sweatRate.5 58 16 25 ];
+            %tmp.18 = self;
+            symbol [ calculateSweatRate %tmp.19 58 28 46 ];
+            %tmp.19 = getv function %tmp.18 :calculateSweatRate;
+            %tmp.20 = lgetv %ri.1;
+            symbol [ ri %tmp.20 58 47 49 ];
+            %tmp.21 = lgetv %temp.2;
+            symbol [ temp %tmp.21 58 51 55 ];
+            %tmp.22 = invoke %tmp.18 %tmp.19(%tmp.20, %tmp.21);
+            lputv %sweatRate.5 %tmp.22;
+            symbol [ sweatRate %sweatRate.5 58 16 25 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 60 12 ]
+            %tmp.23 = lgetv %state;
+            symbol [ state %tmp.23 60 12 17 ];
+            %tmp.24 = lgetv %sweatRate.5;
+            symbol [ sweatRate %tmp.24 60 30 39 ];
+            symbol [ sweatRate ? 60 18 27 ];
+            putv %tmp.23 :sweatRate %tmp.24;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 66 12 ]
+            %tmp.25 = self;
+            symbol [ updateFluidLoss %tmp.26 66 12 27 ];
+            %tmp.26 = getv function %tmp.25 :updateFluidLoss;
+            %tmp.27 = lgetv %sweatRate.5;
+            symbol [ sweatRate %tmp.27 67 16 25 ];
+            %tmp.28 = lgetv %deltaSeconds.4;
+            symbol [ deltaSeconds %tmp.28 68 16 28 ];
+            invoke %tmp.25 %tmp.26(%tmp.27, %tmp.28);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 75 12 ]
+            %tmp.29 = lgetv %state;
+            symbol [ state %tmp.29 75 12 17 ];
+            symbol [ totalFluidLossMl %tmp.31 76 16 32 ];
+            %tmp.31 = getv ? :totalFluidLossMl;
+            symbol [ sessionHydrationLoss ? 75 18 38 ];
+            putv %tmp.29 :sessionHydrationLoss %tmp.31;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 78 12 ]
+            %tmp.32 = lgetv %state;
+            symbol [ state %tmp.32 78 12 17 ];
+            symbol [ lapFluidLossMl %tmp.34 78 37 51 ];
+            %tmp.34 = getv ? :lapFluidLossMl;
+            symbol [ lapHydrationLoss ? 78 18 34 ];
+            putv %tmp.32 :lapHydrationLoss %tmp.34;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 80 12 ]
+            %tmp.35 = lgetv %state;
+            symbol [ state %tmp.35 80 12 17 ];
+            %tmp.36 = self;
+            symbol [ calculateHydrationLabel %tmp.37 81 16 39 ];
+            %tmp.37 = getv function %tmp.36 :calculateHydrationLabel;
+            %tmp.38 = lgetv %state;
+            symbol [ state %tmp.38 82 20 25 ];
+            symbol [ hydrationDeficitMl %tmp.39 82 26 44 ];
+            %tmp.39 = getv %tmp.38 :hydrationDeficitMl;
+            %tmp.40 = invoke %tmp.36 %tmp.37(%tmp.39);
+            symbol [ hydrationStateLabel ? 80 18 37 ];
+            putv %tmp.35 :hydrationStateLabel %tmp.40;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 85 12 ]
+            %tmp.41 = lgetv %elapsed.3;
+            symbol [ elapsed %tmp.41 86 16 23 ];
+            symbol [ lastElapsedTime ? 85 12 27 ];
+            putv self :lastElapsedTime %tmp.41;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_39_31_87_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 93; @symbol_functiondef = [updateFluidLoss,93,17,32]; @symbol_param<0> = [sweatRate,94,12,21]; @symbol_param<1> = [deltaSeconds,95,12,24]; ]
+        function updateFluidLoss(sweatRate, deltaSeconds) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_96_10_109_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 98 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_96_10_109_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_96_10_109_8_stop" ]
+            %lossIncrement.1 = local;
+            symbol [ lossIncrement %lossIncrement.1 98 16 29 ];
+            %tmp.1 = lgetv %sweatRate;
+            symbol [ sweatRate %tmp.1 99 17 26 ];
+            %tmp.2 = 3600.0;
+            %tmp.3 = div %tmp.1 %tmp.2;
+            %tmp.4 = lgetv %deltaSeconds;
+            symbol [ deltaSeconds %tmp.4 100 18 30 ];
+            %tmp.5 = mul %tmp.3 %tmp.4;
+            lputv %lossIncrement.1 %tmp.5;
+            symbol [ lossIncrement %lossIncrement.1 98 16 29 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 102 12 ]
+            symbol [ totalFluidLossMl %tmp.6 102 12 28 ];
+            %tmp.6 = getv self :totalFluidLossMl;
+            %tmp.7 = lgetv %lossIncrement.1;
+            symbol [ lossIncrement %tmp.7 103 16 29 ];
+            %tmp.8 = add %tmp.6 %tmp.7;
+            symbol [ totalFluidLossMl ? 102 12 28 ];
+            putv self :totalFluidLossMl dup %tmp.8;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 105 12 ]
+            symbol [ fluidLostSinceLastDrink %tmp.9 105 12 35 ];
+            %tmp.9 = getv self :fluidLostSinceLastDrink;
+            %tmp.10 = lgetv %lossIncrement.1;
+            symbol [ lossIncrement %tmp.10 105 39 52 ];
+            %tmp.11 = add %tmp.9 %tmp.10;
+            symbol [ fluidLostSinceLastDrink ? 105 12 35 ];
+            putv self :fluidLostSinceLastDrink dup %tmp.11;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 107 12 ]
+            symbol [ lapFluidLossMl %tmp.12 107 12 26 ];
+            %tmp.12 = getv self :lapFluidLossMl;
+            %tmp.13 = lgetv %lossIncrement.1;
+            symbol [ lossIncrement %tmp.13 108 16 29 ];
+            %tmp.14 = add %tmp.12 %tmp.13;
+            symbol [ lapFluidLossMl ? 107 12 26 ];
+            putv self :lapFluidLossMl dup %tmp.14;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_96_10_109_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 115; @symbol_functiondef = [calculateSweatRate,115,17,35]; @symbol_param<0> = [relativeIntensity,115,36,53]; @symbol_param<1> = [temperature,115,55,66]; ]
+        function calculateSweatRate(relativeIntensity, temperature) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_115_68_154_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 117 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_115_68_154_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_115_68_154_8_stop" ]
+            %rate.1 = local;
+            symbol [ rate %rate.1 117 16 20 ];
+            %tmp.1 = 500;
+            lputv %rate.1 %tmp.1;
+            symbol [ rate %rate.1 117 16 20 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 120 12 ]
+            %tmp.2 = lgetv %rate.1;
+            symbol [ rate %tmp.2 120 12 16 ];
+            %tmp.3 = lgetv %relativeIntensity;
+            symbol [ relativeIntensity %tmp.3 120 20 37 ];
+            %tmp.4 = 700;
+            %tmp.5 = mul %tmp.3 %tmp.4;
+            %tmp.6 = add %tmp.2 %tmp.5;
+            lputv %rate.1 %tmp.6;
+            symbol [ rate %rate.1 120 12 16 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 126 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_126_12_139_12_if_stmt:
+            %tmp.7 = lgetv %temperature;
+            symbol [ temperature %tmp.7 126 16 27 ];
+            %tmp.8 = null;
+            %tmp.9 = ne %tmp.7 %tmp.8;
+            bf %tmp.9 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_126_12_139_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_126_12_139_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_126_37_139_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 128 16 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_128_16_130_16_if_stmt:
+            %tmp.10 = lgetv %temperature;
+            symbol [ temperature %tmp.10 128 20 31 ];
+            %tmp.11 = as %tmp.10 { (!Null) };
+            %tmp.12 = 20;
+            %tmp.13 = gt %tmp.11 %tmp.12;
+            bf %tmp.13 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_128_16_130_16_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_128_16_130_16_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_128_38_130_16_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 129 20 ]
+            %tmp.14 = lgetv %rate.1;
+            symbol [ rate %tmp.14 129 20 24 ];
+            %tmp.15 = 100;
+            %tmp.16 = add %tmp.14 %tmp.15;
+            lputv %rate.1 %tmp.16;
+            symbol [ rate %rate.1 129 20 24 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_128_38_130_16_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_128_16_130_16_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_128_16_130_16_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 132 16 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_132_16_134_16_if_stmt:
+            %tmp.17 = lgetv %temperature;
+            symbol [ temperature %tmp.17 132 20 31 ];
+            %tmp.18 = as %tmp.17 { (!Null) };
+            %tmp.19 = 28;
+            %tmp.20 = gt %tmp.18 %tmp.19;
+            bf %tmp.20 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_132_16_134_16_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_132_16_134_16_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_132_38_134_16_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 133 20 ]
+            %tmp.21 = lgetv %rate.1;
+            symbol [ rate %tmp.21 133 20 24 ];
+            %tmp.22 = 200;
+            %tmp.23 = add %tmp.21 %tmp.22;
+            lputv %rate.1 %tmp.23;
+            symbol [ rate %rate.1 133 20 24 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_132_38_134_16_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_132_16_134_16_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_132_16_134_16_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 136 16 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_136_16_138_16_if_stmt:
+            %tmp.24 = lgetv %temperature;
+            symbol [ temperature %tmp.24 136 20 31 ];
+            %tmp.25 = as %tmp.24 { (!Null) };
+            %tmp.26 = 35;
+            %tmp.27 = gt %tmp.25 %tmp.26;
+            bf %tmp.27 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_136_16_138_16_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_136_16_138_16_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_136_38_138_16_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 137 20 ]
+            %tmp.28 = lgetv %rate.1;
+            symbol [ rate %tmp.28 137 20 24 ];
+            %tmp.29 = 300;
+            %tmp.30 = add %tmp.28 %tmp.29;
+            lputv %rate.1 %tmp.30;
+            symbol [ rate %rate.1 137 20 24 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_136_38_138_16_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_136_16_138_16_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_136_16_138_16_if_end:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_126_37_139_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_126_12_139_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_126_12_139_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 146 12 ]
+            %tmp.31 = lgetv %rate.1;
+            symbol [ rate %tmp.31 146 12 16 ];
+            symbol [ weight %tmp.33 146 21 27 ];
+            %tmp.33 = getv ? :weight;
+            %tmp.34 = 70;
+            %tmp.35 = sub %tmp.33 %tmp.34;
+            %tmp.36 = 2;
+            %tmp.37 = mul %tmp.35 %tmp.36;
+            %tmp.38 = add %tmp.31 %tmp.37;
+            lputv %rate.1 %tmp.38;
+            symbol [ rate %rate.1 146 12 16 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 149 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_149_12_151_12_if_stmt:
+            %tmp.39 = lgetv %rate.1;
+            symbol [ rate %tmp.39 149 16 20 ];
+            %tmp.40 = 300;
+            %tmp.41 = lt %tmp.39 %tmp.40;
+            bf %tmp.41 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_149_12_151_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_149_12_151_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_149_28_151_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 150 16 ]
+            %tmp.42 = 300;
+            lputv %rate.1 %tmp.42;
+            symbol [ rate %rate.1 150 16 20 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_149_28_151_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_149_12_151_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_149_12_151_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 153 12 ]
+            %tmp.43 = lgetv %rate.1;
+            symbol [ rate %tmp.43 153 19 23 ];
+            ret %tmp.43;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_115_68_154_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 160; @symbol_functiondef = [calculateHydrationLabel,160,17,40]; @symbol_param<0> = [lossMl,160,41,47]; ]
+        function calculateHydrationLabel(lossMl) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_160_49_175_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 162 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_162_12_164_12_if_stmt:
+            %tmp.1 = lgetv %lossMl;
+            symbol [ lossMl %tmp.1 162 16 22 ];
+            %tmp.2 = 500;
+            %tmp.3 = lt %tmp.1 %tmp.2;
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_162_12_164_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_162_12_164_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_162_30_164_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 163 16 ]
+            %tmp.4 = "Stable";
+            ret %tmp.4;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_162_30_164_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_162_12_164_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_162_12_164_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 166 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_166_12_168_12_if_stmt:
+            %tmp.5 = lgetv %lossMl;
+            symbol [ lossMl %tmp.5 166 16 22 ];
+            %tmp.6 = 1200;
+            %tmp.7 = lt %tmp.5 %tmp.6;
+            bf %tmp.7 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_166_12_168_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_166_12_168_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_166_31_168_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 167 16 ]
+            %tmp.8 = "Drink Soon";
+            ret %tmp.8;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_166_31_168_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_166_12_168_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_166_12_168_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 170 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_170_12_172_12_if_stmt:
+            %tmp.9 = lgetv %lossMl;
+            symbol [ lossMl %tmp.9 170 16 22 ];
+            %tmp.10 = 2000;
+            %tmp.11 = lt %tmp.9 %tmp.10;
+            bf %tmp.11 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_170_12_172_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_170_12_172_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_170_31_172_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 171 16 ]
+            %tmp.12 = "Dehydrated";
+            ret %tmp.12;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_170_31_172_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_170_12_172_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_170_12_172_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 174 12 ]
+            %tmp.13 = "Critical";
+            ret %tmp.13;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_160_49_175_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 177; @symbol_functiondef = [getTotalFluidLoss,177,17,34]; ]
+        function getTotalFluidLoss() {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_177_37_179_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 178 12 ]
+            symbol [ totalFluidLossMl %tmp.2 178 19 35 ];
+            %tmp.2 = getv ? :totalFluidLossMl;
+            ret %tmp.2;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_177_37_179_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 181; @symbol_functiondef = [getLapFluidLoss,181,17,32]; ]
+        function getLapFluidLoss() {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_181_35_183_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 182 12 ]
+            symbol [ lapFluidLossMl %tmp.2 182 19 33 ];
+            %tmp.2 = getv ? :lapFluidLossMl;
+            ret %tmp.2;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_181_35_183_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 185; @symbol_functiondef = [resetFluidLostSinceLastDrink,185,17,45]; ]
+        function resetFluidLostSinceLastDrink() {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_185_48_187_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 186 12 ]
+            %tmp.1 = 0.0;
+            symbol [ fluidLostSinceLastDrink ? 186 12 35 ];
+            putv self :fluidLostSinceLastDrink %tmp.1;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_185_48_187_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 192; @symbol_functiondef = [onLap,192,17,22]; ]
+        function onLap() {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_192_25_194_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 193 12 ]
+            %tmp.1 = 0;
+            symbol [ lapFluidLossMl ? 193 12 26 ];
+            putv self :lapFluidLossMl %tmp.1;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_192_25_194_8_stop:
+        }
+    }
+}
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc"; @line = 1; ]
+<init> {
+}

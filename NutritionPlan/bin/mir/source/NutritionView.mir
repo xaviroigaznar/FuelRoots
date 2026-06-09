@@ -1,0 +1,114 @@
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Graphics,2,13,21]; ]
+using Toybox.Graphics;
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Activity,3,13,21]; ]
+using Toybox.Activity;
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc"; @line = 5; @symbol_usingdef<0> = [Session,5,6,13]; ]
+using Session;
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc"; @line = 6; @symbol_usingdef<0> = [UI,6,6,8]; ]
+using UI;
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc"; @line = 8; @symbol_classdef = [NutritionView,8,6,19]; @symbol_extends<0> = [WatchUi,8,28,35]; @symbol_extends<1> = [View,8,36,40]; ]
+class NutritionView extends WatchUi.View {
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc"; @line = 8; ]
+    <init> {
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc"; @line = 8; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc"; @line = 10; @position = 8; @symbol_vardef = [sessionManager,10,8,22]; ]
+    var sessionManager;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc"; @line = 11; @position = 8; @symbol_vardef = [renderer,11,8,16]; ]
+    var renderer;
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc"; @line = 13; @symbol_functiondef = [initialize,13,13,23]; ]
+    function initialize() as Void {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionView_mc_13_26_30_4_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc" 15 8 ]
+        symbol [ View %tmp.2 15 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 15 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc" 17 8 ]
+        symbol [ UI %tmp.6 18 16 18 ];
+        %tmp.6 = getm $.UI;
+        symbol [ UIRenderer %tmp.7 18 19 29 ];
+        %tmp.7 = getv function ? %tmp.6 :UIRenderer;
+        %tmp.4 = newc %tmp.7 ();
+        symbol [ renderer ? 17 8 16 ];
+        putv self :renderer %tmp.4;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc" 20 8 ]
+        [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionView_mc_13_26_30_4_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionView_mc_13_26_30_4_stop" ]
+        %profile.1 = local;
+        symbol [ profile %profile.1 20 12 19 ];
+        symbol [ Session %tmp.10 21 16 23 ];
+        %tmp.10 = getm $.Session;
+        symbol [ AthleteProfile %tmp.11 21 24 38 ];
+        %tmp.11 = getv function ? %tmp.10 :AthleteProfile;
+        %tmp.12 = 250;
+        %tmp.13 = 75;
+        %tmp.8 = newc %tmp.11 (%tmp.12, %tmp.13);
+        lputv %profile.1 %tmp.8;
+        symbol [ profile %profile.1 20 12 19 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc" 26 8 ]
+        symbol [ Session %tmp.16 27 16 23 ];
+        %tmp.16 = getm $.Session;
+        symbol [ SessionManager %tmp.17 27 24 38 ];
+        %tmp.17 = getv function ? %tmp.16 :SessionManager;
+        %tmp.18 = lgetv %profile.1;
+        symbol [ profile %tmp.18 28 16 23 ];
+        %tmp.14 = newc %tmp.17 (%tmp.18);
+        symbol [ sessionManager ? 26 8 22 ];
+        putv self :sessionManager %tmp.14;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionView_mc_13_26_30_4_stop:
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc"; @line = 32; @symbol_functiondef = [onUpdate,32,13,21]; @symbol_param<0> = [dc,32,22,24]; ]
+    function onUpdate(dc) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionView_mc_32_26_46_4_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc" 34 8 ]
+        [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionView_mc_32_26_46_4_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionView_mc_32_26_46_4_stop" ]
+        %info.1 = local;
+        symbol [ info %info.1 34 12 16 ];
+        symbol [ Activity %tmp.1 35 12 20 ];
+        %tmp.1 = getm $.Toybox.Activity;
+        symbol [ getActivityInfo %tmp.2 35 21 36 ];
+        %tmp.2 = getv function %tmp.1 :getActivityInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %info.1 %tmp.3;
+        symbol [ info %info.1 34 12 16 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc" 37 8 ]
+        symbol [ sessionManager %tmp.5 37 8 22 ];
+        %tmp.5 = getv ? :sessionManager;
+        symbol [ update %tmp.6 37 23 29 ];
+        %tmp.6 = getv function %tmp.5 :update;
+        %tmp.7 = lgetv %info.1;
+        symbol [ info %tmp.7 37 30 34 ];
+        invoke %tmp.5 %tmp.6(%tmp.7);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc" 39 8 ]
+        [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionView_mc_32_26_46_4_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionView_mc_32_26_46_4_stop" ]
+        %state.2 = local;
+        symbol [ state %state.2 39 12 17 ];
+        symbol [ sessionManager %tmp.9 40 12 26 ];
+        %tmp.9 = getv ? :sessionManager;
+        symbol [ getState %tmp.10 40 27 35 ];
+        %tmp.10 = getv function %tmp.9 :getState;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %state.2 %tmp.11;
+        symbol [ state %state.2 39 12 17 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc" 42 8 ]
+        symbol [ renderer %tmp.13 42 8 16 ];
+        %tmp.13 = getv ? :renderer;
+        symbol [ drawMainDashboard %tmp.14 42 17 34 ];
+        %tmp.14 = getv function %tmp.13 :drawMainDashboard;
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 43 12 14 ];
+        %tmp.16 = lgetv %state.2;
+        symbol [ state %tmp.16 44 12 17 ];
+        invoke %tmp.13 %tmp.14(%tmp.15, %tmp.16);
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_NutritionView_mc_32_26_46_4_stop:
+    }
+}
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/NutritionView.mc"; @line = 1; ]
+<init> {
+}

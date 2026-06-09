@@ -1,0 +1,21 @@
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/AlertType.mc"; @line = 1; @symbol_moduledef = [Constants,1,7,16]; ]
+module Constants {
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/AlertType.mc"; @line = 1; ]
+    <init> {
+    }
+    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/AlertType.mc"; @line = 3; @symbol_moduledef = [AlertType,3,11,20]; ]
+    module AlertType {
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/AlertType.mc"; @line = 3; ]
+        <init> {
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/AlertType.mc"; @line = 5; @position = 14; @symbol_constdef = [NONE,5,14,18]; ]
+        const NONE = 0;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/AlertType.mc"; @line = 6; @position = 14; @symbol_constdef = [FUEL,6,14,18]; ]
+        const FUEL = 1;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/AlertType.mc"; @line = 7; @position = 14; @symbol_constdef = [DRINK,7,14,19]; ]
+        const DRINK = 2;
+    }
+}
+[ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/AlertType.mc"; @line = 1; ]
+<init> {
+}
