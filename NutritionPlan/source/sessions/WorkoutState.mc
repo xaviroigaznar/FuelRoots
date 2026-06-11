@@ -3,6 +3,12 @@ module Session {
     class WorkoutState {
 
         // =========================
+        // Constants
+        // =========================
+        const CARBS_THRESHOLD = 30;
+        const HYDRATION_THRESHOLD = 250;
+
+        // =========================
         // Base Metrics
         // =========================
 
@@ -72,13 +78,15 @@ module Session {
         // UI-ready status
         var statusLabel;
         var bonkTimeLabel;
-        var bonkRiskLabel;
+        var bonkRisk;
 
         // =========================
         // Alerts
         // =========================
         var activeAlert = Constants.AlertType.NONE;
         var alertText;
+        var recommendedCarbs;
+        var recommendedDrink;
 
         function initialize() {
 
@@ -106,6 +114,7 @@ module Session {
             lapCarbsBurned = 0.0;
             nextFuelCountdownLabel = "--";
             carbsDeficit = 0;
+            recommendedCarbs = 0;
 
             // Hydration
             sessionHydrationLoss = 0;
@@ -118,6 +127,7 @@ module Session {
 
             minutesUntilDrink = 0;
             hydrationDeficitMl = 0;
+            recommendedDrink = 0;
 
             nextDrinkCountdownLabel = "--";
             hydrationDeficitLabel = "0ml";
@@ -127,7 +137,7 @@ module Session {
 
             statusLabel = "STABLE";
             bonkTimeLabel = "--";
-            bonkRiskLabel = "0%";
+            bonkRisk = 0;
         }
     }
 }

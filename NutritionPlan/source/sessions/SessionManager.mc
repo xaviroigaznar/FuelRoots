@@ -33,17 +33,12 @@ module Session {
         // ALERTS
         // =====================================
         var alertStartTime;
-        var recommendedCarbs;
-        var recommendedDrink;
-
-        const CARBS_THRESHOLD = 30;
-        const HYDRATION_THRESHOLD = 20;
 
         const CARBS_MULTIPLE = 30;
         const HYDRATION_MULTIPLE = 125;
 
         const MIN_FUEL_ALERT_TIME = 900000; // 15 min
-        const MIN_DRINK_ALERT_TIME = 60000; // 10 min
+        const MIN_DRINK_ALERT_TIME = 600000; // 10 min
 
         function initialize(profileData) {
             state = new WorkoutState();
@@ -60,12 +55,6 @@ module Session {
             // TRACKERS
             // =============================
             nutritionTracker = new Tracker.NutritionTracker();
-
-            // =============================
-            // ALERTS
-            // =============================
-            recommendedCarbs = 0;
-            recommendedDrink = 0;
         }
 
         // =====================================
@@ -109,11 +98,11 @@ module Session {
             // =============================
             // Trigger conditions
             if(
-                (fuelEngine.carbsBurnedSinceLastFuel > CARBS_THRESHOLD) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastCarbIntakeTime) >= MIN_FUEL_ALERT_TIME
+                (fuelEngine.carbsBurnedSinceLastFuel > state.CARBS_THRESHOLD) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastCarbIntakeTime) >= MIN_FUEL_ALERT_TIME
             ) {
                 triggerFuelAlert();
             } else if (
-                (hydrationEngine.fluidLostSinceLastDrink > HYDRATION_THRESHOLD) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastDrinkTime) >= MIN_DRINK_ALERT_TIME
+                (hydrationEngine.fluidLostSinceLastDrink > state.HYDRATION_THRESHOLD) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastDrinkTime) >= MIN_DRINK_ALERT_TIME
             ) {
                 triggerDrinkAlert();
             }
@@ -257,7 +246,7 @@ module Session {
 
             if (state.carbBurnRate != null) {
                 state.minutesUntilFuel = calculateFuelCountdown(fuelEngine.carbsBurnedSinceLastFuel, state.carbBurnRate);
-                recommendedCarbs = calculateRecommendedCarbs(carbDeficit, state.carbBurnRate);
+                state.recommendedCarbs = calculateRecommendedCarbs(carbDeficit, state.carbBurnRate);
 
                 state.nextFuelCountdownLabel =
                     Utils.FormatUtils
@@ -280,7 +269,7 @@ module Session {
 
             if (state.sweatRate != null) {
                 state.minutesUntilDrink = calculateDrinkCountdown(hydrationEngine.fluidLostSinceLastDrink, state.sweatRate);
-                recommendedDrink = calculateRecommendedDrink(hydrationDeficit, state.sweatRate);
+                state.recommendedDrink = calculateRecommendedDrink(hydrationDeficit, state.sweatRate);
                 
                 state.nextDrinkCountdownLabel = 
                     Utils.FormatUtils
@@ -297,7 +286,7 @@ module Session {
             carbsBurnedSinceLastFuel,
             carbBurnRate
         ) {
-            var remaining = CARBS_THRESHOLD - carbsBurnedSinceLastFuel;
+            var remaining = state.CARBS_THRESHOLD - carbsBurnedSinceLastFuel;
 
             if (remaining <= 0) {
                 return 0;
@@ -340,7 +329,7 @@ module Session {
 
             state.alertText =
                 "TAKE "
-                + recommendedCarbs.format("%.0f")
+                + state.recommendedCarbs.format("%.0f")
                 + "g HC";
             
             alertStartTime = now;
@@ -353,7 +342,7 @@ module Session {
             fluidLostSinceLastDrink,
             sweatRate
         ) {
-            var remaining = HYDRATION_THRESHOLD - fluidLostSinceLastDrink;
+            var remaining = state.HYDRATION_THRESHOLD - fluidLostSinceLastDrink;
 
             if (remaining <= 0) {
                 return 0;
@@ -407,7 +396,7 @@ module Session {
 
             state.alertText =
                 "DRINK "
-                + recommendedDrink.format("%.0f")
+                + state.recommendedDrink.format("%.0f")
                 + "ml";
             
             alertStartTime = now;
@@ -447,7 +436,7 @@ module Session {
         // CONFIRM FUEL
         // =====================================
         function confirmFuelIntake() {
-            registerFuel(recommendedCarbs);
+            registerFuel(state.recommendedCarbs);
         }
 
         // =====================================
@@ -457,7 +446,7 @@ module Session {
             System.println(
     "confirmDrinkIntake() called"
 );
-            registerDrink(recommendedDrink);
+            registerDrink(state.recommendedDrink);
         }
 
         // =====================================

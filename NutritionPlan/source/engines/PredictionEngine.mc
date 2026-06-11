@@ -70,11 +70,7 @@ module Engine {
                     ri
                 );
 
-            state.bonkRiskLabel =
-                Utils.FormatUtils
-                    .formatPercent(
-                        bonkRisk
-                    );
+            state.bonkRisk = bonkRisk;
 
             // =================================
             // BONK TIME

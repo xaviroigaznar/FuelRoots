@@ -90,76 +90,7 @@ class FuelHydrationField extends WatchUi.DataField {
         // -----------------------------
         // CARBS BOX
         // -----------------------------
-
-        renderer.drawSummaryBox(
-            dc,
-            0,
-            0,
-            boxWidth,
-            topHeight,
-            "CARBS",
-            state.sessionCarbsBurned.format("%.0f") + "g",
-            state.sessionCarbsIngested.format("%.0f") + "g",
-            state.sessionCarbsIngestedPerHour.format("%.0f") + "g/h",
-            state.lapCarbsBurned.format("%.0f") + "g",
-            state.lapCarbsIngested.format("%.0f") + "g",
-            state.lapCarbsIngestedPerHour.format("%.0f") + "g/h",
-            Graphics.COLOR_RED
-        );
-
-        // -----------------------------
-        // HYDRATION BOX
-        // -----------------------------
-
-        renderer.drawSummaryBox(
-            dc,
-            boxWidth,
-            0,
-            boxWidth,
-            topHeight,
-            "HYDRATION",
-            state.sessionHydrationLoss.format("%.0f") + "ml",
-            state.sessionHydrationDrunk.format("%.0f") + "ml",
-            state.sessionHydrationDrunkPerHour.format("%.0f") + "ml/h",
-            state.lapHydrationLoss.format("%.0f") + "ml",
-            state.lapHydrationDrunk.format("%.0f") + "ml",
-            state.lapHydrationDrunkPerHour.format("%.0f") + "ml/h",
-            Graphics.COLOR_GREEN
-        );
-
-        // =================================
-        // BOTTOM LEFT
-        // =================================
-        var carbDeficitLabel = state.carbsDeficit.format("%.0f") + "g";
-        var hydrationDeficitLabel = state.hydrationDeficitMl.format("%.0f") + "ml";
-
-        renderer.drawCountdownBox(
-            dc,
-            0,
-            topHeight,
-            boxWidth,
-            bottomHeight,
-            state.nextDrinkCountdownLabel,
-            state.nextFuelCountdownLabel
-        );
-
-        // =================================
-        // STATUS BOX
-        // =================================
-
-        renderer.drawStatusBox(
-            dc,
-            boxWidth,
-            topHeight,
-            boxWidth,
-            bottomHeight,
-            state.statusLabel,
-            state.fatiguePercent,
-            carbDeficitLabel,
-            hydrationDeficitLabel,
-            state.bonkTimeLabel,
-            state.bonkRiskLabel
-        );
+        renderer.drawMainDashboard(dc, state);
 
         // =================================
         // ALERTS
