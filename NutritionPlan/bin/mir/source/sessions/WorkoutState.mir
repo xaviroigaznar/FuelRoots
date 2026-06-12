@@ -23,7 +23,7 @@ module Session {
         [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc"; @line = 8; @position = 14; @symbol_constdef = [CARBS_THRESHOLD,8,14,29]; ]
         const CARBS_THRESHOLD = 30;
         [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc"; @line = 9; @position = 14; @symbol_constdef = [HYDRATION_THRESHOLD,9,14,33]; ]
-        const HYDRATION_THRESHOLD = 250;
+        const HYDRATION_THRESHOLD = 125;
         [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc"; @line = 15; @position = 12; @symbol_vardef = [elapsedTime,15,12,23]; ]
         var elapsedTime;
         [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc"; @line = 16; @position = 12; @symbol_vardef = [lapElapsedTime,16,12,26]; ]
@@ -104,154 +104,158 @@ module Session {
         var recommendedCarbs;
         [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc"; @line = 89; @position = 12; @symbol_vardef = [recommendedDrink,89,12,28]; ]
         var recommendedDrink;
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc"; @line = 91; @symbol_functiondef = [initialize,91,17,27]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc"; @line = 90; @position = 12; @symbol_vardef = [carbsBurnedSinceLastFuel,90,12,36]; ]
+        var carbsBurnedSinceLastFuel = 0.0;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc"; @line = 91; @position = 12; @symbol_vardef = [fluidLostSinceLastDrink,91,12,35]; ]
+        var fluidLostSinceLastDrink = 0.0;
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc"; @line = 93; @symbol_functiondef = [initialize,93,17,27]; ]
         function initialize() as Void {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_WorkoutState_mc_91_30_141_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 94 12 ]
-            %tmp.1 = 0;
-            symbol [ elapsedTime ? 94 12 23 ];
-            putv self :elapsedTime %tmp.1;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 95 12 ]
-            %tmp.2 = 0;
-            symbol [ lapElapsedTime ? 95 12 26 ];
-            putv self :lapElapsedTime %tmp.2;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_WorkoutState_mc_93_30_143_8_start:
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 96 12 ]
-            %tmp.3 = 0;
-            symbol [ calories ? 96 12 20 ];
-            putv self :calories %tmp.3;
+            %tmp.1 = 0;
+            symbol [ elapsedTime ? 96 12 23 ];
+            putv self :elapsedTime %tmp.1;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 97 12 ]
-            %tmp.4 = 0;
-            symbol [ currentPower ? 97 12 24 ];
-            putv self :currentPower %tmp.4;
+            %tmp.2 = 0;
+            symbol [ lapElapsedTime ? 97 12 26 ];
+            putv self :lapElapsedTime %tmp.2;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 98 12 ]
-            %tmp.5 = 0;
-            symbol [ heartRate ? 98 12 21 ];
-            putv self :heartRate %tmp.5;
+            %tmp.3 = 0;
+            symbol [ calories ? 98 12 20 ];
+            putv self :calories %tmp.3;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 99 12 ]
-            %tmp.6 = null;
-            symbol [ temperature ? 99 12 23 ];
-            putv self :temperature %tmp.6;
+            %tmp.4 = 0;
+            symbol [ currentPower ? 99 12 24 ];
+            putv self :currentPower %tmp.4;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 100 12 ]
-            %tmp.7 = 0;
-            symbol [ rollingPower ? 100 12 24 ];
-            putv self :rollingPower %tmp.7;
+            %tmp.5 = 0;
+            symbol [ heartRate ? 100 12 21 ];
+            putv self :heartRate %tmp.5;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 101 12 ]
+            %tmp.6 = null;
+            symbol [ temperature ? 101 12 23 ];
+            putv self :temperature %tmp.6;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 102 12 ]
+            %tmp.7 = 0;
+            symbol [ rollingPower ? 102 12 24 ];
+            putv self :rollingPower %tmp.7;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 103 12 ]
             %tmp.8 = 0;
-            symbol [ relativeIntensity ? 101 12 29 ];
+            symbol [ relativeIntensity ? 103 12 29 ];
             putv self :relativeIntensity %tmp.8;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 104 12 ]
-            %tmp.9 = 0;
-            symbol [ minutesUntilFuel ? 104 12 28 ];
-            putv self :minutesUntilFuel %tmp.9;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 106 12 ]
-            %tmp.10 = "0g/h";
-            symbol [ sessionCarbsBurnedPerHour ? 106 12 37 ];
-            putv self :sessionCarbsBurnedPerHour %tmp.10;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 107 12 ]
-            %tmp.11 = "0g/h";
-            symbol [ sessionCarbsIngestedPerHour ? 107 12 39 ];
-            putv self :sessionCarbsIngestedPerHour %tmp.11;
+            %tmp.9 = 0;
+            symbol [ minutesUntilFuel ? 106 12 28 ];
+            putv self :minutesUntilFuel %tmp.9;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 108 12 ]
-            %tmp.12 = "0g";
-            symbol [ sessionCarbsIngested ? 108 12 32 ];
-            putv self :sessionCarbsIngested %tmp.12;
+            %tmp.10 = "0g/h";
+            symbol [ sessionCarbsBurnedPerHour ? 108 12 37 ];
+            putv self :sessionCarbsBurnedPerHour %tmp.10;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 109 12 ]
-            %tmp.13 = 0.0;
-            symbol [ sessionCarbsBurned ? 109 12 30 ];
-            putv self :sessionCarbsBurned %tmp.13;
+            %tmp.11 = "0g/h";
+            symbol [ sessionCarbsIngestedPerHour ? 109 12 39 ];
+            putv self :sessionCarbsIngestedPerHour %tmp.11;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 110 12 ]
+            %tmp.12 = "0g";
+            symbol [ sessionCarbsIngested ? 110 12 32 ];
+            putv self :sessionCarbsIngested %tmp.12;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 111 12 ]
-            %tmp.14 = "0g/h";
-            symbol [ lapCarbsBurnedPerHour ? 111 12 33 ];
-            putv self :lapCarbsBurnedPerHour %tmp.14;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 112 12 ]
-            %tmp.15 = "0g/h";
-            symbol [ lapCarbsIngestedPerHour ? 112 12 35 ];
-            putv self :lapCarbsIngestedPerHour %tmp.15;
+            %tmp.13 = 0.0;
+            symbol [ sessionCarbsBurned ? 111 12 30 ];
+            putv self :sessionCarbsBurned %tmp.13;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 113 12 ]
-            %tmp.16 = "0g";
-            symbol [ lapCarbsIngested ? 113 12 28 ];
-            putv self :lapCarbsIngested %tmp.16;
+            %tmp.14 = "0g/h";
+            symbol [ lapCarbsBurnedPerHour ? 113 12 33 ];
+            putv self :lapCarbsBurnedPerHour %tmp.14;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 114 12 ]
-            %tmp.17 = 0.0;
-            symbol [ lapCarbsBurned ? 114 12 26 ];
-            putv self :lapCarbsBurned %tmp.17;
+            %tmp.15 = "0g/h";
+            symbol [ lapCarbsIngestedPerHour ? 114 12 35 ];
+            putv self :lapCarbsIngestedPerHour %tmp.15;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 115 12 ]
-            %tmp.18 = "--";
-            symbol [ nextFuelCountdownLabel ? 115 12 34 ];
-            putv self :nextFuelCountdownLabel %tmp.18;
+            %tmp.16 = "0g";
+            symbol [ lapCarbsIngested ? 115 12 28 ];
+            putv self :lapCarbsIngested %tmp.16;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 116 12 ]
-            %tmp.19 = 0;
-            symbol [ carbsDeficit ? 116 12 24 ];
-            putv self :carbsDeficit %tmp.19;
+            %tmp.17 = 0.0;
+            symbol [ lapCarbsBurned ? 116 12 26 ];
+            putv self :lapCarbsBurned %tmp.17;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 117 12 ]
+            %tmp.18 = "--";
+            symbol [ nextFuelCountdownLabel ? 117 12 34 ];
+            putv self :nextFuelCountdownLabel %tmp.18;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 118 12 ]
+            %tmp.19 = 0;
+            symbol [ carbsDeficit ? 118 12 24 ];
+            putv self :carbsDeficit %tmp.19;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 119 12 ]
             %tmp.20 = 0;
-            symbol [ recommendedCarbs ? 117 12 28 ];
+            symbol [ recommendedCarbs ? 119 12 28 ];
             putv self :recommendedCarbs %tmp.20;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 120 12 ]
-            %tmp.21 = 0;
-            symbol [ sessionHydrationLoss ? 120 12 32 ];
-            putv self :sessionHydrationLoss %tmp.21;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 121 12 ]
-            %tmp.22 = 0;
-            symbol [ sessionHydrationDrunk ? 121 12 33 ];
-            putv self :sessionHydrationDrunk %tmp.22;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 122 12 ]
-            %tmp.23 = 0;
-            symbol [ sessionHydrationDrunkPerHour ? 122 12 40 ];
-            putv self :sessionHydrationDrunkPerHour %tmp.23;
+            %tmp.21 = 0;
+            symbol [ sessionHydrationLoss ? 122 12 32 ];
+            putv self :sessionHydrationLoss %tmp.21;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 123 12 ]
-            %tmp.24 = 0;
-            symbol [ lapHydrationLoss ? 123 12 28 ];
-            putv self :lapHydrationLoss %tmp.24;
+            %tmp.22 = 0;
+            symbol [ sessionHydrationDrunk ? 123 12 33 ];
+            putv self :sessionHydrationDrunk %tmp.22;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 124 12 ]
-            %tmp.25 = 0;
-            symbol [ lapHydrationDrunk ? 124 12 29 ];
-            putv self :lapHydrationDrunk %tmp.25;
+            %tmp.23 = 0;
+            symbol [ sessionHydrationDrunkPerHour ? 124 12 40 ];
+            putv self :sessionHydrationDrunkPerHour %tmp.23;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 125 12 ]
-            %tmp.26 = 0;
-            symbol [ lapHydrationDrunkPerHour ? 125 12 36 ];
-            putv self :lapHydrationDrunkPerHour %tmp.26;
+            %tmp.24 = 0;
+            symbol [ lapHydrationLoss ? 125 12 28 ];
+            putv self :lapHydrationLoss %tmp.24;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 126 12 ]
-            %tmp.27 = "STABLE";
-            symbol [ hydrationStateLabel ? 126 12 31 ];
-            putv self :hydrationStateLabel %tmp.27;
+            %tmp.25 = 0;
+            symbol [ lapHydrationDrunk ? 126 12 29 ];
+            putv self :lapHydrationDrunk %tmp.25;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 127 12 ]
+            %tmp.26 = 0;
+            symbol [ lapHydrationDrunkPerHour ? 127 12 36 ];
+            putv self :lapHydrationDrunkPerHour %tmp.26;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 128 12 ]
-            %tmp.28 = 0;
-            symbol [ minutesUntilDrink ? 128 12 29 ];
-            putv self :minutesUntilDrink %tmp.28;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 129 12 ]
-            %tmp.29 = 0;
-            symbol [ hydrationDeficitMl ? 129 12 30 ];
-            putv self :hydrationDeficitMl %tmp.29;
+            %tmp.27 = "STABLE";
+            symbol [ hydrationStateLabel ? 128 12 31 ];
+            putv self :hydrationStateLabel %tmp.27;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 130 12 ]
-            %tmp.30 = 0;
-            symbol [ recommendedDrink ? 130 12 28 ];
-            putv self :recommendedDrink %tmp.30;
+            %tmp.28 = 0;
+            symbol [ minutesUntilDrink ? 130 12 29 ];
+            putv self :minutesUntilDrink %tmp.28;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 131 12 ]
+            %tmp.29 = 0;
+            symbol [ hydrationDeficitMl ? 131 12 30 ];
+            putv self :hydrationDeficitMl %tmp.29;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 132 12 ]
+            %tmp.30 = 0;
+            symbol [ recommendedDrink ? 132 12 28 ];
+            putv self :recommendedDrink %tmp.30;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 134 12 ]
             %tmp.31 = "--";
-            symbol [ nextDrinkCountdownLabel ? 132 12 35 ];
+            symbol [ nextDrinkCountdownLabel ? 134 12 35 ];
             putv self :nextDrinkCountdownLabel %tmp.31;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 133 12 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 135 12 ]
             %tmp.32 = "0ml";
-            symbol [ hydrationDeficitLabel ? 133 12 33 ];
+            symbol [ hydrationDeficitLabel ? 135 12 33 ];
             putv self :hydrationDeficitLabel %tmp.32;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 136 12 ]
-            %tmp.33 = 0;
-            symbol [ fatiguePercent ? 136 12 26 ];
-            putv self :fatiguePercent %tmp.33;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 138 12 ]
-            %tmp.34 = "STABLE";
-            symbol [ statusLabel ? 138 12 23 ];
-            putv self :statusLabel %tmp.34;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 139 12 ]
-            %tmp.35 = "--";
-            symbol [ bonkTimeLabel ? 139 12 25 ];
-            putv self :bonkTimeLabel %tmp.35;
+            %tmp.33 = 0;
+            symbol [ fatiguePercent ? 138 12 26 ];
+            putv self :fatiguePercent %tmp.33;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 140 12 ]
+            %tmp.34 = "STABLE";
+            symbol [ statusLabel ? 140 12 23 ];
+            putv self :statusLabel %tmp.34;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 141 12 ]
+            %tmp.35 = "--";
+            symbol [ bonkTimeLabel ? 141 12 25 ];
+            putv self :bonkTimeLabel %tmp.35;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/sessions/WorkoutState.mc" 142 12 ]
             %tmp.36 = 0;
-            symbol [ bonkRisk ? 140 12 20 ];
+            symbol [ bonkRisk ? 142 12 20 ];
             putv self :bonkRisk %tmp.36;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_WorkoutState_mc_91_30_141_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_sessions_WorkoutState_mc_93_30_143_8_stop:
         }
     }
 }

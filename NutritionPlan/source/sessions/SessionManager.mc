@@ -98,11 +98,11 @@ module Session {
             // =============================
             // Trigger conditions
             if(
-                (fuelEngine.carbsBurnedSinceLastFuel > state.CARBS_THRESHOLD) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastCarbIntakeTime) >= MIN_FUEL_ALERT_TIME
+                (state.carbsBurnedSinceLastFuel >= state.CARBS_THRESHOLD) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastCarbIntakeTime) >= MIN_FUEL_ALERT_TIME
             ) {
                 triggerFuelAlert();
             } else if (
-                (hydrationEngine.fluidLostSinceLastDrink > state.HYDRATION_THRESHOLD) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastDrinkTime) >= MIN_DRINK_ALERT_TIME
+                (state.fluidLostSinceLastDrink >= state.HYDRATION_THRESHOLD) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastDrinkTime) >= MIN_DRINK_ALERT_TIME
             ) {
                 triggerDrinkAlert();
             }
@@ -245,8 +245,8 @@ module Session {
             state.carbsDeficit = carbDeficit;
 
             if (state.carbBurnRate != null) {
-                state.minutesUntilFuel = calculateFuelCountdown(fuelEngine.carbsBurnedSinceLastFuel, state.carbBurnRate);
-                state.recommendedCarbs = calculateRecommendedCarbs(carbDeficit, state.carbBurnRate);
+                state.minutesUntilFuel = calculateFuelCountdown(state.carbsBurnedSinceLastFuel, state.carbBurnRate);
+                state.recommendedCarbs = calculateRecommendedCarbs(state.carbsBurnedSinceLastFuel, state.carbBurnRate);
 
                 state.nextFuelCountdownLabel =
                     Utils.FormatUtils
@@ -268,8 +268,8 @@ module Session {
             state.hydrationDeficitMl = hydrationDeficit;
 
             if (state.sweatRate != null) {
-                state.minutesUntilDrink = calculateDrinkCountdown(hydrationEngine.fluidLostSinceLastDrink, state.sweatRate);
-                state.recommendedDrink = calculateRecommendedDrink(hydrationDeficit, state.sweatRate);
+                state.minutesUntilDrink = calculateDrinkCountdown(state.fluidLostSinceLastDrink, state.sweatRate);
+                state.recommendedDrink = calculateRecommendedDrink(state.fluidLostSinceLastDrink, state.sweatRate);
                 
                 state.nextDrinkCountdownLabel = 
                     Utils.FormatUtils
@@ -367,8 +367,8 @@ module Session {
             var recommendation =
                 deficitMl + futureDemand;
 
-            if (recommendation > 750) {
-                recommendation = 750;
+            if (recommendation > 250) {
+                recommendation = 250;
             }
 
             var multiple = Utils.FormatUtils.roundToNearestMultiple(recommendation, HYDRATION_MULTIPLE);
@@ -380,15 +380,6 @@ module Session {
         // DRINK ALERT
         // =====================================
         function triggerDrinkAlert() {
-            System.println(
-                "Fluid since drink: "
-                + hydrationEngine.fluidLostSinceLastDrink
-            );
-
-            System.println(
-                "Hydration deficit: "
-                + state.hydrationDeficitMl
-            );
             var now =
                 System.getTimer();
 
@@ -456,7 +447,7 @@ module Session {
             nutritionTracker
                 .registerCarbs(grams);
             
-            fuelEngine.resetCarbsBurnedSinceLastFuel();
+            state.carbsBurnedSinceLastFuel = 0.0;
             
             updateNutritionState();
         }
@@ -467,12 +458,7 @@ module Session {
         function registerDrink(ml) {
             nutritionTracker
                 .registerDrink(ml);
-            hydrationEngine.resetFluidLostSinceLastDrink();
-            
-            System.println(
-                "After reset: "
-                + hydrationEngine.fluidLostSinceLastDrink
-            );
+            state.fluidLostSinceLastDrink = 0.0;
             updateNutritionState();
         }
 

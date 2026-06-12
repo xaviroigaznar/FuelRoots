@@ -39,157 +39,157 @@ module Engine {
         var totalCarbsBurned = 0.0;
         [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 32; @position = 12; @symbol_vardef = [lapCarbsBurned,32,12,26]; ]
         var lapCarbsBurned = 0;
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 33; @position = 12; @symbol_vardef = [carbsBurnedSinceLastFuel,33,12,36]; ]
-        var carbsBurnedSinceLastFuel = 0.0;
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 38; @position = 12; @symbol_vardef = [lastElapsedTime,38,12,27]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 37; @position = 12; @symbol_vardef = [lastElapsedTime,37,12,27]; ]
         var lastElapsedTime = 0;
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 43; @symbol_functiondef = [initialize,43,17,27]; @symbol_param<0> = [profile,43,28,35]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 42; @symbol_functiondef = [initialize,42,17,27]; @symbol_param<0> = [profile,42,28,35]; ]
         function initialize(profile) as Void {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_43_37_46_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 44 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_42_37_45_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 43 12 ]
             %tmp.1 = lgetv %profile;
-            symbol [ profile %tmp.1 44 18 25 ];
-            symbol [ ftp %tmp.2 44 26 29 ];
+            symbol [ profile %tmp.1 43 18 25 ];
+            symbol [ ftp %tmp.2 43 26 29 ];
             %tmp.2 = getv %tmp.1 :ftp;
-            symbol [ ftp ? 44 12 15 ];
+            symbol [ ftp ? 43 12 15 ];
             putv self :ftp %tmp.2;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 45 12 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 44 12 ]
             %tmp.3 = lgetv %profile;
-            symbol [ profile %tmp.3 45 21 28 ];
-            symbol [ weight %tmp.4 45 29 35 ];
+            symbol [ profile %tmp.3 44 21 28 ];
+            symbol [ weight %tmp.4 44 29 35 ];
             %tmp.4 = getv %tmp.3 :weight;
-            symbol [ weight ? 45 12 18 ];
+            symbol [ weight ? 44 12 18 ];
             putv self :weight %tmp.4;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_43_37_46_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_42_37_45_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 51; @symbol_functiondef = [update,51,17,23]; @symbol_param<0> = [state,51,24,29]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 50; @symbol_functiondef = [update,50,17,23]; @symbol_param<0> = [state,50,24,29]; ]
         function update(state) {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_51_31_118_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 53 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_51_31_118_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_51_31_118_8_stop" ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_50_31_118_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 52 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_50_31_118_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_50_31_118_8_stop" ]
             %elapsed.1 = local;
-            symbol [ elapsed %elapsed.1 53 16 23 ];
+            symbol [ elapsed %elapsed.1 52 16 23 ];
             %tmp.1 = lgetv %state;
-            symbol [ state %tmp.1 54 16 21 ];
-            symbol [ elapsedTime %tmp.2 54 22 33 ];
+            symbol [ state %tmp.1 53 16 21 ];
+            symbol [ elapsedTime %tmp.2 53 22 33 ];
             %tmp.2 = getv %tmp.1 :elapsedTime;
             lputv %elapsed.1 %tmp.2;
-            symbol [ elapsed %elapsed.1 53 16 23 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 56 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_51_31_118_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_51_31_118_8_stop" ]
+            symbol [ elapsed %elapsed.1 52 16 23 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 55 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_50_31_118_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_50_31_118_8_stop" ]
             %power.2 = local;
-            symbol [ power %power.2 56 16 21 ];
+            symbol [ power %power.2 55 16 21 ];
             %tmp.3 = lgetv %state;
-            symbol [ state %tmp.3 57 16 21 ];
-            symbol [ currentPower %tmp.4 57 22 34 ];
+            symbol [ state %tmp.3 56 16 21 ];
+            symbol [ currentPower %tmp.4 56 22 34 ];
             %tmp.4 = getv %tmp.3 :currentPower;
             lputv %power.2 %tmp.4;
-            symbol [ power %power.2 56 16 21 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 60 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_60_12_64_12_if_stmt:
-            symbol [ lastElapsedTime %tmp.6 60 16 31 ];
+            symbol [ power %power.2 55 16 21 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 59 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_59_12_63_12_if_stmt:
+            symbol [ lastElapsedTime %tmp.6 59 16 31 ];
             %tmp.6 = getv ? :lastElapsedTime;
             %tmp.7 = 0;
             %tmp.8 = eq %tmp.6 %tmp.7;
-            bf %tmp.8 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_60_12_64_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_60_12_64_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_60_38_64_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 62 16 ]
+            bf %tmp.8 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_59_12_63_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_59_12_63_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_59_38_63_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 61 16 ]
             %tmp.9 = lgetv %elapsed.1;
-            symbol [ elapsed %tmp.9 62 34 41 ];
-            symbol [ lastElapsedTime ? 62 16 31 ];
+            symbol [ elapsed %tmp.9 61 34 41 ];
+            symbol [ lastElapsedTime ? 61 16 31 ];
             putv self :lastElapsedTime %tmp.9;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 63 16 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 62 16 ]
             ret ?;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_60_38_64_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_60_12_64_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_60_12_64_12_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 66 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_51_31_118_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_51_31_118_8_stop" ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_59_38_63_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_59_12_63_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_59_12_63_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 65 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_50_31_118_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_50_31_118_8_stop" ]
             %deltaSeconds.3 = local;
-            symbol [ deltaSeconds %deltaSeconds.3 66 16 28 ];
+            symbol [ deltaSeconds %deltaSeconds.3 65 16 28 ];
             %tmp.10 = lgetv %elapsed.1;
-            symbol [ elapsed %tmp.10 67 17 24 ];
-            symbol [ lastElapsedTime %tmp.12 67 27 42 ];
+            symbol [ elapsed %tmp.10 66 17 24 ];
+            symbol [ lastElapsedTime %tmp.12 66 27 42 ];
             %tmp.12 = getv ? :lastElapsedTime;
             %tmp.13 = sub %tmp.10 %tmp.12;
             %tmp.14 = 1000.0;
             %tmp.15 = div %tmp.13 %tmp.14;
             lputv %deltaSeconds.3 %tmp.15;
-            symbol [ deltaSeconds %deltaSeconds.3 66 16 28 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 74 12 ]
+            symbol [ deltaSeconds %deltaSeconds.3 65 16 28 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 73 12 ]
             %tmp.16 = self;
-            symbol [ updateNP %tmp.17 74 12 20 ];
+            symbol [ updateNP %tmp.17 73 12 20 ];
             %tmp.17 = getv function %tmp.16 :updateNP;
             %tmp.18 = lgetv %power.2;
-            symbol [ power %tmp.18 74 21 26 ];
+            symbol [ power %tmp.18 73 21 26 ];
             invoke %tmp.16 %tmp.17(%tmp.18);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 80 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_51_31_118_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_51_31_118_8_stop" ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 79 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_50_31_118_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_50_31_118_8_stop" ]
             %ri.4 = local;
-            symbol [ ri %ri.4 80 16 18 ];
+            symbol [ ri %ri.4 79 16 18 ];
             %tmp.19 = self;
-            symbol [ getIF %tmp.20 81 16 21 ];
+            symbol [ getIF %tmp.20 80 16 21 ];
             %tmp.20 = getv function %tmp.19 :getIF;
             %tmp.21 = invoke %tmp.19 %tmp.20();
             lputv %ri.4 %tmp.21;
-            symbol [ ri %ri.4 80 16 18 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 83 12 ]
+            symbol [ ri %ri.4 79 16 18 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 82 12 ]
             %tmp.22 = lgetv %state;
-            symbol [ state %tmp.22 83 12 17 ];
+            symbol [ state %tmp.22 82 12 17 ];
             %tmp.23 = lgetv %ri.4;
-            symbol [ ri %tmp.23 83 38 40 ];
-            symbol [ relativeIntensity ? 83 18 35 ];
+            symbol [ ri %tmp.23 82 38 40 ];
+            symbol [ relativeIntensity ? 82 18 35 ];
             putv %tmp.22 :relativeIntensity %tmp.23;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 89 12 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 88 12 ]
             %tmp.24 = self;
-            symbol [ updateEnergy %tmp.25 89 12 24 ];
+            symbol [ updateEnergy %tmp.25 88 12 24 ];
             %tmp.25 = getv function %tmp.24 :updateEnergy;
             %tmp.26 = lgetv %power.2;
-            symbol [ power %tmp.26 90 16 21 ];
+            symbol [ power %tmp.26 89 16 21 ];
             %tmp.27 = lgetv %deltaSeconds.3;
-            symbol [ deltaSeconds %tmp.27 91 16 28 ];
+            symbol [ deltaSeconds %tmp.27 90 16 28 ];
             invoke %tmp.24 %tmp.25(%tmp.26, %tmp.27);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 98 12 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 97 12 ]
             %tmp.28 = self;
-            symbol [ updateCarbs %tmp.29 98 12 23 ];
+            symbol [ updateCarbs %tmp.29 97 12 23 ];
             %tmp.29 = getv function %tmp.28 :updateCarbs;
             %tmp.30 = lgetv %ri.4;
-            symbol [ ri %tmp.30 99 16 18 ];
+            symbol [ ri %tmp.30 98 16 18 ];
             %tmp.31 = lgetv %deltaSeconds.3;
-            symbol [ deltaSeconds %tmp.31 100 16 28 ];
-            invoke %tmp.28 %tmp.29(%tmp.30, %tmp.31);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 107 12 ]
+            symbol [ deltaSeconds %tmp.31 99 16 28 ];
             %tmp.32 = lgetv %state;
-            symbol [ state %tmp.32 107 12 17 ];
-            symbol [ totalCarbsBurned %tmp.34 108 16 32 ];
-            %tmp.34 = getv ? :totalCarbsBurned;
+            symbol [ state %tmp.32 100 16 21 ];
+            invoke %tmp.28 %tmp.29(%tmp.30, %tmp.31, %tmp.32);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 107 12 ]
+            %tmp.33 = lgetv %state;
+            symbol [ state %tmp.33 107 12 17 ];
+            symbol [ totalCarbsBurned %tmp.35 108 16 32 ];
+            %tmp.35 = getv ? :totalCarbsBurned;
             symbol [ sessionCarbsBurned ? 107 18 36 ];
-            putv %tmp.32 :sessionCarbsBurned %tmp.34;
+            putv %tmp.33 :sessionCarbsBurned %tmp.35;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 110 12 ]
-            %tmp.35 = lgetv %state;
-            symbol [ state %tmp.35 110 12 17 ];
-            symbol [ lapCarbsBurned %tmp.37 111 16 30 ];
-            %tmp.37 = getv ? :lapCarbsBurned;
+            %tmp.36 = lgetv %state;
+            symbol [ state %tmp.36 110 12 17 ];
+            symbol [ lapCarbsBurned %tmp.38 111 16 30 ];
+            %tmp.38 = getv ? :lapCarbsBurned;
             symbol [ lapCarbsBurned ? 110 18 32 ];
-            putv %tmp.35 :lapCarbsBurned %tmp.37;
+            putv %tmp.36 :lapCarbsBurned %tmp.38;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 113 12 ]
-            %tmp.38 = lgetv %state;
-            symbol [ state %tmp.38 113 12 17 ];
-            %tmp.39 = self;
-            symbol [ calculateCarbBurnRate %tmp.40 114 16 37 ];
-            %tmp.40 = getv function %tmp.39 :calculateCarbBurnRate;
-            %tmp.41 = lgetv %ri.4;
-            symbol [ ri %tmp.41 114 38 40 ];
-            %tmp.42 = invoke %tmp.39 %tmp.40(%tmp.41);
+            %tmp.39 = lgetv %state;
+            symbol [ state %tmp.39 113 12 17 ];
+            %tmp.40 = self;
+            symbol [ calculateCarbBurnRate %tmp.41 114 16 37 ];
+            %tmp.41 = getv function %tmp.40 :calculateCarbBurnRate;
+            %tmp.42 = lgetv %ri.4;
+            symbol [ ri %tmp.42 114 38 40 ];
+            %tmp.43 = invoke %tmp.40 %tmp.41(%tmp.42);
             symbol [ carbBurnRate ? 113 18 30 ];
-            putv %tmp.38 :carbBurnRate %tmp.42;
+            putv %tmp.39 :carbBurnRate %tmp.43;
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 116 12 ]
-            %tmp.43 = lgetv %elapsed.1;
-            symbol [ elapsed %tmp.43 117 16 23 ];
+            %tmp.44 = lgetv %elapsed.1;
+            symbol [ elapsed %tmp.44 117 16 23 ];
             symbol [ lastElapsedTime ? 116 12 27 ];
-            putv self :lastElapsedTime %tmp.43;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_51_31_118_8_stop:
+            putv self :lastElapsedTime %tmp.44;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_50_31_118_8_stop:
         }
         [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 123; @symbol_functiondef = [updateEnergy,123,17,29]; @symbol_param<0> = [power,124,12,17]; @symbol_param<1> = [deltaSeconds,125,12,24]; ]
         function updateEnergy(power, deltaSeconds) {
@@ -239,318 +239,313 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engine
             putv self :lapKj dup %tmp.14;
 _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_126_10_138_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 144; @symbol_functiondef = [updateCarbs,144,17,28]; @symbol_param<0> = [relativeIntensity,145,12,29]; @symbol_param<1> = [deltaSeconds,146,12,24]; ]
-        function updateCarbs(relativeIntensity, deltaSeconds) {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_147_10_166_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 149 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_147_10_166_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_147_10_166_8_stop" ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 144; @symbol_functiondef = [updateCarbs,144,17,28]; @symbol_param<0> = [relativeIntensity,145,12,29]; @symbol_param<1> = [deltaSeconds,146,12,24]; @symbol_param<2> = [state,147,12,17]; ]
+        function updateCarbs(relativeIntensity, deltaSeconds, state) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_148_10_167_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 150 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_148_10_167_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_148_10_167_8_stop" ]
             %burnRate.1 = local;
-            symbol [ burnRate %burnRate.1 149 16 24 ];
+            symbol [ burnRate %burnRate.1 150 16 24 ];
             %tmp.1 = self;
-            symbol [ calculateCarbBurnRate %tmp.2 150 16 37 ];
+            symbol [ calculateCarbBurnRate %tmp.2 151 16 37 ];
             %tmp.2 = getv function %tmp.1 :calculateCarbBurnRate;
             %tmp.3 = lgetv %relativeIntensity;
-            symbol [ relativeIntensity %tmp.3 151 20 37 ];
+            symbol [ relativeIntensity %tmp.3 152 20 37 ];
             %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
             lputv %burnRate.1 %tmp.4;
-            symbol [ burnRate %burnRate.1 149 16 24 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 155 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_147_10_166_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_147_10_166_8_stop" ]
+            symbol [ burnRate %burnRate.1 150 16 24 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 156 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_148_10_167_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_148_10_167_8_stop" ]
             %carbIncrement.2 = local;
-            symbol [ carbIncrement %carbIncrement.2 155 16 29 ];
+            symbol [ carbIncrement %carbIncrement.2 156 16 29 ];
             %tmp.5 = lgetv %burnRate.1;
-            symbol [ burnRate %tmp.5 156 17 25 ];
+            symbol [ burnRate %tmp.5 157 17 25 ];
             %tmp.6 = 3600.0;
             %tmp.7 = div %tmp.5 %tmp.6;
             %tmp.8 = lgetv %deltaSeconds;
-            symbol [ deltaSeconds %tmp.8 157 18 30 ];
+            symbol [ deltaSeconds %tmp.8 158 18 30 ];
             %tmp.9 = mul %tmp.7 %tmp.8;
             lputv %carbIncrement.2 %tmp.9;
-            symbol [ carbIncrement %carbIncrement.2 155 16 29 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 159 12 ]
-            symbol [ totalCarbsBurned %tmp.10 159 12 28 ];
+            symbol [ carbIncrement %carbIncrement.2 156 16 29 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 160 12 ]
+            symbol [ totalCarbsBurned %tmp.10 160 12 28 ];
             %tmp.10 = getv self :totalCarbsBurned;
             %tmp.11 = lgetv %carbIncrement.2;
-            symbol [ carbIncrement %tmp.11 160 16 29 ];
+            symbol [ carbIncrement %tmp.11 161 16 29 ];
             %tmp.12 = add %tmp.10 %tmp.11;
-            symbol [ totalCarbsBurned ? 159 12 28 ];
+            symbol [ totalCarbsBurned ? 160 12 28 ];
             putv self :totalCarbsBurned dup %tmp.12;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 162 12 ]
-            symbol [ carbsBurnedSinceLastFuel %tmp.13 162 12 36 ];
-            %tmp.13 = getv self :carbsBurnedSinceLastFuel;
-            %tmp.14 = lgetv %carbIncrement.2;
-            symbol [ carbIncrement %tmp.14 162 40 53 ];
-            %tmp.15 = add %tmp.13 %tmp.14;
-            symbol [ carbsBurnedSinceLastFuel ? 162 12 36 ];
-            putv self :carbsBurnedSinceLastFuel dup %tmp.15;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 164 12 ]
-            symbol [ lapCarbsBurned %tmp.16 164 12 26 ];
-            %tmp.16 = getv self :lapCarbsBurned;
-            %tmp.17 = lgetv %carbIncrement.2;
-            symbol [ carbIncrement %tmp.17 165 16 29 ];
-            %tmp.18 = add %tmp.16 %tmp.17;
-            symbol [ lapCarbsBurned ? 164 12 26 ];
-            putv self :lapCarbsBurned dup %tmp.18;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_147_10_166_8_stop:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 163 12 ]
+            %tmp.13 = lgetv %state;
+            symbol [ state %tmp.13 163 12 17 ];
+            %tmp.14 = lgetv %state;
+            symbol [ state %tmp.14 163 12 17 ];
+            symbol [ carbsBurnedSinceLastFuel %tmp.15 163 18 42 ];
+            %tmp.15 = getv %tmp.14 :carbsBurnedSinceLastFuel;
+            %tmp.16 = lgetv %carbIncrement.2;
+            symbol [ carbIncrement %tmp.16 163 46 59 ];
+            %tmp.17 = add %tmp.15 %tmp.16;
+            symbol [ carbsBurnedSinceLastFuel ? 163 18 42 ];
+            putv %tmp.13 :carbsBurnedSinceLastFuel dup %tmp.17;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 165 12 ]
+            symbol [ lapCarbsBurned %tmp.18 165 12 26 ];
+            %tmp.18 = getv self :lapCarbsBurned;
+            %tmp.19 = lgetv %carbIncrement.2;
+            symbol [ carbIncrement %tmp.19 166 16 29 ];
+            %tmp.20 = add %tmp.18 %tmp.19;
+            symbol [ lapCarbsBurned ? 165 12 26 ];
+            putv self :lapCarbsBurned dup %tmp.20;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_148_10_167_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 172; @symbol_functiondef = [calculateCarbBurnRate,172,17,38]; @symbol_param<0> = [relativeIntensity,173,12,29]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 173; @symbol_functiondef = [calculateCarbBurnRate,173,17,38]; @symbol_param<0> = [relativeIntensity,174,12,29]; ]
         function calculateCarbBurnRate(relativeIntensity) {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_174_10_189_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 184 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_175_10_190_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 185 12 ]
             %tmp.1 = 20;
             %tmp.2 = lgetv %relativeIntensity;
-            symbol [ relativeIntensity %tmp.2 186 17 34 ];
-            symbol [ weight %tmp.4 187 18 24 ];
+            symbol [ relativeIntensity %tmp.2 187 17 34 ];
+            symbol [ weight %tmp.4 188 18 24 ];
             %tmp.4 = getv ? :weight;
             %tmp.5 = mul %tmp.2 %tmp.4;
             %tmp.6 = 1.2;
             %tmp.7 = mul %tmp.5 %tmp.6;
             %tmp.8 = add %tmp.1 %tmp.7;
             ret %tmp.8;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_174_10_189_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_175_10_190_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 194; @symbol_functiondef = [updateNP,194,17,25]; @symbol_param<0> = [power,194,26,31]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 195; @symbol_functiondef = [updateNP,195,17,25]; @symbol_param<0> = [power,195,26,31]; ]
         function updateNP(power) {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_194_33_214_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 196 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_196_12_196_41_if_stmt:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_195_33_215_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 197 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_197_12_197_41_if_stmt:
             %tmp.1 = lgetv %power;
-            symbol [ power %tmp.1 196 16 21 ];
+            symbol [ power %tmp.1 197 16 21 ];
             %tmp.2 = null;
             %tmp.3 = eq %tmp.1 %tmp.2;
-            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_196_12_196_41_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_196_12_196_41_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_196_31_196_41_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 196 33 ]
+            bf %tmp.3 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_197_12_197_41_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_197_12_197_41_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_197_31_197_41_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 197 33 ]
             ret ?;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_196_31_196_41_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_196_12_196_41_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_196_12_196_41_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 198 12 ]
-            symbol [ powerBuffer %tmp.5 198 12 23 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_197_31_197_41_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_197_12_197_41_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_197_12_197_41_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 199 12 ]
+            symbol [ powerBuffer %tmp.5 199 12 23 ];
             %tmp.5 = getv ? :powerBuffer;
-            symbol [ add %tmp.6 198 24 27 ];
+            symbol [ add %tmp.6 199 24 27 ];
             %tmp.6 = getv function %tmp.5 :add;
             %tmp.7 = lgetv %power;
-            symbol [ power %tmp.7 198 28 33 ];
+            symbol [ power %tmp.7 199 28 33 ];
             invoke %tmp.5 %tmp.6(%tmp.7);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 199 12 ]
-            symbol [ rollingSum %tmp.8 199 12 22 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 200 12 ]
+            symbol [ rollingSum %tmp.8 200 12 22 ];
             %tmp.8 = getv self :rollingSum;
             %tmp.9 = lgetv %power;
-            symbol [ power %tmp.9 199 26 31 ];
+            symbol [ power %tmp.9 200 26 31 ];
             %tmp.10 = add %tmp.8 %tmp.9;
-            symbol [ rollingSum ? 199 12 22 ];
+            symbol [ rollingSum ? 200 12 22 ];
             putv self :rollingSum dup %tmp.10;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 201 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_201_12_205_12_if_stmt:
-            symbol [ powerBuffer %tmp.12 201 16 27 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 202 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_202_12_206_12_if_stmt:
+            symbol [ powerBuffer %tmp.12 202 16 27 ];
             %tmp.12 = getv ? :powerBuffer;
-            symbol [ size %tmp.13 201 28 32 ];
+            symbol [ size %tmp.13 202 28 32 ];
             %tmp.13 = getv function %tmp.12 :size;
             %tmp.14 = invoke %tmp.12 %tmp.13();
-            symbol [ bufferSize %tmp.16 201 37 47 ];
+            symbol [ bufferSize %tmp.16 202 37 47 ];
             %tmp.16 = getv ? :bufferSize;
             %tmp.17 = gt %tmp.14 %tmp.16;
-            bf %tmp.17 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_201_12_205_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_201_12_205_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_201_49_205_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 203 16 ]
-            symbol [ rollingSum %tmp.18 203 16 26 ];
+            bf %tmp.17 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_202_12_206_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_202_12_206_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_202_49_206_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 204 16 ]
+            symbol [ rollingSum %tmp.18 204 16 26 ];
             %tmp.18 = getv self :rollingSum;
-            symbol [ powerBuffer %tmp.20 203 30 41 ];
+            symbol [ powerBuffer %tmp.20 204 30 41 ];
             %tmp.20 = getv ? :powerBuffer;
             %tmp.21 = 0;
             %tmp.22 = agetv %tmp.20 %tmp.21;
             %tmp.23 = sub %tmp.18 %tmp.22;
-            symbol [ rollingSum ? 203 16 26 ];
+            symbol [ rollingSum ? 204 16 26 ];
             putv self :rollingSum dup %tmp.23;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 204 16 ]
-            symbol [ powerBuffer %tmp.25 204 16 27 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 205 16 ]
+            symbol [ powerBuffer %tmp.25 205 16 27 ];
             %tmp.25 = getv ? :powerBuffer;
-            symbol [ remove %tmp.26 204 28 34 ];
+            symbol [ remove %tmp.26 205 28 34 ];
             %tmp.26 = getv function %tmp.25 :remove;
             %tmp.27 = 0;
             invoke %tmp.25 %tmp.26(%tmp.27);
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_201_49_205_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_201_12_205_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_201_12_205_12_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 207 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_207_12_213_12_if_stmt:
-            symbol [ powerBuffer %tmp.29 207 16 27 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_202_49_206_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_202_12_206_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_202_12_206_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 208 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_208_12_214_12_if_stmt:
+            symbol [ powerBuffer %tmp.29 208 16 27 ];
             %tmp.29 = getv ? :powerBuffer;
-            symbol [ size %tmp.30 207 28 32 ];
+            symbol [ size %tmp.30 208 28 32 ];
             %tmp.30 = getv function %tmp.29 :size;
             %tmp.31 = invoke %tmp.29 %tmp.30();
-            symbol [ bufferSize %tmp.33 207 38 48 ];
+            symbol [ bufferSize %tmp.33 208 38 48 ];
             %tmp.33 = getv ? :bufferSize;
             %tmp.34 = eq %tmp.31 %tmp.33;
-            bf %tmp.34 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_207_12_213_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_207_12_213_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_207_50_213_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 209 16 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_207_50_213_12_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_207_50_213_12_stop" ]
+            bf %tmp.34 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_208_12_214_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_208_12_214_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_208_50_214_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 210 16 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_208_50_214_12_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_208_50_214_12_stop" ]
             %avg30.1 = local;
-            symbol [ avg30 %avg30.1 209 20 25 ];
-            symbol [ rollingSum %tmp.36 209 28 38 ];
+            symbol [ avg30 %avg30.1 210 20 25 ];
+            symbol [ rollingSum %tmp.36 210 28 38 ];
             %tmp.36 = getv ? :rollingSum;
-            symbol [ bufferSize %tmp.38 209 41 51 ];
+            symbol [ bufferSize %tmp.38 210 41 51 ];
             %tmp.38 = getv ? :bufferSize;
             %tmp.39 = div %tmp.36 %tmp.38;
             lputv %avg30.1 %tmp.39;
-            symbol [ avg30 %avg30.1 209 20 25 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 211 16 ]
-            symbol [ npSum %tmp.40 211 16 21 ];
+            symbol [ avg30 %avg30.1 210 20 25 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 212 16 ]
+            symbol [ npSum %tmp.40 212 16 21 ];
             %tmp.40 = getv self :npSum;
-            symbol [ Math %tmp.41 211 25 29 ];
+            symbol [ Math %tmp.41 212 25 29 ];
             %tmp.41 = getm $.Toybox.Math;
-            symbol [ pow %tmp.42 211 30 33 ];
+            symbol [ pow %tmp.42 212 30 33 ];
             %tmp.42 = getv function %tmp.41 :pow;
             %tmp.43 = lgetv %avg30.1;
-            symbol [ avg30 %tmp.43 211 34 39 ];
+            symbol [ avg30 %tmp.43 212 34 39 ];
             %tmp.44 = 4;
             %tmp.45 = invoke %tmp.41 %tmp.42(%tmp.43, %tmp.44);
             %tmp.46 = add %tmp.40 %tmp.45;
-            symbol [ npSum ? 211 16 21 ];
+            symbol [ npSum ? 212 16 21 ];
             putv self :npSum dup %tmp.46;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 212 16 ]
-            symbol [ npCount %tmp.49 212 16 23 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 213 16 ]
+            symbol [ npCount %tmp.49 213 16 23 ];
             %tmp.49 = getv ? :npCount;
             %tmp.50 = add %tmp.49 1;
-            symbol [ npCount ? 212 16 23 ];
+            symbol [ npCount ? 213 16 23 ];
             putv self :npCount dup %tmp.50;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_207_50_213_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_207_12_213_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_207_12_213_12_if_end:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_194_33_214_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_208_50_214_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_208_12_214_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_208_12_214_12_if_end:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_195_33_215_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 219; @symbol_functiondef = [getNP,219,17,22]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 220; @symbol_functiondef = [getNP,220,17,22]; ]
         function getNP() {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_219_25_224_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 221 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_221_12_221_42_if_stmt:
-            symbol [ npCount %tmp.2 221 16 23 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_220_25_225_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 222 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_222_12_222_42_if_stmt:
+            symbol [ npCount %tmp.2 222 16 23 ];
             %tmp.2 = getv ? :npCount;
             %tmp.3 = 0;
             %tmp.4 = eq %tmp.2 %tmp.3;
-            bf %tmp.4 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_221_12_221_42_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_221_12_221_42_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_221_30_221_42_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 221 32 ]
+            bf %tmp.4 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_222_12_222_42_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_222_12_222_42_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_222_30_222_42_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 222 32 ]
             %tmp.5 = 0;
             ret %tmp.5;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_221_30_221_42_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_221_12_221_42_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_221_12_221_42_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 223 12 ]
-            symbol [ Math %tmp.6 223 19 23 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_222_30_222_42_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_222_12_222_42_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_222_12_222_42_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 224 12 ]
+            symbol [ Math %tmp.6 224 19 23 ];
             %tmp.6 = getm $.Toybox.Math;
-            symbol [ pow %tmp.7 223 24 27 ];
+            symbol [ pow %tmp.7 224 24 27 ];
             %tmp.7 = getv function %tmp.6 :pow;
-            symbol [ npSum %tmp.9 223 28 33 ];
+            symbol [ npSum %tmp.9 224 28 33 ];
             %tmp.9 = getv ? :npSum;
-            symbol [ npCount %tmp.11 223 36 43 ];
+            symbol [ npCount %tmp.11 224 36 43 ];
             %tmp.11 = getv ? :npCount;
             %tmp.12 = div %tmp.9 %tmp.11;
             %tmp.13 = 0.25;
             %tmp.14 = invoke %tmp.6 %tmp.7(%tmp.12, %tmp.13);
             ret %tmp.14;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_219_25_224_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_220_25_225_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 226; @symbol_functiondef = [getIF,226,17,22]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 227; @symbol_functiondef = [getIF,227,17,22]; ]
         function getIF() {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_226_25_233_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 228 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_226_25_233_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_226_25_233_8_stop" ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_227_25_234_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 229 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_227_25_234_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_227_25_234_8_stop" ]
             %np.1 = local;
-            symbol [ np %np.1 228 16 18 ];
+            symbol [ np %np.1 229 16 18 ];
             %tmp.1 = self;
-            symbol [ getNP %tmp.2 228 21 26 ];
+            symbol [ getNP %tmp.2 229 21 26 ];
             %tmp.2 = getv function %tmp.1 :getNP;
             %tmp.3 = invoke %tmp.1 %tmp.2();
             lputv %np.1 %tmp.3;
-            symbol [ np %np.1 228 16 18 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 230 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_230_12_230_38_if_stmt:
-            symbol [ ftp %tmp.5 230 16 19 ];
+            symbol [ np %np.1 229 16 18 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 231 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_231_12_231_38_if_stmt:
+            symbol [ ftp %tmp.5 231 16 19 ];
             %tmp.5 = getv ? :ftp;
             %tmp.6 = 0;
             %tmp.7 = eq %tmp.5 %tmp.6;
-            bf %tmp.7 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_230_12_230_38_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_230_12_230_38_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_230_26_230_38_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 230 28 ]
+            bf %tmp.7 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_231_12_231_38_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_231_12_231_38_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_231_26_231_38_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 231 28 ]
             %tmp.8 = 0;
             ret %tmp.8;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_230_26_230_38_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_230_12_230_38_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_230_12_230_38_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 232 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_231_26_231_38_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_231_12_231_38_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_231_12_231_38_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 233 12 ]
             %tmp.9 = lgetv %np.1;
-            symbol [ np %tmp.9 232 19 21 ];
-            symbol [ ftp %tmp.11 232 24 27 ];
+            symbol [ np %tmp.9 233 19 21 ];
+            symbol [ ftp %tmp.11 233 24 27 ];
             %tmp.11 = getv ? :ftp;
             %tmp.12 = div %tmp.9 %tmp.11;
             ret %tmp.12;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_226_25_233_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_227_25_234_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 235; @symbol_functiondef = [getTotalKj,235,17,27]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 236; @symbol_functiondef = [getTotalKj,236,17,27]; ]
         function getTotalKj() {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_235_30_237_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 236 12 ]
-            symbol [ totalKj %tmp.2 236 19 26 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_236_30_238_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 237 12 ]
+            symbol [ totalKj %tmp.2 237 19 26 ];
             %tmp.2 = getv ? :totalKj;
             ret %tmp.2;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_235_30_237_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_236_30_238_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 239; @symbol_functiondef = [getLapKj,239,17,25]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 240; @symbol_functiondef = [getLapKj,240,17,25]; ]
         function getLapKj() {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_239_28_241_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 240 12 ]
-            symbol [ lapKj %tmp.2 240 19 24 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_240_28_242_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 241 12 ]
+            symbol [ lapKj %tmp.2 241 19 24 ];
             %tmp.2 = getv ? :lapKj;
             ret %tmp.2;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_239_28_241_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_240_28_242_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 243; @symbol_functiondef = [getTotalCarbsBurned,243,17,36]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 244; @symbol_functiondef = [getTotalCarbsBurned,244,17,36]; ]
         function getTotalCarbsBurned() {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_243_39_245_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 244 12 ]
-            symbol [ totalCarbsBurned %tmp.2 244 19 35 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_244_39_246_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 245 12 ]
+            symbol [ totalCarbsBurned %tmp.2 245 19 35 ];
             %tmp.2 = getv ? :totalCarbsBurned;
             ret %tmp.2;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_243_39_245_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_244_39_246_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 247; @symbol_functiondef = [getLapCarbsBurned,247,17,34]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 248; @symbol_functiondef = [getLapCarbsBurned,248,17,34]; ]
         function getLapCarbsBurned() {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_247_37_249_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 248 12 ]
-            symbol [ lapCarbsBurned %tmp.2 248 19 33 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_248_37_250_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 249 12 ]
+            symbol [ lapCarbsBurned %tmp.2 249 19 33 ];
             %tmp.2 = getv ? :lapCarbsBurned;
             ret %tmp.2;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_247_37_249_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_248_37_250_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 251; @symbol_functiondef = [resetCarbsBurnedSinceLastFuel,251,17,46]; ]
-        function resetCarbsBurnedSinceLastFuel() {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_251_49_253_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 252 12 ]
-            %tmp.1 = 0.0;
-            symbol [ carbsBurnedSinceLastFuel ? 252 12 36 ];
-            putv self :carbsBurnedSinceLastFuel %tmp.1;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_251_49_253_8_stop:
-        }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 259; @symbol_functiondef = [onLap,259,17,22]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc"; @line = 256; @symbol_functiondef = [onLap,256,17,22]; ]
         function onLap() {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_259_25_262_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 260 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_256_25_259_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 257 12 ]
             %tmp.1 = 0;
-            symbol [ lapKj ? 260 12 17 ];
+            symbol [ lapKj ? 257 12 17 ];
             putv self :lapKj %tmp.1;
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 261 12 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/FuelEngine.mc" 258 12 ]
             %tmp.2 = 0;
-            symbol [ lapCarbsBurned ? 261 12 26 ];
+            symbol [ lapCarbsBurned ? 258 12 26 ];
             putv self :lapCarbsBurned %tmp.2;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_259_25_262_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_FuelEngine_mc_256_25_259_8_stop:
         }
     }
 }

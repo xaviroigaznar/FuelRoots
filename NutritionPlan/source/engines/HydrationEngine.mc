@@ -16,7 +16,6 @@ module Engine {
 
         var totalFluidLossMl = 0.0;
         var lapFluidLossMl = 0.0;
-        var fluidLostSinceLastDrink = 0.0;
 
         // =====================================
         // TIMERS
@@ -65,7 +64,8 @@ module Engine {
             // =================================
             updateFluidLoss(
                 sweatRate,
-                deltaSeconds
+                deltaSeconds,
+                state
             );
 
             // =================================
@@ -92,7 +92,8 @@ module Engine {
 
         function updateFluidLoss(
             sweatRate,
-            deltaSeconds
+            deltaSeconds,
+            state
         ) {
 
             var lossIncrement =
@@ -102,7 +103,7 @@ module Engine {
             totalFluidLossMl +=
                 lossIncrement;
             
-            fluidLostSinceLastDrink += lossIncrement;
+            state.fluidLostSinceLastDrink += lossIncrement;
 
             lapFluidLossMl +=
                 lossIncrement;
@@ -114,40 +115,27 @@ module Engine {
 
         function calculateSweatRate(relativeIntensity, temperature) {
             // Base sweat rate
-            var rate = 500;
-
-            // Intensity scaling
-            rate += relativeIntensity * 700;
-
-            // =====================
-            // TEMPERATURE
-            // =====================
-
-            if (temperature != null) {
-
-                if (temperature > 20) {
-                    rate += 100;
+            var rate = 0;
+            if (relativeIntensity > 0) {
+                if (temperature != null) {
+                    rate = (weight * (0.004 + (0.008 * relativeIntensity)) * (1.0 + (0.02 * (temperature - 20.0)))) * 1000;
+                } else {
+                    rate = (weight * (0.004 + (0.008 * relativeIntensity))) * 1000;
                 }
-
-                if (temperature > 28) {
-                    rate += 200;
-                }
-
-                if (temperature > 35) {
-                    rate += 300;
+            } else {
+                if (temperature != null) {
+                    rate = (weight * 0.009 * (1.0 + (0.02 * (temperature - 20.0)))) * 1000;
+                } else {
+                    rate = (weight * 0.009) * 1000;
                 }
             }
 
             // =====================
             // BODY SIZE
             // =====================
-
-            // Weight scaling
-            rate += (weight - 70) * 2;
-
             // Clamp minimum
-            if (rate < 300) {
-                rate = 300;
+            if (rate < 125) {
+                rate = 125;
             }
 
             return rate;
@@ -180,10 +168,6 @@ module Engine {
     
         function getLapFluidLoss() {
             return lapFluidLossMl;
-        }
-
-        function resetFluidLostSinceLastDrink() {
-            fluidLostSinceLastDrink = 0.0;
         }
 
         // =====================================

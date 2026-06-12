@@ -6,7 +6,7 @@ module Session {
         // Constants
         // =========================
         const CARBS_THRESHOLD = 30;
-        const HYDRATION_THRESHOLD = 250;
+        const HYDRATION_THRESHOLD = 125;
 
         // =========================
         // Base Metrics
@@ -87,6 +87,8 @@ module Session {
         var alertText;
         var recommendedCarbs;
         var recommendedDrink;
+        var carbsBurnedSinceLastFuel = 0.0;
+        var fluidLostSinceLastDrink = 0.0;
 
         function initialize() {
 

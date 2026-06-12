@@ -175,152 +175,65 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHy
     }
     [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc"; @line = 67; @symbol_functiondef = [drawMainScreen,67,13,27]; @symbol_param<0> = [dc,67,28,30]; @symbol_param<1> = [state,67,32,37]; ]
     function drawMainScreen(dc, state) {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_67_39_113_4_start:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_67_39_85_4_start:
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" 69 8 ]
         %tmp.1 = lgetv %dc;
         symbol [ dc %tmp.1 69 8 10 ];
         symbol [ clear %tmp.2 69 11 16 ];
         %tmp.2 = getv function %tmp.1 :clear;
         invoke %tmp.1 %tmp.2();
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" 71 8 ]
-        [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_67_39_113_4_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_67_39_113_4_stop" ]
-        %width.1 = local;
-        symbol [ width %width.1 71 12 17 ];
-        %tmp.3 = lgetv %dc;
-        symbol [ dc %tmp.3 71 20 22 ];
-        symbol [ getWidth %tmp.4 71 23 31 ];
-        %tmp.4 = getv function %tmp.3 :getWidth;
-        %tmp.5 = invoke %tmp.3 %tmp.4();
-        lputv %width.1 %tmp.5;
-        symbol [ width %width.1 71 12 17 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" 72 8 ]
-        [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_67_39_113_4_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_67_39_113_4_stop" ]
-        %height.2 = local;
-        symbol [ height %height.2 72 12 18 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" 74 8 ]
+        symbol [ renderer %tmp.4 74 8 16 ];
+        %tmp.4 = getv ? :renderer;
+        symbol [ drawMainDashboard %tmp.5 74 17 34 ];
+        %tmp.5 = getv function %tmp.4 :drawMainDashboard;
         %tmp.6 = lgetv %dc;
-        symbol [ dc %tmp.6 72 21 23 ];
-        symbol [ getHeight %tmp.7 72 24 33 ];
-        %tmp.7 = getv function %tmp.6 :getHeight;
-        %tmp.8 = invoke %tmp.6 %tmp.7();
-        lputv %height.2 %tmp.8;
-        symbol [ height %height.2 72 12 18 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" 77 8 ]
-        [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_67_39_113_4_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_67_39_113_4_stop" ]
-        %topHeight.3 = local;
-        symbol [ topHeight %topHeight.3 77 12 21 ];
-        %tmp.9 = lgetv %height.2;
-        symbol [ height %tmp.9 78 13 19 ];
-        %tmp.10 = 50;
-        %tmp.11 = mul %tmp.9 %tmp.10;
-        %tmp.12 = 100;
-        %tmp.13 = div %tmp.11 %tmp.12;
-        lputv %topHeight.3 %tmp.13;
-        symbol [ topHeight %topHeight.3 77 12 21 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" 80 8 ]
-        [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_67_39_113_4_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_67_39_113_4_stop" ]
-        %bottomHeight.4 = local;
-        symbol [ bottomHeight %bottomHeight.4 80 12 24 ];
-        %tmp.14 = lgetv %height.2;
-        symbol [ height %tmp.14 81 12 18 ];
-        %tmp.15 = lgetv %topHeight.3;
-        symbol [ topHeight %tmp.15 81 21 30 ];
-        %tmp.16 = sub %tmp.14 %tmp.15;
-        lputv %bottomHeight.4 %tmp.16;
-        symbol [ bottomHeight %bottomHeight.4 80 12 24 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" 83 8 ]
-        [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_67_39_113_4_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_67_39_113_4_stop" ]
-        %boxWidth.5 = local;
-        symbol [ boxWidth %boxWidth.5 83 12 20 ];
-        %tmp.17 = lgetv %width.1;
-        symbol [ width %tmp.17 84 12 17 ];
-        %tmp.18 = 2;
-        %tmp.19 = div %tmp.17 %tmp.18;
-        lputv %boxWidth.5 %tmp.19;
-        symbol [ boxWidth %boxWidth.5 83 12 20 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" 93 8 ]
-        symbol [ renderer %tmp.21 93 8 16 ];
+        symbol [ dc %tmp.6 74 35 37 ];
+        %tmp.7 = lgetv %state;
+        symbol [ state %tmp.7 74 39 44 ];
+        invoke %tmp.4 %tmp.5(%tmp.6, %tmp.7);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" 79 8 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_79_8_84_8_if_stmt:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_79_12_79_82_begin:
+        %tmp.8 = lgetv %state;
+        symbol [ state %tmp.8 79 12 17 ];
+        symbol [ activeAlert %tmp.9 79 18 29 ];
+        %tmp.9 = getv %tmp.8 :activeAlert;
+        symbol [ Constants %tmp.11 79 33 42 ];
+        %tmp.11 = getv ? :Constants;
+        symbol [ AlertType %tmp.12 79 43 52 ];
+        %tmp.12 = getv %tmp.11 :AlertType;
+        symbol [ NONE %tmp.13 79 53 57 ];
+        %tmp.13 = getv %tmp.12 :NONE;
+        %tmp.14 = ne %tmp.9 %tmp.13;
+        bf %tmp.14 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_79_8_84_8_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_79_61_79_82_true:
+        %tmp.15 = lgetv %state;
+        symbol [ state %tmp.15 79 61 66 ];
+        symbol [ activeAlert %tmp.16 79 67 78 ];
+        %tmp.16 = getv %tmp.15 :activeAlert;
+        %tmp.17 = null;
+        %tmp.18 = ne %tmp.16 %tmp.17;
+        push %tmp.18;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_79_61_79_82_end:
+        %tmp.19 = phi [%tmp.14 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_79_12_79_82_begin] [%tmp.18 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_79_61_79_82_true] [%tmp.19 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_79_61_79_82_end];
+        bf %tmp.19 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_79_8_84_8_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_79_8_84_8_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_79_88_84_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" 80 12 ]
+        symbol [ renderer %tmp.21 80 12 20 ];
         %tmp.21 = getv ? :renderer;
-        symbol [ drawMainDashboard %tmp.22 93 17 34 ];
-        %tmp.22 = getv function %tmp.21 :drawMainDashboard;
+        symbol [ drawAlertScreen %tmp.22 80 21 36 ];
+        %tmp.22 = getv function %tmp.21 :drawAlertScreen;
         %tmp.23 = lgetv %dc;
-        symbol [ dc %tmp.23 93 35 37 ];
+        symbol [ dc %tmp.23 81 16 18 ];
         %tmp.24 = lgetv %state;
-        symbol [ state %tmp.24 93 39 44 ];
+        symbol [ state %tmp.24 82 16 21 ];
         invoke %tmp.21 %tmp.22(%tmp.23, %tmp.24);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" 98 8 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_98_8_112_8_if_stmt:
-        %tmp.25 = lgetv %state;
-        symbol [ state %tmp.25 98 12 17 ];
-        symbol [ activeAlert %tmp.26 98 18 29 ];
-        %tmp.26 = getv %tmp.25 :activeAlert;
-        symbol [ Constants %tmp.28 98 33 42 ];
-        %tmp.28 = getv ? :Constants;
-        symbol [ AlertType %tmp.29 98 43 52 ];
-        %tmp.29 = getv %tmp.28 :AlertType;
-        symbol [ FUEL %tmp.30 98 53 57 ];
-        %tmp.30 = getv %tmp.29 :FUEL;
-        %tmp.31 = eq %tmp.26 %tmp.30;
-        bf %tmp.31 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_98_8_112_8_if_false;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_98_8_112_8_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_98_59_105_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" 99 12 ]
-        symbol [ renderer %tmp.33 99 12 20 ];
-        %tmp.33 = getv ? :renderer;
-        symbol [ drawAlertOverlay %tmp.34 99 21 37 ];
-        %tmp.34 = getv function %tmp.33 :drawAlertOverlay;
-        %tmp.35 = lgetv %dc;
-        symbol [ dc %tmp.35 100 16 18 ];
-        %tmp.36 = "FUEL NOW";
-        %tmp.37 = lgetv %state;
-        symbol [ state %tmp.37 102 16 21 ];
-        symbol [ alertText %tmp.38 102 22 31 ];
-        %tmp.38 = getv %tmp.37 :alertText;
-        symbol [ Graphics %tmp.39 103 16 24 ];
-        %tmp.39 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLUE %tmp.40 103 25 35 ];
-        %tmp.40 = getv %tmp.39 :COLOR_BLUE;
-        invoke %tmp.33 %tmp.34(%tmp.35, %tmp.36, %tmp.38, %tmp.40);
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_98_59_105_8_stop:
-        goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_98_8_112_8_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_98_8_112_8_if_false:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" 105 15 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_105_15_112_8_if_stmt:
-        %tmp.41 = lgetv %state;
-        symbol [ state %tmp.41 105 19 24 ];
-        symbol [ activeAlert %tmp.42 105 25 36 ];
-        %tmp.42 = getv %tmp.41 :activeAlert;
-        symbol [ Constants %tmp.44 105 40 49 ];
-        %tmp.44 = getv ? :Constants;
-        symbol [ AlertType %tmp.45 105 50 59 ];
-        %tmp.45 = getv %tmp.44 :AlertType;
-        symbol [ DRINK %tmp.46 105 60 65 ];
-        %tmp.46 = getv %tmp.45 :DRINK;
-        %tmp.47 = eq %tmp.42 %tmp.46;
-        bf %tmp.47 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_105_15_112_8_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_105_15_112_8_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_105_67_112_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc" 106 12 ]
-        symbol [ renderer %tmp.49 106 12 20 ];
-        %tmp.49 = getv ? :renderer;
-        symbol [ drawAlertOverlay %tmp.50 106 21 37 ];
-        %tmp.50 = getv function %tmp.49 :drawAlertOverlay;
-        %tmp.51 = lgetv %dc;
-        symbol [ dc %tmp.51 107 16 18 ];
-        %tmp.52 = "DRINK NOW";
-        %tmp.53 = lgetv %state;
-        symbol [ state %tmp.53 109 16 21 ];
-        symbol [ alertText %tmp.54 109 22 31 ];
-        %tmp.54 = getv %tmp.53 :alertText;
-        symbol [ Graphics %tmp.55 110 16 24 ];
-        %tmp.55 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLUE %tmp.56 110 25 35 ];
-        %tmp.56 = getv %tmp.55 :COLOR_BLUE;
-        invoke %tmp.49 %tmp.50(%tmp.51, %tmp.52, %tmp.54, %tmp.56);
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_105_67_112_8_stop:
-        goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_105_15_112_8_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_105_15_112_8_if_end:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_98_8_112_8_if_end:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_67_39_113_4_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_79_88_84_8_stop:
+        goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_79_8_84_8_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_79_8_84_8_if_end:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_FuelHydrationField_mc_67_39_85_4_stop:
     }
 }
 [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/FuelHydrationField.mc"; @line = 1; ]

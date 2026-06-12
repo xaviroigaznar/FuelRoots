@@ -453,8 +453,8 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIR
             %tmp.15 = "CHO (g)";
             %tmp.16 = lgetv %state;
             symbol [ state %tmp.16 221 16 21 ];
-            symbol [ carbsDeficit %tmp.17 221 22 34 ];
-            %tmp.17 = getv %tmp.16 :carbsDeficit;
+            symbol [ carbsBurnedSinceLastFuel %tmp.17 221 22 46 ];
+            %tmp.17 = getv %tmp.16 :carbsBurnedSinceLastFuel;
             %tmp.18 = lgetv %state;
             symbol [ state %tmp.18 222 16 21 ];
             symbol [ CARBS_THRESHOLD %tmp.19 222 22 37 ];
@@ -490,8 +490,8 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIR
             %tmp.35 = "H2O (ml)";
             %tmp.36 = lgetv %state;
             symbol [ state %tmp.36 234 16 21 ];
-            symbol [ hydrationDeficitMl %tmp.37 234 22 40 ];
-            %tmp.37 = getv %tmp.36 :hydrationDeficitMl;
+            symbol [ fluidLostSinceLastDrink %tmp.37 234 22 45 ];
+            %tmp.37 = getv %tmp.36 :fluidLostSinceLastDrink;
             %tmp.38 = lgetv %state;
             symbol [ state %tmp.38 235 16 21 ];
             symbol [ HYDRATION_THRESHOLD %tmp.39 235 22 41 ];
@@ -509,9 +509,9 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIR
         }
         [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc"; @line = 241; @symbol_functiondef = [drawTank,241,17,25]; @symbol_param<0> = [dc,242,8,10]; @symbol_param<1> = [x,243,8,9]; @symbol_param<2> = [y,244,8,9]; @symbol_param<3> = [width,245,8,13]; @symbol_param<4> = [height,246,8,14]; @symbol_param<5> = [title,247,8,13]; @symbol_param<6> = [deficitValue,248,8,20]; @symbol_param<7> = [maxValue,249,8,16]; @symbol_param<8> = [fillColor,250,8,17]; @symbol_param<9> = [borderColor,251,8,19]; ]
         function drawTank(dc, x, y, width, height, title, deficitValue, maxValue, fillColor, borderColor) {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_346_8_start:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_350_8_start:
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 253 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_346_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_346_8_stop" ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_350_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_350_8_stop" ]
             %tankColor.1 = local;
             symbol [ tankColor %tankColor.1 253 16 25 ];
             %tmp.1 = lgetv %fillColor;
@@ -519,14 +519,14 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIR
             lputv %tankColor.1 %tmp.1;
             symbol [ tankColor %tankColor.1 253 16 25 ];
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 254 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_346_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_346_8_stop" ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_350_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_350_8_stop" ]
             %ratio.2 = local;
             symbol [ ratio %ratio.2 254 16 21 ];
             %tmp.2 = 0.0;
             lputv %ratio.2 %tmp.2;
             symbol [ ratio %ratio.2 254 16 21 ];
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 255 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_346_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_346_8_stop" ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_350_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_350_8_stop" ]
             %remaining.3 = local;
             symbol [ remaining %remaining.3 255 16 25 ];
             %tmp.3 = lgetv %maxValue;
@@ -536,637 +536,1150 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIR
             %tmp.5 = sub %tmp.3 %tmp.4;
             lputv %remaining.3 %tmp.5;
             symbol [ remaining %remaining.3 255 16 25 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 257 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_257_12_259_12_if_stmt:
-            %tmp.6 = lgetv %maxValue;
-            symbol [ maxValue %tmp.6 257 16 24 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 256 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_256_12_258_12_if_stmt:
+            %tmp.6 = lgetv %remaining.3;
+            symbol [ remaining %tmp.6 256 16 25 ];
             %tmp.7 = 0;
-            %tmp.8 = gt %tmp.6 %tmp.7;
-            bf %tmp.8 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_257_12_259_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_257_12_259_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_257_30_259_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 258 16 ]
-            %tmp.9 = 1;
-            %tmp.10 = lgetv %deficitValue;
-            symbol [ deficitValue %tmp.10 258 29 41 ];
-            %tmp.11 = lgetv %maxValue;
-            symbol [ maxValue %tmp.11 258 44 52 ];
-            %tmp.12 = div %tmp.10 %tmp.11;
-            %tmp.13 = sub %tmp.9 %tmp.12;
-            lputv %ratio.2 %tmp.13;
-            symbol [ ratio %ratio.2 258 16 21 ];
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_257_30_259_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_257_12_259_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_257_12_259_12_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 261 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_261_12_263_12_if_stmt:
-            %tmp.14 = lgetv %ratio.2;
-            symbol [ ratio %tmp.14 261 16 21 ];
-            %tmp.15 = 1.0;
-            %tmp.16 = gt %tmp.14 %tmp.15;
-            bf %tmp.16 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_261_12_263_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_261_12_263_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_261_29_263_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 262 16 ]
-            %tmp.17 = 1.0;
+            %tmp.8 = lte %tmp.6 %tmp.7;
+            bf %tmp.8 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_256_12_258_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_256_12_258_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_256_32_258_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 257 16 ]
+            %tmp.9 = 0;
+            lputv %remaining.3 %tmp.9;
+            symbol [ remaining %remaining.3 257 16 25 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_256_32_258_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_256_12_258_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_256_12_258_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 260 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_260_12_262_12_if_stmt:
+            %tmp.10 = lgetv %maxValue;
+            symbol [ maxValue %tmp.10 260 16 24 ];
+            %tmp.11 = 0;
+            %tmp.12 = gt %tmp.10 %tmp.11;
+            bf %tmp.12 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_260_12_262_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_260_12_262_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_260_30_262_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 261 16 ]
+            %tmp.13 = 1;
+            %tmp.14 = lgetv %deficitValue;
+            symbol [ deficitValue %tmp.14 261 29 41 ];
+            %tmp.15 = lgetv %maxValue;
+            symbol [ maxValue %tmp.15 261 44 52 ];
+            %tmp.16 = div %tmp.14 %tmp.15;
+            %tmp.17 = sub %tmp.13 %tmp.16;
             lputv %ratio.2 %tmp.17;
-            symbol [ ratio %ratio.2 262 16 21 ];
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_261_29_263_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_261_12_263_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_261_12_263_12_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 265 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_265_12_267_12_if_stmt:
+            symbol [ ratio %ratio.2 261 16 21 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_260_30_262_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_260_12_262_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_260_12_262_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 264 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_264_12_266_12_if_stmt:
             %tmp.18 = lgetv %ratio.2;
-            symbol [ ratio %tmp.18 265 16 21 ];
-            %tmp.19 = 0.0;
-            %tmp.20 = lt %tmp.18 %tmp.19;
-            bf %tmp.20 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_265_12_267_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_265_12_267_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_265_29_267_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 266 16 ]
-            %tmp.21 = 0.0;
+            symbol [ ratio %tmp.18 264 16 21 ];
+            %tmp.19 = 1.0;
+            %tmp.20 = gt %tmp.18 %tmp.19;
+            bf %tmp.20 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_264_12_266_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_264_12_266_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_264_29_266_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 265 16 ]
+            %tmp.21 = 1.0;
             lputv %ratio.2 %tmp.21;
-            symbol [ ratio %ratio.2 266 16 21 ];
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_265_29_267_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_265_12_267_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_265_12_267_12_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 269 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_269_12_280_12_if_stmt:
+            symbol [ ratio %ratio.2 265 16 21 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_264_29_266_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_264_12_266_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_264_12_266_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 268 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_268_12_270_12_if_stmt:
             %tmp.22 = lgetv %ratio.2;
-            symbol [ ratio %tmp.22 269 16 21 ];
-            %tmp.23 = 0.2;
-            %tmp.24 = lte %tmp.22 %tmp.23;
-            bf %tmp.24 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_269_12_280_12_if_false;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_269_12_280_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_269_30_273_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 271 16 ]
-            symbol [ Graphics %tmp.25 271 28 36 ];
-            %tmp.25 = getm $.Toybox.Graphics;
-            symbol [ COLOR_RED %tmp.26 271 37 46 ];
-            %tmp.26 = getv %tmp.25 :COLOR_RED;
-            lputv %tankColor.1 %tmp.26;
-            symbol [ tankColor %tankColor.1 271 16 25 ];
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_269_30_273_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_269_12_280_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_269_12_280_12_if_false:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 273 19 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_273_19_280_12_if_stmt:
-            %tmp.27 = lgetv %ratio.2;
-            symbol [ ratio %tmp.27 273 23 28 ];
-            %tmp.28 = 0.5;
-            %tmp.29 = lte %tmp.27 %tmp.28;
-            bf %tmp.29 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_273_19_280_12_if_false;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_273_19_280_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_273_37_277_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 275 16 ]
-            symbol [ Graphics %tmp.30 275 28 36 ];
-            %tmp.30 = getm $.Toybox.Graphics;
-            symbol [ COLOR_ORANGE %tmp.31 275 37 49 ];
-            %tmp.31 = getv %tmp.30 :COLOR_ORANGE;
-            lputv %tankColor.1 %tmp.31;
-            symbol [ tankColor %tankColor.1 275 16 25 ];
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_273_37_277_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_273_19_280_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_273_19_280_12_if_false:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 277 19 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_277_19_280_12_if_stmt:
-            %tmp.32 = lgetv %ratio.2;
-            symbol [ ratio %tmp.32 277 23 28 ];
-            %tmp.33 = 0.67;
-            %tmp.34 = lte %tmp.32 %tmp.33;
-            bf %tmp.34 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_277_19_280_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_277_19_280_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_277_38_280_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 279 16 ]
-            symbol [ Graphics %tmp.35 279 28 36 ];
-            %tmp.35 = getm $.Toybox.Graphics;
-            symbol [ COLOR_YELLOW %tmp.36 279 37 49 ];
-            %tmp.36 = getv %tmp.35 :COLOR_YELLOW;
-            lputv %tankColor.1 %tmp.36;
-            symbol [ tankColor %tankColor.1 279 16 25 ];
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_277_38_280_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_277_19_280_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_277_19_280_12_if_end:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_273_19_280_12_if_end:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_269_12_280_12_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 283 12 ]
-            %tmp.37 = lgetv %dc;
-            symbol [ dc %tmp.37 283 12 14 ];
-            symbol [ setColor %tmp.38 283 15 23 ];
-            %tmp.38 = getv function %tmp.37 :setColor;
-            %tmp.39 = lgetv %borderColor;
-            symbol [ borderColor %tmp.39 283 24 35 ];
-            symbol [ Graphics %tmp.40 283 37 45 ];
-            %tmp.40 = getm $.Toybox.Graphics;
-            symbol [ COLOR_TRANSPARENT %tmp.41 283 46 63 ];
-            %tmp.41 = getv %tmp.40 :COLOR_TRANSPARENT;
-            invoke %tmp.37 %tmp.38(%tmp.39, %tmp.41);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 285 12 ]
-            %tmp.42 = lgetv %dc;
-            symbol [ dc %tmp.42 285 12 14 ];
-            symbol [ drawRectangle %tmp.43 285 15 28 ];
-            %tmp.43 = getv function %tmp.42 :drawRectangle;
-            %tmp.44 = lgetv %x;
-            symbol [ x %tmp.44 286 16 17 ];
-            %tmp.45 = lgetv %y;
-            symbol [ y %tmp.45 287 16 17 ];
-            %tmp.46 = lgetv %width;
-            symbol [ width %tmp.46 288 16 21 ];
-            %tmp.47 = lgetv %height;
-            symbol [ height %tmp.47 289 16 22 ];
-            invoke %tmp.42 %tmp.43(%tmp.44, %tmp.45, %tmp.46, %tmp.47);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 293 12 ]
-            %tmp.48 = lgetv %dc;
-            symbol [ dc %tmp.48 293 12 14 ];
-            symbol [ drawText %tmp.49 293 15 23 ];
-            %tmp.49 = getv function %tmp.48 :drawText;
-            %tmp.50 = lgetv %x;
-            symbol [ x %tmp.50 294 16 17 ];
-            %tmp.51 = lgetv %width;
-            symbol [ width %tmp.51 294 20 25 ];
-            %tmp.52 = 2;
-            %tmp.53 = div %tmp.51 %tmp.52;
-            %tmp.54 = add %tmp.50 %tmp.53;
-            %tmp.55 = lgetv %y;
-            symbol [ y %tmp.55 295 16 17 ];
-            %tmp.56 = 5;
-            %tmp.57 = add %tmp.55 %tmp.56;
-            symbol [ Graphics %tmp.58 296 16 24 ];
-            %tmp.58 = getm $.Toybox.Graphics;
-            symbol [ FONT_TINY %tmp.59 296 25 34 ];
-            %tmp.59 = getv %tmp.58 :FONT_TINY;
-            %tmp.60 = lgetv %title;
-            symbol [ title %tmp.60 297 16 21 ];
-            symbol [ Graphics %tmp.61 298 16 24 ];
-            %tmp.61 = getm $.Toybox.Graphics;
-            symbol [ TEXT_JUSTIFY_CENTER %tmp.62 298 25 44 ];
-            %tmp.62 = getv %tmp.61 :TEXT_JUSTIFY_CENTER;
-            invoke %tmp.48 %tmp.49(%tmp.54, %tmp.57, %tmp.59, %tmp.60, %tmp.62);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 306 12 ]
-            %tmp.63 = lgetv %dc;
-            symbol [ dc %tmp.63 306 12 14 ];
-            symbol [ setColor %tmp.64 306 15 23 ];
-            %tmp.64 = getv function %tmp.63 :setColor;
-            %tmp.65 = lgetv %tankColor.1;
-            symbol [ tankColor %tmp.65 307 16 25 ];
-            %tmp.66 = lgetv %tankColor.1;
-            symbol [ tankColor %tmp.66 308 16 25 ];
-            invoke %tmp.63 %tmp.64(%tmp.65, %tmp.66);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 311 12 ]
-            %tmp.67 = lgetv %dc;
-            symbol [ dc %tmp.67 311 12 14 ];
-            symbol [ fillRectangle %tmp.68 311 15 28 ];
-            %tmp.68 = getv function %tmp.67 :fillRectangle;
-            %tmp.69 = lgetv %x;
-            symbol [ x %tmp.69 312 16 17 ];
-            %tmp.70 = 5;
-            %tmp.71 = add %tmp.69 %tmp.70;
-            %tmp.72 = lgetv %y;
-            symbol [ y %tmp.72 313 16 17 ];
-            %tmp.73 = 25;
-            %tmp.74 = add %tmp.72 %tmp.73;
-            %tmp.75 = lgetv %width;
-            symbol [ width %tmp.75 314 16 21 ];
-            %tmp.76 = 10;
-            %tmp.77 = sub %tmp.75 %tmp.76;
-            %tmp.78 = lgetv %height;
-            symbol [ height %tmp.78 315 16 22 ];
-            %tmp.79 = 30;
-            %tmp.80 = sub %tmp.78 %tmp.79;
-            invoke %tmp.67 %tmp.68(%tmp.71, %tmp.74, %tmp.77, %tmp.80);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 319 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_346_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_346_8_stop" ]
+            symbol [ ratio %tmp.22 268 16 21 ];
+            %tmp.23 = 0.0;
+            %tmp.24 = lt %tmp.22 %tmp.23;
+            bf %tmp.24 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_268_12_270_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_268_12_270_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_268_29_270_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 269 16 ]
+            %tmp.25 = 0.0;
+            lputv %ratio.2 %tmp.25;
+            symbol [ ratio %ratio.2 269 16 21 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_268_29_270_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_268_12_270_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_268_12_270_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 272 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_272_12_283_12_if_stmt:
+            %tmp.26 = lgetv %ratio.2;
+            symbol [ ratio %tmp.26 272 16 21 ];
+            %tmp.27 = 0.2;
+            %tmp.28 = lte %tmp.26 %tmp.27;
+            bf %tmp.28 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_272_12_283_12_if_false;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_272_12_283_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_272_30_276_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 274 16 ]
+            symbol [ Graphics %tmp.29 274 28 36 ];
+            %tmp.29 = getm $.Toybox.Graphics;
+            symbol [ COLOR_RED %tmp.30 274 37 46 ];
+            %tmp.30 = getv %tmp.29 :COLOR_RED;
+            lputv %tankColor.1 %tmp.30;
+            symbol [ tankColor %tankColor.1 274 16 25 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_272_30_276_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_272_12_283_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_272_12_283_12_if_false:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 276 19 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_276_19_283_12_if_stmt:
+            %tmp.31 = lgetv %ratio.2;
+            symbol [ ratio %tmp.31 276 23 28 ];
+            %tmp.32 = 0.5;
+            %tmp.33 = lte %tmp.31 %tmp.32;
+            bf %tmp.33 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_276_19_283_12_if_false;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_276_19_283_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_276_37_280_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 278 16 ]
+            symbol [ Graphics %tmp.34 278 28 36 ];
+            %tmp.34 = getm $.Toybox.Graphics;
+            symbol [ COLOR_ORANGE %tmp.35 278 37 49 ];
+            %tmp.35 = getv %tmp.34 :COLOR_ORANGE;
+            lputv %tankColor.1 %tmp.35;
+            symbol [ tankColor %tankColor.1 278 16 25 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_276_37_280_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_276_19_283_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_276_19_283_12_if_false:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 280 19 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_280_19_283_12_if_stmt:
+            %tmp.36 = lgetv %ratio.2;
+            symbol [ ratio %tmp.36 280 23 28 ];
+            %tmp.37 = 0.67;
+            %tmp.38 = lte %tmp.36 %tmp.37;
+            bf %tmp.38 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_280_19_283_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_280_19_283_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_280_38_283_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 282 16 ]
+            symbol [ Graphics %tmp.39 282 28 36 ];
+            %tmp.39 = getm $.Toybox.Graphics;
+            symbol [ COLOR_YELLOW %tmp.40 282 37 49 ];
+            %tmp.40 = getv %tmp.39 :COLOR_YELLOW;
+            lputv %tankColor.1 %tmp.40;
+            symbol [ tankColor %tankColor.1 282 16 25 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_280_38_283_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_280_19_283_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_280_19_283_12_if_end:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_276_19_283_12_if_end:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_272_12_283_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 286 12 ]
+            %tmp.41 = lgetv %dc;
+            symbol [ dc %tmp.41 286 12 14 ];
+            symbol [ setColor %tmp.42 286 15 23 ];
+            %tmp.42 = getv function %tmp.41 :setColor;
+            %tmp.43 = lgetv %borderColor;
+            symbol [ borderColor %tmp.43 286 24 35 ];
+            symbol [ Graphics %tmp.44 286 37 45 ];
+            %tmp.44 = getm $.Toybox.Graphics;
+            symbol [ COLOR_TRANSPARENT %tmp.45 286 46 63 ];
+            %tmp.45 = getv %tmp.44 :COLOR_TRANSPARENT;
+            invoke %tmp.41 %tmp.42(%tmp.43, %tmp.45);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 288 12 ]
+            %tmp.46 = lgetv %dc;
+            symbol [ dc %tmp.46 288 12 14 ];
+            symbol [ drawRoundedRectangle %tmp.47 288 15 35 ];
+            %tmp.47 = getv function %tmp.46 :drawRoundedRectangle;
+            %tmp.48 = lgetv %x;
+            symbol [ x %tmp.48 289 16 17 ];
+            %tmp.49 = lgetv %y;
+            symbol [ y %tmp.49 290 16 17 ];
+            %tmp.50 = lgetv %width;
+            symbol [ width %tmp.50 291 16 21 ];
+            %tmp.51 = lgetv %height;
+            symbol [ height %tmp.51 292 16 22 ];
+            %tmp.52 = 10;
+            invoke %tmp.46 %tmp.47(%tmp.48, %tmp.49, %tmp.50, %tmp.51, %tmp.52);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 297 12 ]
+            %tmp.53 = lgetv %dc;
+            symbol [ dc %tmp.53 297 12 14 ];
+            symbol [ drawText %tmp.54 297 15 23 ];
+            %tmp.54 = getv function %tmp.53 :drawText;
+            %tmp.55 = lgetv %x;
+            symbol [ x %tmp.55 298 16 17 ];
+            %tmp.56 = lgetv %width;
+            symbol [ width %tmp.56 298 20 25 ];
+            %tmp.57 = 2;
+            %tmp.58 = div %tmp.56 %tmp.57;
+            %tmp.59 = add %tmp.55 %tmp.58;
+            %tmp.60 = lgetv %y;
+            symbol [ y %tmp.60 299 16 17 ];
+            %tmp.61 = 5;
+            %tmp.62 = add %tmp.60 %tmp.61;
+            symbol [ Graphics %tmp.63 300 16 24 ];
+            %tmp.63 = getm $.Toybox.Graphics;
+            symbol [ FONT_TINY %tmp.64 300 25 34 ];
+            %tmp.64 = getv %tmp.63 :FONT_TINY;
+            %tmp.65 = lgetv %title;
+            symbol [ title %tmp.65 301 16 21 ];
+            symbol [ Graphics %tmp.66 302 16 24 ];
+            %tmp.66 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.67 302 25 44 ];
+            %tmp.67 = getv %tmp.66 :TEXT_JUSTIFY_CENTER;
+            invoke %tmp.53 %tmp.54(%tmp.59, %tmp.62, %tmp.64, %tmp.65, %tmp.67);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 310 12 ]
+            %tmp.68 = lgetv %dc;
+            symbol [ dc %tmp.68 310 12 14 ];
+            symbol [ setColor %tmp.69 310 15 23 ];
+            %tmp.69 = getv function %tmp.68 :setColor;
+            %tmp.70 = lgetv %tankColor.1;
+            symbol [ tankColor %tmp.70 311 16 25 ];
+            %tmp.71 = lgetv %tankColor.1;
+            symbol [ tankColor %tmp.71 312 16 25 ];
+            invoke %tmp.68 %tmp.69(%tmp.70, %tmp.71);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 315 12 ]
+            %tmp.72 = lgetv %dc;
+            symbol [ dc %tmp.72 315 12 14 ];
+            symbol [ fillRectangle %tmp.73 315 15 28 ];
+            %tmp.73 = getv function %tmp.72 :fillRectangle;
+            %tmp.74 = lgetv %x;
+            symbol [ x %tmp.74 316 16 17 ];
+            %tmp.75 = 5;
+            %tmp.76 = add %tmp.74 %tmp.75;
+            %tmp.77 = lgetv %y;
+            symbol [ y %tmp.77 317 16 17 ];
+            %tmp.78 = 25;
+            %tmp.79 = add %tmp.77 %tmp.78;
+            %tmp.80 = lgetv %width;
+            symbol [ width %tmp.80 318 16 21 ];
+            %tmp.81 = 10;
+            %tmp.82 = sub %tmp.80 %tmp.81;
+            %tmp.83 = lgetv %height;
+            symbol [ height %tmp.83 319 16 22 ];
+            %tmp.84 = 30;
+            %tmp.85 = sub %tmp.83 %tmp.84;
+            invoke %tmp.72 %tmp.73(%tmp.76, %tmp.79, %tmp.82, %tmp.85);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 323 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_350_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_350_8_stop" ]
             %emptyHeight.4 = local;
-            symbol [ emptyHeight %emptyHeight.4 319 16 27 ];
-            %tmp.81 = lgetv %height;
-            symbol [ height %tmp.81 319 31 37 ];
-            %tmp.82 = 30;
-            %tmp.83 = sub %tmp.81 %tmp.82;
-            %tmp.84 = 1.0;
-            %tmp.85 = lgetv %ratio.2;
-            symbol [ ratio %tmp.85 319 53 58 ];
-            %tmp.86 = sub %tmp.84 %tmp.85;
-            %tmp.87 = mul %tmp.83 %tmp.86;
-            lputv %emptyHeight.4 %tmp.87;
-            symbol [ emptyHeight %emptyHeight.4 319 16 27 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 321 12 ]
-            %tmp.88 = lgetv %dc;
-            symbol [ dc %tmp.88 321 12 14 ];
-            symbol [ setColor %tmp.89 321 15 23 ];
-            %tmp.89 = getv function %tmp.88 :setColor;
-            symbol [ Graphics %tmp.90 322 16 24 ];
-            %tmp.90 = getm $.Toybox.Graphics;
-            symbol [ COLOR_DK_GRAY %tmp.91 322 25 38 ];
-            %tmp.91 = getv %tmp.90 :COLOR_DK_GRAY;
-            symbol [ Graphics %tmp.92 323 16 24 ];
-            %tmp.92 = getm $.Toybox.Graphics;
-            symbol [ COLOR_DK_GRAY %tmp.93 323 25 38 ];
-            %tmp.93 = getv %tmp.92 :COLOR_DK_GRAY;
-            invoke %tmp.88 %tmp.89(%tmp.91, %tmp.93);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 326 12 ]
-            %tmp.94 = lgetv %dc;
-            symbol [ dc %tmp.94 326 12 14 ];
-            symbol [ fillRectangle %tmp.95 326 15 28 ];
-            %tmp.95 = getv function %tmp.94 :fillRectangle;
-            %tmp.96 = lgetv %x;
-            symbol [ x %tmp.96 327 16 17 ];
-            %tmp.97 = 5;
-            %tmp.98 = add %tmp.96 %tmp.97;
-            %tmp.99 = lgetv %y;
-            symbol [ y %tmp.99 328 16 17 ];
-            %tmp.100 = 25;
-            %tmp.101 = add %tmp.99 %tmp.100;
-            %tmp.102 = lgetv %width;
-            symbol [ width %tmp.102 329 16 21 ];
-            %tmp.103 = 10;
-            %tmp.104 = sub %tmp.102 %tmp.103;
-            %tmp.105 = lgetv %emptyHeight.4;
-            symbol [ emptyHeight %tmp.105 330 16 27 ];
-            invoke %tmp.94 %tmp.95(%tmp.98, %tmp.101, %tmp.104, %tmp.105);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 334 12 ]
-            %tmp.106 = lgetv %dc;
-            symbol [ dc %tmp.106 334 12 14 ];
-            symbol [ setColor %tmp.107 334 15 23 ];
-            %tmp.107 = getv function %tmp.106 :setColor;
-            symbol [ Graphics %tmp.108 335 16 24 ];
-            %tmp.108 = getm $.Toybox.Graphics;
-            symbol [ COLOR_WHITE %tmp.109 335 25 36 ];
-            %tmp.109 = getv %tmp.108 :COLOR_WHITE;
-            symbol [ Graphics %tmp.110 336 16 24 ];
-            %tmp.110 = getm $.Toybox.Graphics;
-            symbol [ COLOR_TRANSPARENT %tmp.111 336 25 42 ];
-            %tmp.111 = getv %tmp.110 :COLOR_TRANSPARENT;
-            invoke %tmp.106 %tmp.107(%tmp.109, %tmp.111);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 339 12 ]
-            %tmp.112 = lgetv %dc;
-            symbol [ dc %tmp.112 339 12 14 ];
-            symbol [ drawText %tmp.113 339 15 23 ];
-            %tmp.113 = getv function %tmp.112 :drawText;
-            %tmp.114 = lgetv %x;
-            symbol [ x %tmp.114 340 16 17 ];
-            %tmp.115 = lgetv %width;
-            symbol [ width %tmp.115 340 20 25 ];
-            %tmp.116 = 2;
-            %tmp.117 = div %tmp.115 %tmp.116;
-            %tmp.118 = add %tmp.114 %tmp.117;
-            %tmp.119 = lgetv %y;
-            symbol [ y %tmp.119 341 16 17 ];
-            %tmp.120 = lgetv %height;
-            symbol [ height %tmp.120 341 20 26 ];
+            symbol [ emptyHeight %emptyHeight.4 323 16 27 ];
+            %tmp.86 = lgetv %height;
+            symbol [ height %tmp.86 323 31 37 ];
+            %tmp.87 = 30;
+            %tmp.88 = sub %tmp.86 %tmp.87;
+            %tmp.89 = 1.0;
+            %tmp.90 = lgetv %ratio.2;
+            symbol [ ratio %tmp.90 323 53 58 ];
+            %tmp.91 = sub %tmp.89 %tmp.90;
+            %tmp.92 = mul %tmp.88 %tmp.91;
+            lputv %emptyHeight.4 %tmp.92;
+            symbol [ emptyHeight %emptyHeight.4 323 16 27 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 325 12 ]
+            %tmp.93 = lgetv %dc;
+            symbol [ dc %tmp.93 325 12 14 ];
+            symbol [ setColor %tmp.94 325 15 23 ];
+            %tmp.94 = getv function %tmp.93 :setColor;
+            symbol [ Graphics %tmp.95 326 16 24 ];
+            %tmp.95 = getm $.Toybox.Graphics;
+            symbol [ COLOR_DK_GRAY %tmp.96 326 25 38 ];
+            %tmp.96 = getv %tmp.95 :COLOR_DK_GRAY;
+            symbol [ Graphics %tmp.97 327 16 24 ];
+            %tmp.97 = getm $.Toybox.Graphics;
+            symbol [ COLOR_DK_GRAY %tmp.98 327 25 38 ];
+            %tmp.98 = getv %tmp.97 :COLOR_DK_GRAY;
+            invoke %tmp.93 %tmp.94(%tmp.96, %tmp.98);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 330 12 ]
+            %tmp.99 = lgetv %dc;
+            symbol [ dc %tmp.99 330 12 14 ];
+            symbol [ fillRectangle %tmp.100 330 15 28 ];
+            %tmp.100 = getv function %tmp.99 :fillRectangle;
+            %tmp.101 = lgetv %x;
+            symbol [ x %tmp.101 331 16 17 ];
+            %tmp.102 = 5;
+            %tmp.103 = add %tmp.101 %tmp.102;
+            %tmp.104 = lgetv %y;
+            symbol [ y %tmp.104 332 16 17 ];
+            %tmp.105 = 25;
+            %tmp.106 = add %tmp.104 %tmp.105;
+            %tmp.107 = lgetv %width;
+            symbol [ width %tmp.107 333 16 21 ];
+            %tmp.108 = 10;
+            %tmp.109 = sub %tmp.107 %tmp.108;
+            %tmp.110 = lgetv %emptyHeight.4;
+            symbol [ emptyHeight %tmp.110 334 16 27 ];
+            invoke %tmp.99 %tmp.100(%tmp.103, %tmp.106, %tmp.109, %tmp.110);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 338 12 ]
+            %tmp.111 = lgetv %dc;
+            symbol [ dc %tmp.111 338 12 14 ];
+            symbol [ setColor %tmp.112 338 15 23 ];
+            %tmp.112 = getv function %tmp.111 :setColor;
+            symbol [ Graphics %tmp.113 339 16 24 ];
+            %tmp.113 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.114 339 25 36 ];
+            %tmp.114 = getv %tmp.113 :COLOR_WHITE;
+            symbol [ Graphics %tmp.115 340 16 24 ];
+            %tmp.115 = getm $.Toybox.Graphics;
+            symbol [ COLOR_TRANSPARENT %tmp.116 340 25 42 ];
+            %tmp.116 = getv %tmp.115 :COLOR_TRANSPARENT;
+            invoke %tmp.111 %tmp.112(%tmp.114, %tmp.116);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 343 12 ]
+            %tmp.117 = lgetv %dc;
+            symbol [ dc %tmp.117 343 12 14 ];
+            symbol [ drawText %tmp.118 343 15 23 ];
+            %tmp.118 = getv function %tmp.117 :drawText;
+            %tmp.119 = lgetv %x;
+            symbol [ x %tmp.119 344 16 17 ];
+            %tmp.120 = lgetv %width;
+            symbol [ width %tmp.120 344 20 25 ];
             %tmp.121 = 2;
             %tmp.122 = div %tmp.120 %tmp.121;
             %tmp.123 = add %tmp.119 %tmp.122;
-            symbol [ Graphics %tmp.124 342 16 24 ];
-            %tmp.124 = getm $.Toybox.Graphics;
-            symbol [ FONT_LARGE %tmp.125 342 25 35 ];
-            %tmp.125 = getv %tmp.124 :FONT_LARGE;
-            %tmp.126 = lgetv %remaining.3;
-            symbol [ remaining %tmp.126 343 16 25 ];
-            symbol [ toNumber %tmp.127 343 26 34 ];
-            %tmp.127 = getv function %tmp.126 :toNumber;
-            %tmp.128 = invoke %tmp.126 %tmp.127();
-            symbol [ Graphics %tmp.129 344 16 24 ];
+            %tmp.124 = lgetv %y;
+            symbol [ y %tmp.124 345 16 17 ];
+            %tmp.125 = lgetv %height;
+            symbol [ height %tmp.125 345 20 26 ];
+            %tmp.126 = 2;
+            %tmp.127 = div %tmp.125 %tmp.126;
+            %tmp.128 = add %tmp.124 %tmp.127;
+            symbol [ Graphics %tmp.129 346 16 24 ];
             %tmp.129 = getm $.Toybox.Graphics;
-            symbol [ TEXT_JUSTIFY_CENTER %tmp.130 344 25 44 ];
-            %tmp.130 = getv %tmp.129 :TEXT_JUSTIFY_CENTER;
-            invoke %tmp.112 %tmp.113(%tmp.118, %tmp.123, %tmp.125, %tmp.128, %tmp.130);
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_346_8_stop:
+            symbol [ FONT_LARGE %tmp.130 346 25 35 ];
+            %tmp.130 = getv %tmp.129 :FONT_LARGE;
+            %tmp.131 = lgetv %remaining.3;
+            symbol [ remaining %tmp.131 347 16 25 ];
+            symbol [ toNumber %tmp.132 347 26 34 ];
+            %tmp.132 = getv function %tmp.131 :toNumber;
+            %tmp.133 = invoke %tmp.131 %tmp.132();
+            symbol [ Graphics %tmp.134 348 16 24 ];
+            %tmp.134 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.135 348 25 44 ];
+            %tmp.135 = getv %tmp.134 :TEXT_JUSTIFY_CENTER;
+            invoke %tmp.117 %tmp.118(%tmp.123, %tmp.128, %tmp.130, %tmp.133, %tmp.135);
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_252_10_350_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc"; @line = 348; @symbol_functiondef = [drawCountdownSection,348,17,37]; @symbol_param<0> = [dc,349,8,10]; @symbol_param<1> = [state,350,8,13]; @symbol_param<2> = [x,351,8,9]; @symbol_param<3> = [y,352,8,9]; @symbol_param<4> = [width,353,8,13]; @symbol_param<5> = [height,354,8,14]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc"; @line = 352; @symbol_functiondef = [drawCountdownSection,352,17,37]; @symbol_param<0> = [dc,353,8,10]; @symbol_param<1> = [state,354,8,13]; @symbol_param<2> = [x,355,8,9]; @symbol_param<3> = [y,356,8,9]; @symbol_param<4> = [width,357,8,13]; @symbol_param<5> = [height,358,8,14]; ]
         function drawCountdownSection(dc, state, x, y, width, height) {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_355_10_409_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 357 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_359_10_415_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 361 12 ]
             %tmp.1 = lgetv %dc;
-            symbol [ dc %tmp.1 357 12 14 ];
-            symbol [ setColor %tmp.2 357 15 23 ];
+            symbol [ dc %tmp.1 361 12 14 ];
+            symbol [ setColor %tmp.2 361 15 23 ];
             %tmp.2 = getv function %tmp.1 :setColor;
-            symbol [ Graphics %tmp.3 358 16 24 ];
+            symbol [ Graphics %tmp.3 362 16 24 ];
             %tmp.3 = getm $.Toybox.Graphics;
-            symbol [ COLOR_BLACK %tmp.4 358 25 36 ];
+            symbol [ COLOR_BLACK %tmp.4 362 25 36 ];
             %tmp.4 = getv %tmp.3 :COLOR_BLACK;
-            symbol [ Graphics %tmp.5 359 16 24 ];
+            symbol [ Graphics %tmp.5 363 16 24 ];
             %tmp.5 = getm $.Toybox.Graphics;
-            symbol [ COLOR_TRANSPARENT %tmp.6 359 25 42 ];
+            symbol [ COLOR_TRANSPARENT %tmp.6 363 25 42 ];
             %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
             invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 366 12 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 370 12 ]
             %tmp.7 = lgetv %dc;
-            symbol [ dc %tmp.7 366 12 14 ];
-            symbol [ drawText %tmp.8 366 15 23 ];
+            symbol [ dc %tmp.7 370 12 14 ];
+            symbol [ drawText %tmp.8 370 15 23 ];
             %tmp.8 = getv function %tmp.7 :drawText;
             %tmp.9 = lgetv %x;
-            symbol [ x %tmp.9 367 16 17 ];
+            symbol [ x %tmp.9 371 16 17 ];
             %tmp.10 = 10;
             %tmp.11 = add %tmp.9 %tmp.10;
             %tmp.12 = lgetv %y;
-            symbol [ y %tmp.12 368 16 17 ];
-            symbol [ Graphics %tmp.13 369 16 24 ];
+            symbol [ y %tmp.12 372 16 17 ];
+            symbol [ Graphics %tmp.13 373 16 24 ];
             %tmp.13 = getm $.Toybox.Graphics;
-            symbol [ FONT_MEDIUM %tmp.14 369 25 36 ];
+            symbol [ FONT_MEDIUM %tmp.14 373 25 36 ];
             %tmp.14 = getv %tmp.13 :FONT_MEDIUM;
-            %tmp.15 = "FUEL IN ";
+            %tmp.15 = "FUEL ";
             %tmp.16 = lgetv %state;
-            symbol [ state %tmp.16 371 18 23 ];
-            symbol [ nextFuelCountdownLabel %tmp.17 371 24 46 ];
-            %tmp.17 = getv %tmp.16 :nextFuelCountdownLabel;
-            %tmp.18 = add %tmp.15 %tmp.17;
-            symbol [ Graphics %tmp.19 372 16 24 ];
-            %tmp.19 = getm $.Toybox.Graphics;
-            symbol [ TEXT_JUSTIFY_LEFT %tmp.20 372 25 42 ];
-            %tmp.20 = getv %tmp.19 :TEXT_JUSTIFY_LEFT;
-            invoke %tmp.7 %tmp.8(%tmp.11, %tmp.12, %tmp.14, %tmp.18, %tmp.20);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 375 12 ]
-            %tmp.21 = lgetv %dc;
-            symbol [ dc %tmp.21 375 12 14 ];
-            symbol [ drawText %tmp.22 375 15 23 ];
-            %tmp.22 = getv function %tmp.21 :drawText;
-            %tmp.23 = lgetv %x;
-            symbol [ x %tmp.23 376 16 17 ];
-            %tmp.24 = 10;
-            %tmp.25 = add %tmp.23 %tmp.24;
-            %tmp.26 = lgetv %y;
-            symbol [ y %tmp.26 377 16 17 ];
-            %tmp.27 = 25;
-            %tmp.28 = add %tmp.26 %tmp.27;
-            symbol [ Graphics %tmp.29 378 16 24 ];
-            %tmp.29 = getm $.Toybox.Graphics;
-            symbol [ FONT_SMALL %tmp.30 378 25 35 ];
-            %tmp.30 = getv %tmp.29 :FONT_SMALL;
-            %tmp.31 = lgetv %state;
-            symbol [ state %tmp.31 379 16 21 ];
-            symbol [ recommendedCarbs %tmp.32 379 22 38 ];
-            %tmp.32 = getv %tmp.31 :recommendedCarbs;
-            symbol [ format %tmp.33 379 39 45 ];
-            %tmp.33 = getv function %tmp.32 :format;
-            %tmp.34 = "%.0f";
-            %tmp.35 = invoke %tmp.32 %tmp.33(%tmp.34);
-            %tmp.36 = "g • ";
-            %tmp.37 = add %tmp.35 %tmp.36;
-            %tmp.38 = lgetv %state;
-            symbol [ state %tmp.38 381 18 23 ];
-            symbol [ sessionCarbsIngested %tmp.39 381 24 44 ];
-            %tmp.39 = getv %tmp.38 :sessionCarbsIngested;
-            symbol [ format %tmp.40 381 45 51 ];
-            %tmp.40 = getv function %tmp.39 :format;
-            %tmp.41 = "%.0f";
-            %tmp.42 = invoke %tmp.39 %tmp.40(%tmp.41);
-            %tmp.43 = add %tmp.37 %tmp.42;
-            %tmp.44 = "g";
-            %tmp.45 = add %tmp.43 %tmp.44;
-            symbol [ Graphics %tmp.46 383 16 24 ];
-            %tmp.46 = getm $.Toybox.Graphics;
-            symbol [ TEXT_JUSTIFY_LEFT %tmp.47 383 25 42 ];
-            %tmp.47 = getv %tmp.46 :TEXT_JUSTIFY_LEFT;
-            invoke %tmp.21 %tmp.22(%tmp.25, %tmp.28, %tmp.30, %tmp.45, %tmp.47);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 390 12 ]
-            %tmp.48 = lgetv %dc;
-            symbol [ dc %tmp.48 390 12 14 ];
-            symbol [ drawText %tmp.49 390 15 23 ];
-            %tmp.49 = getv function %tmp.48 :drawText;
-            %tmp.50 = lgetv %x;
-            symbol [ x %tmp.50 391 16 17 ];
-            %tmp.51 = 10;
-            %tmp.52 = add %tmp.50 %tmp.51;
-            %tmp.53 = lgetv %y;
-            symbol [ y %tmp.53 392 16 17 ];
-            %tmp.54 = 50;
-            %tmp.55 = add %tmp.53 %tmp.54;
-            symbol [ Graphics %tmp.56 393 16 24 ];
-            %tmp.56 = getm $.Toybox.Graphics;
-            symbol [ FONT_MEDIUM %tmp.57 393 25 36 ];
-            %tmp.57 = getv %tmp.56 :FONT_MEDIUM;
-            %tmp.58 = "DRINK IN ";
-            %tmp.59 = lgetv %state;
-            symbol [ state %tmp.59 395 18 23 ];
-            symbol [ nextDrinkCountdownLabel %tmp.60 395 24 47 ];
-            %tmp.60 = getv %tmp.59 :nextDrinkCountdownLabel;
-            %tmp.61 = add %tmp.58 %tmp.60;
-            symbol [ Graphics %tmp.62 396 16 24 ];
-            %tmp.62 = getm $.Toybox.Graphics;
-            symbol [ TEXT_JUSTIFY_LEFT %tmp.63 396 25 42 ];
-            %tmp.63 = getv %tmp.62 :TEXT_JUSTIFY_LEFT;
-            invoke %tmp.48 %tmp.49(%tmp.52, %tmp.55, %tmp.57, %tmp.61, %tmp.63);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 399 12 ]
-            %tmp.64 = lgetv %dc;
-            symbol [ dc %tmp.64 399 12 14 ];
-            symbol [ drawText %tmp.65 399 15 23 ];
-            %tmp.65 = getv function %tmp.64 :drawText;
-            %tmp.66 = lgetv %x;
-            symbol [ x %tmp.66 400 16 17 ];
-            %tmp.67 = 10;
+            symbol [ state %tmp.16 375 18 23 ];
+            symbol [ recommendedCarbs %tmp.17 375 24 40 ];
+            %tmp.17 = getv %tmp.16 :recommendedCarbs;
+            symbol [ format %tmp.18 375 41 47 ];
+            %tmp.18 = getv function %tmp.17 :format;
+            %tmp.19 = "%.0f";
+            %tmp.20 = invoke %tmp.17 %tmp.18(%tmp.19);
+            %tmp.21 = add %tmp.15 %tmp.20;
+            %tmp.22 = "g IN ";
+            %tmp.23 = add %tmp.21 %tmp.22;
+            %tmp.24 = lgetv %state;
+            symbol [ state %tmp.24 377 18 23 ];
+            symbol [ nextFuelCountdownLabel %tmp.25 377 24 46 ];
+            %tmp.25 = getv %tmp.24 :nextFuelCountdownLabel;
+            %tmp.26 = add %tmp.23 %tmp.25;
+            symbol [ Graphics %tmp.27 378 16 24 ];
+            %tmp.27 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_LEFT %tmp.28 378 25 42 ];
+            %tmp.28 = getv %tmp.27 :TEXT_JUSTIFY_LEFT;
+            invoke %tmp.7 %tmp.8(%tmp.11, %tmp.12, %tmp.14, %tmp.26, %tmp.28);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 381 12 ]
+            %tmp.29 = lgetv %dc;
+            symbol [ dc %tmp.29 381 12 14 ];
+            symbol [ drawText %tmp.30 381 15 23 ];
+            %tmp.30 = getv function %tmp.29 :drawText;
+            %tmp.31 = lgetv %x;
+            symbol [ x %tmp.31 382 16 17 ];
+            %tmp.32 = 10;
+            %tmp.33 = add %tmp.31 %tmp.32;
+            %tmp.34 = lgetv %y;
+            symbol [ y %tmp.34 383 16 17 ];
+            %tmp.35 = 25;
+            %tmp.36 = add %tmp.34 %tmp.35;
+            symbol [ Graphics %tmp.37 384 16 24 ];
+            %tmp.37 = getm $.Toybox.Graphics;
+            symbol [ FONT_SMALL %tmp.38 384 25 35 ];
+            %tmp.38 = getv %tmp.37 :FONT_SMALL;
+            %tmp.39 = "Total taken ";
+            %tmp.40 = lgetv %state;
+            symbol [ state %tmp.40 386 18 23 ];
+            symbol [ sessionCarbsIngested %tmp.41 386 24 44 ];
+            %tmp.41 = getv %tmp.40 :sessionCarbsIngested;
+            symbol [ format %tmp.42 386 45 51 ];
+            %tmp.42 = getv function %tmp.41 :format;
+            %tmp.43 = "%.0f";
+            %tmp.44 = invoke %tmp.41 %tmp.42(%tmp.43);
+            %tmp.45 = add %tmp.39 %tmp.44;
+            %tmp.46 = "g";
+            %tmp.47 = add %tmp.45 %tmp.46;
+            symbol [ Graphics %tmp.48 388 16 24 ];
+            %tmp.48 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_LEFT %tmp.49 388 25 42 ];
+            %tmp.49 = getv %tmp.48 :TEXT_JUSTIFY_LEFT;
+            invoke %tmp.29 %tmp.30(%tmp.33, %tmp.36, %tmp.38, %tmp.47, %tmp.49);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 395 12 ]
+            %tmp.50 = lgetv %dc;
+            symbol [ dc %tmp.50 395 12 14 ];
+            symbol [ drawText %tmp.51 395 15 23 ];
+            %tmp.51 = getv function %tmp.50 :drawText;
+            %tmp.52 = lgetv %x;
+            symbol [ x %tmp.52 396 16 17 ];
+            %tmp.53 = 10;
+            %tmp.54 = add %tmp.52 %tmp.53;
+            %tmp.55 = lgetv %y;
+            symbol [ y %tmp.55 397 16 17 ];
+            %tmp.56 = 50;
+            %tmp.57 = add %tmp.55 %tmp.56;
+            symbol [ Graphics %tmp.58 398 16 24 ];
+            %tmp.58 = getm $.Toybox.Graphics;
+            symbol [ FONT_MEDIUM %tmp.59 398 25 36 ];
+            %tmp.59 = getv %tmp.58 :FONT_MEDIUM;
+            %tmp.60 = "DRINK ";
+            %tmp.61 = lgetv %state;
+            symbol [ state %tmp.61 400 18 23 ];
+            symbol [ recommendedDrink %tmp.62 400 24 40 ];
+            %tmp.62 = getv %tmp.61 :recommendedDrink;
+            symbol [ format %tmp.63 400 41 47 ];
+            %tmp.63 = getv function %tmp.62 :format;
+            %tmp.64 = "%.0f";
+            %tmp.65 = invoke %tmp.62 %tmp.63(%tmp.64);
+            %tmp.66 = add %tmp.60 %tmp.65;
+            %tmp.67 = "ml IN ";
             %tmp.68 = add %tmp.66 %tmp.67;
-            %tmp.69 = lgetv %y;
-            symbol [ y %tmp.69 401 16 17 ];
-            %tmp.70 = 75;
-            %tmp.71 = add %tmp.69 %tmp.70;
-            symbol [ Graphics %tmp.72 402 16 24 ];
+            %tmp.69 = lgetv %state;
+            symbol [ state %tmp.69 402 18 23 ];
+            symbol [ nextDrinkCountdownLabel %tmp.70 402 24 47 ];
+            %tmp.70 = getv %tmp.69 :nextDrinkCountdownLabel;
+            %tmp.71 = add %tmp.68 %tmp.70;
+            symbol [ Graphics %tmp.72 403 16 24 ];
             %tmp.72 = getm $.Toybox.Graphics;
-            symbol [ FONT_SMALL %tmp.73 402 25 35 ];
-            %tmp.73 = getv %tmp.72 :FONT_SMALL;
-            %tmp.74 = lgetv %state;
-            symbol [ state %tmp.74 403 16 21 ];
-            symbol [ recommendedDrink %tmp.75 403 22 38 ];
-            %tmp.75 = getv %tmp.74 :recommendedDrink;
-            symbol [ format %tmp.76 403 39 45 ];
-            %tmp.76 = getv function %tmp.75 :format;
-            %tmp.77 = "%.0f";
-            %tmp.78 = invoke %tmp.75 %tmp.76(%tmp.77);
-            %tmp.79 = "ml • ";
-            %tmp.80 = add %tmp.78 %tmp.79;
-            %tmp.81 = lgetv %state;
-            symbol [ state %tmp.81 405 18 23 ];
-            symbol [ sessionHydrationDrunk %tmp.82 405 24 45 ];
-            %tmp.82 = getv %tmp.81 :sessionHydrationDrunk;
-            symbol [ format %tmp.83 405 46 52 ];
-            %tmp.83 = getv function %tmp.82 :format;
-            %tmp.84 = "%.0f";
-            %tmp.85 = invoke %tmp.82 %tmp.83(%tmp.84);
-            %tmp.86 = add %tmp.80 %tmp.85;
-            %tmp.87 = "ml";
-            %tmp.88 = add %tmp.86 %tmp.87;
-            symbol [ Graphics %tmp.89 407 16 24 ];
-            %tmp.89 = getm $.Toybox.Graphics;
-            symbol [ TEXT_JUSTIFY_LEFT %tmp.90 407 25 42 ];
-            %tmp.90 = getv %tmp.89 :TEXT_JUSTIFY_LEFT;
-            invoke %tmp.64 %tmp.65(%tmp.68, %tmp.71, %tmp.73, %tmp.88, %tmp.90);
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_355_10_409_8_stop:
+            symbol [ TEXT_JUSTIFY_LEFT %tmp.73 403 25 42 ];
+            %tmp.73 = getv %tmp.72 :TEXT_JUSTIFY_LEFT;
+            invoke %tmp.50 %tmp.51(%tmp.54, %tmp.57, %tmp.59, %tmp.71, %tmp.73);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 406 12 ]
+            %tmp.74 = lgetv %dc;
+            symbol [ dc %tmp.74 406 12 14 ];
+            symbol [ drawText %tmp.75 406 15 23 ];
+            %tmp.75 = getv function %tmp.74 :drawText;
+            %tmp.76 = lgetv %x;
+            symbol [ x %tmp.76 407 16 17 ];
+            %tmp.77 = 10;
+            %tmp.78 = add %tmp.76 %tmp.77;
+            %tmp.79 = lgetv %y;
+            symbol [ y %tmp.79 408 16 17 ];
+            %tmp.80 = 75;
+            %tmp.81 = add %tmp.79 %tmp.80;
+            symbol [ Graphics %tmp.82 409 16 24 ];
+            %tmp.82 = getm $.Toybox.Graphics;
+            symbol [ FONT_SMALL %tmp.83 409 25 35 ];
+            %tmp.83 = getv %tmp.82 :FONT_SMALL;
+            %tmp.84 = "Total drunk ";
+            %tmp.85 = lgetv %state;
+            symbol [ state %tmp.85 411 18 23 ];
+            symbol [ sessionHydrationDrunk %tmp.86 411 24 45 ];
+            %tmp.86 = getv %tmp.85 :sessionHydrationDrunk;
+            symbol [ format %tmp.87 411 46 52 ];
+            %tmp.87 = getv function %tmp.86 :format;
+            %tmp.88 = "%.0f";
+            %tmp.89 = invoke %tmp.86 %tmp.87(%tmp.88);
+            %tmp.90 = add %tmp.84 %tmp.89;
+            %tmp.91 = "ml";
+            %tmp.92 = add %tmp.90 %tmp.91;
+            symbol [ Graphics %tmp.93 413 16 24 ];
+            %tmp.93 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_LEFT %tmp.94 413 25 42 ];
+            %tmp.94 = getv %tmp.93 :TEXT_JUSTIFY_LEFT;
+            invoke %tmp.74 %tmp.75(%tmp.78, %tmp.81, %tmp.83, %tmp.92, %tmp.94);
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_359_10_415_8_stop:
         }
-        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc"; @line = 411; @symbol_functiondef = [drawStatusSection,411,17,34]; @symbol_param<0> = [dc,412,8,10]; @symbol_param<1> = [state,413,8,13]; @symbol_param<2> = [x,414,8,9]; @symbol_param<3> = [y,415,8,9]; @symbol_param<4> = [width,416,8,13]; @symbol_param<5> = [height,417,8,14]; ]
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc"; @line = 417; @symbol_functiondef = [drawStatusSection,417,17,34]; @symbol_param<0> = [dc,418,8,10]; @symbol_param<1> = [state,419,8,13]; @symbol_param<2> = [x,420,8,9]; @symbol_param<3> = [y,421,8,9]; @symbol_param<4> = [width,422,8,13]; @symbol_param<5> = [height,423,8,14]; ]
         function drawStatusSection(dc, state, x, y, width, height) {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_418_10_474_8_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 420 12 ]
-            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_418_10_474_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_418_10_474_8_stop" ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_424_10_480_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 426 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_424_10_480_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_424_10_480_8_stop" ]
             %color.1 = local;
-            symbol [ color %color.1 420 16 21 ];
-            symbol [ Graphics %tmp.1 421 16 24 ];
+            symbol [ color %color.1 426 16 21 ];
+            symbol [ Graphics %tmp.1 427 16 24 ];
             %tmp.1 = getm $.Toybox.Graphics;
-            symbol [ COLOR_GREEN %tmp.2 421 25 36 ];
+            symbol [ COLOR_GREEN %tmp.2 427 25 36 ];
             %tmp.2 = getv %tmp.1 :COLOR_GREEN;
             lputv %color.1 %tmp.2;
-            symbol [ color %color.1 420 16 21 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 423 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_423_12_434_12_if_stmt:
+            symbol [ color %color.1 426 16 21 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 429 12 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_429_12_440_12_if_stmt:
             %tmp.3 = lgetv %state;
-            symbol [ state %tmp.3 423 16 21 ];
-            symbol [ bonkRisk %tmp.4 423 22 30 ];
+            symbol [ state %tmp.3 429 16 21 ];
+            symbol [ bonkRisk %tmp.4 429 22 30 ];
             %tmp.4 = getv %tmp.3 :bonkRisk;
             %tmp.5 = 60;
             %tmp.6 = gt %tmp.4 %tmp.5;
-            bf %tmp.6 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_423_12_434_12_if_false;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_423_12_434_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_423_37_428_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 425 16 ]
-            symbol [ Graphics %tmp.7 426 20 28 ];
+            bf %tmp.6 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_429_12_440_12_if_false;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_429_12_440_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_429_37_434_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 431 16 ]
+            symbol [ Graphics %tmp.7 432 20 28 ];
             %tmp.7 = getm $.Toybox.Graphics;
-            symbol [ COLOR_RED %tmp.8 426 29 38 ];
+            symbol [ COLOR_RED %tmp.8 432 29 38 ];
             %tmp.8 = getv %tmp.7 :COLOR_RED;
             lputv %color.1 %tmp.8;
-            symbol [ color %color.1 425 16 21 ];
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_423_37_428_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_423_12_434_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_423_12_434_12_if_false:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 428 19 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_428_19_434_12_if_stmt:
+            symbol [ color %color.1 431 16 21 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_429_37_434_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_429_12_440_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_429_12_440_12_if_false:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 434 19 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_434_19_440_12_if_stmt:
             %tmp.9 = lgetv %state;
-            symbol [ state %tmp.9 429 16 21 ];
-            symbol [ bonkRisk %tmp.10 429 22 30 ];
+            symbol [ state %tmp.9 435 16 21 ];
+            symbol [ bonkRisk %tmp.10 435 22 30 ];
             %tmp.10 = getv %tmp.9 :bonkRisk;
             %tmp.11 = 30;
             %tmp.12 = gt %tmp.10 %tmp.11;
-            bf %tmp.12 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_428_19_434_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_428_19_434_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_430_14_434_12_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 432 16 ]
-            symbol [ Graphics %tmp.13 433 20 28 ];
+            bf %tmp.12 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_434_19_440_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_434_19_440_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_436_14_440_12_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 438 16 ]
+            symbol [ Graphics %tmp.13 439 20 28 ];
             %tmp.13 = getm $.Toybox.Graphics;
-            symbol [ COLOR_ORANGE %tmp.14 433 29 41 ];
+            symbol [ COLOR_ORANGE %tmp.14 439 29 41 ];
             %tmp.14 = getv %tmp.13 :COLOR_ORANGE;
             lputv %color.1 %tmp.14;
-            symbol [ color %color.1 432 16 21 ];
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_430_14_434_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_428_19_434_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_428_19_434_12_if_end:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_423_12_434_12_if_end:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 436 12 ]
+            symbol [ color %color.1 438 16 21 ];
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_436_14_440_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_434_19_440_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_434_19_440_12_if_end:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_429_12_440_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 442 12 ]
             %tmp.15 = lgetv %dc;
-            symbol [ dc %tmp.15 436 12 14 ];
-            symbol [ setColor %tmp.16 436 15 23 ];
+            symbol [ dc %tmp.15 442 12 14 ];
+            symbol [ setColor %tmp.16 442 15 23 ];
             %tmp.16 = getv function %tmp.15 :setColor;
             %tmp.17 = lgetv %color.1;
-            symbol [ color %tmp.17 437 16 21 ];
-            symbol [ Graphics %tmp.18 438 16 24 ];
+            symbol [ color %tmp.17 443 16 21 ];
+            symbol [ Graphics %tmp.18 444 16 24 ];
             %tmp.18 = getm $.Toybox.Graphics;
-            symbol [ COLOR_TRANSPARENT %tmp.19 438 25 42 ];
+            symbol [ COLOR_TRANSPARENT %tmp.19 444 25 42 ];
             %tmp.19 = getv %tmp.18 :COLOR_TRANSPARENT;
             invoke %tmp.15 %tmp.16(%tmp.17, %tmp.19);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 441 12 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 447 12 ]
             %tmp.20 = lgetv %dc;
-            symbol [ dc %tmp.20 441 12 14 ];
-            symbol [ drawText %tmp.21 441 15 23 ];
+            symbol [ dc %tmp.20 447 12 14 ];
+            symbol [ drawText %tmp.21 447 15 23 ];
             %tmp.21 = getv function %tmp.20 :drawText;
             %tmp.22 = lgetv %width;
-            symbol [ width %tmp.22 442 16 21 ];
+            symbol [ width %tmp.22 448 16 21 ];
             %tmp.23 = 2;
             %tmp.24 = div %tmp.22 %tmp.23;
             %tmp.25 = lgetv %y;
-            symbol [ y %tmp.25 443 16 17 ];
-            symbol [ Graphics %tmp.26 444 16 24 ];
+            symbol [ y %tmp.25 449 16 17 ];
+            symbol [ Graphics %tmp.26 450 16 24 ];
             %tmp.26 = getm $.Toybox.Graphics;
-            symbol [ FONT_LARGE %tmp.27 444 25 35 ];
+            symbol [ FONT_LARGE %tmp.27 450 25 35 ];
             %tmp.27 = getv %tmp.26 :FONT_LARGE;
             %tmp.28 = lgetv %state;
-            symbol [ state %tmp.28 445 16 21 ];
-            symbol [ statusLabel %tmp.29 445 22 33 ];
+            symbol [ state %tmp.28 451 16 21 ];
+            symbol [ statusLabel %tmp.29 451 22 33 ];
             %tmp.29 = getv %tmp.28 :statusLabel;
-            symbol [ Graphics %tmp.30 446 16 24 ];
+            symbol [ Graphics %tmp.30 452 16 24 ];
             %tmp.30 = getm $.Toybox.Graphics;
-            symbol [ TEXT_JUSTIFY_CENTER %tmp.31 446 25 44 ];
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.31 452 25 44 ];
             %tmp.31 = getv %tmp.30 :TEXT_JUSTIFY_CENTER;
             invoke %tmp.20 %tmp.21(%tmp.24, %tmp.25, %tmp.27, %tmp.29, %tmp.31);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 449 12 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 455 12 ]
             %tmp.32 = lgetv %dc;
-            symbol [ dc %tmp.32 449 12 14 ];
-            symbol [ setColor %tmp.33 449 15 23 ];
+            symbol [ dc %tmp.32 455 12 14 ];
+            symbol [ setColor %tmp.33 455 15 23 ];
             %tmp.33 = getv function %tmp.32 :setColor;
-            symbol [ Graphics %tmp.34 450 16 24 ];
+            symbol [ Graphics %tmp.34 456 16 24 ];
             %tmp.34 = getm $.Toybox.Graphics;
-            symbol [ COLOR_BLACK %tmp.35 450 25 36 ];
+            symbol [ COLOR_BLACK %tmp.35 456 25 36 ];
             %tmp.35 = getv %tmp.34 :COLOR_BLACK;
-            symbol [ Graphics %tmp.36 451 16 24 ];
+            symbol [ Graphics %tmp.36 457 16 24 ];
             %tmp.36 = getm $.Toybox.Graphics;
-            symbol [ COLOR_TRANSPARENT %tmp.37 451 25 42 ];
+            symbol [ COLOR_TRANSPARENT %tmp.37 457 25 42 ];
             %tmp.37 = getv %tmp.36 :COLOR_TRANSPARENT;
             invoke %tmp.32 %tmp.33(%tmp.35, %tmp.37);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 454 12 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 460 12 ]
             %tmp.38 = lgetv %dc;
-            symbol [ dc %tmp.38 454 12 14 ];
-            symbol [ drawText %tmp.39 454 15 23 ];
+            symbol [ dc %tmp.38 460 12 14 ];
+            symbol [ drawText %tmp.39 460 15 23 ];
             %tmp.39 = getv function %tmp.38 :drawText;
             %tmp.40 = lgetv %width;
-            symbol [ width %tmp.40 455 16 21 ];
+            symbol [ width %tmp.40 461 16 21 ];
             %tmp.41 = 2;
             %tmp.42 = div %tmp.40 %tmp.41;
             %tmp.43 = lgetv %y;
-            symbol [ y %tmp.43 456 16 17 ];
+            symbol [ y %tmp.43 462 16 17 ];
             %tmp.44 = 40;
             %tmp.45 = add %tmp.43 %tmp.44;
-            symbol [ Graphics %tmp.46 457 16 24 ];
+            symbol [ Graphics %tmp.46 463 16 24 ];
             %tmp.46 = getm $.Toybox.Graphics;
-            symbol [ FONT_SMALL %tmp.47 457 25 35 ];
+            symbol [ FONT_SMALL %tmp.47 463 25 35 ];
             %tmp.47 = getv %tmp.46 :FONT_SMALL;
             %tmp.48 = "Fatigue ";
             %tmp.49 = lgetv %state;
-            symbol [ state %tmp.49 459 18 23 ];
-            symbol [ fatiguePercent %tmp.50 459 24 38 ];
+            symbol [ state %tmp.49 465 18 23 ];
+            symbol [ fatiguePercent %tmp.50 465 24 38 ];
             %tmp.50 = getv %tmp.49 :fatiguePercent;
             %tmp.51 = add %tmp.48 %tmp.50;
             %tmp.52 = " • Bonk risk ";
             %tmp.53 = add %tmp.51 %tmp.52;
             %tmp.54 = lgetv %state;
-            symbol [ state %tmp.54 461 18 23 ];
-            symbol [ bonkRisk %tmp.55 461 24 32 ];
+            symbol [ state %tmp.54 467 18 23 ];
+            symbol [ bonkRisk %tmp.55 467 24 32 ];
             %tmp.55 = getv %tmp.54 :bonkRisk;
-            symbol [ format %tmp.56 461 33 39 ];
+            symbol [ format %tmp.56 467 33 39 ];
             %tmp.56 = getv function %tmp.55 :format;
             %tmp.57 = "%.0f";
             %tmp.58 = invoke %tmp.55 %tmp.56(%tmp.57);
             %tmp.59 = add %tmp.53 %tmp.58;
             %tmp.60 = "%";
             %tmp.61 = add %tmp.59 %tmp.60;
-            symbol [ Graphics %tmp.62 463 16 24 ];
+            symbol [ Graphics %tmp.62 469 16 24 ];
             %tmp.62 = getm $.Toybox.Graphics;
-            symbol [ TEXT_JUSTIFY_CENTER %tmp.63 463 25 44 ];
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.63 469 25 44 ];
             %tmp.63 = getv %tmp.62 :TEXT_JUSTIFY_CENTER;
             invoke %tmp.38 %tmp.39(%tmp.42, %tmp.45, %tmp.47, %tmp.61, %tmp.63);
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 466 12 ]
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 472 12 ]
             %tmp.64 = lgetv %dc;
-            symbol [ dc %tmp.64 466 12 14 ];
-            symbol [ drawText %tmp.65 466 15 23 ];
+            symbol [ dc %tmp.64 472 12 14 ];
+            symbol [ drawText %tmp.65 472 15 23 ];
             %tmp.65 = getv function %tmp.64 :drawText;
             %tmp.66 = lgetv %width;
-            symbol [ width %tmp.66 467 16 21 ];
+            symbol [ width %tmp.66 473 16 21 ];
             %tmp.67 = 2;
             %tmp.68 = div %tmp.66 %tmp.67;
             %tmp.69 = lgetv %y;
-            symbol [ y %tmp.69 468 16 17 ];
+            symbol [ y %tmp.69 474 16 17 ];
             %tmp.70 = 70;
             %tmp.71 = add %tmp.69 %tmp.70;
-            symbol [ Graphics %tmp.72 469 16 24 ];
+            symbol [ Graphics %tmp.72 475 16 24 ];
             %tmp.72 = getm $.Toybox.Graphics;
-            symbol [ FONT_SMALL %tmp.73 469 25 35 ];
+            symbol [ FONT_SMALL %tmp.73 475 25 35 ];
             %tmp.73 = getv %tmp.72 :FONT_SMALL;
             %tmp.74 = "Bonk time ";
             %tmp.75 = lgetv %state;
-            symbol [ state %tmp.75 471 18 23 ];
-            symbol [ bonkTimeLabel %tmp.76 471 24 37 ];
+            symbol [ state %tmp.75 477 18 23 ];
+            symbol [ bonkTimeLabel %tmp.76 477 24 37 ];
             %tmp.76 = getv %tmp.75 :bonkTimeLabel;
             %tmp.77 = add %tmp.74 %tmp.76;
-            symbol [ Graphics %tmp.78 472 16 24 ];
+            symbol [ Graphics %tmp.78 478 16 24 ];
             %tmp.78 = getm $.Toybox.Graphics;
-            symbol [ TEXT_JUSTIFY_CENTER %tmp.79 472 25 44 ];
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.79 478 25 44 ];
             %tmp.79 = getv %tmp.78 :TEXT_JUSTIFY_CENTER;
             invoke %tmp.64 %tmp.65(%tmp.68, %tmp.71, %tmp.73, %tmp.77, %tmp.79);
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_418_10_474_8_stop:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_424_10_480_8_stop:
+        }
+        [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc"; @line = 482; @symbol_functiondef = [drawAlertScreen,482,17,32]; @symbol_param<0> = [dc,483,12,14]; @symbol_param<1> = [state,484,12,17]; ]
+        function drawAlertScreen(dc, state) {
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 487 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop" ]
+            %width.1 = local;
+            symbol [ width %width.1 487 16 21 ];
+            %tmp.1 = lgetv %dc;
+            symbol [ dc %tmp.1 487 24 26 ];
+            symbol [ getWidth %tmp.2 487 27 35 ];
+            %tmp.2 = getv function %tmp.1 :getWidth;
+            %tmp.3 = invoke %tmp.1 %tmp.2();
+            lputv %width.1 %tmp.3;
+            symbol [ width %width.1 487 16 21 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 488 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop" ]
+            %height.2 = local;
+            symbol [ height %height.2 488 16 22 ];
+            %tmp.4 = lgetv %dc;
+            symbol [ dc %tmp.4 488 25 27 ];
+            symbol [ getHeight %tmp.5 488 28 37 ];
+            %tmp.5 = getv function %tmp.4 :getHeight;
+            %tmp.6 = invoke %tmp.4 %tmp.5();
+            lputv %height.2 %tmp.6;
+            symbol [ height %height.2 488 16 22 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 490 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop" ]
+            %bgColor.3 = local;
+            symbol [ bgColor %bgColor.3 490 16 23 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 491 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop" ]
+            %actionText.4 = local;
+            symbol [ actionText %actionText.4 491 16 26 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 492 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop" ]
+            %amountText.5 = local;
+            symbol [ amountText %amountText.5 492 16 26 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 493 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop" ]
+            %unitText.6 = local;
+            symbol [ unitText %unitText.6 493 16 24 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 494 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop" ]
+            %detailText.7 = local;
+            symbol [ detailText %detailText.7 494 16 26 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 496 12 ]
+            %tmp.7 = lgetv %state;
+            symbol [ state %tmp.7 496 20 25 ];
+            symbol [ activeAlert %tmp.8 496 26 37 ];
+            %tmp.8 = getv %tmp.7 :activeAlert;
+            push %tmp.8;
+            switch %tmp.8 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_496_12_537_12_switchStmtEnd;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_496_12_537_12_switchStmtBegin:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 498 16 ]
+            %tmp.9 = dup %tmp.8;
+            symbol [ Constants %tmp.11 498 21 30 ];
+            %tmp.11 = getv ? :Constants;
+            symbol [ AlertType %tmp.12 498 31 40 ];
+            %tmp.12 = getv %tmp.11 :AlertType;
+            symbol [ DRINK %tmp.13 498 41 46 ];
+            %tmp.13 = getv %tmp.12 :DRINK;
+            %tmp.14 = getv function %tmp.9 :equals;
+            %tmp.15 = invoke %tmp.9 %tmp.14 (%tmp.13);
+            bt %tmp.15 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_498_16_514_25_switchCase;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 516 16 ]
+            %tmp.16 = dup %tmp.8;
+            symbol [ Constants %tmp.18 516 21 30 ];
+            %tmp.18 = getv ? :Constants;
+            symbol [ AlertType %tmp.19 516 31 40 ];
+            %tmp.19 = getv %tmp.18 :AlertType;
+            symbol [ FUEL %tmp.20 516 41 45 ];
+            %tmp.20 = getv %tmp.19 :FUEL;
+            %tmp.21 = getv function %tmp.16 :equals;
+            %tmp.22 = invoke %tmp.16 %tmp.21 (%tmp.20);
+            bt %tmp.22 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_516_16_533_25_switchCase;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 535 16 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_496_12_537_12_switchStmtDefault:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_496_12_537_12_defaultCodeBegin;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_498_16_514_25_switchCase:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 500 20 ]
+            symbol [ Graphics %tmp.23 500 30 38 ];
+            %tmp.23 = getm $.Toybox.Graphics;
+            symbol [ COLOR_BLUE %tmp.24 500 39 49 ];
+            %tmp.24 = getv %tmp.23 :COLOR_BLUE;
+            lputv %bgColor.3 %tmp.24;
+            symbol [ bgColor %bgColor.3 500 20 27 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 502 20 ]
+            %tmp.25 = "DRINK";
+            lputv %actionText.4 %tmp.25;
+            symbol [ actionText %actionText.4 502 20 30 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 504 20 ]
+            %tmp.26 = lgetv %state;
+            symbol [ state %tmp.26 505 24 29 ];
+            symbol [ recommendedDrink %tmp.27 505 30 46 ];
+            %tmp.27 = getv %tmp.26 :recommendedDrink;
+            symbol [ format %tmp.28 506 25 31 ];
+            %tmp.28 = getv function %tmp.27 :format;
+            %tmp.29 = "%.0f";
+            %tmp.30 = invoke %tmp.27 %tmp.28(%tmp.29);
+            lputv %amountText.5 %tmp.30;
+            symbol [ amountText %amountText.5 504 20 30 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 508 20 ]
+            %tmp.31 = "ml";
+            lputv %unitText.6 %tmp.31;
+            symbol [ unitText %unitText.6 508 20 28 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 510 20 ]
+            %tmp.32 = lgetv %amountText.5;
+            symbol [ amountText %tmp.32 511 24 34 ];
+            %tmp.33 = "ml WATER";
+            %tmp.34 = add %tmp.32 %tmp.33;
+            lputv %detailText.7 %tmp.34;
+            symbol [ detailText %detailText.7 510 20 30 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 514 20 ]
+            goto break @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_496_12_537_12_switchStmtEnd;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_516_16_533_25_switchCase:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 518 20 ]
+            symbol [ Graphics %tmp.35 519 24 32 ];
+            %tmp.35 = getm $.Toybox.Graphics;
+            symbol [ COLOR_ORANGE %tmp.36 519 33 45 ];
+            %tmp.36 = getv %tmp.35 :COLOR_ORANGE;
+            lputv %bgColor.3 %tmp.36;
+            symbol [ bgColor %bgColor.3 518 20 27 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 521 20 ]
+            %tmp.37 = "FUEL";
+            lputv %actionText.4 %tmp.37;
+            symbol [ actionText %actionText.4 521 20 30 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 523 20 ]
+            %tmp.38 = lgetv %state;
+            symbol [ state %tmp.38 524 24 29 ];
+            symbol [ recommendedCarbs %tmp.39 524 30 46 ];
+            %tmp.39 = getv %tmp.38 :recommendedCarbs;
+            symbol [ format %tmp.40 525 25 31 ];
+            %tmp.40 = getv function %tmp.39 :format;
+            %tmp.41 = "%.0f";
+            %tmp.42 = invoke %tmp.39 %tmp.40(%tmp.41);
+            lputv %amountText.5 %tmp.42;
+            symbol [ amountText %amountText.5 523 20 30 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 527 20 ]
+            %tmp.43 = "g";
+            lputv %unitText.6 %tmp.43;
+            symbol [ unitText %unitText.6 527 20 28 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 529 20 ]
+            %tmp.44 = lgetv %amountText.5;
+            symbol [ amountText %tmp.44 530 24 34 ];
+            %tmp.45 = "g CARBS";
+            %tmp.46 = add %tmp.44 %tmp.45;
+            lputv %detailText.7 %tmp.46;
+            symbol [ detailText %detailText.7 529 20 30 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 533 20 ]
+            goto break @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_496_12_537_12_switchStmtEnd;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_535_16_536_26_switchCase:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_496_12_537_12_defaultCodeBegin:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 536 20 ]
+            ret ?;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_496_12_537_12_switchStmtEnd:
+            pop;
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 543 12 ]
+            %tmp.47 = lgetv %dc;
+            symbol [ dc %tmp.47 543 12 14 ];
+            symbol [ setColor %tmp.48 543 15 23 ];
+            %tmp.48 = getv function %tmp.47 :setColor;
+            symbol [ Graphics %tmp.49 544 16 24 ];
+            %tmp.49 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.50 544 25 36 ];
+            %tmp.50 = getv %tmp.49 :COLOR_WHITE;
+            %tmp.51 = lgetv %bgColor.3;
+            symbol [ bgColor %tmp.51 545 16 23 ];
+            invoke %tmp.47 %tmp.48(%tmp.50, %tmp.51);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 548 12 ]
+            %tmp.52 = lgetv %dc;
+            symbol [ dc %tmp.52 548 12 14 ];
+            symbol [ fillRectangle %tmp.53 548 15 28 ];
+            %tmp.53 = getv function %tmp.52 :fillRectangle;
+            %tmp.54 = 0;
+            %tmp.55 = 0;
+            %tmp.56 = lgetv %width.1;
+            symbol [ width %tmp.56 551 16 21 ];
+            %tmp.57 = lgetv %height.2;
+            symbol [ height %tmp.57 552 16 22 ];
+            invoke %tmp.52 %tmp.53(%tmp.54, %tmp.55, %tmp.56, %tmp.57);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 559 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop" ]
+            %circleRadius.8 = local;
+            symbol [ circleRadius %circleRadius.8 559 16 28 ];
+            %tmp.58 = lgetv %height.2;
+            symbol [ height %tmp.58 559 31 37 ];
+            %tmp.59 = 6;
+            %tmp.60 = div %tmp.58 %tmp.59;
+            lputv %circleRadius.8 %tmp.60;
+            symbol [ circleRadius %circleRadius.8 559 16 28 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 561 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop" ]
+            %circleX.9 = local;
+            symbol [ circleX %circleX.9 561 16 23 ];
+            %tmp.61 = lgetv %width.1;
+            symbol [ width %tmp.61 562 16 21 ];
+            %tmp.62 = 2;
+            %tmp.63 = div %tmp.61 %tmp.62;
+            lputv %circleX.9 %tmp.63;
+            symbol [ circleX %circleX.9 561 16 23 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 564 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop" ]
+            %circleY.10 = local;
+            symbol [ circleY %circleY.10 564 16 23 ];
+            %tmp.64 = lgetv %height.2;
+            symbol [ height %tmp.64 565 16 22 ];
+            %tmp.65 = 4;
+            %tmp.66 = div %tmp.64 %tmp.65;
+            lputv %circleY.10 %tmp.66;
+            symbol [ circleY %circleY.10 564 16 23 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 567 12 ]
+            %tmp.67 = lgetv %dc;
+            symbol [ dc %tmp.67 567 12 14 ];
+            symbol [ setColor %tmp.68 567 15 23 ];
+            %tmp.68 = getv function %tmp.67 :setColor;
+            symbol [ Graphics %tmp.69 568 16 24 ];
+            %tmp.69 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.70 568 25 36 ];
+            %tmp.70 = getv %tmp.69 :COLOR_WHITE;
+            symbol [ Graphics %tmp.71 569 16 24 ];
+            %tmp.71 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.72 569 25 36 ];
+            %tmp.72 = getv %tmp.71 :COLOR_WHITE;
+            invoke %tmp.67 %tmp.68(%tmp.70, %tmp.72);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 572 12 ]
+            %tmp.73 = lgetv %dc;
+            symbol [ dc %tmp.73 572 12 14 ];
+            symbol [ fillCircle %tmp.74 572 15 25 ];
+            %tmp.74 = getv function %tmp.73 :fillCircle;
+            %tmp.75 = lgetv %circleX.9;
+            symbol [ circleX %tmp.75 573 16 23 ];
+            %tmp.76 = lgetv %circleY.10;
+            symbol [ circleY %tmp.76 574 16 23 ];
+            %tmp.77 = lgetv %circleRadius.8;
+            symbol [ circleRadius %tmp.77 575 16 28 ];
+            %tmp.78 = 4;
+            %tmp.79 = add %tmp.77 %tmp.78;
+            invoke %tmp.73 %tmp.74(%tmp.75, %tmp.76, %tmp.79);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 578 12 ]
+            %tmp.80 = lgetv %dc;
+            symbol [ dc %tmp.80 578 12 14 ];
+            symbol [ setColor %tmp.81 578 15 23 ];
+            %tmp.81 = getv function %tmp.80 :setColor;
+            symbol [ Graphics %tmp.82 579 16 24 ];
+            %tmp.82 = getm $.Toybox.Graphics;
+            symbol [ COLOR_BLACK %tmp.83 579 25 36 ];
+            %tmp.83 = getv %tmp.82 :COLOR_BLACK;
+            symbol [ Graphics %tmp.84 580 16 24 ];
+            %tmp.84 = getm $.Toybox.Graphics;
+            symbol [ COLOR_BLACK %tmp.85 580 25 36 ];
+            %tmp.85 = getv %tmp.84 :COLOR_BLACK;
+            invoke %tmp.80 %tmp.81(%tmp.83, %tmp.85);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 583 12 ]
+            %tmp.86 = lgetv %dc;
+            symbol [ dc %tmp.86 583 12 14 ];
+            symbol [ fillCircle %tmp.87 583 15 25 ];
+            %tmp.87 = getv function %tmp.86 :fillCircle;
+            %tmp.88 = lgetv %circleX.9;
+            symbol [ circleX %tmp.88 584 16 23 ];
+            %tmp.89 = lgetv %circleY.10;
+            symbol [ circleY %tmp.89 585 16 23 ];
+            %tmp.90 = lgetv %circleRadius.8;
+            symbol [ circleRadius %tmp.90 586 16 28 ];
+            invoke %tmp.86 %tmp.87(%tmp.88, %tmp.89, %tmp.90);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 593 12 ]
+            %tmp.91 = lgetv %dc;
+            symbol [ dc %tmp.91 593 12 14 ];
+            symbol [ setColor %tmp.92 593 15 23 ];
+            %tmp.92 = getv function %tmp.91 :setColor;
+            symbol [ Graphics %tmp.93 594 16 24 ];
+            %tmp.93 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.94 594 25 36 ];
+            %tmp.94 = getv %tmp.93 :COLOR_WHITE;
+            symbol [ Graphics %tmp.95 595 16 24 ];
+            %tmp.95 = getm $.Toybox.Graphics;
+            symbol [ COLOR_TRANSPARENT %tmp.96 595 25 42 ];
+            %tmp.96 = getv %tmp.95 :COLOR_TRANSPARENT;
+            invoke %tmp.91 %tmp.92(%tmp.94, %tmp.96);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 598 12 ]
+            %tmp.97 = lgetv %dc;
+            symbol [ dc %tmp.97 598 12 14 ];
+            symbol [ drawText %tmp.98 598 15 23 ];
+            %tmp.98 = getv function %tmp.97 :drawText;
+            %tmp.99 = lgetv %circleX.9;
+            symbol [ circleX %tmp.99 599 16 23 ];
+            %tmp.100 = lgetv %circleY.10;
+            symbol [ circleY %tmp.100 600 16 23 ];
+            %tmp.101 = 35;
+            %tmp.102 = sub %tmp.100 %tmp.101;
+            symbol [ Graphics %tmp.103 601 16 24 ];
+            %tmp.103 = getm $.Toybox.Graphics;
+            symbol [ FONT_SMALL %tmp.104 601 25 35 ];
+            %tmp.104 = getv %tmp.103 :FONT_SMALL;
+            %tmp.105 = lgetv %actionText.4;
+            symbol [ actionText %tmp.105 602 16 26 ];
+            symbol [ Graphics %tmp.106 603 16 24 ];
+            %tmp.106 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.107 603 25 44 ];
+            %tmp.107 = getv %tmp.106 :TEXT_JUSTIFY_CENTER;
+            invoke %tmp.97 %tmp.98(%tmp.99, %tmp.102, %tmp.104, %tmp.105, %tmp.107);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 610 12 ]
+            %tmp.108 = lgetv %dc;
+            symbol [ dc %tmp.108 610 12 14 ];
+            symbol [ drawText %tmp.109 610 15 23 ];
+            %tmp.109 = getv function %tmp.108 :drawText;
+            %tmp.110 = lgetv %circleX.9;
+            symbol [ circleX %tmp.110 611 16 23 ];
+            %tmp.111 = lgetv %circleY.10;
+            symbol [ circleY %tmp.111 612 16 23 ];
+            %tmp.112 = 5;
+            %tmp.113 = sub %tmp.111 %tmp.112;
+            symbol [ Graphics %tmp.114 613 16 24 ];
+            %tmp.114 = getm $.Toybox.Graphics;
+            symbol [ FONT_NUMBER_HOT %tmp.115 613 25 40 ];
+            %tmp.115 = getv %tmp.114 :FONT_NUMBER_HOT;
+            %tmp.116 = lgetv %amountText.5;
+            symbol [ amountText %tmp.116 614 16 26 ];
+            symbol [ Graphics %tmp.117 615 16 24 ];
+            %tmp.117 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.118 615 25 44 ];
+            %tmp.118 = getv %tmp.117 :TEXT_JUSTIFY_CENTER;
+            invoke %tmp.108 %tmp.109(%tmp.110, %tmp.113, %tmp.115, %tmp.116, %tmp.118);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 618 12 ]
+            %tmp.119 = lgetv %dc;
+            symbol [ dc %tmp.119 618 12 14 ];
+            symbol [ drawText %tmp.120 618 15 23 ];
+            %tmp.120 = getv function %tmp.119 :drawText;
+            %tmp.121 = lgetv %circleX.9;
+            symbol [ circleX %tmp.121 619 16 23 ];
+            %tmp.122 = lgetv %circleY.10;
+            symbol [ circleY %tmp.122 620 16 23 ];
+            %tmp.123 = 35;
+            %tmp.124 = add %tmp.122 %tmp.123;
+            symbol [ Graphics %tmp.125 621 16 24 ];
+            %tmp.125 = getm $.Toybox.Graphics;
+            symbol [ FONT_MEDIUM %tmp.126 621 25 36 ];
+            %tmp.126 = getv %tmp.125 :FONT_MEDIUM;
+            %tmp.127 = lgetv %unitText.6;
+            symbol [ unitText %tmp.127 622 16 24 ];
+            symbol [ Graphics %tmp.128 623 16 24 ];
+            %tmp.128 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.129 623 25 44 ];
+            %tmp.129 = getv %tmp.128 :TEXT_JUSTIFY_CENTER;
+            invoke %tmp.119 %tmp.120(%tmp.121, %tmp.124, %tmp.126, %tmp.127, %tmp.129);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 630 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop" ]
+            %boxWidth.11 = local;
+            symbol [ boxWidth %boxWidth.11 630 16 24 ];
+            %tmp.130 = lgetv %width.1;
+            symbol [ width %tmp.130 631 16 21 ];
+            %tmp.131 = 0.75;
+            %tmp.132 = mul %tmp.130 %tmp.131;
+            lputv %boxWidth.11 %tmp.132;
+            symbol [ boxWidth %boxWidth.11 630 16 24 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 633 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop" ]
+            %boxHeight.12 = local;
+            symbol [ boxHeight %boxHeight.12 633 16 25 ];
+            %tmp.133 = 55;
+            lputv %boxHeight.12 %tmp.133;
+            symbol [ boxHeight %boxHeight.12 633 16 25 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 636 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop" ]
+            %boxX.13 = local;
+            symbol [ boxX %boxX.13 636 16 20 ];
+            %tmp.134 = lgetv %width.1;
+            symbol [ width %tmp.134 637 17 22 ];
+            %tmp.135 = lgetv %boxWidth.11;
+            symbol [ boxWidth %tmp.135 637 25 33 ];
+            %tmp.136 = sub %tmp.134 %tmp.135;
+            %tmp.137 = 2;
+            %tmp.138 = div %tmp.136 %tmp.137;
+            lputv %boxX.13 %tmp.138;
+            symbol [ boxX %boxX.13 636 16 20 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 639 12 ]
+            [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop" ]
+            %boxY.14 = local;
+            symbol [ boxY %boxY.14 639 16 20 ];
+            %tmp.139 = lgetv %circleY.10;
+            symbol [ circleY %tmp.139 640 16 23 ];
+            %tmp.140 = lgetv %circleRadius.8;
+            symbol [ circleRadius %tmp.140 641 18 30 ];
+            %tmp.141 = add %tmp.139 %tmp.140;
+            %tmp.142 = 25;
+            %tmp.143 = add %tmp.141 %tmp.142;
+            lputv %boxY.14 %tmp.143;
+            symbol [ boxY %boxY.14 639 16 20 ];
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 644 12 ]
+            %tmp.144 = lgetv %dc;
+            symbol [ dc %tmp.144 644 12 14 ];
+            symbol [ setColor %tmp.145 644 15 23 ];
+            %tmp.145 = getv function %tmp.144 :setColor;
+            symbol [ Graphics %tmp.146 645 16 24 ];
+            %tmp.146 = getm $.Toybox.Graphics;
+            symbol [ COLOR_BLACK %tmp.147 645 25 36 ];
+            %tmp.147 = getv %tmp.146 :COLOR_BLACK;
+            symbol [ Graphics %tmp.148 646 16 24 ];
+            %tmp.148 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.149 646 25 36 ];
+            %tmp.149 = getv %tmp.148 :COLOR_WHITE;
+            invoke %tmp.144 %tmp.145(%tmp.147, %tmp.149);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 649 12 ]
+            %tmp.150 = lgetv %dc;
+            symbol [ dc %tmp.150 649 12 14 ];
+            symbol [ fillRectangle %tmp.151 649 15 28 ];
+            %tmp.151 = getv function %tmp.150 :fillRectangle;
+            %tmp.152 = lgetv %boxX.13;
+            symbol [ boxX %tmp.152 650 16 20 ];
+            %tmp.153 = lgetv %boxY.14;
+            symbol [ boxY %tmp.153 651 16 20 ];
+            %tmp.154 = lgetv %boxWidth.11;
+            symbol [ boxWidth %tmp.154 652 16 24 ];
+            %tmp.155 = lgetv %boxHeight.12;
+            symbol [ boxHeight %tmp.155 653 16 25 ];
+            invoke %tmp.150 %tmp.151(%tmp.152, %tmp.153, %tmp.154, %tmp.155);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 656 12 ]
+            %tmp.156 = lgetv %dc;
+            symbol [ dc %tmp.156 656 12 14 ];
+            symbol [ drawRectangle %tmp.157 656 15 28 ];
+            %tmp.157 = getv function %tmp.156 :drawRectangle;
+            %tmp.158 = lgetv %boxX.13;
+            symbol [ boxX %tmp.158 657 16 20 ];
+            %tmp.159 = lgetv %boxY.14;
+            symbol [ boxY %tmp.159 658 16 20 ];
+            %tmp.160 = lgetv %boxWidth.11;
+            symbol [ boxWidth %tmp.160 659 16 24 ];
+            %tmp.161 = lgetv %boxHeight.12;
+            symbol [ boxHeight %tmp.161 660 16 25 ];
+            invoke %tmp.156 %tmp.157(%tmp.158, %tmp.159, %tmp.160, %tmp.161);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 663 12 ]
+            %tmp.162 = lgetv %dc;
+            symbol [ dc %tmp.162 663 12 14 ];
+            symbol [ drawText %tmp.163 663 15 23 ];
+            %tmp.163 = getv function %tmp.162 :drawText;
+            %tmp.164 = lgetv %width.1;
+            symbol [ width %tmp.164 664 16 21 ];
+            %tmp.165 = 2;
+            %tmp.166 = div %tmp.164 %tmp.165;
+            %tmp.167 = lgetv %boxY.14;
+            symbol [ boxY %tmp.167 665 16 20 ];
+            %tmp.168 = 12;
+            %tmp.169 = add %tmp.167 %tmp.168;
+            symbol [ Graphics %tmp.170 666 16 24 ];
+            %tmp.170 = getm $.Toybox.Graphics;
+            symbol [ FONT_MEDIUM %tmp.171 666 25 36 ];
+            %tmp.171 = getv %tmp.170 :FONT_MEDIUM;
+            %tmp.172 = lgetv %detailText.7;
+            symbol [ detailText %tmp.172 667 16 26 ];
+            symbol [ Graphics %tmp.173 668 16 24 ];
+            %tmp.173 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.174 668 25 44 ];
+            %tmp.174 = getv %tmp.173 :TEXT_JUSTIFY_CENTER;
+            invoke %tmp.162 %tmp.163(%tmp.166, %tmp.169, %tmp.171, %tmp.172, %tmp.174);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 675 12 ]
+            %tmp.175 = lgetv %dc;
+            symbol [ dc %tmp.175 675 12 14 ];
+            symbol [ setColor %tmp.176 675 15 23 ];
+            %tmp.176 = getv function %tmp.175 :setColor;
+            symbol [ Graphics %tmp.177 676 16 24 ];
+            %tmp.177 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.178 676 25 36 ];
+            %tmp.178 = getv %tmp.177 :COLOR_WHITE;
+            symbol [ Graphics %tmp.179 677 16 24 ];
+            %tmp.179 = getm $.Toybox.Graphics;
+            symbol [ COLOR_TRANSPARENT %tmp.180 677 25 42 ];
+            %tmp.180 = getv %tmp.179 :COLOR_TRANSPARENT;
+            invoke %tmp.175 %tmp.176(%tmp.178, %tmp.180);
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 680 12 ]
+            %tmp.181 = lgetv %dc;
+            symbol [ dc %tmp.181 680 12 14 ];
+            symbol [ drawText %tmp.182 680 15 23 ];
+            %tmp.182 = getv function %tmp.181 :drawText;
+            %tmp.183 = lgetv %width.1;
+            symbol [ width %tmp.183 681 16 21 ];
+            %tmp.184 = 2;
+            %tmp.185 = div %tmp.183 %tmp.184;
+            %tmp.186 = lgetv %height.2;
+            symbol [ height %tmp.186 682 16 22 ];
+            %tmp.187 = 25;
+            %tmp.188 = sub %tmp.186 %tmp.187;
+            symbol [ Graphics %tmp.189 683 16 24 ];
+            %tmp.189 = getm $.Toybox.Graphics;
+            symbol [ FONT_XTINY %tmp.190 683 25 35 ];
+            %tmp.190 = getv %tmp.189 :FONT_XTINY;
+            %tmp.191 = "NutritionPlan";
+            symbol [ Graphics %tmp.192 685 16 24 ];
+            %tmp.192 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.193 685 25 44 ];
+            %tmp.193 = getv %tmp.192 :TEXT_JUSTIFY_CENTER;
+            invoke %tmp.181 %tmp.182(%tmp.185, %tmp.188, %tmp.190, %tmp.191, %tmp.193);
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_687_8_stop:
         }
     }
 }

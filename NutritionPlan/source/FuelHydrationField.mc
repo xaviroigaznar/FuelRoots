@@ -68,46 +68,18 @@ class FuelHydrationField extends WatchUi.DataField {
 
         dc.clear();
 
-        var width = dc.getWidth();
-        var height = dc.getHeight();
-
         // =================================
-        // LAYOUT
+        // DASHBOARD
         // =================================
-        var topHeight =
-            (height * 50) / 100;
-
-        var bottomHeight =
-            height - topHeight;
-
-        var boxWidth =
-            width / 2;
-
-        // =================================
-        // TOP ROW
-        // =================================
-
-        // -----------------------------
-        // CARBS BOX
-        // -----------------------------
         renderer.drawMainDashboard(dc, state);
 
         // =================================
         // ALERTS
         // =================================
-        if (state.activeAlert == Constants.AlertType.FUEL) {
-            renderer.drawAlertOverlay(
+        if (state.activeAlert != Constants.AlertType.NONE && state.activeAlert != null) {
+            renderer.drawAlertScreen(
                 dc,
-                "FUEL NOW",
-                state.alertText,
-                Graphics.COLOR_BLUE
-            );
-        } else if (state.activeAlert == Constants.AlertType.DRINK) {
-            renderer.drawAlertOverlay(
-                dc,
-                "DRINK NOW",
-                state.alertText,
-                Graphics.COLOR_BLUE
+                state
             );
         }
     }

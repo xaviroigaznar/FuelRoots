@@ -218,7 +218,7 @@ module UI {
                 tankWidth,
                 height,
                 "CHO (g)",
-                state.carbsDeficit,
+                state.carbsBurnedSinceLastFuel,
                 state.CARBS_THRESHOLD,
                 Graphics.COLOR_GREEN,
                 Graphics.COLOR_GREEN
@@ -231,7 +231,7 @@ module UI {
                 tankWidth,
                 height,
                 "H2O (ml)",
-                state.hydrationDeficitMl,
+                state.fluidLostSinceLastDrink,
                 state.HYDRATION_THRESHOLD,
                 Graphics.COLOR_BLUE,
                 Graphics.COLOR_BLUE
@@ -253,6 +253,9 @@ module UI {
             var tankColor = fillColor;
             var ratio = 0.0;
             var remaining = maxValue - deficitValue;
+            if (remaining <= 0) {
+                remaining = 0;
+            }
 
             if (maxValue > 0) {
                 ratio = 1 - (deficitValue / maxValue);
@@ -282,11 +285,12 @@ module UI {
             // Marco
             dc.setColor(borderColor, Graphics.COLOR_TRANSPARENT);
 
-            dc.drawRectangle(
+            dc.drawRoundedRectangle(
                 x,
                 y,
                 width,
-                height
+                height,
+                10
             );
 
             // Título
@@ -367,7 +371,9 @@ module UI {
                 x + 10,
                 y,
                 Graphics.FONT_MEDIUM,
-                "FUEL IN "
+                "FUEL "
+                + state.recommendedCarbs.format("%.0f")
+                + "g IN "
                 + state.nextFuelCountdownLabel,
                 Graphics.TEXT_JUSTIFY_LEFT
             );
@@ -376,8 +382,7 @@ module UI {
                 x + 10,
                 y + 25,
                 Graphics.FONT_SMALL,
-                state.recommendedCarbs.format("%.0f")
-                + "g • "
+                "Total taken "
                 + state.sessionCarbsIngested.format("%.0f")
                 + "g",
                 Graphics.TEXT_JUSTIFY_LEFT
@@ -391,7 +396,9 @@ module UI {
                 x + 10,
                 y + 50,
                 Graphics.FONT_MEDIUM,
-                "DRINK IN "
+                "DRINK "
+                + state.recommendedDrink.format("%.0f")
+                + "ml IN "
                 + state.nextDrinkCountdownLabel,
                 Graphics.TEXT_JUSTIFY_LEFT
             );
@@ -400,8 +407,7 @@ module UI {
                 x + 10,
                 y + 75,
                 Graphics.FONT_SMALL,
-                state.recommendedDrink.format("%.0f")
-                + "ml • "
+                + "Total drunk "
                 + state.sessionHydrationDrunk.format("%.0f")
                 + "ml",
                 Graphics.TEXT_JUSTIFY_LEFT
@@ -469,6 +475,213 @@ module UI {
                 Graphics.FONT_SMALL,
                 "Bonk time "
                 + state.bonkTimeLabel,
+                Graphics.TEXT_JUSTIFY_CENTER
+            );
+        }
+
+        function drawAlertScreen(
+            dc,
+            state
+        ) {
+
+            var width = dc.getWidth();
+            var height = dc.getHeight();
+
+            var bgColor;
+            var actionText;
+            var amountText;
+            var unitText;
+            var detailText;
+
+            switch (state.activeAlert) {
+
+                case Constants.AlertType.DRINK:
+
+                    bgColor = Graphics.COLOR_BLUE;
+
+                    actionText = "DRINK";
+
+                    amountText =
+                        state.recommendedDrink
+                        .format("%.0f");
+
+                    unitText = "ml";
+
+                    detailText =
+                        amountText
+                        + "ml WATER";
+
+                    break;
+
+                case Constants.AlertType.FUEL:
+
+                    bgColor =
+                        Graphics.COLOR_ORANGE;
+
+                    actionText = "FUEL";
+
+                    amountText =
+                        state.recommendedCarbs
+                        .format("%.0f");
+
+                    unitText = "g";
+
+                    detailText =
+                        amountText
+                        + "g CARBS";
+
+                    break;
+
+                default:
+                    return;
+            }
+
+            // ============================
+            // Background
+            // ============================
+
+            dc.setColor(
+                Graphics.COLOR_WHITE,
+                bgColor
+            );
+
+            dc.fillRectangle(
+                0,
+                0,
+                width,
+                height
+            );
+
+            // ============================
+            // Circle
+            // ============================
+
+            var circleRadius = height / 6;
+
+            var circleX =
+                width / 2;
+
+            var circleY =
+                height / 4;
+
+            dc.setColor(
+                Graphics.COLOR_WHITE,
+                Graphics.COLOR_WHITE
+            );
+
+            dc.fillCircle(
+                circleX,
+                circleY,
+                circleRadius + 4
+            );
+
+            dc.setColor(
+                Graphics.COLOR_BLACK,
+                Graphics.COLOR_BLACK
+            );
+
+            dc.fillCircle(
+                circleX,
+                circleY,
+                circleRadius
+            );
+
+            // ============================
+            // Action
+            // ============================
+
+            dc.setColor(
+                Graphics.COLOR_WHITE,
+                Graphics.COLOR_TRANSPARENT
+            );
+
+            dc.drawText(
+                circleX,
+                circleY - 35,
+                Graphics.FONT_SMALL,
+                actionText,
+                Graphics.TEXT_JUSTIFY_CENTER
+            );
+
+            // ============================
+            // Amount
+            // ============================
+
+            dc.drawText(
+                circleX,
+                circleY - 5,
+                Graphics.FONT_NUMBER_HOT,
+                amountText,
+                Graphics.TEXT_JUSTIFY_CENTER
+            );
+
+            dc.drawText(
+                circleX,
+                circleY + 35,
+                Graphics.FONT_MEDIUM,
+                unitText,
+                Graphics.TEXT_JUSTIFY_CENTER
+            );
+
+            // ============================
+            // Description box
+            // ============================
+
+            var boxWidth =
+                width * 0.75;
+
+            var boxHeight =
+                55;
+
+            var boxX =
+                (width - boxWidth) / 2;
+
+            var boxY =
+                circleY
+                + circleRadius
+                + 25;
+
+            dc.setColor(
+                Graphics.COLOR_BLACK,
+                Graphics.COLOR_WHITE
+            );
+
+            dc.fillRectangle(
+                boxX,
+                boxY,
+                boxWidth,
+                boxHeight
+            );
+
+            dc.drawRectangle(
+                boxX,
+                boxY,
+                boxWidth,
+                boxHeight
+            );
+
+            dc.drawText(
+                width / 2,
+                boxY + 12,
+                Graphics.FONT_MEDIUM,
+                detailText,
+                Graphics.TEXT_JUSTIFY_CENTER
+            );
+
+            // ============================
+            // Footer
+            // ============================
+
+            dc.setColor(
+                Graphics.COLOR_WHITE,
+                Graphics.COLOR_TRANSPARENT
+            );
+
+            dc.drawText(
+                width / 2,
+                height - 25,
+                Graphics.FONT_XTINY,
+                "NutritionPlan",
                 Graphics.TEXT_JUSTIFY_CENTER
             );
         }
