@@ -111,14 +111,14 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engine
             lputv %sweatRate.5 %tmp.21;
             symbol [ sweatRate %sweatRate.5 57 16 25 ];
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 59 12 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_59_12_62_12_if_stmt:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_59_12_61_12_if_stmt:
             %tmp.22 = lgetv %sweatRate.5;
             symbol [ sweatRate %tmp.22 59 16 25 ];
             %tmp.23 = null;
             %tmp.24 = eq %tmp.22 %tmp.23;
-            bf %tmp.24 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_59_12_62_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_59_12_62_12_if_true:
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_59_35_62_12_start:
+            bf %tmp.24 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_59_12_61_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_59_12_61_12_if_true:
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_59_35_61_12_start:
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 60 16 ]
             %tmp.25 = self;
             symbol [ calculateSweatRate %tmp.26 60 28 46 ];
@@ -130,16 +130,16 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engine
             %tmp.29 = invoke %tmp.25 %tmp.26(%tmp.27, %tmp.28);
             lputv %sweatRate.5 %tmp.29;
             symbol [ sweatRate %sweatRate.5 60 16 25 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 61 16 ]
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_59_35_61_12_stop:
+            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_59_12_61_12_if_end;
+_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_59_12_61_12_if_end:
+[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 63 12 ]
             %tmp.30 = lgetv %state;
-            symbol [ state %tmp.30 61 16 21 ];
+            symbol [ state %tmp.30 63 12 17 ];
             %tmp.31 = lgetv %sweatRate.5;
-            symbol [ sweatRate %tmp.31 61 34 43 ];
-            symbol [ sweatRate ? 61 22 31 ];
+            symbol [ sweatRate %tmp.31 63 30 39 ];
+            symbol [ sweatRate ? 63 18 27 ];
             putv %tmp.30 :sweatRate %tmp.31;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_59_35_62_12_stop:
-            goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_59_12_62_12_if_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_engines_HydrationEngine_mc_59_12_62_12_if_end:
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/engines/HydrationEngine.mc" 68 12 ]
             %tmp.32 = self;
             symbol [ updateFluidLoss %tmp.33 68 12 27 ];
