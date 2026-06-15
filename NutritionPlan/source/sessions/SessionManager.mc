@@ -34,9 +34,6 @@ module Session {
         // =====================================
         var alertStartTime;
 
-        const CARBS_MULTIPLE = 30;
-        const HYDRATION_MULTIPLE = 125;
-
         const MIN_FUEL_ALERT_TIME = 900000; // 15 min
         const MIN_DRINK_ALERT_TIME = 600000; // 10 min
 
@@ -98,11 +95,11 @@ module Session {
             // =============================
             // Trigger conditions
             if(
-                (state.carbsBurnedSinceLastFuel >= state.CARBS_THRESHOLD) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastCarbIntakeTime) >= MIN_FUEL_ALERT_TIME
+                (state.carbsBurnedSinceLastFuel >= SettingsManager.getCHThreshold()) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastCarbIntakeTime) >= MIN_FUEL_ALERT_TIME
             ) {
                 triggerFuelAlert();
             } else if (
-                (state.fluidLostSinceLastDrink >= state.HYDRATION_THRESHOLD) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastDrinkTime) >= MIN_DRINK_ALERT_TIME
+                (state.fluidLostSinceLastDrink >= SettingsManager.getHydrationThreshold()) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastDrinkTime) >= MIN_DRINK_ALERT_TIME
             ) {
                 triggerDrinkAlert();
             }
@@ -286,7 +283,7 @@ module Session {
             carbsBurnedSinceLastFuel,
             carbBurnRate
         ) {
-            var remaining = state.CARBS_THRESHOLD - carbsBurnedSinceLastFuel;
+            var remaining = SettingsManager.getCHThreshold() - carbsBurnedSinceLastFuel;
 
             if (remaining <= 0) {
                 return 0;
@@ -311,7 +308,7 @@ module Session {
             var recommendation =
                 carbDeficit + futureDemand;
 
-            var multiple = Utils.FormatUtils.roundToNearestMultiple(recommendation, CARBS_MULTIPLE);
+            var multiple = Utils.FormatUtils.roundToNearestMultiple(recommendation, SettingsManager.getCHDosePreference());
 
             return multiple;
         }
@@ -342,7 +339,7 @@ module Session {
             fluidLostSinceLastDrink,
             sweatRate
         ) {
-            var remaining = state.HYDRATION_THRESHOLD - fluidLostSinceLastDrink;
+            var remaining = SettingsManager.getHydrationThreshold() - fluidLostSinceLastDrink;
 
             if (remaining <= 0) {
                 return 0;
@@ -371,7 +368,7 @@ module Session {
                 recommendation = 250;
             }
 
-            var multiple = Utils.FormatUtils.roundToNearestMultiple(recommendation, HYDRATION_MULTIPLE);
+            var multiple = Utils.FormatUtils.roundToNearestMultiple(recommendation, SettingsManager.getHydrationDosePreference());
 
             return multiple;
         }
@@ -409,7 +406,7 @@ module Session {
                 + elapsed
             );
             // 8 seconds
-            if (elapsed > 8000) {
+            if (elapsed > SettingsManager.getAlertDisplayingTimer()) {
                 System.println("CONFIRMING ALERT");
                 var activeAlert = state.activeAlert;
                 if (activeAlert == Constants.AlertType.FUEL) {

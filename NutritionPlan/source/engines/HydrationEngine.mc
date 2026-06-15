@@ -54,9 +54,12 @@ module Engine {
             // =================================
             // SWEAT RATE
             // =================================
-            var sweatRate = calculateSweatRate(ri, temp);
+            var sweatRate = SettingsManager.getSweatRate();
 
-            state.sweatRate = sweatRate;
+            if (sweatRate == null) {
+                sweatRate = calculateSweatRate(ri, temp);
+                state.sweatRate = sweatRate;
+            }
 
             
             // =================================

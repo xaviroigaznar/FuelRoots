@@ -30,23 +30,9 @@ class FuelHydrationField extends WatchUi.DataField {
         renderer = new UI.UIRenderer();
 
         // =============================
-        // SETTINGS
-        // =============================
-        ftp = Application.getApp().getProperty("ftp");
-        weight = Application.getApp().getProperty("weight");
-
-        if (ftp == null) {
-            ftp = 250;
-        }
-
-        if (weight == null) {
-            weight = 75;
-        }
-
-        // =============================
         // PROFILE
         // =============================
-        var profile = new Session.AthleteProfile(ftp, weight);
+        var profile = new Session.AthleteProfile(SettingsManager.getFTP(), SettingsManager.getWeight());
 
         sessionManager = new Session.SessionManager(profile);
     }

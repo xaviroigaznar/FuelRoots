@@ -219,7 +219,7 @@ module UI {
                 height,
                 "CHO (g)",
                 state.carbsBurnedSinceLastFuel,
-                state.CARBS_THRESHOLD,
+                SettingsManager.getCHThreshold(),
                 Graphics.COLOR_GREEN,
                 Graphics.COLOR_GREEN
             );
@@ -232,7 +232,7 @@ module UI {
                 height,
                 "H2O (ml)",
                 state.fluidLostSinceLastDrink,
-                state.HYDRATION_THRESHOLD,
+                SettingsManager.getHydrationThreshold(),
                 Graphics.COLOR_BLUE,
                 Graphics.COLOR_BLUE
             );
@@ -516,7 +516,7 @@ module UI {
                 case Constants.AlertType.FUEL:
 
                     bgColor =
-                        Graphics.COLOR_ORANGE;
+                        Graphics.COLOR_GREEN;
 
                     actionText = "FUEL";
 
@@ -542,7 +542,7 @@ module UI {
 
             dc.setColor(
                 Graphics.COLOR_WHITE,
-                bgColor
+                Graphics.COLOR_WHITE
             );
 
             dc.fillRectangle(
@@ -576,8 +576,8 @@ module UI {
             );
 
             dc.setColor(
-                Graphics.COLOR_BLACK,
-                Graphics.COLOR_BLACK
+                bgColor,
+                bgColor
             );
 
             dc.fillCircle(
@@ -592,7 +592,7 @@ module UI {
 
             dc.setColor(
                 Graphics.COLOR_WHITE,
-                Graphics.COLOR_TRANSPARENT
+                bgColor
             );
 
             dc.drawText(
@@ -642,8 +642,8 @@ module UI {
                 + 25;
 
             dc.setColor(
-                Graphics.COLOR_BLACK,
-                Graphics.COLOR_WHITE
+                Graphics.COLOR_WHITE,
+                bgColor
             );
 
             dc.fillRectangle(
@@ -662,26 +662,9 @@ module UI {
 
             dc.drawText(
                 width / 2,
-                boxY + 12,
+                height - 25,
                 Graphics.FONT_MEDIUM,
                 detailText,
-                Graphics.TEXT_JUSTIFY_CENTER
-            );
-
-            // ============================
-            // Footer
-            // ============================
-
-            dc.setColor(
-                Graphics.COLOR_WHITE,
-                Graphics.COLOR_TRANSPARENT
-            );
-
-            dc.drawText(
-                width / 2,
-                height - 25,
-                Graphics.FONT_XTINY,
-                "NutritionPlan",
                 Graphics.TEXT_JUSTIFY_CENTER
             );
         }

@@ -1,0 +1,15 @@
+<properties>
+    <property id="ftp" type="string"/>
+    <property id="weight" type="string"/>
+    <property id="sweatRate" type="string"/>
+
+    <property id="chDosePreference" type="string"/>
+    <property id="chThreshold" type="string"/>
+
+    <property id="hydrationDosePreference" type="string"/>
+    <property id="hydrationThreshold" type="string"/>
+
+    <property id="userConfirmation" type="boolean"/>
+
+    <property id="alertDisplayingTimer" type="string"/>
+</properties>

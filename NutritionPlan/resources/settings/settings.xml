@@ -1,0 +1,37 @@
+<settings>
+    <setting propertyKey="@Properties.ftp" title="FTP">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+
+    <setting propertyKey="@Properties.weight" title="Peso (kg)">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+
+    <setting propertyKey="@Properties.sweatRate" title="Sweat Rate (ml/h)">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+
+    <setting propertyKey="@Properties.chDosePreference" title="CH Dose Preference">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+
+    <setting propertyKey="@Properties.chThreshold" title="CH Alert Threshold (g)">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+
+    <setting propertyKey="@Properties.hydrationDosePreference" title="Hydration Dose Preference">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+
+    <setting propertyKey="@Properties.hydrationThreshold" title="Hydration Alert Threshold (ml)">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+
+    <setting propertyKey="@Properties.userConfirmation" title="Require User Confirmation">
+        <settingConfig type="boolean" />
+    </setting>
+
+    <setting propertyKey="@Properties.alertDisplayingTimer" title="Alert Duration (s)">
+        <settingConfig type="alphaNumeric" />
+    </setting>
+</settings>

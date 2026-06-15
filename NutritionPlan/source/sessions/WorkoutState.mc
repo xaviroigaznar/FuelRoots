@@ -1,13 +1,6 @@
 module Session {
 
     class WorkoutState {
-
-        // =========================
-        // Constants
-        // =========================
-        const CARBS_THRESHOLD = 30;
-        const HYDRATION_THRESHOLD = 125;
-
         // =========================
         // Base Metrics
         // =========================
