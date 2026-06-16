@@ -58,9 +58,9 @@ module Engine {
 
             if (sweatRate == null) {
                 sweatRate = calculateSweatRate(ri, temp);
-                state.sweatRate = sweatRate;
             }
 
+            state.sweatRate = sweatRate;
             
             // =================================
             // FLUID LOSS
