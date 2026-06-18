@@ -14,7 +14,7 @@ module SettingsManager {
 
     const DEFAULT_ALERT_DURATION = 8000;
 
-    const DEFAULT_USER_CONFIRMATION = false;
+    const DEFAULT_USER_CONFIRMATION = true;
 
     function getFTP() {
 
@@ -112,17 +112,5 @@ module SettingsManager {
         return (value == null || value.length() == 0)
             ? DEFAULT_ALERT_DURATION
             : value.toNumber() * 1000;
-    }
-
-    function requiresUserConfirmation() {
-
-        var value =
-            Application.Properties.getValue(
-                "userConfirmation"
-            );
-
-        return value == null
-            ? DEFAULT_USER_CONFIRMATION
-            : value;
     }
 }

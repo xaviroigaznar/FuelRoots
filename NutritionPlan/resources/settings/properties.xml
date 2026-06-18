@@ -9,7 +9,5 @@
     <property id="hydrationDosePreference" type="string"/>
     <property id="hydrationThreshold" type="string"/>
 
-    <property id="userConfirmation" type="boolean"/>
-
     <property id="alertDisplayingTimer" type="string"/>
 </properties>

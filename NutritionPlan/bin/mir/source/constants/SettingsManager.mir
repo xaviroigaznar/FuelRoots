@@ -22,7 +22,7 @@ module SettingsManager {
     [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/SettingsManager.mc"; @line = 15; @position = 10; @symbol_constdef = [DEFAULT_ALERT_DURATION,15,10,32]; ]
     const DEFAULT_ALERT_DURATION = 8000;
     [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/SettingsManager.mc"; @line = 17; @position = 10; @symbol_constdef = [DEFAULT_USER_CONFIRMATION,17,10,35]; ]
-    const DEFAULT_USER_CONFIRMATION = false;
+    const DEFAULT_USER_CONFIRMATION = true;
     [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/SettingsManager.mc"; @line = 19; @symbol_functiondef = [getFTP,19,13,19]; ]
     function getFTP() {
 _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_19_22_29_4_start:
@@ -475,45 +475,6 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_consta
         %tmp.24 = phi [%tmp.15 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_112_15_114_33_begin] [%tmp.17 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_112_15_114_33_true] [%tmp.23 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_112_15_114_33_else_false] [%tmp.24 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_112_15_114_33_end];
         ret %tmp.24;
 _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_105_39_115_4_stop:
-    }
-    [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/SettingsManager.mc"; @line = 117; @symbol_functiondef = [requiresUserConfirmation,117,13,37]; ]
-    function requiresUserConfirmation() {
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_117_40_127_4_start:
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/SettingsManager.mc" 119 8 ]
-        [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_117_40_127_4_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_117_40_127_4_stop" ]
-        %value.1 = local;
-        symbol [ value %value.1 119 12 17 ];
-        symbol [ Application %tmp.1 120 12 23 ];
-        %tmp.1 = getm $.Toybox.Application;
-        symbol [ Properties %tmp.2 120 24 34 ];
-        %tmp.2 = getv %tmp.1 :Properties;
-        symbol [ getValue %tmp.3 120 35 43 ];
-        %tmp.3 = getv function %tmp.2 :getValue;
-        %tmp.4 = "userConfirmation";
-        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
-        lputv %value.1 %tmp.5;
-        symbol [ value %value.1 119 12 17 ];
-[ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/SettingsManager.mc" 124 8 ]
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_124_15_126_14_begin:
-        %tmp.6 = lgetv %value.1;
-        symbol [ value %tmp.6 124 15 20 ];
-        %tmp.7 = null;
-        %tmp.8 = eq %tmp.6 %tmp.7;
-        bf %tmp.8 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_124_15_126_14_else_false;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_124_15_126_14_true:
-        symbol [ DEFAULT_USER_CONFIRMATION %tmp.10 125 14 39 ];
-        %tmp.10 = getv ? :DEFAULT_USER_CONFIRMATION;
-        push %tmp.10;
-        goto @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_124_15_126_14_end;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_124_15_126_14_else_false:
-        %tmp.11 = lgetv %value.1;
-        symbol [ value %tmp.11 126 14 19 ];
-        %tmp.12 = as %tmp.11 { (!Null) };
-        push %tmp.12;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_124_15_126_14_end:
-        %tmp.13 = phi [%tmp.8 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_124_15_126_14_begin] [%tmp.10 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_124_15_126_14_true] [%tmp.12 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_124_15_126_14_else_false] [%tmp.13 @_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_124_15_126_14_end];
-        ret %tmp.13;
-_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_constants_SettingsManager_mc_117_40_127_4_stop:
     }
 }
 [ @file = "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/constants/SettingsManager.mc"; @line = 1; ]

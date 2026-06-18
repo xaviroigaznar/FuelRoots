@@ -617,7 +617,7 @@ module UI {
 
             dc.drawText(
                 circleX,
-                circleY + 35,
+                circleY + 45,
                 Graphics.FONT_MEDIUM,
                 unitText,
                 Graphics.TEXT_JUSTIFY_CENTER
@@ -631,7 +631,7 @@ module UI {
                 width * 0.75;
 
             var boxHeight =
-                55;
+                75;
 
             var boxX =
                 (width - boxWidth) / 2;

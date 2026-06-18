@@ -1518,7 +1518,7 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIR
             symbol [ circleX %tmp.119 619 16 23 ];
             %tmp.120 = lgetv %circleY.10;
             symbol [ circleY %tmp.120 620 16 23 ];
-            %tmp.121 = 35;
+            %tmp.121 = 45;
             %tmp.122 = add %tmp.120 %tmp.121;
             symbol [ Graphics %tmp.123 621 16 24 ];
             %tmp.123 = getm $.Toybox.Graphics;
@@ -1545,7 +1545,7 @@ _Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIR
             [ "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_670_8_start" "_Users_xaviroigaznar97_GitRepositories_NutritionPlan_NutritionPlan_source_ui_UIRenderer_mc_485_10_670_8_stop" ]
             %boxHeight.12 = local;
             symbol [ boxHeight %boxHeight.12 633 16 25 ];
-            %tmp.131 = 55;
+            %tmp.131 = 75;
             lputv %boxHeight.12 %tmp.131;
             symbol [ boxHeight %boxHeight.12 633 16 25 ];
 [ "/Users/xaviroigaznar97/GitRepositories/NutritionPlan/NutritionPlan/source/ui/UIRenderer.mc" 636 12 ]

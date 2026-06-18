@@ -27,10 +27,6 @@
         <settingConfig type="alphaNumeric" />
     </setting>
 
-    <setting propertyKey="@Properties.userConfirmation" title="Require User Confirmation">
-        <settingConfig type="boolean" />
-    </setting>
-
     <setting propertyKey="@Properties.alertDisplayingTimer" title="Alert Duration (s)">
         <settingConfig type="alphaNumeric" />
     </setting>

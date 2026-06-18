@@ -94,13 +94,36 @@ module Session {
             // ALERTS
             // =============================
             // Trigger conditions
+            
             if(
                 (state.carbsBurnedSinceLastFuel >= SettingsManager.getCHThreshold()) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastCarbIntakeTime) >= MIN_FUEL_ALERT_TIME
             ) {
+                if (Attention has :vibrate) {
+                    var vibeData =
+                    [
+                        new Attention.VibeProfile(50, 2000), // On for two seconds
+                        new Attention.VibeProfile(0, 1000),  // Off for one second
+                        new Attention.VibeProfile(50, 2000), // On for two seconds
+                        new Attention.VibeProfile(0, 1000),  // Off for one second
+                        new Attention.VibeProfile(50, 2000)  // on for two seconds
+                    ];
+                    Attention.vibrate(vibeData);
+                }
                 triggerFuelAlert();
             } else if (
                 (state.fluidLostSinceLastDrink >= SettingsManager.getHydrationThreshold()) && state.activeAlert == Constants.AlertType.NONE && (System.getTimer() - nutritionTracker.lastDrinkTime) >= MIN_DRINK_ALERT_TIME
             ) {
+                if (Attention has :vibrate) {
+                    var vibeData =
+                    [
+                        new Attention.VibeProfile(50, 2000), // On for two seconds
+                        new Attention.VibeProfile(0, 1000),  // Off for one second
+                        new Attention.VibeProfile(50, 2000), // On for two seconds
+                        new Attention.VibeProfile(0, 1000),  // Off for one second
+                        new Attention.VibeProfile(50, 2000)  // on for two seconds
+                    ];
+                    Attention.vibrate(vibeData);
+                }
                 triggerDrinkAlert();
             }
             updateAlertLifecycle();
@@ -399,22 +422,15 @@ module Session {
                 System.getTimer()
                 - alertStartTime;
 
-            System.println(
-                "Alert active: "
-                + state.activeAlert
-                + " elapsed="
-                + elapsed
-            );
-            // 8 seconds
             if (elapsed > SettingsManager.getAlertDisplayingTimer()) {
-                System.println("CONFIRMING ALERT");
                 var activeAlert = state.activeAlert;
+
                 if (activeAlert == Constants.AlertType.FUEL) {
                     confirmFuelIntake();
                 } else if (activeAlert == Constants.AlertType.DRINK) {
-                    System.println("CONFIRM DRINK");
                     confirmDrinkIntake();
                 }
+
                 state.activeAlert = Constants.AlertType.NONE;
                 alertStartTime = null;
             }
@@ -431,9 +447,6 @@ module Session {
         // CONFIRM DRINK
         // =====================================
         function confirmDrinkIntake() {
-            System.println(
-    "confirmDrinkIntake() called"
-);
             registerDrink(state.recommendedDrink);
         }
 
