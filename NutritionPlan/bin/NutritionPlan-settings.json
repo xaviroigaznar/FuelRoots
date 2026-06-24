@@ -123,16 +123,30 @@
   "supportsLiveValidation" : false,
   "languages" : {
     "valyrian" : {
+      "fatigued" : "FATIGUED",
+      "critical" : "CRITICAL",
+      "fuel" : "FUEL ",
+      "gIn" : "g IN ",
+      "drink" : "DRINK ",
+      "AppName" : "The Athletes Fuel",
+      "bonkTime" : "Bonk time ",
       "$literal1$" : "Peso (kg)",
       "$literal0$" : "FTP",
+      "mlWater" : "ml WATER",
+      "fatigue" : "Fatigue ",
       "$literal3$" : "CH Dose Preference",
+      "totalTaken" : "Total taken ",
       "$literal2$" : "Sweat Rate (ml/h)",
       "$literal5$" : "Hydration Dose Preference",
       "$literal4$" : "CH Alert Threshold (g)",
+      "stable" : "STABLE",
       "$literal7$" : "Alert Duration (s)",
+      "mlIn" : "ml IN ",
+      "totalDrunk" : "Total drunk ",
       "$literal6$" : "Hydration Alert Threshold (ml)",
-      "label" : "My Value",
-      "AppName" : "NutritionPlan"
+      "gCarbs" : "g CARBS",
+      "moderate" : "MODERATE",
+      "bonkRisk" : " • Bonk risk "
     }
   }
 }

@@ -11,134 +11,6 @@ module UI {
         function initialize() {
         }
 
-        // =====================================
-        // ALERT OVERLAY
-        // =====================================
-        function drawAlertOverlay(
-            dc,
-            title,
-            message,
-            color
-        ) {
-
-            var width =
-                dc.getWidth();
-
-            var height =
-                dc.getHeight();
-
-            // =============================
-            // OVERLAY SIZE
-            // =============================
-
-            var w = width - 30;
-            var h = 90;
-
-            var x = 15;
-            var y = (height / 2) - (h / 2);
-
-            // =============================
-            // SHADOW
-            // =============================
-
-            dc.setColor(
-                Graphics.COLOR_DK_GRAY,
-                Graphics.COLOR_DK_GRAY
-            );
-
-            dc.fillRectangle(
-                x + 3,
-                y + 3,
-                w,
-                h
-            );
-
-            // =============================
-            // MAIN BOX
-            // =============================
-
-            dc.setColor(
-                Graphics.COLOR_BLACK,
-                Graphics.COLOR_BLACK
-            );
-
-            dc.fillRectangle(
-                x,
-                y,
-                w,
-                h
-            );
-
-            // =============================
-            // BORDER
-            // =============================
-
-            dc.setColor(
-                color,
-                Graphics.COLOR_BLACK
-            );
-
-            dc.drawRectangle(
-                x,
-                y,
-                w,
-                h
-            );
-
-            // =============================
-            // HEADER
-            // =============================
-
-            dc.fillRectangle(
-                x,
-                y,
-                w,
-                24
-            );
-
-            dc.setColor(
-                Graphics.COLOR_WHITE,
-                color
-            );
-
-            dc.drawText(
-                x + (w / 2),
-                y + 4,
-                Graphics.FONT_SMALL,
-                title,
-                Graphics.TEXT_JUSTIFY_CENTER
-            );
-
-            // =============================
-            // MESSAGE
-            // =============================
-
-            dc.setColor(
-                Graphics.COLOR_WHITE,
-                Graphics.COLOR_BLACK
-            );
-
-            dc.drawText(
-                x + (w / 2),
-                y + 38,
-                Graphics.FONT_MEDIUM,
-                message,
-                Graphics.TEXT_JUSTIFY_CENTER
-            );
-
-            // =============================
-            // FOOTER
-            // =============================
-
-            dc.drawText(
-                x + (w / 2),
-                y + 65,
-                Graphics.FONT_XTINY,
-                "PRESS START",
-                Graphics.TEXT_JUSTIFY_CENTER
-            );
-        }
-
         function drawMainDashboard(
         dc,
         state
@@ -366,23 +238,25 @@ module UI {
             // -------------------------
             // Fuel
             // -------------------------
-
+            var fuelText = WatchUi.loadResource(Rez.Strings.fuel);
+            var gInText = WatchUi.loadResource(Rez.Strings.gIn);
             dc.drawText(
                 x + 10,
                 y,
                 Graphics.FONT_MEDIUM,
-                "FUEL "
+                fuelText
                 + state.recommendedCarbs.format("%.0f")
-                + "g IN "
+                + gInText
                 + state.nextFuelCountdownLabel,
                 Graphics.TEXT_JUSTIFY_LEFT
             );
 
+            var totalTakenText = WatchUi.loadResource(Rez.Strings.totalTaken);
             dc.drawText(
                 x + 10,
                 y + 25,
                 Graphics.FONT_SMALL,
-                "Total taken "
+                totalTakenText
                 + state.sessionCarbsIngested.format("%.0f")
                 + "g",
                 Graphics.TEXT_JUSTIFY_LEFT
@@ -392,22 +266,26 @@ module UI {
             // Drink
             // -------------------------
 
+            var drinkText = WatchUi.loadResource(Rez.Strings.drink);
+
+            var mlInText = WatchUi.loadResource(Rez.Strings.mlIn);
             dc.drawText(
                 x + 10,
                 y + 50,
                 Graphics.FONT_MEDIUM,
-                "DRINK "
+                drinkText
                 + state.recommendedDrink.format("%.0f")
-                + "ml IN "
+                + mlInText
                 + state.nextDrinkCountdownLabel,
                 Graphics.TEXT_JUSTIFY_LEFT
             );
 
+            var totalDrunkText = WatchUi.loadResource(Rez.Strings.totalDrunk);
             dc.drawText(
                 x + 10,
                 y + 75,
                 Graphics.FONT_SMALL,
-                + "Total drunk "
+                + totalDrunkText
                 + state.sessionHydrationDrunk.format("%.0f")
                 + "ml",
                 Graphics.TEXT_JUSTIFY_LEFT
@@ -457,23 +335,29 @@ module UI {
                 Graphics.COLOR_TRANSPARENT
             );
 
+
+            var fatigueText = WatchUi.loadResource(Rez.Strings.fatigue);
+
+            var bonkRiskText = WatchUi.loadResource(Rez.Strings.bonkRisk);
             dc.drawText(
                 width / 2,
                 y + 40,
                 Graphics.FONT_SMALL,
-                "Fatigue "
+                fatigueText
                 + state.fatiguePercent
-                + " • Bonk risk "
+                + bonkRiskText
                 + state.bonkRisk.format("%.0f")
                 + "%",
                 Graphics.TEXT_JUSTIFY_CENTER
             );
 
+
+            var bonkTimeText = WatchUi.loadResource(Rez.Strings.bonkTime);
             dc.drawText(
                 width / 2,
                 y + 70,
                 Graphics.FONT_SMALL,
-                "Bonk time "
+                bonkTimeText
                 + state.bonkTimeLabel,
                 Graphics.TEXT_JUSTIFY_CENTER
             );
@@ -499,7 +383,7 @@ module UI {
 
                     bgColor = Graphics.COLOR_BLUE;
 
-                    actionText = "DRINK";
+                    actionText = WatchUi.loadResource(Rez.Strings.drink);
 
                     amountText =
                         state.recommendedDrink
@@ -509,7 +393,7 @@ module UI {
 
                     detailText =
                         amountText
-                        + "ml WATER";
+                        + WatchUi.loadResource(Rez.Strings.mlWater);
 
                     break;
 
@@ -518,7 +402,7 @@ module UI {
                     bgColor =
                         Graphics.COLOR_GREEN;
 
-                    actionText = "FUEL";
+                    actionText = WatchUi.loadResource(Rez.Strings.fuel);
 
                     amountText =
                         state.recommendedCarbs
@@ -528,7 +412,7 @@ module UI {
 
                     detailText =
                         amountText
-                        + "g CARBS";
+                        + WatchUi.loadResource(Rez.Strings.gCarbs);
 
                     break;
 

@@ -66,8 +66,22 @@ module Rez {
     } // Layouts
 
     module Strings {
-        (:initialized) var label as ResourceId;
+        (:initialized) var fatigued as ResourceId;
+        (:initialized) var critical as ResourceId;
+        (:initialized) var fuel as ResourceId;
+        (:initialized) var gIn as ResourceId;
+        (:initialized) var drink as ResourceId;
         (:initialized) var AppName as ResourceId;
+        (:initialized) var bonkTime as ResourceId;
+        (:initialized) var mlWater as ResourceId;
+        (:initialized) var fatigue as ResourceId;
+        (:initialized) var totalTaken as ResourceId;
+        (:initialized) var stable as ResourceId;
+        (:initialized) var mlIn as ResourceId;
+        (:initialized) var totalDrunk as ResourceId;
+        (:initialized) var gCarbs as ResourceId;
+        (:initialized) var moderate as ResourceId;
+        (:initialized) var bonkRisk as ResourceId;
     } // Strings
 
     module Styles {

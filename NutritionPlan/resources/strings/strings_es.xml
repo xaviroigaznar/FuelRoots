@@ -1,0 +1,22 @@
+<strings>
+    <string id="AppName">The Athletes Fuel</string>
+
+    <string id="fuel">COMER </string>
+    <string id="drink">BEBER </string>
+
+    <string id="gCarbs">g CARBS</string>
+    <string id="mlWater">ml AGUA</string>
+    <string id="mlIn">ml EN </string>
+    <string id="totalDrunk">Total bebido </string>
+    <string id="gIn">g EN </string>
+    <string id="totalTaken">Total comido </string>
+
+    <string id="stable">ESTABLE</string>
+    <string id="moderate">MODERADO</string>
+    <string id="critical">CRÍTICO</string>
+    <string id="fatigued">FATIGADO</string>
+
+    <string id="fatigue">Fatiga </string>
+    <string id="bonkRisk"> • Riesgo de pájara </string>
+    <string id="bonkTime">Tiempo hasta la pájara </string>
+</strings>

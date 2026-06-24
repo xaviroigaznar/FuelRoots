@@ -252,18 +252,18 @@ module Engine {
         ) {
 
             if (bonkRisk > 80) {
-                return "CRITICAL";
+                return WatchUi.loadResource(Rez.Strings.critical);
             }
 
             if (fatigue > 75) {
-                return "FATIGUED";
+                return WatchUi.loadResource(Rez.Strings.fatigued);
             }
 
             if (fatigue > 50) {
-                return "MODERATE";
+                return WatchUi.loadResource(Rez.Strings.moderate);
             }
 
-            return "STABLE";
+            return WatchUi.loadResource(Rez.Strings.stable);
         }
     }
 }
