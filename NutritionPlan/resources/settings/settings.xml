@@ -1,33 +1,33 @@
 <settings>
-    <setting propertyKey="@Properties.ftp" title="FTP">
+    <setting propertyKey="@Properties.ftp" title="@Strings.settingsFtp">
         <settingConfig type="alphaNumeric" />
     </setting>
 
-    <setting propertyKey="@Properties.weight" title="Peso (kg)">
+    <setting propertyKey="@Properties.weight" title="@Strings.settingsWeight">
         <settingConfig type="alphaNumeric" />
     </setting>
 
-    <setting propertyKey="@Properties.sweatRate" title="Sweat Rate (ml/h)">
+    <setting propertyKey="@Properties.sweatRate" title="@Strings.settingsSweatRate">
         <settingConfig type="alphaNumeric" />
     </setting>
 
-    <setting propertyKey="@Properties.chDosePreference" title="CH Dose Preference">
+    <setting propertyKey="@Properties.chDosePreference" title="@Strings.settingsChDose">
         <settingConfig type="alphaNumeric" />
     </setting>
 
-    <setting propertyKey="@Properties.chThreshold" title="CH Alert Threshold (g)">
+    <setting propertyKey="@Properties.chThreshold" title="@Strings.settingsChThreshold">
         <settingConfig type="alphaNumeric" />
     </setting>
 
-    <setting propertyKey="@Properties.hydrationDosePreference" title="Hydration Dose Preference">
+    <setting propertyKey="@Properties.hydrationDosePreference" title="@Strings.settingsHydrationDose">
         <settingConfig type="alphaNumeric" />
     </setting>
 
-    <setting propertyKey="@Properties.hydrationThreshold" title="Hydration Alert Threshold (ml)">
+    <setting propertyKey="@Properties.hydrationThreshold" title="@Strings.settingsHydrationThreshold">
         <settingConfig type="alphaNumeric" />
     </setting>
 
-    <setting propertyKey="@Properties.alertDisplayingTimer" title="Alert Duration (s)">
+    <setting propertyKey="@Properties.alertDisplayingTimer" title="@Strings.settingsAlertDuration">
         <settingConfig type="alphaNumeric" />
     </setting>
 </settings>

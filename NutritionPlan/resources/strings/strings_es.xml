@@ -19,4 +19,13 @@
     <string id="fatigue">Fatiga </string>
     <string id="bonkRisk"> • Riesgo de pájara </string>
     <string id="bonkTime">Tiempo hasta la pájara </string>
+
+    <string id="settingsFtp">FTP</string>
+    <string id="settingsWeight">Peso (kg)</string>
+    <string id="settingsSweatRate">Tasa de sudoración (ml/h)</string>
+    <string id="settingsChDose">Preferencia de dosis de CH</string>
+    <string id="settingsChThreshold">Umbral de alerta de CH (g)</string>
+    <string id="settingsHydrationDose">Preferencia de dosis de hidratación</string>
+    <string id="settingsHydrationThreshold">Umbral de alerta de hidratación (ml)</string>
+    <string id="settingsAlertDuration">Duración de la alerta (s)</string>
 </strings>

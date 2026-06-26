@@ -19,4 +19,13 @@
     <string id="fatigue">Fatigue </string>
     <string id="bonkRisk"> • Bonk risk </string>
     <string id="bonkTime">Bonk time </string>
+
+    <string id="settingsFtp">FTP</string>
+    <string id="settingsWeight">Weight (kg)</string>
+    <string id="settingsSweatRate">Sweat Rate (ml/h)</string>
+    <string id="settingsChDose">CH Dose Preference</string>
+    <string id="settingsChThreshold">CH Alert Threshold (g)</string>
+    <string id="settingsHydrationDose">Hydration Dose Preference</string>
+    <string id="settingsHydrationThreshold">Hydration Alert Threshold (ml)</string>
+    <string id="settingsAlertDuration">Alert Duration (s)</string>
 </strings>

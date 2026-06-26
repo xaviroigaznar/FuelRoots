@@ -655,152 +655,159 @@
         <entry id="9" module="true" symbol="globals/Session"/>
         <entry id="8388639" module="true" symbol="Graphics"/>
         <entry field="true" id="62" symbol="sessionFluidIngestedMl"/>
-        <entry field="true" id="172" symbol="nextFuelCountdownLabel"/>
-        <entry id="90" method="true" symbol="formatCountdown"/>
-        <entry id="130" method="true" symbol="calculateStatus"/>
-        <entry field="true" id="154" symbol="bonkTimeLabel"/>
-        <entry id="150" method="true" symbol="updateBaseMetrics"/>
+        <entry field="true" id="180" symbol="nextFuelCountdownLabel"/>
+        <entry field="true" id="87" symbol="settingsSweatRate"/>
+        <entry id="98" method="true" symbol="formatCountdown"/>
+        <entry id="138" method="true" symbol="calculateStatus"/>
+        <entry field="true" id="83" symbol="settingsChThreshold"/>
+        <entry field="true" id="162" symbol="bonkTimeLabel"/>
+        <entry id="158" method="true" symbol="updateBaseMetrics"/>
         <entry id="50" method="true" symbol="getSessionCarbRate"/>
         <entry id="18" object="true" symbol="NutritionPlanApp"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
         <entry id="48" method="true" symbol="getLapFluid"/>
-        <entry field="true" id="177" symbol="sessionCarbsBurned"/>
-        <entry id="106" method="true" symbol="getTotalKj"/>
+        <entry field="true" id="185" symbol="sessionCarbsBurned"/>
+        <entry id="114" method="true" symbol="getTotalKj"/>
         <entry id="66" method="true" symbol="MainLayout"/>
-        <entry field="true" id="159" symbol="fluidLostSinceLastDrink"/>
-        <entry id="185" symbol="currentLapTime"/>
+        <entry field="true" id="167" symbol="fluidLostSinceLastDrink"/>
+        <entry id="193" symbol="currentLapTime"/>
         <entry field="true" id="79" symbol="mlIn"/>
         <entry field="true" id="71" symbol="bonkTime"/>
         <entry field="true" id="8388737" symbol="calories"/>
-        <entry field="true" id="182" symbol="sessionHydrationLoss"/>
+        <entry field="true" id="190" symbol="sessionHydrationLoss"/>
         <entry field="true" id="55" symbol="lapFluidIngestedMl"/>
-        <entry field="true" id="173" symbol="recommendedCarbs"/>
-        <entry id="139" method="true" symbol="confirmFuelIntake"/>
+        <entry field="true" id="181" symbol="recommendedCarbs"/>
+        <entry id="147" method="true" symbol="confirmFuelIntake"/>
         <entry id="41" object="true" symbol="HydrationEngine"/>
-        <entry id="103" method="true" symbol="getLapKj"/>
-        <entry id="123" method="true" symbol="getTotalFluidLoss"/>
-        <entry field="true" id="110" symbol="npCount"/>
-        <entry field="true" id="111" symbol="npSum"/>
+        <entry id="111" method="true" symbol="getLapKj"/>
+        <entry id="131" method="true" symbol="getTotalFluidLoss"/>
+        <entry field="true" id="118" symbol="npCount"/>
+        <entry field="true" id="119" symbol="npSum"/>
         <entry id="38" object="true" symbol="UIRenderer"/>
         <entry field="true" id="36" symbol="renderer"/>
-        <entry id="97" method="true" symbol="formatWatts"/>
-        <entry field="true" id="162" symbol="hydrationStateLabel"/>
+        <entry id="105" method="true" symbol="formatWatts"/>
+        <entry field="true" id="170" symbol="hydrationStateLabel"/>
         <entry id="3" module="true" symbol="globals/Constants/AlertType"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
         <entry id="20" module="true" symbol="Tracker"/>
-        <entry field="true" id="145" symbol="profile"/>
-        <entry field="true" id="124" symbol="lapFluidLossMl"/>
+        <entry field="true" id="153" symbol="profile"/>
+        <entry field="true" id="132" symbol="lapFluidLossMl"/>
         <entry id="10" module="true" symbol="globals/SettingsManager"/>
-        <entry id="102" method="true" symbol="getLapCarbsBurned"/>
+        <entry id="110" method="true" symbol="getLapCarbsBurned"/>
         <entry field="true" id="56" symbol="lastCarbIntakeTime"/>
         <entry field="true" id="8388962" symbol="temperature"/>
-        <entry field="true" id="132" symbol="glycogenCapacity"/>
-        <entry field="true" id="179" symbol="sessionCarbsIngestedPerHour"/>
+        <entry field="true" id="140" symbol="glycogenCapacity"/>
+        <entry field="true" id="187" symbol="sessionCarbsIngestedPerHour"/>
         <entry id="24" method="true" symbol="getAlertDisplayingTimer"/>
         <entry field="true" id="69" symbol="AppName"/>
-        <entry field="true" id="108" symbol="lapKj"/>
+        <entry field="true" id="116" symbol="lapKj"/>
         <entry id="8" module="true" symbol="globals/Rez/Strings"/>
-        <entry field="true" id="181" symbol="sessionHydrationDrunkPerHour"/>
+        <entry field="true" id="189" symbol="sessionHydrationDrunkPerHour"/>
         <entry id="16" module="true" symbol="Engine"/>
         <entry field="true" id="72" symbol="critical"/>
-        <entry field="true" id="184" symbol="sweatRate"/>
+        <entry field="true" id="82" symbol="settingsChDose"/>
+        <entry field="true" id="192" symbol="sweatRate"/>
+        <entry field="true" id="86" symbol="settingsHydrationThreshold"/>
         <entry id="8388631" module="true" symbol="Activity"/>
-        <entry id="134" method="true" symbol="calculateDrinkCountdown"/>
-        <entry field="true" id="167" symbol="lapHydrationDrunkPerHour"/>
+        <entry id="142" method="true" symbol="calculateDrinkCountdown"/>
+        <entry field="true" id="175" symbol="lapHydrationDrunkPerHour"/>
         <entry field="true" id="80" symbol="mlWater"/>
         <entry id="2" module="true" symbol="globals/Constants"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
         <entry id="5" module="true" symbol="globals/Rez"/>
-        <entry id="84" method="true" symbol="drawAlertScreen"/>
+        <entry field="true" id="81" symbol="settingsAlertDuration"/>
+        <entry id="92" method="true" symbol="drawAlertScreen"/>
         <entry id="29" method="true" symbol="getHydrationThreshold"/>
-        <entry field="true" id="155" symbol="carbBurnRate"/>
+        <entry field="true" id="163" symbol="carbBurnRate"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
         <entry field="true" id="8389065" symbol="locY"/>
         <entry field="true" id="8389064" symbol="locX"/>
         <entry id="58" method="true" symbol="registerCarbs"/>
-        <entry field="true" id="116" symbol="totalKj"/>
+        <entry field="true" id="124" symbol="totalKj"/>
         <entry id="33" module="true" symbol="AlertType"/>
         <entry id="15" module="true" symbol="Constants"/>
         <entry id="8391489" module="true" symbol="Weather"/>
+        <entry field="true" id="88" symbol="settingsWeight"/>
         <entry field="true" id="61" symbol="sessionCarbsIngested"/>
-        <entry id="122" method="true" symbol="getLapFluidLoss"/>
+        <entry id="130" method="true" symbol="getLapFluidLoss"/>
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
         <entry id="8389348" symbol="font"/>
-        <entry field="true" id="133" symbol="alertStartTime"/>
+        <entry field="true" id="141" symbol="alertStartTime"/>
         <entry id="17" object="true" symbol="FuelHydrationField"/>
         <entry id="8389275" method="true" symbol="getApp"/>
-        <entry field="true" id="180" symbol="sessionHydrationDrunk"/>
+        <entry field="true" id="188" symbol="sessionHydrationDrunk"/>
         <entry id="7" module="true" symbol="globals/Rez/Layouts"/>
         <entry field="true" id="77" symbol="gCarbs"/>
         <entry id="28" method="true" symbol="getHydrationDosePreference"/>
-        <entry id="137" method="true" symbol="calculateRecommendedDrink"/>
+        <entry id="145" method="true" symbol="calculateRecommendedDrink"/>
         <entry id="8388879" module="true" object="true" symbol="Session"/>
-        <entry field="true" id="168" symbol="lapHydrationLoss"/>
+        <entry field="true" id="176" symbol="lapHydrationLoss"/>
         <entry field="true" id="73" symbol="drink"/>
         <entry field="true" id="35" symbol="ftp"/>
-        <entry field="true" id="156" symbol="carbsBurnedSinceLastFuel"/>
+        <entry field="true" id="164" symbol="carbsBurnedSinceLastFuel"/>
         <entry field="true" id="8389063" symbol="identifier"/>
         <entry id="8389349" symbol="justification"/>
         <entry field="true" id="37" symbol="sessionManager"/>
-        <entry id="86" method="true" symbol="drawMainDashboard"/>
-        <entry field="true" id="99" symbol="bufferSize"/>
+        <entry id="94" method="true" symbol="drawMainDashboard"/>
+        <entry field="true" id="107" symbol="bufferSize"/>
         <entry id="8388987" method="true" symbol="vibrate"/>
         <entry field="true" id="8388742" symbol="currentPower"/>
         <entry field="true" id="57" symbol="lastDrinkTime"/>
-        <entry id="131" method="true" symbol="estimateBonkTime"/>
-        <entry id="89" method="true" symbol="drawTank"/>
+        <entry id="139" method="true" symbol="estimateBonkTime"/>
+        <entry id="97" method="true" symbol="drawTank"/>
         <entry field="true" id="78" symbol="gIn"/>
-        <entry field="true" id="125" symbol="totalFluidLossMl"/>
-        <entry id="117" method="true" symbol="updateCarbs"/>
-        <entry id="91" method="true" symbol="formatDuration"/>
-        <entry field="true" id="114" symbol="rollingSum"/>
+        <entry field="true" id="133" symbol="totalFluidLossMl"/>
+        <entry id="125" method="true" symbol="updateCarbs"/>
+        <entry id="99" method="true" symbol="formatDuration"/>
+        <entry field="true" id="122" symbol="rollingSum"/>
         <entry id="8389131" method="true" symbol="setColor"/>
         <entry field="true" id="76" symbol="fuel"/>
         <entry id="39" object="true" symbol="FormatUtils"/>
-        <entry field="true" id="164" symbol="lapCarbsIngestedPerHour"/>
+        <entry field="true" id="172" symbol="lapCarbsIngestedPerHour"/>
         <entry id="6" module="true" symbol="globals/Rez/Drawables"/>
-        <entry id="138" method="true" symbol="confirmDrinkIntake"/>
+        <entry id="146" method="true" symbol="confirmDrinkIntake"/>
+        <entry field="true" id="84" symbol="settingsFtp"/>
         <entry id="21" module="true" symbol="UI"/>
         <entry field="true" id="75" symbol="fatigued"/>
         <entry id="46" method="true" symbol="getLapCarbRate"/>
-        <entry field="true" id="161" symbol="hydrationDeficitMl"/>
-        <entry field="true" id="83" symbol="totalTaken"/>
+        <entry field="true" id="169" symbol="hydrationDeficitMl"/>
+        <entry field="true" id="91" symbol="totalTaken"/>
         <entry id="51" method="true" symbol="getSessionCarbs"/>
         <entry id="67" method="true" symbol="TopLeftLayout"/>
-        <entry id="100" method="true" symbol="calculateCarbBurnRate"/>
+        <entry id="108" method="true" symbol="calculateCarbBurnRate"/>
         <entry id="19" module="true" symbol="SettingsManager"/>
         <entry id="44" object="true" symbol="SessionManager"/>
         <entry id="43" object="true" symbol="AthleteProfile"/>
         <entry id="8388644" module="true" symbol="System"/>
         <entry field="true" id="8389867" symbol="moderate"/>
-        <entry id="95" method="true" symbol="formatPercent"/>
-        <entry field="true" id="163" symbol="lapCarbsBurnedPerHour"/>
+        <entry id="103" method="true" symbol="formatPercent"/>
+        <entry field="true" id="171" symbol="lapCarbsBurnedPerHour"/>
         <entry field="true" id="8389143" symbol="weight"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
         <entry id="53" method="true" symbol="getSessionHydrationRate"/>
         <entry id="64" method="true" symbol="BottomLeftLayout"/>
         <entry id="12" module="true" symbol="globals/UI"/>
         <entry id="65" method="true" symbol="BottomRightLayout"/>
-        <entry field="true" id="140" symbol="fuelEngine"/>
+        <entry field="true" id="148" symbol="fuelEngine"/>
         <entry id="8388640" module="true" symbol="Lang"/>
-        <entry field="true" id="142" symbol="maxBufferSize"/>
-        <entry id="135" method="true" symbol="calculateFuelCountdown"/>
-        <entry field="true" id="170" symbol="minutesUntilFuel"/>
+        <entry field="true" id="150" symbol="maxBufferSize"/>
+        <entry id="143" method="true" symbol="calculateFuelCountdown"/>
+        <entry field="true" id="178" symbol="minutesUntilFuel"/>
         <entry id="45" object="true" symbol="WorkoutState"/>
         <entry id="34" method="true" symbol="drawMainScreen"/>
-        <entry id="92" method="true" symbol="formatKilometers"/>
+        <entry id="100" method="true" symbol="formatKilometers"/>
         <entry field="true" id="8389130" symbol="mColor"/>
         <entry id="8389068" method="true" symbol="draw"/>
         <entry field="true" id="54" symbol="lapCarbsIngested"/>
-        <entry field="true" id="174" symbol="recommendedDrink"/>
+        <entry field="true" id="182" symbol="recommendedDrink"/>
         <entry field="true" id="63" symbol="LauncherIcon"/>
         <entry id="8388610" symbol="statics"/>
         <entry id="23" object="true" symbol="NutritionTracker"/>
-        <entry id="88" method="true" symbol="drawStatusSection"/>
-        <entry field="true" id="107" symbol="lapCarbsBurned"/>
-        <entry id="98" method="true" symbol="roundToNearestMultiple"/>
-        <entry id="112" method="true" symbol="onLap"/>
-        <entry id="120" method="true" symbol="calculateHydrationLabel"/>
+        <entry id="96" method="true" symbol="drawStatusSection"/>
+        <entry field="true" id="115" symbol="lapCarbsBurned"/>
+        <entry id="106" method="true" symbol="roundToNearestMultiple"/>
+        <entry id="120" method="true" symbol="onLap"/>
+        <entry id="128" method="true" symbol="calculateHydrationLabel"/>
         <entry id="49" method="true" symbol="getLapHydrationRate"/>
         <entry id="52" method="true" symbol="getSessionFluid"/>
         <entry id="8389350" module="true" symbol="globals"/>
@@ -808,77 +815,78 @@
         <entry id="14" module="true" symbol="globals/Utils/FormatUtils/&lt;statics&gt;"/>
         <entry id="42" object="true" symbol="PredictionEngine"/>
         <entry id="8390146" module="true" object="true" symbol="Background"/>
-        <entry id="85" method="true" symbol="drawCountdownSection"/>
+        <entry id="93" method="true" symbol="drawCountdownSection"/>
         <entry field="true" id="8388960" symbol="heartRate"/>
         <entry id="8388702" method="true" symbol="initialize"/>
-        <entry id="119" method="true" symbol="updateNP"/>
+        <entry id="127" method="true" symbol="updateNP"/>
         <entry id="27" method="true" symbol="getFTP"/>
-        <entry field="true" id="152" symbol="activeAlert"/>
+        <entry field="true" id="160" symbol="activeAlert"/>
         <entry field="true" id="70" symbol="bonkRisk"/>
         <entry id="8389279" method="true" symbol="onStart"/>
-        <entry id="129" method="true" symbol="calculateRemainingGlycogen"/>
-        <entry field="true" id="178" symbol="sessionCarbsBurnedPerHour"/>
+        <entry id="137" method="true" symbol="calculateRemainingGlycogen"/>
+        <entry field="true" id="186" symbol="sessionCarbsBurnedPerHour"/>
         <entry id="11" module="true" symbol="globals/Tracker"/>
-        <entry id="151" method="true" symbol="updateNutritionState"/>
-        <entry field="true" id="157" symbol="carbsDeficit"/>
-        <entry field="true" id="176" symbol="rollingPower"/>
+        <entry id="159" method="true" symbol="updateNutritionState"/>
+        <entry field="true" id="165" symbol="carbsDeficit"/>
+        <entry field="true" id="184" symbol="rollingPower"/>
         <entry id="22" module="true" symbol="Utils"/>
         <entry id="8389902" method="true" symbol="getState"/>
-        <entry field="true" id="169" symbol="minutesUntilDrink"/>
+        <entry field="true" id="177" symbol="minutesUntilDrink"/>
         <entry id="26" method="true" symbol="getCHThreshold"/>
-        <entry id="94" method="true" symbol="formatMilliliters"/>
+        <entry id="102" method="true" symbol="formatMilliliters"/>
         <entry id="8388641" module="true" symbol="Math"/>
         <entry id="60" method="true" symbol="resetLap"/>
         <entry id="31" method="true" symbol="getWeight"/>
         <entry id="13" module="true" symbol="globals/Utils"/>
-        <entry id="121" method="true" symbol="calculateSweatRate"/>
-        <entry field="true" id="175" symbol="relativeIntensity"/>
+        <entry id="129" method="true" symbol="calculateSweatRate"/>
+        <entry field="true" id="183" symbol="relativeIntensity"/>
         <entry id="30" method="true" symbol="getSweatRate"/>
-        <entry id="87" method="true" symbol="drawNutritionTanks"/>
-        <entry field="true" id="160" symbol="hydrationDeficitLabel"/>
+        <entry id="95" method="true" symbol="drawNutritionTanks"/>
+        <entry field="true" id="168" symbol="hydrationDeficitLabel"/>
         <entry id="8389280" method="true" symbol="getInitialView"/>
         <entry id="8389281" method="true" symbol="onStop"/>
-        <entry field="true" id="165" symbol="lapElapsedTime"/>
-        <entry field="true" id="166" symbol="lapHydrationDrunk"/>
+        <entry field="true" id="173" symbol="lapElapsedTime"/>
+        <entry field="true" id="174" symbol="lapHydrationDrunk"/>
         <entry field="true" id="74" symbol="fatigue"/>
         <entry field="true" id="8389347" symbol="color"/>
-        <entry id="93" method="true" symbol="formatLiters"/>
+        <entry id="101" method="true" symbol="formatLiters"/>
         <entry field="true" id="8388732" symbol="elapsedTime"/>
-        <entry id="136" method="true" symbol="calculateRecommendedCarbs"/>
-        <entry field="true" id="171" symbol="nextDrinkCountdownLabel"/>
+        <entry id="144" method="true" symbol="calculateRecommendedCarbs"/>
+        <entry field="true" id="179" symbol="nextDrinkCountdownLabel"/>
         <entry id="25" method="true" symbol="getCHDosePreference"/>
-        <entry field="true" id="143" symbol="nutritionTracker"/>
-        <entry field="true" id="113" symbol="powerBuffer"/>
-        <entry id="128" method="true" symbol="calculateFatigue"/>
+        <entry field="true" id="151" symbol="nutritionTracker"/>
+        <entry field="true" id="121" symbol="powerBuffer"/>
+        <entry id="136" method="true" symbol="calculateFatigue"/>
         <entry id="32" module="true" symbol="Layouts"/>
         <entry field="true" id="8389487" symbol="state"/>
-        <entry id="146" method="true" symbol="registerFuel"/>
+        <entry id="154" method="true" symbol="registerFuel"/>
         <entry id="4" module="true" symbol="globals/Engine"/>
-        <entry id="104" method="true" symbol="getNP"/>
+        <entry id="112" method="true" symbol="getNP"/>
         <entry id="47" method="true" symbol="getLapCarbs"/>
         <entry id="40" object="true" symbol="FuelEngine"/>
-        <entry field="true" id="82" symbol="totalDrunk"/>
-        <entry id="118" method="true" symbol="updateEnergy"/>
-        <entry id="148" method="true" symbol="triggerFuelAlert"/>
-        <entry field="true" id="144" symbol="predictionEngine"/>
+        <entry field="true" id="90" symbol="totalDrunk"/>
+        <entry id="126" method="true" symbol="updateEnergy"/>
+        <entry id="156" method="true" symbol="triggerFuelAlert"/>
+        <entry field="true" id="152" symbol="predictionEngine"/>
         <entry id="59" method="true" symbol="registerDrink"/>
-        <entry field="true" id="183" symbol="statusLabel"/>
-        <entry id="101" method="true" symbol="getIF"/>
-        <entry id="149" method="true" symbol="updateAlertLifecycle"/>
-        <entry field="true" id="81" symbol="stable"/>
-        <entry id="105" method="true" symbol="getTotalCarbsBurned"/>
+        <entry field="true" id="191" symbol="statusLabel"/>
+        <entry id="109" method="true" symbol="getIF"/>
+        <entry field="true" id="85" symbol="settingsHydrationDose"/>
+        <entry id="157" method="true" symbol="updateAlertLifecycle"/>
+        <entry field="true" id="89" symbol="stable"/>
+        <entry id="113" method="true" symbol="getTotalCarbsBurned"/>
         <entry id="8390514" method="true" symbol="update"/>
-        <entry field="true" id="141" symbol="hydrationEngine"/>
-        <entry field="true" id="158" symbol="fatiguePercent"/>
+        <entry field="true" id="149" symbol="hydrationEngine"/>
+        <entry field="true" id="166" symbol="fatiguePercent"/>
         <entry id="8388635" module="true" symbol="Application"/>
-        <entry field="true" id="115" symbol="totalCarbsBurned"/>
-        <entry id="96" method="true" symbol="formatTemperature"/>
-        <entry field="true" id="109" symbol="lastElapsedTime"/>
-        <entry id="126" method="true" symbol="updateFluidLoss"/>
-        <entry id="127" method="true" symbol="calculateBonkRisk"/>
-        <entry field="true" id="153" symbol="alertText"/>
+        <entry field="true" id="123" symbol="totalCarbsBurned"/>
+        <entry id="104" method="true" symbol="formatTemperature"/>
+        <entry field="true" id="117" symbol="lastElapsedTime"/>
+        <entry id="134" method="true" symbol="updateFluidLoss"/>
+        <entry id="135" method="true" symbol="calculateBonkRisk"/>
+        <entry field="true" id="161" symbol="alertText"/>
         <entry id="68" method="true" symbol="TopRightLayout"/>
-        <entry id="147" method="true" symbol="triggerDrinkAlert"/>
+        <entry id="155" method="true" symbol="triggerDrinkAlert"/>
     </symbolTable>
     <localVars>
         <entry arg="true" endPc="268435597" name="color" stackId="1" startPc="268435586"/>
@@ -1115,23 +1123,31 @@
     </localVars>
     <deviceInfo deviceVersion="45fe3cbb0de8ea0a70e12628d2697915f1272301" partNumber="006-B3843-00"/>
     <annotations>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="settingsWeight"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="totalTaken"/>
         <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="settingsChThreshold"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="fatigued"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="settingsAlertDuration"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="settingsFtp"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="bonkRisk"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="settingsChDose"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="settingsSweatRate"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="bonkTime"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="settingsHydrationDose"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="fatigue"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="gCarbs"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="critical"/>
-        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="settingsHydrationThreshold"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="mlIn"/>
-        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="bonkRisk"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="mlWater"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="stable"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="gIn"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="fuel"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="totalDrunk"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="drink"/>
-        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="bonkTime"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="moderate"/>
-        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="fatigue"/>
     </annotations>
     <dataEntryOffsetMappings>
         <dataEntry label="globals" offset="139" parentId="" symbolId="globals" type="module"/>
@@ -1150,16 +1166,16 @@
         <dataEntry label="globals/Rez/Drawables" offset="1112" parentId="Rez" symbolId="Drawables" type="module"/>
         <dataEntry label="globals/Rez/Layouts" offset="1147" parentId="Rez" symbolId="Layouts" type="module"/>
         <dataEntry label="globals/Rez/Strings" offset="1218" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry label="globals/Constants/AlertType" offset="1388" parentId="Constants" symbolId="AlertType" type="module"/>
-        <dataEntry label="globals/UI/UIRenderer" offset="1414" parentId="UI" symbolId="UIRenderer" type="class"/>
-        <dataEntry label="globals/Utils/FormatUtils" offset="1512" parentId="Utils" symbolId="FormatUtils" type="class"/>
-        <dataEntry label="globals/Utils/FormatUtils/&lt;statics&gt;" offset="1560" parentId="FormatUtils" symbolId="&lt;statics&gt;" type="module"/>
-        <dataEntry label="globals/Engine/FuelEngine" offset="1663" parentId="Engine" symbolId="FuelEngine" type="class"/>
-        <dataEntry label="globals/Engine/HydrationEngine" offset="1923" parentId="Engine" symbolId="HydrationEngine" type="class"/>
-        <dataEntry label="globals/Engine/PredictionEngine" offset="2066" parentId="Engine" symbolId="PredictionEngine" type="class"/>
-        <dataEntry label="globals/Session/AthleteProfile" offset="2182" parentId="Session" symbolId="AthleteProfile" type="class"/>
-        <dataEntry label="globals/Session/SessionManager" offset="2244" parentId="Session" symbolId="SessionManager" type="class"/>
-        <dataEntry label="globals/Session/WorkoutState" offset="2513" parentId="Session" symbolId="WorkoutState" type="class"/>
+        <dataEntry label="globals/Constants/AlertType" offset="1460" parentId="Constants" symbolId="AlertType" type="module"/>
+        <dataEntry label="globals/UI/UIRenderer" offset="1486" parentId="UI" symbolId="UIRenderer" type="class"/>
+        <dataEntry label="globals/Utils/FormatUtils" offset="1584" parentId="Utils" symbolId="FormatUtils" type="class"/>
+        <dataEntry label="globals/Utils/FormatUtils/&lt;statics&gt;" offset="1632" parentId="FormatUtils" symbolId="&lt;statics&gt;" type="module"/>
+        <dataEntry label="globals/Engine/FuelEngine" offset="1735" parentId="Engine" symbolId="FuelEngine" type="class"/>
+        <dataEntry label="globals/Engine/HydrationEngine" offset="1995" parentId="Engine" symbolId="HydrationEngine" type="class"/>
+        <dataEntry label="globals/Engine/PredictionEngine" offset="2138" parentId="Engine" symbolId="PredictionEngine" type="class"/>
+        <dataEntry label="globals/Session/AthleteProfile" offset="2254" parentId="Session" symbolId="AthleteProfile" type="class"/>
+        <dataEntry label="globals/Session/SessionManager" offset="2316" parentId="Session" symbolId="SessionManager" type="class"/>
+        <dataEntry label="globals/Session/WorkoutState" offset="2585" parentId="Session" symbolId="WorkoutState" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Tracker">
