@@ -21,16 +21,27 @@ module UI {
             var width = dc.getWidth();
             var height = dc.getHeight();
 
-            var tanksHeight =
-                Math.floor(height * 0.5);
 
-            var countdownHeight =
-                Math.floor(height * 0.2);
+            var largeFontHeight = dc.getFontHeight(Graphics.FONT_LARGE);
+            var mediumFontHeight = dc.getFontHeight(Graphics.FONT_MEDIUM);
+            var smallFontHeight = dc.getFontHeight(Graphics.FONT_SMALL);
 
             var statusHeight =
-                height
-                - tanksHeight
-                - countdownHeight;
+                largeFontHeight
+                + 2 * smallFontHeight
+                + 15;
+            
+            var countdownHeight =
+                2 * mediumFontHeight
+                + 2 * smallFontHeight
+                + 20;
+
+            var mediumScreenHeight =
+                Math.floor(height * 0.5);
+            
+            var unfilledHeight = height - statusHeight - countdownHeight;
+            
+            var tanksHeight = mediumScreenHeight < unfilledHeight ? mediumScreenHeight : unfilledHeight;
             // =====================================
             // TANKS
             // =====================================
@@ -65,7 +76,7 @@ module UI {
                 dc,
                 state,
                 0,
-                tanksHeight + countdownHeight + 20,
+                tanksHeight + countdownHeight,
                 width,
                 statusHeight
             );
@@ -238,6 +249,10 @@ module UI {
             // -------------------------
             // Fuel
             // -------------------------
+            var mediumFontHeight = dc.getFontHeight(Graphics.FONT_MEDIUM);
+            var smallFontHeight = dc.getFontHeight(Graphics.FONT_SMALL);
+            var fuelTextYPosition = y + mediumFontHeight;
+
             var fuelText = WatchUi.loadResource(Rez.Strings.fuel);
             var gInText = WatchUi.loadResource(Rez.Strings.gIn);
             dc.drawText(
@@ -254,7 +269,7 @@ module UI {
             var totalTakenText = WatchUi.loadResource(Rez.Strings.totalTaken);
             dc.drawText(
                 x + 10,
-                y + 25,
+                fuelTextYPosition,
                 Graphics.FONT_SMALL,
                 totalTakenText
                 + state.sessionCarbsIngested.format("%.0f")
@@ -267,11 +282,12 @@ module UI {
             // -------------------------
 
             var drinkText = WatchUi.loadResource(Rez.Strings.drink);
-
+            var firstDrinkTextYPosition = y + mediumFontHeight + smallFontHeight + 5;
+            var secondDrinkTextYPosition = y + 2 * mediumFontHeight + smallFontHeight + 5;
             var mlInText = WatchUi.loadResource(Rez.Strings.mlIn);
             dc.drawText(
                 x + 10,
-                y + 50,
+                firstDrinkTextYPosition,
                 Graphics.FONT_MEDIUM,
                 drinkText
                 + state.recommendedDrink.format("%.0f")
@@ -283,7 +299,7 @@ module UI {
             var totalDrunkText = WatchUi.loadResource(Rez.Strings.totalDrunk);
             dc.drawText(
                 x + 10,
-                y + 75,
+                secondDrinkTextYPosition,
                 Graphics.FONT_SMALL,
                 + totalDrunkText
                 + state.sessionHydrationDrunk.format("%.0f")
@@ -339,9 +355,11 @@ module UI {
             var fatigueText = WatchUi.loadResource(Rez.Strings.fatigue);
 
             var bonkRiskText = WatchUi.loadResource(Rez.Strings.bonkRisk);
+            var largeFontHeight = dc.getFontHeight(Graphics.FONT_LARGE);
+            var smallFontHeight = dc.getFontHeight(Graphics.FONT_SMALL);
             dc.drawText(
                 width / 2,
-                y + 40,
+                y + largeFontHeight + 5,
                 Graphics.FONT_SMALL,
                 fatigueText
                 + state.fatiguePercent
@@ -355,7 +373,7 @@ module UI {
             var bonkTimeText = WatchUi.loadResource(Rez.Strings.bonkTime);
             dc.drawText(
                 width / 2,
-                y + 70,
+                y + largeFontHeight + smallFontHeight + 10,
                 Graphics.FONT_SMALL,
                 bonkTimeText
                 + state.bonkTimeLabel,

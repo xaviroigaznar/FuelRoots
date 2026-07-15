@@ -48,6 +48,7 @@ module Session {
             hydrationEngine = new Engine.HydrationEngine(profile);
             predictionEngine = new Engine.PredictionEngine(profile);
 
+            state.elapsedTime = Activity.getActivityInfo().elapsedTime;
             // =============================
             // TRACKERS
             // =============================
